@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Grille de points.gd" type="Script" id=1]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Afficheur de point.tscn" type="PackedScene" id=2]
+
+[node name="Grille de points" type="GridContainer"]
+margin_right = 106.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.1, 0.1 )
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Afficheur de point" parent="." instance=ExtResource( 2 )]
+margin_right = 21.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 18, 0 )
+
+[node name="Afficheur de point2" parent="." instance=ExtResource( 2 )]
+margin_left = 21.0
+margin_right = 42.0
+margin_bottom = 20.0
+
+[node name="Afficheur de point3" parent="." instance=ExtResource( 2 )]
+margin_left = 42.0
+margin_right = 63.0
+margin_bottom = 20.0
+
+[node name="Afficheur de point4" parent="." instance=ExtResource( 2 )]
+margin_left = 63.0
+margin_right = 84.0
+margin_bottom = 20.0
+
+[node name="Afficheur de point5" parent="." instance=ExtResource( 2 )]
+margin_left = 84.0
+margin_right = 105.0
+margin_bottom = 20.0
+
+[node name="Afficheur de point6" parent="." instance=ExtResource( 2 )]
+margin_top = 20.0
+margin_right = 21.0
+margin_bottom = 40.0
+
+[node name="Afficheur de point7" parent="." instance=ExtResource( 2 )]
+margin_left = 21.0
+margin_top = 20.0
+margin_right = 42.0
+margin_bottom = 40.0
+
+[node name="Afficheur de point8" parent="." instance=ExtResource( 2 )]
+margin_left = 42.0
+margin_top = 20.0
+margin_right = 63.0
+margin_bottom = 40.0
+
+[node name="Afficheur de point9" parent="." instance=ExtResource( 2 )]
+margin_left = 63.0
+margin_top = 20.0
+margin_right = 84.0
+margin_bottom = 40.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="Afficheur de point10" parent="." instance=ExtResource( 2 )]
+margin_left = 84.0
+margin_top = 20.0
+margin_right = 105.0
+margin_bottom = 40.0

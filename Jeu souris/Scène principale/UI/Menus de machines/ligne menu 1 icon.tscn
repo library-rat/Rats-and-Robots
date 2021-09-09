@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scène principale/Robot/Ressources/graphiques/icon physique.png" type="Texture" id=1]
+[ext_resource path="res://Scène principale/Robot/Ressources/graphiques/icob déplacement.png" type="Texture" id=2]
+[ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 51
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 34
+use_mipmaps = true
+font_data = ExtResource( 5 )
+
+[node name="ligne menu 2 icon" type="HBoxContainer"]
+margin_right = 969.0
+margin_bottom = 69.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cout physique +meca" type="Button" parent="."]
+margin_right = 50.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 50, 69 )
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+text = "6"
+flat = true
+
+[node name="icon physique+meca" type="Button" parent="."]
+margin_left = 54.0
+margin_right = 124.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 70, 0 )
+size_flags_vertical = 3
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 128.0
+margin_right = 969.0
+margin_bottom = 69.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = -0.943909
+margin_top = 1.94388
+margin_right = 580.056
+margin_bottom = 70.9439
+custom_fonts/font = SubResource( 2 )
+text = "GROSSE ATTAQUE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -69.0
+margin_top = -31.5
+margin_right = -6.0
+margin_bottom = 31.5
+rect_min_size = Vector2( 63, 63 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

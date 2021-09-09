@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scène principale/Souris/Ressources/Souris.gd" type="Script" id=1]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Grille de points.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scène principale/Souris/Ressources/Sprite Souris Moche.png" type="Texture" id=3]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Mecanique.tres" type="Resource" id=4]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Endurance.tres" type="Resource" id=5]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Diplomatie.tres" type="Resource" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15, 32 )
+
+[node name="Souris" type="Node2D"]
+script = ExtResource( 1 )
+Points = [ ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 6 ), null, null, null ]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( -32, -32 )
+
+[node name="Area2D" type="Area2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D"]
+shape = SubResource( 1 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+margin_left = 15.0
+margin_top = 11.0
+margin_right = 254.0
+margin_bottom = 103.0
+rect_scale = Vector2( 0.1, 0.1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grille de points" parent="PanelContainer" instance=ExtResource( 2 )]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 232.0
+margin_bottom = 85.0
+rect_scale = Vector2( 1, 1 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="input_event" from="Sprite/Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="mouse_entered" from="Sprite/Area2D" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite/Area2D" to="." method="_on_Area2D_mouse_exited"]

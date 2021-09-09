@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.215686, 0.0823529, 0.172549, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 29
+font_data = ExtResource( 1 )
+
+[node name="Menu" type="Panel"]
+margin_left = 153.0
+margin_top = 86.0
+margin_right = 783.0
+margin_bottom = 426.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = -1.0
+margin_bottom = -151.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+margin_right = 628.0
+margin_bottom = 80.0
+custom_constants/margin_right = 100
+custom_constants/margin_left = 100
+
+[node name="Panel" type="Panel" parent="Control/MarginContainer"]
+margin_left = 100.0
+margin_right = 528.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 80 )
+
+[node name="Label" type="Label" parent="Control/MarginContainer/Panel"]
+margin_right = 828.0
+margin_bottom = 84.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+margin_top = 84.0
+margin_right = 628.0
+margin_bottom = 84.0
