@@ -1,16 +1,14 @@
 extends HBoxContainer
 
+export (Array,String) var pointValeur = [null] #tyoe des points
+export (Array,int) var ValeurMax = [null] #valeur max des points
+var Valeur
+signal cout_point (type,index)
 
-signal cout_physique
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Valeur = ValeurMax.duplicate()
+	$Compteur.text = str(Valeur[0])
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_cout_physique_meca_pressed():
-	emit_signal("cout_physique")
+func _on_icon_physique_pressed():
+	emit_signal("cout_point", pointValeur[0],0)

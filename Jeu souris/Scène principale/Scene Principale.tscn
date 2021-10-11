@@ -1,21 +1,44 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scène principale/Robot/Robot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scène principale/UI/UI.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scène principale/Robot/Robot.gd" type="Script" id=3]
+[ext_resource path="res://Scène principale/Robot/Ressources/graphiques/Machine Canon Plasma.png" type="Texture" id=3]
+[ext_resource path="res://Scène principale/Scene Principale.gd" type="Script" id=5]
 
 [node name="Scene Principale" type="Node"]
-
-[node name="UI" parent="." instance=ExtResource( 2 )]
+script = ExtResource( 5 )
 
 [node name="Robot" parent="." instance=ExtResource( 1 )]
-script = ExtResource( 3 )
 
 [node name="Machine" parent="Robot/Cabine de pilotage" index="0"]
 numero_de_machine = 1
 
-[node name="Machine2" parent="Robot/Cabine de pilotage" index="1"]
+[node name="Sprite" parent="Robot/Cabine de pilotage/Machine" index="0"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+
+[node name="Machine2" parent="Robot/Cabine de pilotage" index="3"]
 numero_de_machine = 2
+
+[node name="Souris" parent="Robot/Cabine de pilotage" index="4"]
+Calcul = 3
+Endurance = 3
+Observation = 2
+Points = [ null, null, null, null, null, null, null, null, null, null ]
+rest_point = 1
+
+[node name="Souris2" parent="Robot/Cabine de pilotage" index="5"]
+Observation = 4
+
+[node name="UI" parent="." instance=ExtResource( 2 )]
+
+[node name="Cabine de Pilotage" parent="UI" index="0"]
+visible = false
+
+[connection signal="ouvremachine" from="Robot" to="UI" method="_on_Robot_ouvremachine"]
 
 [editable path="Robot"]
 [editable path="Robot/Cabine de pilotage"]
+[editable path="Robot/Cabine de pilotage/Machine"]
+[editable path="Robot/Cabine de pilotage/Machine2"]
+[editable path="UI"]

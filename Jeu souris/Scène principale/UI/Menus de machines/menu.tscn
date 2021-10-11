@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Grille de points.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Menu.gd" type="Script" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.215686, 0.0823529, 0.172549, 1 )
@@ -15,36 +17,38 @@ margin_top = 86.0
 margin_right = 783.0
 margin_bottom = 426.0
 custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Control" type="VBoxContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 1.0
-margin_right = -1.0
-margin_bottom = -151.0
+margin_right = 630.0
+margin_bottom = 84.0
 size_flags_horizontal = 3
+custom_constants/separation = 30
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
-margin_right = 628.0
+margin_right = 630.0
 margin_bottom = 80.0
+rect_min_size = Vector2( 630, 80 )
 custom_constants/margin_right = 100
 custom_constants/margin_left = 100
 
 [node name="Panel" type="Panel" parent="Control/MarginContainer"]
 margin_left = 100.0
-margin_right = 528.0
+margin_right = 530.0
 margin_bottom = 80.0
-rect_min_size = Vector2( 0, 80 )
+rect_min_size = Vector2( 430, 80 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="Control/MarginContainer/Panel"]
-margin_right = 828.0
-margin_bottom = 84.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
@@ -55,6 +59,39 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-margin_top = 84.0
-margin_right = 628.0
-margin_bottom = 84.0
+margin_top = 110.0
+margin_right = 630.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 630, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchor_top = 1.02
+anchor_bottom = 1.1
+margin_bottom = -27.2
+rect_scale = Vector2( 0.1, 0.1 )
+size_flags_horizontal = 7
+size_flags_vertical = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grille de points" parent="Panel" instance=ExtResource( 2 )]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 97.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="FermeMenu" type="Button" parent="."]
+anchor_left = 0.97
+anchor_right = 0.97
+margin_right = 12.0
+margin_bottom = 20.0
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="FermeMenu" to="." method="_on_FermeMenu_pressed"]

@@ -3,14 +3,16 @@
 [ext_resource path="res://Scène principale/Souris/Ressources/Souris.gd" type="Script" id=1]
 [ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Grille de points.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scène principale/Souris/Ressources/Sprite Souris Moche.png" type="Texture" id=3]
-[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Mecanique.tres" type="Resource" id=4]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Calcul.tres" type="Resource" id=4]
 [ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Endurance.tres" type="Resource" id=5]
-[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Diplomatie.tres" type="Resource" id=6]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Observation.tres" type="Resource" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 32 )
 
-[node name="Souris" type="Node2D"]
+[node name="Souris" type="Node2D" groups=[
+"Souris",
+]]
 script = ExtResource( 1 )
 Points = [ ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 6 ), null, null, null ]
 
