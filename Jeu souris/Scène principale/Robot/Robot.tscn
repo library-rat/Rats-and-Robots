@@ -9,10 +9,11 @@ script = ExtResource( 2 )
 
 [node name="Cabine de pilotage" parent="." instance=ExtResource( 1 )]
 
-[node name="Souris" parent="Cabine de pilotage" instance=ExtResource( 3 )]
+[node name="Souris" parent="." instance=ExtResource( 3 )]
 
-[node name="Souris2" parent="Cabine de pilotage" instance=ExtResource( 3 )]
+[node name="Souris2" parent="." instance=ExtResource( 3 )]
 
+[connection signal="assign_souris" from="Cabine de pilotage/Machine2" to="." method="_on_Machine2_assign_souris"]
 [connection signal="ouvrir_menu" from="Cabine de pilotage/Machine2" to="." method="_on_Machine2_ouvrir_menu"]
 
 [editable path="Cabine de pilotage"]

@@ -31,10 +31,7 @@ func _ready():
 	#calcul tout les points de repos en parcourant toutes les dropzones
 	rest_nodes = get_tree().get_nodes_in_group("DropzoneMachine")
 	rest_nodes[rest_point].select(self) #permet le changement de couleur des dropout zone
-	
-	print(Observation)
-	print(Points)
-	
+
 func _physics_process(delta):
 	if selectionnee :
 		$"PanelContainer".visible = false #evite d'avoir l'affichage des points pendant le drag & drop
@@ -62,18 +59,15 @@ null, null, null, null, null, null, null, null]
 
 
 #affiche les points quand la souris passe dessus
-func _on_Area2D_mouse_entered():
+func _on_Texture_mouse_entered():
 	$"PanelContainer".visible = true
 
 #enleve le menu des points quand la souris n'est plus dessus
-func _on_Area2D_mouse_exited():
+func _on_Texture_mouse_exited():
 	$"PanelContainer".visible = false
-#la souris est selectionnée si la souris clique dessus
-func _on_Area2D_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("left click") :
+func _on_Texture_gui_input(event):
+	if Input.is_action_just_pressed("left click") :#la souris est selectionnée si le joueur clique dessus
 		selectionnee = true
-
-func _input(event):
 	if event is InputEventMouseButton :
 		if event.button_index == BUTTON_LEFT and not event.pressed: # quand le cilck est laché
 			selectionnee = false
@@ -83,7 +77,7 @@ func _input(event):
 			for i in rest_nodes.size() :#parmi les points de repos
 				var distance= global_position.distance_to(rest_nodes[i].global_position)
 				if distance < distancemin :
-					if rest_nodes[i].libre :#si aucune souris n'est dedans
+					if rest_nodes[i].libre and rest_nodes[i].salle== rest_nodes [rest_point].salle :#si aucune souris n'est dedans et que la machinne est dans la meme salle
 						rest_nodes[rest_point].deselect()
 						rest_nodes[i].select(self)# change la couleur des dropout zones
 						rest_point= i

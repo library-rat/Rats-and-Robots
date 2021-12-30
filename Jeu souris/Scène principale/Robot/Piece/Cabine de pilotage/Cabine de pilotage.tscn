@@ -7,11 +7,11 @@
 [node name="Machine" parent="." instance=ExtResource( 1 )]
 position = Vector2( 67.4645, 193.663 )
 
-[node name="Machine4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 327.607, 443.115 )
+[node name="Machine2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 523.842, 238.11 )
 
 [node name="Machine3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 565.115, 120.642 )
 
-[node name="Machine2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 523.842, 238.11 )
+[node name="Machine4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 327.607, 443.115 )

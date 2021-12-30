@@ -16,7 +16,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 630.0
 margin_bottom = 69.0
-pointValeur = [ "Observation" ]
+pointValeur = [ "Endurance" ]
 ValeurMax = [ 2 ]
 
 [node name="Panel" parent="Control/VBoxContainer/Marcher" index="2"]
