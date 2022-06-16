@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "Action",
+"language": "GDScript",
+"path": "res://Scène principale/Robot/Queue_action/Action.gd"
+}, {
 "base": "Node2D",
 "class": "Cursor",
 "language": "GDScript",
@@ -42,7 +47,7 @@ _global_script_classes=[ {
 "base": "TileMap",
 "class": "UnitOverlay",
 "language": "GDScript",
-"path": "res://UnitOverlay.gd"
+"path": "res://Scène principale/Gameboard/UnitOverlay.gd"
 }, {
 "base": "TileMap",
 "class": "UnitPath",
@@ -50,6 +55,7 @@ _global_script_classes=[ {
 "path": "res://Scène principale/Gameboard/UnitPath.gd"
 } ]
 _global_script_class_icons={
+"Action": "",
 "Cursor": "",
 "GameBoard": "",
 "Grid": "",
@@ -66,8 +72,19 @@ config/name="Jeu souris"
 run/main_scene="res://Scène principale/Scene Principale.tscn"
 config/icon="res://icon.png"
 
+[global]
+
+bitm=false
+bitmap=false
+bitma=false
+
 [input]
 
+ui_page_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777235,"unicode":0,"echo":false,"script":null)
+ ]
+}
 "left click"={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)

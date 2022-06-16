@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scène principale/Gameboard/Unit/Lifebar/Lifebar.gd" type="Script" id=1]
+
+[node name="Lifebar" type="HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 10.0
+grow_horizontal = 2
+rect_min_size = Vector2( 50, 10 )
+size_flags_horizontal = 5
+size_flags_vertical = 5
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

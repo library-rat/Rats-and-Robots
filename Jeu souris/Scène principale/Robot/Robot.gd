@@ -16,3 +16,5 @@ func _on_Machine2_ouvrir_menu(numero_machine): #la machine 2 ouvre le lenu de la
 
 func _on_Machine2_assign_souris(numero_machine, souris):
 	EquipeListe[numero_machine-1] = souris
+
+#Il n'y a pas de structure de queue avec Godot donc les fonctions usuelles vont etre impléémentées 
