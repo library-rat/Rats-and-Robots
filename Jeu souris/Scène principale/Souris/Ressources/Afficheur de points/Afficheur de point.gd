@@ -1,5 +1,7 @@
 extends CenterContainer
 
-func affiche_point (pt) :
-	if pt is Point :
-		$PointTextureRect.texture = pt.texture
+func affiche_point (objet) :
+	if objet is Point :
+		$PointTextureRect.texture = objet.texture
+	if objet == null :
+		$PointTextureRect.texture = null

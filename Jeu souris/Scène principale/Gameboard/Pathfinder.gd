@@ -23,7 +23,6 @@ func _init(grid : Grid,walkable_cells : Array) -> void :
 		cell_mappings[cell] = grid.as_index(cell)
 #On ajoute alors toutes les cases dans l'instance Astar
 	_add_and_connect_points(cell_mappings)
-	print (cell_mappings)
 
 func calculate_point_path( start : Vector2, end : Vector2) -> PoolVector2Array :
 	#Pour l'algo Astar on a besoin des indices pour faire le chemin

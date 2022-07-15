@@ -17,4 +17,20 @@ func _on_Machine2_ouvrir_menu(numero_machine): #la machine 2 ouvre le lenu de la
 func _on_Machine2_assign_souris(numero_machine, souris):
 	EquipeListe[numero_machine-1] = souris
 
-#Il n'y a pas de structure de queue avec Godot donc les fonctions usuelles vont etre impléémentées 
+var test = preload("res://Scène principale/Robot/Queue_action/Icon.tres")
+
+var mouvement = preload ("res://Scène principale/UI/Mouvement.tres")
+
+func _input(event):
+	if event.is_action_pressed("ui_accept") :
+		$FileAction.enleve_action() 
+	if event.is_action("ui_page_up"):
+		$FileAction.ajoute_action(test)
+
+func _on_Cabine_de_Pilotage_marcher(valeur):
+	for i in range (valeur) :
+		$FileAction.ajoute_action(mouvement)
+
+
+func _on_FileAction_change_action(action, valeur):
+	pass # Replace with function body.

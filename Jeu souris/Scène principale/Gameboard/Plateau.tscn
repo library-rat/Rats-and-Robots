@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Scène principale/Gameboard/Unit/Unit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scène principale/Gameboard/GameBoard.gd" type="Script" id=2]
 [ext_resource path="res://Scène principale/Gameboard/Cursor/Cursor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scène principale/Gameboard/UnitOverlay.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scène principale/Gameboard/unit_overlay_tileset.tres" type="TileSet" id=5]
 [ext_resource path="res://Scène principale/Gameboard/UnitPath.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scène principale/Gameboard/Unit/bugcat.png" type="Texture" id=7]
+[ext_resource path="res://Scène principale/Gameboard/Unit/Player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scène principale/Gameboard/Grid.tres" type="Resource" id=8]
 
 [node name="Plateau" type="Node2D"]
@@ -19,7 +19,6 @@ mode = 1
 tile_set = ExtResource( 5 )
 cell_size = Vector2( 64, 32 )
 format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65546, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131080, 0, 0, 131081, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196616, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262150, 0, 0, 262152, 0, 0, 262155, 0, 0, 262158, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327686, 0, 0, 327688, 0, 0, 327691, 0, 0, 327693, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393222, 0, 0, 393224, 0, 0, 393227, 0, 0, 393228, 0, 0, 458752, 0, 0, 458755, 0, 0, 458758, 0, 0, 458760, 0, 0, 458762, 0, 0, 458763, 0, 0, 524288, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 655368, 0, 0, 655369, 0, 0 )
 
 [node name="GameBoard" type="YSort" parent="."]
 script = ExtResource( 2 )
@@ -32,15 +31,15 @@ grid = ExtResource( 8 )
 
 [node name="Cursor" parent="GameBoard" instance=ExtResource( 3 )]
 
-[node name="Unit" parent="GameBoard" instance=ExtResource( 1 )]
-position = Vector2( 480, 40 )
-skin = ExtResource( 7 )
-move_range = 3
+[node name="Player" parent="GameBoard" instance=ExtResource( 7 )]
+position = Vector2( 136, 168 )
+move_range = 0
 
-[node name="Unit2" parent="GameBoard" instance=ExtResource( 1 )]
-position = Vector2( 360, 424 )
-skin = ExtResource( 7 )
-move_range = 2
+[node name="Enemy" parent="GameBoard" instance=ExtResource( 1 )]
+position = Vector2( 528, 344 )
+
+[node name="Enemy2" parent="GameBoard" instance=ExtResource( 1 )]
+position = Vector2( 512, 160 )
 
 [connection signal="accept_pressed" from="GameBoard/Cursor" to="GameBoard" method="_on_Cursor_accept_pressed"]
 [connection signal="moved" from="GameBoard/Cursor" to="GameBoard" method="_on_Cursor_moved"]

@@ -16,6 +16,7 @@ func select(souris): #quand une souris arrive dans une nouvelle dropzone ouvre l
 
 func deselect(): #deselection la souris quitte la dropzone
 	libre= true
+	emit_signal("assign_souris",numero_de_machine,null)
 	if salle == "epauleg":
 		modulate = Color.yellow
 	if salle == "epauled" :

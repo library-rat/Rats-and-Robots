@@ -14,6 +14,7 @@ export var grid: Resource
 export var skin: Texture setget set_skin
 ## Distance to which the unit can walk in cells.
 export var move_range : int = 3
+export var max_move_range : int = 3
 export var max_life : int = 7
 export var life : int
 ## Offset to apply to the `skin` sprite in pixels.

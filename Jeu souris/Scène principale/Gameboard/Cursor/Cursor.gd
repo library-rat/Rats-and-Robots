@@ -41,13 +41,6 @@ func _unhandled_input(event : InputEvent) -> void :
 		self.cell += Vector2.LEFT
 	elif event.is_action("ui_down"):
 		self.cell += Vector2.DOWN
-	elif event.is_action("ui_page_up"):
-		offset += Vector2.UP
-		self.cell += Vector2.UP
-	elif event.is_action("ui_page_down"):
-		offset += Vector2.DOWN
-		self.cell += Vector2.ZERO
-		
 #on trace le countour de la case
 func _draw() -> void :
 	var taillec = grid.taille_demie_case

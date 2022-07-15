@@ -7,6 +7,7 @@ margin_right = 100.0
 margin_bottom = 10.0
 grow_horizontal = 2
 rect_min_size = Vector2( 50, 10 )
+mouse_filter = 2
 size_flags_horizontal = 5
 size_flags_vertical = 5
 custom_constants/separation = 0

@@ -18,6 +18,8 @@ var _active_unit : Unit
 #on le rempli avec la fonction _move_active_unit()
 var _walkable_cells := []
 
+var state #permet de savoir quel type d'action le robot est en train d'effectuer
+
 onready var _unit_path : UnitPath = $UnitPath
 
 onready var _unit_overlay : UnitOverlay = $UnitOverlay
@@ -103,6 +105,10 @@ func _clear_active_unit() -> void:
 func _move_active_unit(new_cell : Vector2) -> void :
 	if is_occupied(new_cell) or not(new_cell in _walkable_cells):
 		return
+		
+	var difference : Vector2 = (_active_unit.cell - new_cell).abs()		#si l'on déplace l'unité on retire les déplacement de sa portée
+	var distance := int (difference.x + difference.y)
+	_active_unit.move_range -= distance
 	_units.erase(_active_unit.cell)
 	_units[new_cell] = _active_unit
 	_deselect_active_unit()
@@ -112,20 +118,28 @@ func _move_active_unit(new_cell : Vector2) -> void :
 	_clear_active_unit()
 
 
+signal player_moved (move_range_left)
+
 func _on_Cursor_accept_pressed(cell : Vector2)-> void:
 	if not _active_unit:
 		_select_unit(cell)
-	elif _active_unit.is_selected:
+	elif not cell in _walkable_cells :
+		_deselect_active_unit()
+		_clear_active_unit()
+	elif _active_unit.is_selected and (_active_unit == $Player) and (state == "Mouvement")  :	#si l'unité est le joueur, que l'action est mouvement on peut la bouger
 		_move_active_unit(cell)
+		emit_signal( "player_moved", $Player.move_range)
 
 
 func _on_Cursor_moved(new_cell:Vector2)-> void:
-	
-	print(_active_unit)
-	if _active_unit and _active_unit.is_selected:
+	if _active_unit and _active_unit.is_selected and  _active_unit == $Player :	#si une unitée selectionnée et que celle-ci est le joueur on affiche le chemin
 		_unit_path.draw(_active_unit.cell,new_cell)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if _active_unit and event.is_action_pressed("ui_cancel"):
 		_deselect_active_unit()
 		_clear_active_unit()
+
+
+func _on_AfficheactionActive_move_player(valeur):
+	state = "Mouvement"

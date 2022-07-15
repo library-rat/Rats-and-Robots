@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scène principale/Robot/Robot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scène principale/UI/UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scène principale/Gameboard/Plateau.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scène principale/Scene Principale.gd" type="Script" id=5]
 
 [node name="Scene Principale" type="Node"]
@@ -14,25 +15,27 @@ salle = "epauleg"
 numero_de_machine = 1
 
 [node name="Machine2" parent="Robot/Cabine de pilotage" index="1"]
-salle = "epauled"
+salle = "epauleg"
 numero_de_machine = 2
 
 [node name="Machine3" parent="Robot/Cabine de pilotage" index="2"]
-salle = "epauled"
+salle = "epauleg"
 
 [node name="Machine4" parent="Robot/Cabine de pilotage" index="3"]
 salle = "epauleg"
 
-[node name="Souris" parent="Robot" index="1"]
+[node name="Souris" parent="Robot" index="2"]
 Calcul = 2
 Endurance = 3
 Observation = 1
 rest_point = 1
 
-[node name="Souris2" parent="Robot" index="2"]
+[node name="Souris2" parent="Robot" index="3"]
 Calcul = 1
 Endurance = 1
 Observation = 4
+
+[node name="Plateau" parent="." instance=ExtResource( 3 )]
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
@@ -40,9 +43,14 @@ Observation = 4
 visible = false
 
 [connection signal="ouvremachine" from="Robot" to="UI" method="_on_Robot_ouvremachine"]
+[connection signal="move_player" from="Robot/AfficheactionActive" to="Plateau/GameBoard" method="_on_AfficheactionActive_move_player"]
+[connection signal="move_player" from="Robot/AfficheactionActive" to="Plateau/GameBoard/Player" method="_on_AfficheactionActive_move_player"]
+[connection signal="player_moved" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_moved"]
+[connection signal="marcher" from="UI/Cabine de Pilotage" to="Robot" method="_on_Cabine_de_Pilotage_marcher"]
 
 [editable path="Robot"]
 [editable path="Robot/Cabine de pilotage"]
 [editable path="Robot/Cabine de pilotage/Machine"]
 [editable path="Robot/Cabine de pilotage/Machine2"]
+[editable path="Plateau"]
 [editable path="UI"]

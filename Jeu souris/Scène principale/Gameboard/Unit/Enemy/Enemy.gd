@@ -1,4 +1,7 @@
-extends Unit
+tool
+class_name Enemy
+extends "res://Scène principale/Gameboard/Unit/Unit.gd"
+
 
 
 func _ready():

@@ -4,7 +4,10 @@ var Souris
 func afficher_menu(souris) :
 	visible = true
 	Souris = souris
-	$"Panel/Grille de points".rafraichir_affichage(Souris.Points)
+	if Souris == null :
+		$"Panel/Grille de points".nettoyer_affichage()
+	else :
+		$"Panel/Grille de points".rafraichir_affichage(Souris.Points)
 
 func _on_FermeMenu_pressed():
 	visible = false
@@ -36,13 +39,3 @@ func test_souris_stat (stat) : #permet de tester si une souris a des points
 			return (true)
 	
 	return (false)
-
-func _on_Marcher_cout_point(type, index):
-	if test_souris_stat(type) :
-		var marcher = $"Control/VBoxContainer/Marcher"
-		marcher.Valeur[index] = marcher.Valeur[index] - 1
-		if marcher.Valeur[index] == 0 :
-			print('ok')
-			marcher.Valeur[index] = marcher.ValeurMax[index]
-		$"Control/VBoxContainer/Marcher/Compteur".text = str(marcher.Valeur[index])
-	else : print ("Nope")

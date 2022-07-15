@@ -1,6 +1,10 @@
 extends GridContainer
 
 
+func nettoyer_affichage():
+	for node in get_children() :
+		node.affiche_point(null)
+
 func rafraichir_affichage(Pointliste):
 	for point_index in Pointliste.size():
 		met_a_jour_afficheur (point_index,Pointliste)

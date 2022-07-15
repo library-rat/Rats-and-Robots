@@ -24,7 +24,6 @@ func draw(cell_start: Vector2, cell_end: Vector2) -> void:
 	# path for us.
 	clear()
 	current_path = _pathfinder.calculate_point_path(cell_start, cell_end)
-	print (current_path)
 	# And we draw a tile for every cell in the path.
 	for cell in current_path:
 		set_cellv(cell, 0)

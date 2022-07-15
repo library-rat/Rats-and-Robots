@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scène principale/Robot/Queue_action/Action.gd" type="Script" id=1]
+[ext_resource path="res://Scène principale/Robot/Queue_action/IconPlus.png" type="Texture" id=2]
+
+[resource]
+resource_name = "Mouvement"
+script = ExtResource( 1 )
+name = "Mouvement"
+texture = ExtResource( 2 )
