@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scène principale/UI/Menus de machines/Echelle_g.tscn" type="PackedScene" id=1]
+
+[node name="Echelle_d" instance=ExtResource( 1 )]
+
+[editable path="Control/VBoxContainer/Monter"]

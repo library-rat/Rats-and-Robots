@@ -20,7 +20,7 @@ var ObservationPt = preload("res://Scène principale/Souris/Ressources/Afficheur
 var ObservationLockPt = preload("res://Scène principale/Souris/Ressources/Afficheur de points/ObservationLock.tres")
 #Variables liées au drag and dropping de la souris
 var selectionnee = false
-export (int) var rest_point
+export (int) var rest_point	#attention il y a un décalage de 1 entre respoint et numéro machines : respoint +1 = numéro_machine
 var rest_nodes = []
 
 
@@ -72,13 +72,16 @@ func _on_Texture_gui_input(event):
 		if event.button_index == BUTTON_LEFT and not event.pressed: # quand le cilck est laché
 			selectionnee = false
 			#rayon de la dropzone des machines
-			var distancemin = 75
+			var distancemin = 25
 			#pour chacunes des dropzones
 			for i in rest_nodes.size() :#parmi les points de repos
 				var distance= global_position.distance_to(rest_nodes[i].global_position)
 				if distance < distancemin :
-					if rest_nodes[i].libre and rest_nodes[i].salle== rest_nodes [rest_point].salle :#si aucune souris n'est dedans et que la machinne est dans la meme salle
-						rest_nodes[rest_point].deselect()
-						rest_nodes[i].select(self)# change la couleur des dropout zones
+					if rest_nodes[i].salle == rest_nodes [rest_point].salle : #si la machine set dans la meme salle
+						if rest_nodes[i].libre :#si aucune souris n'est dedans
+							rest_nodes[rest_point].deselect()
+							rest_nodes[i].select(self)# change la couleur des dropout zones
+						else :
+							rest_nodes[i].swap(rest_point + 1)
 						rest_point= i
 						distancemin = distance

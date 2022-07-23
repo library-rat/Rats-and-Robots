@@ -48,12 +48,6 @@ func _draw() -> void :
 	var isoLeft =taillec* grid.cartesien_a_isometric(Vector2.LEFT)
 	var isoUp = taillec*grid.cartesien_a_isometric(Vector2.UP)
 	var isoDown = taillec*grid.cartesien_a_isometric(Vector2.DOWN)
-	for i in range(100) :
-		for j in range (100):
-			draw_line(i*2*isoRight+j*2*isoDown,(i+1)*2*isoRight+j*2*isoDown,Color.aliceblue, false, .0)
-			draw_line((i+1)*2*isoRight+j*2*isoDown, (i+1)*2*isoRight+(j+1)*2*isoDown,Color.aliceblue, false, .0)
-			draw_line((i+1)*2*isoRight+(j+1)*2*isoDown, i*2*isoRight+(j+1)*2*isoDown,Color.aliceblue, false, .0)
-			draw_line(Vector2.ZERO+ i*2*isoRight+j*2*isoDown, i*2*isoRight+(j+1)*2*isoDown,Color.aliceblue, false, .0)
 	draw_line(isoLeft+isoUp, isoRight+isoUp,Color.orangered, false, .0)
 	draw_line(isoRight+isoUp,isoRight+isoDown,Color.orangered, false, .0)
 	draw_line(isoRight+isoDown, isoLeft + isoDown,Color.orangered, false, .0)

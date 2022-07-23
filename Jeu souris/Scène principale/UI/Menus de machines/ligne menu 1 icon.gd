@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-export (Array,String) var pointValeur = [null] #tyoe des points
+export (Array,String) var pointValeur = [null] #type des points
 export (Array,int) var ValeurMax = [null] #valeur max des points
 var Valeur
 signal cout_point (type,index)

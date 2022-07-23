@@ -1,41 +1,43 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://Scène principale/Robot/Piece/Cabine de pilotage/Cabine de pilotage.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scène principale/Robot/Machines/Machine.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scène principale/Robot/Robot.gd" type="Script" id=2]
 [ext_resource path="res://Scène principale/Souris/Ressources/Souris.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scène principale/Robot/Queue_action/Afficheaction.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scène principale/Robot/Queue_action/FileAction.gd" type="Script" id=5]
 [ext_resource path="res://Scène principale/Robot/Queue_action/AfficheactionActive.gd" type="Script" id=6]
+[ext_resource path="res://Scène principale/Robot/Machines/Plasma.png" type="Texture" id=7]
+[ext_resource path="res://Scène principale/Robot/Machines/Echelle_g_b.png" type="Texture" id=8]
+[ext_resource path="res://Scène principale/Robot/Machines/Chargeur.png" type="Texture" id=9]
+[ext_resource path="res://Scène principale/Robot/Robot background.png" type="Texture" id=10]
+[ext_resource path="res://Scène principale/Robot/Machines/Echelle_d_h.png" type="Texture" id=11]
+[ext_resource path="res://Scène principale/Robot/Machines/Echelle_g_h.png" type="Texture" id=12]
+[ext_resource path="res://Scène principale/Robot/Machines/Ordi_c.png" type="Texture" id=13]
+[ext_resource path="res://Scène principale/Robot/Machines/Pont_d.png" type="Texture" id=14]
+[ext_resource path="res://Scène principale/Robot/Machines/Pont_b.png" type="Texture" id=15]
+[ext_resource path="res://Scène principale/Robot/Machines/Gachette.png" type="Texture" id=16]
+[ext_resource path="res://Scène principale/Robot/Machines/Pont_g.png" type="Texture" id=17]
+[ext_resource path="res://Scène principale/Robot/Machines/Injecteur.png" type="Texture" id=18]
+[ext_resource path="res://Scène principale/Robot/Machines/Visage.png" type="Texture" id=19]
+[ext_resource path="res://Scène principale/Robot/Machines/Echelle_d_b.png" type="Texture" id=20]
+[ext_resource path="res://Scène principale/Robot/Machines/Ordi_m.png" type="Texture" id=21]
 
 [node name="Robot" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="Panel" type="Panel" parent="."]
-margin_left = 666.0
-margin_top = -2.0
-margin_right = 1022.0
-margin_bottom = 600.0
+[node name="Background" type="TextureRect" parent="."]
+margin_left = 574.657
+margin_top = 0.909408
+margin_right = 1022.65
+margin_bottom = 621.909
+size_flags_horizontal = 5
+size_flags_vertical = 5
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Cabine de pilotage" parent="." instance=ExtResource( 1 )]
-
-[node name="Machine" parent="Cabine de pilotage" index="0"]
-position = Vector2( 699.819, 59.1195 )
-
-[node name="Machine2" parent="Cabine de pilotage" index="1"]
-position = Vector2( 888.685, 61.4102 )
-
-[node name="Machine3" parent="Cabine de pilotage" index="2"]
-position = Vector2( 702.5, 288.668 )
-
-[node name="Machine4" parent="Cabine de pilotage" index="3"]
-position = Vector2( 894.979, 310.068 )
-
-[node name="Souris" parent="." instance=ExtResource( 3 )]
-
-[node name="Souris2" parent="." instance=ExtResource( 3 )]
 
 [node name="FileAction" type="VBoxContainer" parent="."]
 margin_left = 627.024
@@ -89,8 +91,247 @@ margin_bottom = 560.33
 rect_scale = Vector2( 2, 2 )
 script = ExtResource( 6 )
 
-[connection signal="assign_souris" from="Cabine de pilotage/Machine2" to="." method="_on_Machine2_assign_souris"]
-[connection signal="ouvrir_menu" from="Cabine de pilotage/Machine2" to="." method="_on_Machine2_ouvrir_menu"]
-[connection signal="change_action" from="FileAction" to="AfficheactionActive" method="_on_FileAction_change_action"]
+[node name="Ordi_c" parent="." instance=ExtResource( 1 )]
+position = Vector2( 666.282, 113.327 )
+salle = "Scapula_d"
+numero_de_machine = 1
 
-[editable path="Cabine de pilotage"]
+[node name="Texture" parent="Ordi_c" index="0"]
+margin_left = -19.8037
+margin_top = -20.8622
+margin_right = 16.1963
+margin_bottom = 33.1378
+texture = ExtResource( 13 )
+
+[node name="Ordi_m" parent="." instance=ExtResource( 1 )]
+position = Vector2( 702.103, 115.79 )
+salle = "Scapula_d"
+numero_de_machine = 2
+
+[node name="Texture" parent="Ordi_m" index="0"]
+margin_left = -20.2921
+margin_top = -18.9885
+margin_right = 17.7079
+margin_bottom = 21.0115
+texture = ExtResource( 21 )
+
+[node name="Pont_g" parent="." instance=ExtResource( 1 )]
+position = Vector2( 740.802, 107.931 )
+salle = "Scapula_d"
+numero_de_machine = 3
+
+[node name="Texture" parent="Pont_g" index="0"]
+margin_left = -9.7937
+margin_top = -33.0
+margin_right = 84.2063
+margin_bottom = 32.0
+texture = ExtResource( 17 )
+
+[node name="Pont_b" parent="." instance=ExtResource( 1 )]
+position = Vector2( 782.445, 186.357 )
+salle = "Tete"
+numero_de_machine = 4
+
+[node name="Texture" parent="Pont_b" index="0"]
+margin_left = -15.0
+margin_top = -24.0
+margin_right = 14.0
+margin_bottom = 36.0
+texture = ExtResource( 15 )
+
+[node name="Pont_d" parent="." instance=ExtResource( 1 )]
+position = Vector2( 855.472, 111.214 )
+salle = "Scapula_g"
+numero_de_machine = 5
+
+[node name="Texture" parent="Pont_d" index="0"]
+margin_left = -56.528
+margin_top = -35.5281
+margin_right = 37.472
+margin_bottom = 28.4719
+texture = ExtResource( 14 )
+
+[node name="Plasma" parent="." instance=ExtResource( 1 )]
+position = Vector2( 891.023, 107.874 )
+salle = "Scapula_g"
+numero_de_machine = 6
+
+[node name="Texture" parent="Plasma" index="0"]
+margin_left = -25.0
+margin_top = -42.0
+margin_right = 12.0
+margin_bottom = 40.0
+texture = ExtResource( 7 )
+
+[node name="Gachette" parent="." instance=ExtResource( 1 )]
+position = Vector2( 937.041, 113.396 )
+salle = "Scapula_g"
+numero_de_machine = 7
+
+[node name="Texture" parent="Gachette" index="0"]
+margin_left = -24.0
+margin_top = -30.0
+margin_right = 25.0
+margin_bottom = 15.0
+texture = ExtResource( 16 )
+
+[node name="Echelle_g_h" parent="." instance=ExtResource( 1 )]
+position = Vector2( 625.948, 134.927 )
+salle = "Scapula_d"
+numero_de_machine = 8
+
+[node name="Texture" parent="Echelle_g_h" index="0"]
+margin_left = -9.82751
+margin_top = -12.8343
+margin_right = 11.1725
+margin_bottom = 28.1657
+texture = ExtResource( 12 )
+
+[node name="Echelle_g_b" parent="." instance=ExtResource( 1 )]
+position = Vector2( 628.198, 181.802 )
+salle = "Humerus_d"
+numero_de_machine = 9
+
+[node name="Texture" parent="Echelle_g_b" index="0"]
+margin_left = -11.752
+margin_top = -22.0496
+margin_right = 19.248
+margin_bottom = 14.9504
+texture = ExtResource( 8 )
+
+[node name="Injecteur" parent="." instance=ExtResource( 1 )]
+position = Vector2( 699.182, 177.244 )
+salle = "Humerus_d"
+numero_de_machine = 10
+
+[node name="Texture" parent="Injecteur" index="0"]
+margin_left = -61.1575
+margin_top = -43.2126
+margin_right = 27.8425
+margin_bottom = 11.7874
+texture = ExtResource( 18 )
+
+[node name="Visage" parent="." instance=ExtResource( 1 )]
+position = Vector2( 808.871, 199.681 )
+salle = "Tete"
+numero_de_machine = 11
+
+[node name="Texture" parent="Visage" index="0"]
+margin_left = -38.1826
+margin_top = -58.9888
+margin_right = 45.8174
+margin_bottom = 25.0112
+texture = ExtResource( 19 )
+
+[node name="Chargeur" parent="." instance=ExtResource( 1 )]
+position = Vector2( 891.686, 169.275 )
+salle = "Humerus_g"
+numero_de_machine = 12
+
+[node name="Texture" parent="Chargeur" index="0"]
+margin_left = -20.5
+margin_top = -34.0
+margin_right = 30.5
+margin_bottom = 23.0
+texture = ExtResource( 9 )
+
+[node name="Echelle_d_h" parent="." instance=ExtResource( 1 )]
+position = Vector2( 952.94, 136.43 )
+salle = "Scapula_g"
+numero_de_machine = 13
+
+[node name="Texture" parent="Echelle_d_h" index="0"]
+margin_left = -11.4744
+margin_top = -15.7898
+margin_right = 41.5256
+margin_bottom = 67.2102
+texture = ExtResource( 11 )
+
+[node name="Echelle_d_b" parent="." instance=ExtResource( 1 )]
+position = Vector2( 940.272, 172.595 )
+salle = "Humerus_g"
+numero_de_machine = 14
+
+[node name="Texture" parent="Echelle_d_b" index="0"]
+margin_left = -16.0
+margin_top = -28.0
+margin_right = 35.0
+margin_bottom = 26.0
+texture = ExtResource( 20 )
+
+[node name="Souris" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 2 )
+Calcul = 3
+Endurance = 4
+rest_point = 12
+
+[node name="Souris2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 896.611, 103.823 )
+Observation = 5
+rest_point = 4
+
+[node name="Souris3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 896.611, 103.823 )
+Calcul = 2
+Endurance = 2
+Observation = 2
+rest_point = 13
+
+[connection signal="change_action" from="FileAction" to="AfficheactionActive" method="_on_FileAction_change_action"]
+[connection signal="assign_souris" from="Ordi_c" to="." method="_on_Ordi_c_assign_souris"]
+[connection signal="ouvrir_menu" from="Ordi_c" to="." method="_on_Ordi_c_ouvrir_menu"]
+[connection signal="swap_souris" from="Ordi_c" to="." method="_on_Ordi_c_swap_souris"]
+[connection signal="assign_souris" from="Ordi_m" to="." method="_on_Ordi_m_assign_souris"]
+[connection signal="ouvrir_menu" from="Ordi_m" to="." method="_on_Ordi_m_ouvrir_menu"]
+[connection signal="swap_souris" from="Ordi_m" to="." method="_on_Ordi_m_swap_souris"]
+[connection signal="assign_souris" from="Pont_g" to="." method="_on_Pont_g_assign_souris"]
+[connection signal="ouvrir_menu" from="Pont_g" to="." method="_on_Pont_g_ouvrir_menu"]
+[connection signal="swap_souris" from="Pont_g" to="." method="_on_Pont_g_swap_souris"]
+[connection signal="assign_souris" from="Pont_b" to="." method="_on_Pont_b_assign_souris"]
+[connection signal="ouvrir_menu" from="Pont_b" to="." method="_on_Pont_b_ouvrir_menu"]
+[connection signal="swap_souris" from="Pont_b" to="." method="_on_Pont_b_swap_souris"]
+[connection signal="assign_souris" from="Pont_d" to="." method="_on_Pont_d_assign_souris"]
+[connection signal="ouvrir_menu" from="Pont_d" to="." method="_on_Pont_d_ouvrir_menu"]
+[connection signal="swap_souris" from="Pont_d" to="." method="_on_Pont_d_swap_souris"]
+[connection signal="assign_souris" from="Plasma" to="." method="_on_Plasma_assign_souris"]
+[connection signal="ouvrir_menu" from="Plasma" to="." method="_on_Plasma_ouvrir_menu"]
+[connection signal="swap_souris" from="Plasma" to="." method="_on_Plasma_swap_souris"]
+[connection signal="assign_souris" from="Gachette" to="." method="_on_Gachette_assign_souris"]
+[connection signal="ouvrir_menu" from="Gachette" to="." method="_on_Gachette_ouvrir_menu"]
+[connection signal="swap_souris" from="Gachette" to="." method="_on_Gachette_swap_souris"]
+[connection signal="assign_souris" from="Echelle_g_h" to="." method="_on_Echelle_g_h_assign_souris"]
+[connection signal="ouvrir_menu" from="Echelle_g_h" to="." method="_on_Echelle_g_h_ouvrir_menu"]
+[connection signal="swap_souris" from="Echelle_g_h" to="." method="_on_Echelle_g_h_swap_souris"]
+[connection signal="assign_souris" from="Echelle_g_b" to="." method="_on_Echelle_g_b_assign_souris"]
+[connection signal="ouvrir_menu" from="Echelle_g_b" to="." method="_on_Echelle_g_b_ouvrir_menu"]
+[connection signal="swap_souris" from="Echelle_g_b" to="." method="_on_Echelle_g_b_swap_souris"]
+[connection signal="assign_souris" from="Injecteur" to="." method="_on_Injecteur_assign_souris"]
+[connection signal="ouvrir_menu" from="Injecteur" to="." method="_on_Injecteur_ouvrir_menu"]
+[connection signal="swap_souris" from="Injecteur" to="." method="_on_Injecteur_swap_souris"]
+[connection signal="assign_souris" from="Visage" to="." method="_on_Visage_assign_souris"]
+[connection signal="ouvrir_menu" from="Visage" to="." method="_on_Visage_ouvrir_menu"]
+[connection signal="swap_souris" from="Visage" to="." method="_on_Visage_swap_souris"]
+[connection signal="assign_souris" from="Chargeur" to="." method="_on_Chargeur_assign_souris"]
+[connection signal="ouvrir_menu" from="Chargeur" to="." method="_on_Chargeur_ouvrir_menu"]
+[connection signal="swap_souris" from="Chargeur" to="." method="_on_Chargeur_swap_souris"]
+[connection signal="assign_souris" from="Echelle_d_h" to="." method="_on_Echelle_d_h_assign_souris"]
+[connection signal="ouvrir_menu" from="Echelle_d_h" to="." method="_on_Echelle_d_h_ouvrir_menu"]
+[connection signal="swap_souris" from="Echelle_d_h" to="." method="_on_Echelle_d_h_swap_souris"]
+[connection signal="assign_souris" from="Echelle_d_b" to="." method="_on_Echelle_d_b_assign_souris"]
+[connection signal="ouvrir_menu" from="Echelle_d_b" to="." method="_on_Echelle_d_b_ouvrir_menu"]
+[connection signal="swap_souris" from="Echelle_d_b" to="." method="_on_Echelle_d_b_swap_souris"]
+
+[editable path="Ordi_c"]
+[editable path="Ordi_m"]
+[editable path="Pont_g"]
+[editable path="Pont_b"]
+[editable path="Pont_d"]
+[editable path="Plasma"]
+[editable path="Gachette"]
+[editable path="Echelle_g_h"]
+[editable path="Echelle_g_b"]
+[editable path="Injecteur"]
+[editable path="Visage"]
+[editable path="Chargeur"]
+[editable path="Echelle_d_h"]
+[editable path="Echelle_d_b"]

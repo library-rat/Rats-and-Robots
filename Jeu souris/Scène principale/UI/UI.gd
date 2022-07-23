@@ -1,6 +1,6 @@
 extends Control
 
-onready var ListeMachine = [null,$"Cabine de Pilotage",null,null]
+onready var ListeMachine = [null,$"Ordi_m",null,null,null,null,null,$"Echelle_g",$"Echelle_g",null,null,null,$"Echelle_d",$"Echelle_d"]
 
 
 func _on_Robot_ouvremachine(numero,souris):

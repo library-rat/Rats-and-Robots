@@ -10,7 +10,6 @@ func ajoute_action(action : Action) :
 signal change_action (action, valeur)
 
 func enleve_action() :		#enlève l'action en tete de file et la met dans affiche action active
-	print (queue)
 	if queue == [] :
 		emit_signal("change_action", null, 0)
 	else :
