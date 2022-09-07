@@ -33,12 +33,12 @@ margin_right = 50.0
 margin_bottom = 69.0
 rect_min_size = Vector2( 50, 69 )
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "x"
 flat = true
 
-[node name="icon physique" type="Button" parent="."]
+[node name="icon" type="Button" parent="."]
 margin_left = 54.0
 margin_right = 124.0
 margin_bottom = 69.0
@@ -86,4 +86,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="icon physique" to="." method="_on_icon_physique_pressed"]
+[connection signal="pressed" from="icon" to="." method="_on_icon_pressed"]

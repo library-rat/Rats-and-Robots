@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scène principale/UI/Menus de machines/menu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scène principale/UI/Menus de machines/Ordi_m.gd" type="Script" id=3]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Icon point calcul.png" type="Texture" id=4]
+[ext_resource path="res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Icon point observation.png" type="Texture" id=6]
 
 [node name="Ordi_m" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
@@ -11,15 +14,18 @@ script = ExtResource( 3 )
 text = "Coordinateur moteur"
 
 [node name="VBoxContainer" parent="Control" index="1"]
-margin_bottom = 179.0
+margin_bottom = 325.0
 
 [node name="Marcher" parent="Control/VBoxContainer" index="0" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 630.0
 margin_bottom = 69.0
-pointValeur = [ "Endurance" ]
+pointValeur = [ "Calcul" ]
 ValeurMax = [ 2 ]
+
+[node name="icon" parent="Control/VBoxContainer/Marcher" index="1"]
+icon = ExtResource( 4 )
 
 [node name="Panel" parent="Control/VBoxContainer/Marcher" index="2"]
 margin_right = 630.0
@@ -27,6 +33,43 @@ margin_right = 630.0
 [node name="Label" parent="Control/VBoxContainer/Marcher/Panel" index="0"]
 rect_scale = Vector2( 1.00357, 1.00651 )
 text = "Marcher"
+
+[node name="Charge" parent="Control/VBoxContainer" index="1" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 73.0
+margin_right = 630.0
+margin_bottom = 142.0
+pointValeur = [ "Calcul" ]
+ValeurMax = [ 2 ]
+
+[node name="icon" parent="Control/VBoxContainer/Charge" index="1"]
+icon = ExtResource( 4 )
+
+[node name="Panel" parent="Control/VBoxContainer/Charge" index="2"]
+margin_right = 630.0
+
+[node name="Label" parent="Control/VBoxContainer/Charge/Panel" index="0"]
+text = "Charge"
+
+[node name="Saut" parent="Control/VBoxContainer" index="2" instance=ExtResource( 5 )]
+margin_top = 146.0
+margin_right = 630.0
+margin_bottom = 215.0
+pointValeur = [ "Calcul", "Observation" ]
+ValeurMax = [ 1, 1 ]
+
+[node name="icon 1" parent="Control/VBoxContainer/Saut" index="1"]
+icon = ExtResource( 4 )
+
+[node name="icon 2" parent="Control/VBoxContainer/Saut" index="3"]
+icon = ExtResource( 6 )
+
+[node name="Panel" parent="Control/VBoxContainer/Saut" index="4"]
+margin_right = 630.0
+
+[node name="Label" parent="Control/VBoxContainer/Saut/Panel" index="0"]
+text = "Saut"
 
 [node name="FermeMenu" parent="." index="2"]
 anchor_left = 0.0
@@ -36,6 +79,9 @@ margin_right = 631.1
 rect_min_size = Vector2( 20, 20 )
 
 [connection signal="cout_point" from="Control/VBoxContainer/Marcher" to="." method="_on_Marcher_cout_point"]
-[connection signal="pressed" from="Control/VBoxContainer/Marcher/icon physique" to="." method="_on_icon_physique_pressed"]
+[connection signal="cout_point" from="Control/VBoxContainer/Charge" to="." method="_on_Charge_cout_point"]
+[connection signal="cout_point" from="Control/VBoxContainer/Saut" to="." method="_on_Saut_cout_point"]
 
 [editable path="Control/VBoxContainer/Marcher"]
+[editable path="Control/VBoxContainer/Charge"]
+[editable path="Control/VBoxContainer/Saut"]

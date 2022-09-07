@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scène principale/UI/Menus de machines/bullet_menu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Icon point calcul.png" type="Texture" id=4]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Icon point endurance.png" type="Texture" id=5]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Chargeur.gd" type="Script" id=6]
+
+[node name="Chargeur" instance=ExtResource( 1 )]
+script = ExtResource( 6 )
+
+[node name="Label" parent="Control/MarginContainer/Panel" index="0"]
+text = "Chargeur"
+
+[node name="ChargerS" parent="Control/HSplitContainer/Panel/VBoxContainer" index="0" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 630.0
+margin_bottom = 69.0
+pointValeur = [ "Endurance" ]
+ValeurMax = [ 2 ]
+
+[node name="icon" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerS" index="1"]
+icon = ExtResource( 5 )
+
+[node name="Panel" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerS" index="2"]
+margin_right = 630.0
+
+[node name="Label" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerS/Panel" index="0"]
+text = "Munition Simple"
+
+[node name="ChargerL" parent="Control/HSplitContainer/Panel/VBoxContainer" index="1" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 84.0
+margin_right = 630.0
+margin_bottom = 153.0
+pointValeur = [ "Endurance" ]
+ValeurMax = [ 3 ]
+
+[node name="icon" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerL" index="1"]
+icon = ExtResource( 5 )
+
+[node name="Panel" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerL" index="2"]
+margin_right = 630.0
+
+[node name="Label" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerL/Panel" index="0"]
+text = "Munition Lourde"
+
+[node name="ChargerP" parent="Control/HSplitContainer/Panel/VBoxContainer" index="2" instance=ExtResource( 3 )]
+margin_top = 168.0
+margin_right = 630.0
+margin_bottom = 237.0
+pointValeur = [ "Endurance", "Calcul" ]
+ValeurMax = [ 2, 1 ]
+
+[node name="icon 1" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerP" index="1"]
+icon = ExtResource( 5 )
+
+[node name="icon 2" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerP" index="3"]
+icon = ExtResource( 4 )
+
+[node name="Panel" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerP" index="4"]
+margin_right = 630.0
+
+[node name="Label" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerP/Panel" index="0"]
+text = "Mun. Paralysante"
+
+[connection signal="cout_point" from="Control/HSplitContainer/Panel/VBoxContainer/ChargerS" to="." method="_on_ChargerS_cout_point"]
+[connection signal="cout_point" from="Control/HSplitContainer/Panel/VBoxContainer/ChargerL" to="." method="_on_ChargerL_cout_point"]
+[connection signal="cout_point" from="Control/HSplitContainer/Panel/VBoxContainer/ChargerP" to="." method="_on_ChargerP_cout_point"]
+
+[editable path="Control/HSplitContainer/Panel/VBoxContainer/ChargerS"]
+[editable path="Control/HSplitContainer/Panel/VBoxContainer/ChargerL"]
+[editable path="Control/HSplitContainer/Panel/VBoxContainer/ChargerP"]

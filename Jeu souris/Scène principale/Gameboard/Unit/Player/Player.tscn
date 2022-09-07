@@ -8,7 +8,3 @@
 script = ExtResource( 2 )
 skin = ExtResource( 3 )
 move_range = 3
-
-[node name="Sprite" parent="PathFollow2D" index="1"]
-position = Vector2( 0, 0 )
-texture = null

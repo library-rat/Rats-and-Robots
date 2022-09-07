@@ -1,9 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scène principale/UI/Menus de machines/Ordi_m.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scène principale/UI/UI.gd" type="Script" id=2]
 [ext_resource path="res://Scène principale/UI/Menus de machines/Echelle_g.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scène principale/UI/Menus de machines/Echelle_d.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Pont (tete).tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Pont (epaule_g).tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Pont (epaule_d).tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Visage.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Gachette.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Chargeur.tscn" type="PackedScene" id=10]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.215686, 0.0823529, 0.172549, 1 )
@@ -15,9 +21,13 @@ margin_left = -0.667427
 margin_right = -0.667419
 mouse_filter = 2
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="Fin_de_tour" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 15.6675
+margin_right = 55.6675
+margin_bottom = 50.0
 
 [node name="Ordi_m" parent="." instance=ExtResource( 1 )]
 visible = false
@@ -27,8 +37,29 @@ visible = false
 
 [node name="Echelle_d" parent="." instance=ExtResource( 4 )]
 visible = false
-margin_left = 153.0
-margin_top = 86.0
-margin_right = 783.0
-margin_bottom = 426.0
 custom_styles/panel = SubResource( 1 )
+
+[node name="Pont (tete)" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="Pont (epaule_g)" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="Pont (epaule_d)" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="Visage" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="Gachette" parent="." instance=ExtResource( 9 )]
+visible = false
+
+[node name="Chargeur" parent="." instance=ExtResource( 10 )]
+visible = false
+
+[connection signal="coordine_deplacement" from="Visage" to="Echelle_g" method="_on_Visage_coordine_deplacement"]
+[connection signal="coordine_deplacement" from="Visage" to="Echelle_d" method="_on_Visage_coordine_deplacement"]
+[connection signal="coordine_deplacement" from="Visage" to="Pont (tete)" method="_on_Visage_coordine_deplacement"]
+[connection signal="coordine_deplacement" from="Visage" to="Pont (epaule_g)" method="_on_Visage_coordine_deplacement"]
+[connection signal="coordine_deplacement" from="Visage" to="Pont (epaule_d)" method="_on_Visage_coordine_deplacement"]
+[connection signal="charge_munition" from="Chargeur" to="Gachette" method="_on_Chargeur_charge_munition"]

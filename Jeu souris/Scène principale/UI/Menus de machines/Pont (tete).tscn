@@ -1,40 +1,188 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scène principale/UI/Menus de machines/menu.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Pont (tete).gd" type="Script" id=3]
+[ext_resource path="res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Scène principale/Robot/Ressources/graphiques/icon physique.png" type="Texture" id=6]
+[ext_resource path="res://Scène principale/Robot/Ressources/graphiques/icob déplacement.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 51
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 34
+use_mipmaps = true
+font_data = ExtResource( 5 )
 
 [node name="Pont (tete)" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
 
 [node name="Label" parent="Control/MarginContainer/Panel" index="0"]
-text = "Pont (Crane)"
+text = "Pont (crane)"
 
 [node name="VBoxContainer" parent="Control" index="1"]
-margin_bottom = 252.0
+margin_bottom = 179.0
 
-[node name="ligne menu 1 icon" parent="Control/VBoxContainer" index="0" instance=ExtResource( 2 )]
+[node name="Ouvrir_porte" parent="Control/VBoxContainer" index="0" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 630.0
 margin_bottom = 69.0
+pointValeur = [ "Endurance" ]
+ValeurMax = [ 1 ]
 
-[node name="Panel" parent="Control/VBoxContainer/ligne menu 1 icon" index="2"]
+[node name="Panel" parent="Control/VBoxContainer/Ouvrir_porte" index="2"]
 margin_right = 630.0
 
-[node name="Label" parent="Control/VBoxContainer/ligne menu 1 icon/Panel" index="0"]
-text = "Pont(épaule gauche)"
+[node name="Label" parent="Control/VBoxContainer/Ouvrir_porte/Panel" index="0"]
+text = "Ouvrir la porte"
 
-[node name="ligne menu 1 icon2" parent="Control/VBoxContainer" index="1" instance=ExtResource( 2 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Pont_1" type="HBoxContainer" parent="Control/VBoxContainer" index="1"]
+visible = false
 margin_top = 73.0
 margin_right = 630.0
 margin_bottom = 142.0
+rect_min_size = Vector2( 0, 69 )
+size_flags_stretch_ratio = 0.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
-[node name="Panel" parent="Control/VBoxContainer/ligne menu 1 icon2" index="2"]
+[node name="Compteur" type="Button" parent="Control/VBoxContainer/Pont_1" index="0"]
+margin_right = 50.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 50, 69 )
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = " "
+flat = true
+
+[node name="passage_1" type="Button" parent="Control/VBoxContainer/Pont_1" index="1"]
+margin_left = 54.0
+margin_right = 124.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 70, 0 )
+size_flags_vertical = 3
+icon = ExtResource( 6 )
+expand_icon = true
+
+[node name="Panel" type="Panel" parent="Control/VBoxContainer/Pont_1" index="2"]
+margin_left = 128.0
 margin_right = 630.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 7
+size_flags_vertical = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Label" parent="Control/VBoxContainer/ligne menu 1 icon2/Panel" index="0"]
+[node name="Label" type="Label" parent="Control/VBoxContainer/Pont_1/Panel" index="0"]
+margin_left = -0.943909
+margin_top = 1.94388
+margin_right = 580.056
+margin_bottom = 70.9439
+custom_fonts/font = SubResource( 3 )
+text = "Pont(épaule gauche)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Pont_1/Panel" index="1"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -69.0
+margin_top = -31.5
+margin_right = -6.0
+margin_bottom = 31.5
+rect_min_size = Vector2( 63, 63 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pont_2" type="HBoxContainer" parent="Control/VBoxContainer" index="2"]
+visible = false
+margin_top = 73.0
+margin_right = 630.0
+margin_bottom = 142.0
+rect_min_size = Vector2( 0, 69 )
+size_flags_stretch_ratio = 0.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Compteur" type="Button" parent="Control/VBoxContainer/Pont_2" index="0"]
+margin_right = 50.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 50, 69 )
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = " "
+flat = true
+
+[node name="passage_2" type="Button" parent="Control/VBoxContainer/Pont_2" index="1"]
+margin_left = 54.0
+margin_right = 124.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 70, 0 )
+size_flags_vertical = 3
+icon = ExtResource( 6 )
+expand_icon = true
+
+[node name="Panel" type="Panel" parent="Control/VBoxContainer/Pont_2" index="2"]
+margin_left = 128.0
+margin_right = 630.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 7
+size_flags_vertical = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Pont_2/Panel" index="0"]
+margin_left = -0.943909
+margin_top = 1.94388
+margin_right = 580.056
+margin_bottom = 70.9439
+custom_fonts/font = SubResource( 3 )
 text = "Pont(épaule droite)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[editable path="Control/VBoxContainer/ligne menu 1 icon"]
-[editable path="Control/VBoxContainer/ligne menu 1 icon2"]
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Pont_2/Panel" index="1"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -69.0
+margin_top = -31.5
+margin_right = -6.0
+margin_bottom = 31.5
+rect_min_size = Vector2( 63, 63 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="cout_point" from="Control/VBoxContainer/Ouvrir_porte" to="." method="_on_Ouvrir_porte_cout_point"]
+[connection signal="pressed" from="Control/VBoxContainer/Pont_1/passage_1" to="." method="_on_passage_1_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Pont_2/passage_2" to="." method="_on_passage_2_pressed"]
+
+[editable path="Control/VBoxContainer/Ouvrir_porte"]

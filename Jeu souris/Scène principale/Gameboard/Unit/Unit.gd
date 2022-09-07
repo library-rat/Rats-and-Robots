@@ -17,6 +17,7 @@ export var move_range : int = 3
 export var max_move_range : int = 3
 export var max_life : int = 7
 export var life : int
+export var movable : bool = true
 ## Offset to apply to the `skin` sprite in pixels.
 export var skin_offset := Vector2.ZERO setget set_skin_offset
 ## The unit's move speed when it's moving along a path.
@@ -102,9 +103,13 @@ func _set_is_walking(value: bool) -> void:
 	_is_walking = value
 	set_process(_is_walking)
 
+func pushed_along(old_cell:Vector2,new_cell:Vector2) -> void:
+	position = grid.calcul_map_position(new_cell)
+	cell = new_cell
+	
 func update_lifebar ():
 	$'Lifebar'.update_health(life,max_life)
 
-func is_hit (valeur) :
+func is_hit (valeur : int)  -> void:
 	life = max (0, life - valeur)
 	update_lifebar()

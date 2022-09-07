@@ -8,14 +8,75 @@
 
 [node name="Robot" parent="." instance=ExtResource( 1 )]
 
+[node name="Souris" parent="Robot" index="17"]
+Endurance = 2
+Observation = 1
+
+[node name="Souris2" parent="Robot" index="18"]
+Endurance = 10
+Observation = 0
+rest_point = 13
+
+[node name="Souris3" parent="Robot" index="19"]
+Calcul = 7
+Endurance = 0
+Observation = 3
+rest_point = 1
+
 [node name="Plateau" parent="." instance=ExtResource( 3 )]
+
+[node name="Player" parent="Plateau/GameBoard" index="3"]
+rsautext = 3
+rsautint = 2
+limitedash = 5
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
+[connection signal="fermer_pont_epaule_d" from="Robot" to="UI/Pont (epaule_d)" method="_on_Robot_fermer_pont_epaule_d"]
+[connection signal="fermer_pont_epaule_g" from="Robot" to="UI/Pont (epaule_g)" method="_on_Robot_fermer_pont_epaule_g"]
+[connection signal="fermer_pont_tete" from="Robot" to="UI/Pont (tete)" method="_on_Robot_fermer_pont_tete"]
 [connection signal="ouvremachine" from="Robot" to="UI" method="_on_Robot_ouvremachine"]
+[connection signal="reset_echelle_d" from="Robot" to="UI/Echelle_d" method="_on_Robot_reset_echelle_d"]
+[connection signal="reset_echelle_g" from="Robot" to="UI/Echelle_g" method="_on_Robot_reset_echelle_g"]
+[connection signal="dash_player" from="Robot/AfficheactionActive" to="Plateau/GameBoard" method="_on_AfficheactionActive_dash_player"]
+[connection signal="jump_player" from="Robot/AfficheactionActive" to="Plateau/GameBoard" method="_on_AfficheactionActive_jump_player"]
+[connection signal="move_player" from="Robot/AfficheactionActive" to="Plateau/GameBoard" method="_on_AfficheactionActive_move_player"]
+[connection signal="move_player" from="Robot/AfficheactionActive" to="Plateau/GameBoard/Player" method="_on_AfficheactionActive_move_player"]
+[connection signal="player_neutre" from="Robot/AfficheactionActive" to="Plateau/GameBoard" method="_on_AfficheactionActive_player_neutre"]
+[connection signal="player_neutre" from="Robot/AfficheactionActive" to="Plateau/GameBoard/Player" method="_on_AfficheactionActive_player_neutre"]
+[connection signal="player_dashed" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_dashed"]
+[connection signal="player_jumped" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_jumped"]
 [connection signal="player_moved" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_moved"]
+[connection signal="pressed" from="UI/Fin_de_tour" to="Robot" method="_on_Fin_de_tour_pressed"]
+[connection signal="pressed" from="UI/Fin_de_tour" to="UI" method="_on_Fin_de_tour_pressed"]
+[connection signal="charge" from="UI/Ordi_m" to="Robot" method="_on_Ordi_m_charge"]
+[connection signal="marcher" from="UI/Ordi_m" to="Robot" method="_on_Ordi_m_marcher"]
+[connection signal="saut" from="UI/Ordi_m" to="Robot" method="_on_Ordi_m_saut"]
 [connection signal="utilise_echelle" from="UI/Echelle_g" to="Robot" method="_on_Echelle_g_utilise_echelle"]
 [connection signal="utilise_echelle" from="UI/Echelle_d" to="Robot" method="_on_Echelle_d_utilise_echelle"]
+[connection signal="aller_epaule_d" from="UI/Pont (tete)" to="Robot" method="_on_Pont_tete_aller_epaule_d"]
+[connection signal="aller_epaule_g" from="UI/Pont (tete)" to="Robot" method="_on_Pont_tete_aller_epaule_g"]
+[connection signal="aller_epaule_d" from="UI/Pont (epaule_g)" to="Robot" method="_on_Pont_epaule_g_aller_epaule_d"]
+[connection signal="aller_tete" from="UI/Pont (epaule_g)" to="Robot" method="_on_Pont_epaule_g_aller_tete"]
+[connection signal="aller_epaule_g" from="UI/Pont (epaule_d)" to="Robot" method="_on_Pont_epaule_d_aller_epaule_g"]
+[connection signal="aller_tete" from="UI/Pont (epaule_d)" to="Robot" method="_on_Pont_epaule_d_aller_tete"]
+[connection signal="tir_courbe" from="UI/Gachette" to="Robot" method="_on_Gachette_tir_courbe"]
+[connection signal="tir_tendu" from="UI/Gachette" to="Robot" method="_on_Gachette_tir_tendu"]
 
+[editable path="Robot"]
+[editable path="Robot/Ordi_c"]
+[editable path="Robot/Ordi_m"]
+[editable path="Robot/Pont_g"]
+[editable path="Robot/Pont_d"]
+[editable path="Robot/Plasma"]
+[editable path="Robot/Gachette"]
+[editable path="Robot/Echelle_g_h"]
+[editable path="Robot/Echelle_g_b"]
+[editable path="Robot/Injecteur"]
+[editable path="Robot/Visage"]
+[editable path="Robot/Pont_b"]
+[editable path="Robot/Chargeur"]
+[editable path="Robot/Echelle_d_h"]
+[editable path="Robot/Echelle_d_b"]
 [editable path="Plateau"]
 [editable path="UI"]

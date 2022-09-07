@@ -34,9 +34,7 @@ func _on_Texture_gui_input(event):
 		emit_signal(\"ouvrir_menu\", numero_de_machine)
 "
 
-[node name="Machine" type="Position2D" groups=[
-"DropzoneMachine",
-]]
+[node name="Machine" type="Position2D" groups=["DropzoneMachine"]]
 script = SubResource( 1 )
 
 [node name="Texture" type="TextureRect" parent="."]

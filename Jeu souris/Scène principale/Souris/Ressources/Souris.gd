@@ -21,7 +21,7 @@ var ObservationLockPt = preload("res://Scène principale/Souris/Ressources/Affic
 #Variables liées au drag and dropping de la souris
 var selectionnee = false
 export (int) var rest_point	#attention il y a un décalage de 1 entre respoint et numéro machines : respoint +1 = numéro_machine
-var rest_nodes = []
+var rest_nodes =  [null,null,null,null,null,null,null,null,null,null,null,null,null,null]
 
 
 func _ready(): 
@@ -29,7 +29,9 @@ func _ready():
 	reset_stat()
 	$"PanelContainer/Grille de points".rafraichir_affichage(Points)
 	#calcul tout les points de repos en parcourant toutes les dropzones
-	rest_nodes = get_tree().get_nodes_in_group("DropzoneMachine")
+	var listnodes = get_tree().get_nodes_in_group("DropzoneMachine")#listnodes est une liste de toute les machines
+	for nodes in listnodes :
+		rest_nodes[nodes.numero_de_machine - 1 ] = nodes #on met cette liste dans le bon ordre
 	rest_nodes[rest_point].select(self) #permet le changement de couleur des dropout zone
 
 func _physics_process(delta):
@@ -50,6 +52,12 @@ null, null, null, null, null, null, null, null]
 	var sumEndu = Endurance + ELock
 	var sumObs = Observation + OLock
 	var sumCalc = Calcul + CLock
+	Endurance = sumEndu
+	ELock = 0
+	Observation = sumObs
+	OLock = 0
+	Calcul= sumCalc
+	CLock = 0
 	for i in range (sumCalc):#reset les points de calcul
 		change_point(i,CalculPt)
 	for j in range (sumCalc,sumCalc+sumEndu):#reset les points d'endu

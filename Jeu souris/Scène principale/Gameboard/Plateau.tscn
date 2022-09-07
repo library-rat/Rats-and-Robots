@@ -43,3 +43,4 @@ position = Vector2( 512, 160 )
 
 [connection signal="accept_pressed" from="GameBoard/Cursor" to="GameBoard" method="_on_Cursor_accept_pressed"]
 [connection signal="moved" from="GameBoard/Cursor" to="GameBoard" method="_on_Cursor_moved"]
+[connection signal="saut_fini" from="GameBoard/Player" to="GameBoard" method="_on_Player_saut_fini"]

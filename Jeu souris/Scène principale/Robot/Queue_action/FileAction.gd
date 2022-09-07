@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 var IconPlus = preload("res://Scène principale/Robot/Queue_action/IconPlus.png") 
-var queue = []
+var queue = [] #queue des actions (avec de possibles doublons)
 
 func ajoute_action(action : Action) :
 	queue.append(action)

@@ -8,7 +8,6 @@ signal moved(new_cell)
 export var grid: Resource = preload ("res://Scène principale/Gameboard/Grid.tres")
 var offset = Vector2.ZERO
 
-
 export var ui_cooldown := 0.1#cooldown en temps
 var cell := Vector2.ZERO setget set_cell#coordonnées du curseur en cartésiennes + setget permet d'appeller
 #set_cell à chaque fois que on modifie cell
@@ -65,3 +64,4 @@ func set_cell(value : Vector2) -> void:
 	position = grid.calcul_map_position(cell) -grid.cartesien_a_isometric(offset* grid.taille_case)
 	emit_signal("moved", cell+offset)
 	_timer.start()
+

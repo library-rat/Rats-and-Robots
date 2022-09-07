@@ -7,9 +7,7 @@
 [ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Endurance.tres" type="Resource" id=5]
 [ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Observation.tres" type="Resource" id=6]
 
-[node name="Souris" type="Node2D" groups=[
-"Souris",
-]]
+[node name="Souris" type="Node2D" groups=["Souris"]]
 script = ExtResource( 1 )
 Points = [ ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 6 ), null, null, null ]
 

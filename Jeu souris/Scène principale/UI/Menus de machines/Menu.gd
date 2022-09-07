@@ -29,6 +29,7 @@ func test_souris_stat (stat) : #permet de tester si une souris a des points
 			Souris.CLock += 1#un point est alors transformé en pt bloqué
 			Souris.Points[Souris.Calcul] = Souris.CalculLockPt #modifie un point dans la liste de Points de la souris
 			$"Panel/Grille de points".rafraichir_affichage(Souris.Points) #update les points dans le menu
+			Souris.get_node("PanelContainer/Grille de points").rafraichir_affichage(Souris.Points)
 			return (true)
 	if stat =="Observation" :
 		if Souris.Observation > 0 : #si la souris a des points en endurance
@@ -36,6 +37,7 @@ func test_souris_stat (stat) : #permet de tester si une souris a des points
 			Souris.OLock += 1#un point est alors transformé en pt bloqué
 			Souris.Points[sumCalc+sumEndu+ Souris.Observation] = Souris.ObservationLockPt #modifie un point dans la liste de Points de la souris
 			$"Panel/Grille de points".rafraichir_affichage(Souris.Points) #update les points dans le menu
+			Souris.get_node("PanelContainer/Grille de points").rafraichir_affichage(Souris.Points)
 			return (true)
 	
 	return (false)

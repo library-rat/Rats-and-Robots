@@ -35,9 +35,6 @@ size_flags_vertical = 5
 texture = ExtResource( 10 )
 expand = true
 stretch_mode = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="FileAction" type="VBoxContainer" parent="."]
 margin_left = 627.024
@@ -45,9 +42,6 @@ margin_top = 229.152
 margin_right = 657.024
 margin_bottom = 531.153
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Afficheaction9" parent="FileAction" instance=ExtResource( 4 )]
 
@@ -91,6 +85,17 @@ margin_bottom = 560.33
 rect_scale = Vector2( 2, 2 )
 script = ExtResource( 6 )
 
+[node name="Action_Retenue" parent="AfficheactionActive" instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 22.894
+margin_top = -14.165
+margin_right = 52.894
+margin_bottom = 15.835
+rect_scale = Vector2( 0.5, 0.5 )
+
 [node name="Ordi_c" parent="." instance=ExtResource( 1 )]
 position = Vector2( 666.282, 113.327 )
 salle = "Scapula_d"
@@ -127,18 +132,6 @@ margin_right = 84.2063
 margin_bottom = 32.0
 texture = ExtResource( 17 )
 
-[node name="Pont_b" parent="." instance=ExtResource( 1 )]
-position = Vector2( 782.445, 186.357 )
-salle = "Tete"
-numero_de_machine = 4
-
-[node name="Texture" parent="Pont_b" index="0"]
-margin_left = -15.0
-margin_top = -24.0
-margin_right = 14.0
-margin_bottom = 36.0
-texture = ExtResource( 15 )
-
 [node name="Pont_d" parent="." instance=ExtResource( 1 )]
 position = Vector2( 855.472, 111.214 )
 salle = "Scapula_g"
@@ -152,15 +145,15 @@ margin_bottom = 28.4719
 texture = ExtResource( 14 )
 
 [node name="Plasma" parent="." instance=ExtResource( 1 )]
-position = Vector2( 891.023, 107.874 )
+position = Vector2( 893, 109 )
 salle = "Scapula_g"
 numero_de_machine = 6
 
 [node name="Texture" parent="Plasma" index="0"]
-margin_left = -25.0
-margin_top = -42.0
-margin_right = 12.0
-margin_bottom = 40.0
+margin_left = -22.023
+margin_top = -41.874
+margin_right = 14.977
+margin_bottom = 40.126
 texture = ExtResource( 7 )
 
 [node name="Gachette" parent="." instance=ExtResource( 1 )]
@@ -217,11 +210,23 @@ salle = "Tete"
 numero_de_machine = 11
 
 [node name="Texture" parent="Visage" index="0"]
-margin_left = -38.1826
-margin_top = -58.9888
-margin_right = 45.8174
-margin_bottom = 25.0112
+margin_left = -35.871
+margin_top = -54.681
+margin_right = 41.129
+margin_bottom = 19.319
 texture = ExtResource( 19 )
+
+[node name="Pont_b" parent="." instance=ExtResource( 1 )]
+position = Vector2( 782.445, 186.357 )
+salle = "Tete"
+numero_de_machine = 4
+
+[node name="Texture" parent="Pont_b" index="0"]
+margin_left = -15.0
+margin_top = -24.0
+margin_right = 14.0
+margin_bottom = 36.0
+texture = ExtResource( 15 )
 
 [node name="Chargeur" parent="." instance=ExtResource( 1 )]
 position = Vector2( 891.686, 169.275 )
@@ -263,12 +268,13 @@ texture = ExtResource( 20 )
 position = Vector2( 0, 2 )
 Calcul = 3
 Endurance = 4
-rest_point = 12
+rest_point = 10
 
 [node name="Souris2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 896.611, 103.823 )
-Observation = 5
-rest_point = 4
+Endurance = 2
+Observation = 2
+rest_point = 1
 
 [node name="Souris3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 896.611, 103.823 )
@@ -287,9 +293,6 @@ rest_point = 13
 [connection signal="assign_souris" from="Pont_g" to="." method="_on_Pont_g_assign_souris"]
 [connection signal="ouvrir_menu" from="Pont_g" to="." method="_on_Pont_g_ouvrir_menu"]
 [connection signal="swap_souris" from="Pont_g" to="." method="_on_Pont_g_swap_souris"]
-[connection signal="assign_souris" from="Pont_b" to="." method="_on_Pont_b_assign_souris"]
-[connection signal="ouvrir_menu" from="Pont_b" to="." method="_on_Pont_b_ouvrir_menu"]
-[connection signal="swap_souris" from="Pont_b" to="." method="_on_Pont_b_swap_souris"]
 [connection signal="assign_souris" from="Pont_d" to="." method="_on_Pont_d_assign_souris"]
 [connection signal="ouvrir_menu" from="Pont_d" to="." method="_on_Pont_d_ouvrir_menu"]
 [connection signal="swap_souris" from="Pont_d" to="." method="_on_Pont_d_swap_souris"]
@@ -311,6 +314,9 @@ rest_point = 13
 [connection signal="assign_souris" from="Visage" to="." method="_on_Visage_assign_souris"]
 [connection signal="ouvrir_menu" from="Visage" to="." method="_on_Visage_ouvrir_menu"]
 [connection signal="swap_souris" from="Visage" to="." method="_on_Visage_swap_souris"]
+[connection signal="assign_souris" from="Pont_b" to="." method="_on_Pont_b_assign_souris"]
+[connection signal="ouvrir_menu" from="Pont_b" to="." method="_on_Pont_b_ouvrir_menu"]
+[connection signal="swap_souris" from="Pont_b" to="." method="_on_Pont_b_swap_souris"]
 [connection signal="assign_souris" from="Chargeur" to="." method="_on_Chargeur_assign_souris"]
 [connection signal="ouvrir_menu" from="Chargeur" to="." method="_on_Chargeur_ouvrir_menu"]
 [connection signal="swap_souris" from="Chargeur" to="." method="_on_Chargeur_swap_souris"]
@@ -324,7 +330,6 @@ rest_point = 13
 [editable path="Ordi_c"]
 [editable path="Ordi_m"]
 [editable path="Pont_g"]
-[editable path="Pont_b"]
 [editable path="Pont_d"]
 [editable path="Plasma"]
 [editable path="Gachette"]
@@ -332,6 +337,7 @@ rest_point = 13
 [editable path="Echelle_g_b"]
 [editable path="Injecteur"]
 [editable path="Visage"]
+[editable path="Pont_b"]
 [editable path="Chargeur"]
 [editable path="Echelle_d_h"]
 [editable path="Echelle_d_b"]
