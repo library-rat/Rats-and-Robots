@@ -8,9 +8,6 @@
 
 [node name="Robot" parent="." instance=ExtResource( 1 )]
 
-[node name="Afficheaction1" parent="Robot/FileAction" index="8"]
-visible = false
-
 [node name="Plateau" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="Plateau/GameBoard" index="3"]
