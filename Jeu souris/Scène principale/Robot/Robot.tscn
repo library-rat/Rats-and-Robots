@@ -267,20 +267,27 @@ texture = ExtResource( 20 )
 [node name="Souris" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 2 )
 Calcul = 3
-Endurance = 4
+Endurance = 1
+Observation = 2
 rest_point = 10
 
 [node name="Souris2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 896.611, 103.823 )
+Calcul = 6
 Endurance = 2
 Observation = 2
 rest_point = 1
 
+[node name="Souris4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 896.611, 103.823 )
+Calcul = 3
+Observation = 5
+rest_point = 6
+
 [node name="Souris3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 896.611, 103.823 )
-Calcul = 2
-Endurance = 2
-Observation = 2
+Calcul = 3
+Endurance = 6
 rest_point = 13
 
 [connection signal="change_action" from="FileAction" to="AfficheactionActive" method="_on_FileAction_change_action"]

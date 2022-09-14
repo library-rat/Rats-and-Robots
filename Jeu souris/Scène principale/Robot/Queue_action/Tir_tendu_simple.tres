@@ -1,7 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://Scène principale/Robot/Queue_action/Action.gd" type="Script" id=1]
+[ext_resource path="res://Scène principale/Robot/Queue_action/Icon.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
 name = "Tir_tendu_simple"
+texture = ExtResource( 2 )

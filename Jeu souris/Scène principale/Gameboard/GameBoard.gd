@@ -211,10 +211,11 @@ func _push_unit (cell : Vector2, direction : Vector2)-> void:
 		return
 	var pushed_unit = _units[cell]
 	if pushed_unit.movable :
-		var new_cell = cell + direction
-		_units.erase(pushed_unit.cell)
-		pushed_unit.pushed_along(cell, new_cell)
-		_units[new_cell] = pushed_unit
+		if grid.dans_limite(cell+direction):
+			var new_cell = cell + direction
+			_units.erase(pushed_unit.cell)
+			pushed_unit.pushed_along(cell, new_cell)
+			_units[new_cell] = pushed_unit
 	else:
 		pushed_unit.is_hit(1)
 		$"Player".is_hit(1)

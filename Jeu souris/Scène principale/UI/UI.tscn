@@ -62,4 +62,6 @@ visible = false
 [connection signal="coordine_deplacement" from="Visage" to="Pont (tete)" method="_on_Visage_coordine_deplacement"]
 [connection signal="coordine_deplacement" from="Visage" to="Pont (epaule_g)" method="_on_Visage_coordine_deplacement"]
 [connection signal="coordine_deplacement" from="Visage" to="Pont (epaule_d)" method="_on_Visage_coordine_deplacement"]
+[connection signal="tir_courbe" from="Gachette" to="Chargeur" method="_on_Gachette_tir_courbe"]
+[connection signal="tir_tendu" from="Gachette" to="Chargeur" method="_on_Gachette_tir_tendu"]
 [connection signal="charge_munition" from="Chargeur" to="Gachette" method="_on_Chargeur_charge_munition"]

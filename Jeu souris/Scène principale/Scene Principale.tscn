@@ -8,21 +8,6 @@
 
 [node name="Robot" parent="." instance=ExtResource( 1 )]
 
-[node name="Souris" parent="Robot" index="17"]
-Endurance = 2
-Observation = 1
-
-[node name="Souris2" parent="Robot" index="18"]
-Endurance = 10
-Observation = 0
-rest_point = 13
-
-[node name="Souris3" parent="Robot" index="19"]
-Calcul = 7
-Endurance = 0
-Observation = 3
-rest_point = 1
-
 [node name="Plateau" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="Plateau/GameBoard" index="3"]
