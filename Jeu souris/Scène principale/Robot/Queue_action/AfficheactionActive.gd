@@ -4,6 +4,11 @@ signal player_neutre()
 signal move_player (valeur)
 signal jump_player()
 signal dash_player()
+signal tir_tendu(ammo)
+signal tir_courbe(ammo)
+var balle_S = preload("res://Scène principale/Robot/Machines/Munitions/Balle_simple.tres")
+var balle_L = preload("res://Scène principale/Robot/Machines/Munitions/Balle_lourde.tres")
+var balle_P = preload("res://Scène principale/Robot/Machines/Munitions/Balle_paralysante.tres")
 var action_active = null #variable en cours
 var action_retenue = null #sert à stocker l'action retenue
 
@@ -22,12 +27,26 @@ func change_action (action : Resource,valeur :int): #fonction qui s'occupe du ch
 		action_active = action
 		$TextureRect.texture = action.texture
 		$Label.text = str(valeur)
-		if action.name == "Mouvement" :	#selon l'action on envoie le signal adapté
-			emit_signal("move_player", valeur)
-		if action.name == 'Saut':
-			emit_signal("jump_player")
-		if action.name == "Charge":
-			emit_signal("dash_player")
+		match action.name :
+			"Mouvement" :	#selon l'action on envoie le signal adapté
+				emit_signal("move_player", valeur)
+			'Saut':
+				emit_signal("jump_player")
+			"Charge":
+				emit_signal("dash_player")
+			"Tir_tendu_simple":
+				emit_signal("tir_tendu",balle_S)
+			"Tir_tendu_lourd":
+				emit_signal("tir_tendu",balle_L)
+			"Tir_tendu_paralysant":
+				emit_signal("tir_tendu",balle_P)
+			"Tir_courbe_simple":
+				emit_signal("tir_courbe",balle_S)
+			"Tir_courbe_lourd":
+				emit_signal("tir_courbe",balle_L)
+			"Tir_courbe_paralysant":
+				emit_signal("tir_tendu",balle_P)
+				
 
 func _on_GameBoard_player_moved(move_range_left): #met à jour l'affichage si le Player bouge
 	$Label.text = str(move_range_left)
