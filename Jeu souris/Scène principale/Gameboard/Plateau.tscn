@@ -34,6 +34,9 @@ grid = ExtResource( 8 )
 [node name="Player" parent="GameBoard" instance=ExtResource( 7 )]
 position = Vector2( 136, 168 )
 move_range = 0
+rsautext = 3
+rsautint = 2
+limitedash = 5
 
 [node name="Enemy" parent="GameBoard" instance=ExtResource( 1 )]
 position = Vector2( 528, 344 )

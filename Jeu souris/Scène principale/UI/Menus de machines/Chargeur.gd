@@ -5,8 +5,8 @@ var Balle_L = preload("res://Scène principale/Robot/Machines/Munitions/Balle_lo
 var Balle_P = preload("res://Scène principale/Robot/Machines/Munitions/Balle_paralysante.tres")
 
 var loaded = false
-#var chargeur_ouvert = preload ()
-#var chargeur_ferme = preload ()
+var chargeur_ouvert = preload ("res://Scène principale/UI/Menus de machines/Image Chargeur-Gachette/chargeur ouvert.png")
+var chargeur_ferme = preload ("res://Scène principale/UI/Menus de machines/Image Chargeur-Gachette/chargeur ferme.png")
 
 signal charge_munition (ammo)
 
@@ -21,6 +21,7 @@ func _on_ChargerS_cout_point(type, index):
 					chars.Valeur[index] = chars.ValeurMax[index]
 					emit_signal("charge_munition", Balle_S)
 					loaded = true
+					$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ferme
 				$"Control/HSplitContainer/Panel/VBoxContainer/ChargerS/Compteur".text = str(chars.Valeur[index])
 
 func _on_ChargerL_cout_point(type, index):
@@ -33,6 +34,7 @@ func _on_ChargerL_cout_point(type, index):
 					charl.Valeur[index] = charl.ValeurMax[index]
 					emit_signal("charge_munition", Balle_L)
 					loaded = true
+					$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ferme
 				$"Control/HSplitContainer/Panel/VBoxContainer/ChargerL/Compteur".text = str(charl.Valeur[index])
 
 func _on_ChargerP_cout_point(type, index):
@@ -46,15 +48,15 @@ func _on_ChargerP_cout_point(type, index):
 						emit_signal("charge_munition", Balle_P)							#on emet un signal
 						charp.Valeur = charp.ValeurMax.duplicate()	#on rest les statistique
 						loaded = true
-						#$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ferme
+						$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ferme
 					charp.update_affichage()						#on met à jour l'affichage
 
 
 func _on_Gachette_tir_tendu(ammo):
 	loaded = false
-	#$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ouvert
+	$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ouvert
 
 
 func _on_Gachette_tir_courbe(ammo):
 	loaded = false
-	#$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ouvert
+	$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ouvert

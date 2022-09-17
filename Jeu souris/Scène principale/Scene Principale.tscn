@@ -10,11 +10,6 @@
 
 [node name="Plateau" parent="." instance=ExtResource( 3 )]
 
-[node name="Player" parent="Plateau/GameBoard" index="3"]
-rsautext = 3
-rsautint = 2
-limitedash = 5
-
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
 [connection signal="fermer_pont_epaule_d" from="Robot" to="UI/Pont (epaule_d)" method="_on_Robot_fermer_pont_epaule_d"]
@@ -29,6 +24,10 @@ limitedash = 5
 [connection signal="move_player" from="Robot/AfficheactionActive" to="Plateau/GameBoard/Player" method="_on_AfficheactionActive_move_player"]
 [connection signal="player_neutre" from="Robot/AfficheactionActive" to="Plateau/GameBoard" method="_on_AfficheactionActive_player_neutre"]
 [connection signal="player_neutre" from="Robot/AfficheactionActive" to="Plateau/GameBoard/Player" method="_on_AfficheactionActive_player_neutre"]
+[connection signal="tir_courbe" from="Robot/AfficheactionActive" to="Plateau/GameBoard" method="_on_AfficheactionActive_tir_courbe"]
+[connection signal="tir_courbe" from="Robot/AfficheactionActive" to="Plateau/GameBoard/Player" method="_on_AfficheactionActive_tir_courbe"]
+[connection signal="tir_tendu" from="Robot/AfficheactionActive" to="Plateau/GameBoard" method="_on_AfficheactionActive_tir_tendu"]
+[connection signal="tir_tendu" from="Robot/AfficheactionActive" to="Plateau/GameBoard/Player" method="_on_AfficheactionActive_tir_tendu"]
 [connection signal="player_dashed" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_dashed"]
 [connection signal="player_jumped" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_jumped"]
 [connection signal="player_moved" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_moved"]

@@ -19,7 +19,7 @@ var _active_unit : Unit
 var _walkable_cells := []
 
 var state #permet de savoir quel type d'action le robot est en train d'effectuer
-
+ #note si le joueur tire 
 onready var _unit_path : UnitPath = $UnitPath
 
 onready var _unit_overlay : UnitOverlay = $UnitOverlay
@@ -252,7 +252,6 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_AfficheactionActive_move_player(valeur):
 	state = "Mouvement"
 
-
 func _on_AfficheactionActive_jump_player():
 	state = "Saut"
 
@@ -263,6 +262,8 @@ func _on_AfficheactionActive_player_neutre():
 func _on_AfficheactionActive_dash_player():
 	state = "Charge"
 
-
-func _on_Player_saut_fini():
-	print ("signal_sent")
+func _on_AfficheactionActive_tir_tendu(ammo):
+	state = "Tir_tendu"
+	
+func _on_AfficheactionActive_tir_courbe(ammo):
+	state = "Tir_courbe"
