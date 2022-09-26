@@ -5,6 +5,8 @@ signal saut_fini
 export var rsautext = 3 #rayon intérieur de la zone de saut
 export var rsautint = 2 #rayon exterieur de la zone de saut
 export var limitedash = 5 #distance limite de dash
+export var rlimitetir = 5 #rayon  de limite ext de tir en cloche
+export var limitetir = 8  #distance limite de tir tendu
 var munition = null
 
 func _on_AfficheactionActive_move_player(valeur :int) -> void:

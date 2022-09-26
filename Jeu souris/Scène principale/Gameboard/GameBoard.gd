@@ -50,30 +50,30 @@ func _remplir_case_move(cell:Vector2, max_distance: int)-> Array:
 	#on utilise une file pour implémenter l'algo
 	var queue := [{"cell":cell,"dist":0}]
 	while not queue.empty():
-		var current = stack.pop_back()
+		var current = queue.pop_front()
+		var curcell = current["cell"]
 		#on verifie à chaque ajout de case que
 		#-on est dans la grille
 		#-la case n'est pas déjà remplie
 		#la cellule est à une distance inférieure à la distance max
-		if not grid.dans_limite(current):
+		if not grid.dans_limite(curcell):
 			continue
-		if current in array :
+		if curcell in array :
 			continue
-		var difference : Vector2 = (current -cell).abs()
-		var distance := int (difference.x + difference.y)
-		if distance > max_distance :
+		if current["dist"] > max_distance :
 			continue
 		#si la case satisfait toutes les conditions on l'ajoute à array
 		#et on inspecte les voisins
-		array.append(current)
+		array.append(curcell)
 		for direction in DIRECTIONS :
-			var coordinates: Vector2 = current + direction
+			var coordinates: Vector2 = curcell + direction
 			#pour minimiser le nombre de tests on elimine les case déjà vues ici
-			if is_occupied(coordinates):
+			if is_occupied(coordinates) and state == "Saut":
 				continue
 			if coordinates in array :
 				continue
-			stack.append(coordinates)
+			var newdist = current["dist"] +1
+			queue.append({"cell":coordinates, "dist":newdist})
 	return( array)
 	
 #retourne toute les case pour le saut
@@ -147,8 +147,17 @@ func _select_unit(cell: Vector2) -> void :
 				#on rempli l'array de cellule que le joueur peut utiliser
 				_unit_overlay.clear()
 				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
-			#"Tir_tendu":
-				
+			"Tir_tendu":
+				_selected_cells = _remplir_case_ligne($"Player".cell, $"Player".limitetir)
+				#on rempli l'array de cellules que le joueur peut toucher au gun
+				_unit_overlay.clear()
+				_unit_overlay.draw(_selected_cells, "vert")#on les affiche en vert
+			"Tir_courbe" :
+				_selected_cells = _remplir_case_cercle($"Player".cell, $"Player".rlimitetir,2)
+				#on rempli l'array de cellules que le joueur peut toucher au gun
+				_unit_overlay.clear()
+				_unit_overlay.draw(_selected_cells, "vert")#on les affiche en vert
+
 	_unit_path.initialize(_selected_cells)
 
 func _deselect_active_unit() -> void:

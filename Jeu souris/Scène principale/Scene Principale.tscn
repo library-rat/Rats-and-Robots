@@ -10,8 +10,9 @@
 
 [node name="Plateau" parent="." instance=ExtResource( 3 )]
 
-[node name="GameBoard" parent="Plateau" index="1"]
-grid = null
+[node name="Player" parent="Plateau/GameBoard" index="3"]
+rlimitetir = 5
+limitetir = 8
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
