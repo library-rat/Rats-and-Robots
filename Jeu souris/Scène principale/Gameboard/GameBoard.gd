@@ -14,9 +14,9 @@ var _units := {}
 #on en bouge que un unité à la fois
 #on garde  alors l'unité active dans la varialble
 var _active_unit : Unit
-#Array des cellules ou l'active unit peut aller
-#on le rempli avec la fonction _move_active_unit()
-var _walkable_cells := []
+#Array des cellules ou l'active unit peut aller/tirer/agir
+#on le rempli avec les fonction _jump_player,_dash_player.....
+var _selected_cells := []
 
 var state #permet de savoir quel type d'action le robot est en train d'effectuer
  #note si le joueur tire 
@@ -47,9 +47,9 @@ func _reinitialize () -> void :
 func _remplir_case_move(cell:Vector2, max_distance: int)-> Array:
 	#variable que l'on retournera
 	var array :=  []
-	#on utilise une pile pour implémenter l'algo
-	var stack := [cell]
-	while not stack.empty():
+	#on utilise une file pour implémenter l'algo
+	var queue := [{"cell":cell,"dist":0}]
+	while not queue.empty():
 		var current = stack.pop_back()
 		#on verifie à chaque ajout de case que
 		#-on est dans la grille
@@ -78,7 +78,7 @@ func _remplir_case_move(cell:Vector2, max_distance: int)-> Array:
 	
 #retourne toute les case pour le saut
 #rayonext est la distance maximale de saut et rayonint est la distance minimale 
-func _remplir_case_saut(cell:Vector2, rayonext: int, rayonint: int) -> Array:
+func _remplir_case_cercle(cell:Vector2, rayonext: int, rayonint: int) -> Array:
 	var array = []#variable que l'on retournera
 	var pile = [cell] #pile des cases à visiter
 	while not pile.empty() :#tant que il y a des cases à visiter
@@ -109,14 +109,14 @@ func _remplir_case_saut(cell:Vector2, rayonext: int, rayonint: int) -> Array:
 			pile.append(coordinates)
 	return( array)
 #retourne les cases ateignables pour la charge
-func _remplir_case_charge (cell:Vector2) -> Array :
+func _remplir_case_ligne (cell:Vector2, reach:int) -> Array :
 		var array = []
 		for direction in DIRECTIONS :
 			var current = cell + direction
 			while not is_occupied(current) and grid.dans_limite(current):
 				var difference : Vector2 = (current -cell).abs()
 				var distance := int (difference.x + difference.y) #donne la distance entre la case de l'unité et current
-				if distance > $"Player".limitedash :	#passe si l'on a dépassé la distance on passe
+				if distance >  reach:	#passe si l'on a dépassé la distance on passe
 					current = current + direction		#on déplace quand meme la case pouréviter une boucle infinie
 					continue
 				array.append(current) #si tout est bon on ajoute la case
@@ -133,17 +133,23 @@ func _select_unit(cell: Vector2) -> void :
 	if _active_unit == $"Player" :
 		match state :
 			"Mouvement":
-				_walkable_cells =  _remplir_case_move($"Player".cell,$"Player".move_range)
+				_selected_cells =  _remplir_case_move($"Player".cell,$"Player".move_range)
 				#on rempli l'array de cellule que le joueur peut utiliser
+				_unit_overlay.clear()
+				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
 			"Saut":
-				_walkable_cells = _remplir_case_saut($"Player".cell,$"Player".rsautext,$"Player".rsautint)
+				_selected_cells = _remplir_case_cercle($"Player".cell,$"Player".rsautext,$"Player".rsautint)
 				#on rempli l'array de cellule que le joueur peut utiliser
+				_unit_overlay.clear()
+				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
 			"Charge" :
-				_walkable_cells = _remplir_case_charge($"Player".cell)
+				_selected_cells = _remplir_case_ligne($"Player".cell,$"Player".limitedash)
 				#on rempli l'array de cellule que le joueur peut utiliser
-	_unit_overlay.clear()
-	_unit_overlay.draw(_walkable_cells, "jaune")
-	_unit_path.initialize(_walkable_cells)
+				_unit_overlay.clear()
+				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
+			#"Tir_tendu":
+				
+	_unit_path.initialize(_selected_cells)
 
 func _deselect_active_unit() -> void:
 	_active_unit.is_selected = false
@@ -152,11 +158,11 @@ func _deselect_active_unit() -> void:
 	
 func _clear_active_unit() -> void:
 	_active_unit = null
-	_walkable_cells.clear()
+	_selected_cells.clear()
 
 
 func _move_active_unit(new_cell : Vector2) -> void :
-	if is_occupied(new_cell) or not(new_cell in _walkable_cells):
+	if is_occupied(new_cell) or not(new_cell in _selected_cells):
 		return
 		
 	var difference : Vector2 = (_active_unit.cell - new_cell).abs()		#si l'on déplace l'unité on retire les déplacement de sa portée
@@ -170,7 +176,7 @@ func _move_active_unit(new_cell : Vector2) -> void :
 	_clear_active_unit()
 
 func _jump_player (new_cell : Vector2) -> void:
-	if is_occupied(new_cell) or not(new_cell in _walkable_cells) :
+	if is_occupied(new_cell) or not(new_cell in _selected_cells) :
 		return
 	var old_cell = _active_unit.cell
 	_units.erase(_active_unit.cell)
@@ -180,7 +186,7 @@ func _jump_player (new_cell : Vector2) -> void:
 	_clear_active_unit()
 
 func _dash_player (new_cell : Vector2) -> void :
-	if is_occupied(new_cell) or not(new_cell in _walkable_cells) :
+	if is_occupied(new_cell) or not(new_cell in _selected_cells) :
 		return
 	var old_cell = _active_unit.cell
 	_units.erase(_active_unit.cell)
@@ -224,7 +230,7 @@ func _push_unit (cell : Vector2, direction : Vector2)-> void:
 func _on_Cursor_accept_pressed(cell : Vector2)-> void:
 	if not _active_unit:
 		_select_unit(cell)
-	elif not cell in _walkable_cells :
+	elif not cell in _selected_cells :
 		_deselect_active_unit()
 		_clear_active_unit()
 	elif _active_unit.is_selected and (_active_unit == $Player)  :	#si l'unité est le joueur, que l'action est mouvement on peut la bouger
@@ -237,8 +243,7 @@ func _on_Cursor_accept_pressed(cell : Vector2)-> void:
 		if state == "Charge":
 			_dash_player(cell)
 			emit_signal("player_dashed")
-		if state =="Tir_tendu":
-			
+		#if state =="Tir_tendu":
 
 func _on_Cursor_moved(new_cell:Vector2)-> void:
 	if _active_unit and _active_unit.is_selected :	#si une unitée selectionnée
