@@ -102,6 +102,12 @@ bitmap=false
 bitma=false
 mipmap=false
 
+[importer_defaults]
+
+texture={
+"flags/filter": false
+}
+
 [input]
 
 ui_page_up={

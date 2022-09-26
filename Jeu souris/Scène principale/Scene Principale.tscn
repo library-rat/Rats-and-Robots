@@ -10,6 +10,9 @@
 
 [node name="Plateau" parent="." instance=ExtResource( 3 )]
 
+[node name="GameBoard" parent="Plateau" index="1"]
+grid = null
+
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
 [connection signal="fermer_pont_epaule_d" from="Robot" to="UI/Pont (epaule_d)" method="_on_Robot_fermer_pont_epaule_d"]
