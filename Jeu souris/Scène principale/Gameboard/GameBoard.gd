@@ -68,7 +68,7 @@ func _remplir_case_move(cell:Vector2, max_distance: int)-> Array:
 		for direction in DIRECTIONS :
 			var coordinates: Vector2 = curcell + direction
 			#pour minimiser le nombre de tests on elimine les case déjà vues ici
-			if is_occupied(coordinates) and state == "Saut":
+			if is_occupied(coordinates):
 				continue
 			if coordinates in array :
 				continue
@@ -78,7 +78,9 @@ func _remplir_case_move(cell:Vector2, max_distance: int)-> Array:
 	
 #retourne toute les case pour le saut
 #rayonext est la distance maximale de saut et rayonint est la distance minimale 
-func _remplir_case_cercle(cell:Vector2, rayonext: int, rayonint: int) -> Array:
+#select_occu dit si l'on selectionne les cases occupées ou pas
+func _remplir_case_cercle(cell:Vector2, rayonext: int, rayonint: int, select_occu : bool) -> Array:
+	var dejavu =[]
 	var array = []#variable que l'on retournera
 	var pile = [cell] #pile des cases à visiter
 	while not pile.empty() :#tant que il y a des cases à visiter
@@ -89,24 +91,24 @@ func _remplir_case_cercle(cell:Vector2, rayonext: int, rayonint: int) -> Array:
 		#la cellule est à une distance inférieureou égale au rayon externe
 		if not grid.dans_limite(current):
 			continue
-		if current in array :
+		if current in dejavu :
 			continue
+		dejavu.append(current)
 		var difference : Vector2 = (current -cell).abs()
 		var distance := int (difference.x + difference.y)
 		if distance > rayonext :
 			continue
 		#si la case satisfait toutes les conditions et que elle n'est pas trop proche on l'ajoute
 		#et on inspecte les voisins
-		if distance >= rayonint :
-			array.append(current)
 		for direction in DIRECTIONS :
 			var coordinates: Vector2 = current + direction
-			#pour minimiser le nombre de tests on elimine les case déjà vues ici
-			if is_occupied(coordinates):
-				continue
 			if coordinates in array :
 				continue
 			pile.append(coordinates)
+		if not(select_occu) and is_occupied(current) :
+			continue
+		if distance >= rayonint :
+			array.append(current)
 	return( array)
 #retourne les cases ateignables pour la charge
 func _remplir_case_ligne (cell:Vector2, reach:int) -> Array :
@@ -138,7 +140,7 @@ func _select_unit(cell: Vector2) -> void :
 				_unit_overlay.clear()
 				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
 			"Saut":
-				_selected_cells = _remplir_case_cercle($"Player".cell,$"Player".rsautext,$"Player".rsautint)
+				_selected_cells = _remplir_case_cercle($"Player".cell,$"Player".rsautext,$"Player".rsautint,false)
 				#on rempli l'array de cellule que le joueur peut utiliser
 				_unit_overlay.clear()
 				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
@@ -153,7 +155,7 @@ func _select_unit(cell: Vector2) -> void :
 				_unit_overlay.clear()
 				_unit_overlay.draw(_selected_cells, "vert")#on les affiche en vert
 			"Tir_courbe" :
-				_selected_cells = _remplir_case_cercle($"Player".cell, $"Player".rlimitetir,2)
+				_selected_cells = _remplir_case_cercle($"Player".cell, $"Player".rlimitetir,2, true)
 				#on rempli l'array de cellules que le joueur peut toucher au gun
 				_unit_overlay.clear()
 				_unit_overlay.draw(_selected_cells, "vert")#on les affiche en vert
