@@ -45,7 +45,7 @@ func change_action (action : Resource,valeur :int): #fonction qui s'occupe du ch
 			"Tir_courbe_lourd":
 				emit_signal("tir_courbe",balle_L)
 			"Tir_courbe_paralysant":
-				emit_signal("tir_tendu",balle_P)
+				emit_signal("tir_courbe",balle_P)
 				
 
 func _on_GameBoard_player_moved(move_range_left): #met à jour l'affichage si le Player bouge
@@ -68,6 +68,16 @@ func _on_GameBoard_player_dashed():
 	else :
 		var valeur = int($"Label".text)
 		$"Label".text = str(valeur -1)
+
+
+func _on_GameBoard_player_shot():
+	if $"Label".text == "1" :
+		change_action(null,0)
+		emit_signal("player_neutre")
+	else :
+		var valeur = int($"Label".text)
+		$"Label".text = str(valeur -1)
+
 
 func _input(event):
 	if event.is_action_pressed("maintenir action") :	#si on appuye sur la touche maintenir l'action

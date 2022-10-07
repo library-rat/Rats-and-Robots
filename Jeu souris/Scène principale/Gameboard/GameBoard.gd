@@ -23,6 +23,7 @@ var state #permet de savoir quel type d'action le robot est en train d'effectuer
 onready var _unit_path : UnitPath = $UnitPath
 
 onready var _unit_overlay : UnitOverlay = $UnitOverlay
+onready var _aim_overlay : UnitOverlay = $AimOverlay
 
 #au début du jeu on réinitialise le plateau
 func _ready()-> void:
@@ -111,11 +112,15 @@ func _remplir_case_cercle(cell:Vector2, rayonext: int, rayonint: int, select_occ
 			array.append(current)
 	return( array)
 #retourne les cases ateignables pour la charge
-func _remplir_case_ligne (cell:Vector2, reach:int) -> Array :
+func _remplir_case_ligne (cell:Vector2, reach:int, select_occu: bool) -> Array :
 		var array = []
 		for direction in DIRECTIONS :
 			var current = cell + direction
-			while not is_occupied(current) and grid.dans_limite(current):
+			while grid.dans_limite(current):
+				if is_occupied(current) :
+					if select_occu :
+						array.append(current)
+					break
 				var difference : Vector2 = (current -cell).abs()
 				var distance := int (difference.x + difference.y) #donne la distance entre la case de l'unité et current
 				if distance >  reach:	#passe si l'on a dépassé la distance on passe
@@ -145,12 +150,12 @@ func _select_unit(cell: Vector2) -> void :
 				_unit_overlay.clear()
 				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
 			"Charge" :
-				_selected_cells = _remplir_case_ligne($"Player".cell,$"Player".limitedash)
+				_selected_cells = _remplir_case_ligne($"Player".cell,$"Player".limitedash,false)
 				#on rempli l'array de cellule que le joueur peut utiliser
 				_unit_overlay.clear()
 				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
 			"Tir_tendu":
-				_selected_cells = _remplir_case_ligne($"Player".cell, $"Player".limitetir)
+				_selected_cells = _remplir_case_ligne($"Player".cell, $"Player".limitetir,true)
 				#on rempli l'array de cellules que le joueur peut toucher au gun
 				_unit_overlay.clear()
 				_unit_overlay.draw(_selected_cells, "vert")#on les affiche en vert
@@ -163,7 +168,8 @@ func _select_unit(cell: Vector2) -> void :
 	_unit_path.initialize(_selected_cells)
 
 func _deselect_active_unit() -> void:
-	_active_unit.is_selected = false
+	if _active_unit != null :
+		_active_unit.is_selected = false
 	_unit_overlay.clear()
 	_unit_path.stop()
 	
@@ -204,25 +210,31 @@ func _dash_player (new_cell : Vector2) -> void :
 	_units[new_cell] = _active_unit
 	_deselect_active_unit()
 	$"Player".dash_along(old_cell,new_cell)
-	var direction = new_cell-old_cell
-	if direction.x > 0:
-		direction = Vector2.RIGHT
-		
-	if direction.x < 0:
-		direction = Vector2.LEFT
-
-	if direction.y < 0:
-		direction = Vector2.UP
-		
-	if direction.y > 0:
-		direction = Vector2.DOWN
+	var direction = grid.calc_direction(new_cell,old_cell)
 	_push_unit(new_cell + direction,direction)
 	_clear_active_unit()
+
+func _tir_tendu_player (target_cell : Vector2) -> void:
+	if is_occupied(target_cell) and target_cell in _selected_cells:
+		match $"Player".munition.name:
+			
+			"Balle_simple" : 
+				_units[target_cell].is_hit(1)
+				emit_signal("player_shot")
+				
+			"Balle_lourde" :
+				_units[target_cell].is_hit(2)
+				emit_signal("player_shot")
+
+func _tir_courbe_player (target_cell : Vector2) -> void:
+	if is_occupied(target_cell) and target_cell in _selected_cells:
+		print ("bloup")
 
 
 signal player_moved (move_range_left)
 signal player_jumped ()
 signal player_dashed ()
+signal player_shot ()
 
 func _push_unit (cell : Vector2, direction : Vector2)-> void:
 	if not _units.has(cell) :
@@ -254,42 +266,58 @@ func _on_Cursor_accept_pressed(cell : Vector2)-> void:
 		if state == "Charge":
 			_dash_player(cell)
 			emit_signal("player_dashed")
-		#if state =="Tir_tendu":
+		if state =="Tir_tendu":
+			_tir_tendu_player(cell)
+		if state == "Tir_courbe":
+			_tir_courbe_player(cell)
 
 func _on_Cursor_moved(new_cell:Vector2)-> void:
 	if _active_unit and _active_unit.is_selected :	#si une unitée selectionnée
-		if _active_unit == $Player  and state == "Mouvement" :#si on a sélectionner le joueur pour le faire marcher
-			_unit_path.draw(_active_unit.cell,new_cell) #on dessine le chemin
+		if _active_unit == $Player  :
+			_aim_overlay.clear()
+			match state :
+				"Mouvement" :#si on a sélectionner le joueur pour le faire marcher
+					_unit_path.draw($"Player".cell,new_cell) #on dessine le chemin
+				"Tir_tendu":
+					if new_cell in _selected_cells :
+						var direction = grid.calc_direction(new_cell, $"Player".cell)
+						_aim_overlay.draw($"Player".calc_aire_tir_tendu(direction, new_cell), "rouge")
+						_aim_overlay.draw([new_cell],"rouge")
+				"Tir_courbe" :
+					if new_cell in _selected_cells :
+						var direction = grid.calc_direction(new_cell, $"Player".cell)
+						_aim_overlay.draw($"Player".calc_aire_tir_courbe(direction,new_cell), "rouge")
+						_aim_overlay.draw([new_cell],"rouge")
 
 func _unhandled_input(event: InputEvent) -> void:
 	if _active_unit and event.is_action_pressed("ui_cancel"):
 		_deselect_active_unit()
 		_clear_active_unit()
 
-
 func _on_AfficheactionActive_move_player(valeur):
 	state = "Mouvement"
-	if _active_unit != null :
-		_deselect_active_unit() #on efface les cases autours du joueur et
-		_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
+	_deselect_active_unit() #on efface les cases autours du joueur et
+	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
 
 func _on_AfficheactionActive_jump_player():
 	state = "Saut"
-	if _active_unit != null :
-		_deselect_active_unit()#on efface les cases autours du joueur et
-		_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
+	_deselect_active_unit()#on efface les cases autours du joueur et
+	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
 
 func _on_AfficheactionActive_player_neutre():
 	state = "Neutre"
 
 func _on_AfficheactionActive_dash_player():
 	state = "Charge"
-	if _active_unit != null :
-		_deselect_active_unit()#on efface les cases autours du joueur et
-		_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
+	_deselect_active_unit()#on efface les cases autours du joueur et
+	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
 
 func _on_AfficheactionActive_tir_tendu(ammo):
 	state = "Tir_tendu"
+	_deselect_active_unit()#on efface les cases autours du joueur et
+	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
 
 func _on_AfficheactionActive_tir_courbe(ammo):
 	state = "Tir_courbe"
+	_deselect_active_unit()#on efface les cases autours du joueur et
+	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m

@@ -6,6 +6,9 @@ var munition
 signal tir_tendu (ammo)
 signal tir_courbe (ammo)
 
+func debut_tour():
+	pass
+
 func _on_TirerT_cout_point(type, index):
 	if not (Souris == null):
 		var tirt = $"Control/HSplitContainer/Panel/VBoxContainer/TirerT"

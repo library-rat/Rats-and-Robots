@@ -10,9 +10,11 @@
 
 [node name="Plateau" parent="." instance=ExtResource( 3 )]
 
-[node name="Player" parent="Plateau/GameBoard" index="3"]
-rlimitetir = 5
-limitetir = 8
+[node name="Player" parent="Plateau/GameBoard" index="4"]
+position = Vector2( 341, 318 )
+
+[node name="Enemy3" parent="Plateau/GameBoard" index="7"]
+movable = false
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
@@ -35,6 +37,7 @@ limitetir = 8
 [connection signal="player_dashed" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_dashed"]
 [connection signal="player_jumped" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_jumped"]
 [connection signal="player_moved" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_moved"]
+[connection signal="player_shot" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_shot"]
 [connection signal="pressed" from="UI/Fin_de_tour" to="Robot" method="_on_Fin_de_tour_pressed"]
 [connection signal="pressed" from="UI/Fin_de_tour" to="UI" method="_on_Fin_de_tour_pressed"]
 [connection signal="charge" from="UI/Ordi_m" to="Robot" method="_on_Ordi_m_charge"]

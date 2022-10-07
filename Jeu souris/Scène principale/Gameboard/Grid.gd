@@ -28,6 +28,21 @@ func dans_limite(coordonnees_case: Vector2) -> bool :
 	return(false)
 #revoie si un case des dans les limites de la grille ou pas
 
+func calc_direction (new_cell : Vector2,old_cell:Vector2) -> Vector2 :
+	var direction = new_cell-old_cell
+	if direction.x > 0:
+		direction = Vector2.RIGHT
+		
+	if direction.x < 0:
+		direction = Vector2.LEFT
+
+	if direction.y < 0:
+		direction = Vector2.UP
+		
+	if direction.y > 0:
+		direction = Vector2.DOWN
+	return(direction)
+
 func clamp(grille_position: Vector2) -> Vector2 :
 	var out := grille_position
 	out.x = clamp(out.x,0, taille.x - 1.0)

@@ -26,6 +26,9 @@ script = ExtResource( 2 )
 [node name="UnitOverlay" parent="GameBoard" instance=ExtResource( 4 )]
 cell_y_sort = true
 
+[node name="AimOverlay" parent="GameBoard" instance=ExtResource( 4 )]
+cell_y_sort = true
+
 [node name="UnitPath" parent="GameBoard" instance=ExtResource( 6 )]
 grid = ExtResource( 8 )
 
@@ -37,6 +40,8 @@ move_range = 0
 rsautext = 3
 rsautint = 2
 limitedash = 5
+rlimitetir = 5
+limitetir = 8
 
 [node name="Enemy" parent="GameBoard" instance=ExtResource( 1 )]
 position = Vector2( 177, 216 )

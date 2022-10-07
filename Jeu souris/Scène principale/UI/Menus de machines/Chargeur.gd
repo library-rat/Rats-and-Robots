@@ -10,6 +10,8 @@ var chargeur_ferme = preload ("res://Scène principale/UI/Menus de machines/Imag
 
 signal charge_munition (ammo)
 
+func debut_tour():
+	pass
 
 func _on_ChargerS_cout_point(type, index):
 	if not (Souris == null):

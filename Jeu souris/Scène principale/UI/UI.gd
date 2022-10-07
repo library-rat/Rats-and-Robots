@@ -11,4 +11,3 @@ func _on_Fin_de_tour_pressed():
 	var menu = get_tree().get_nodes_in_group("Menu_machine")#souris est une liste de toutes les souris
 	for m in menu :
 		m.debut_tour()
-

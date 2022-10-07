@@ -39,7 +39,7 @@ func _on_Ordi_m_charge():
 func _on_Gachette_tir_tendu(ammo):
 	if ammo.name == "Balle_simple" :
 		$"FileAction".ajoute_action(tendu_simple)
-	elif ammo.name =="Balle_lourd" :
+	elif ammo.name =="Balle_lourde" :
 		$"FileAction".ajoute_action(tendu_lourd)
 	elif ammo.name == "Balle_paralysante" :
 		$"FileAction".ajoute_action(tendu_paralysante)
@@ -47,7 +47,7 @@ func _on_Gachette_tir_tendu(ammo):
 func _on_Gachette_tir_courbe(ammo):
 	if ammo.name == "Balle_simple" :
 		$"FileAction".ajoute_action(courbe_simple)
-	elif ammo.name =="Balle_lourd" :
+	elif ammo.name =="Balle_lourde" :
 		$"FileAction".ajoute_action(courbe_lourd)
 	elif ammo.name == "Balle_paralysante" :
 		$"FileAction".ajoute_action(courbe_paralysante)
