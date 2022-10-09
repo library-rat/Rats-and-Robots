@@ -27,6 +27,9 @@ icon = ExtResource( 5 )
 [node name="Panel" parent="Control/HSplitContainer/Panel/VBoxContainer/TirerT" index="2"]
 margin_right = 630.0
 
+[node name="Label" parent="Control/HSplitContainer/Panel/VBoxContainer/TirerT/Panel" index="0"]
+text = "Tir Tendu"
+
 [node name="TirerC" parent="Control/HSplitContainer/Panel/VBoxContainer" index="1" instance=ExtResource( 3 )]
 margin_top = 84.0
 margin_right = 630.0
@@ -42,6 +45,9 @@ icon = ExtResource( 4 )
 
 [node name="Panel" parent="Control/HSplitContainer/Panel/VBoxContainer/TirerC" index="4"]
 margin_right = 630.0
+
+[node name="Label" parent="Control/HSplitContainer/Panel/VBoxContainer/TirerC/Panel" index="0"]
+text = "Tir en Cloche"
 
 [connection signal="cout_point" from="Control/HSplitContainer/Panel/VBoxContainer/TirerT" to="." method="_on_TirerT_cout_point"]
 [connection signal="cout_point" from="Control/HSplitContainer/Panel/VBoxContainer/TirerC" to="." method="_on_TirerC_cout_point"]

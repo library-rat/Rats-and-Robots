@@ -215,20 +215,46 @@ func _dash_player (new_cell : Vector2) -> void :
 	_clear_active_unit()
 
 func _tir_tendu_player (target_cell : Vector2) -> void:
-	if is_occupied(target_cell) and target_cell in _selected_cells:
-		match $"Player".munition.name:
-			
-			"Balle_simple" : 
-				_units[target_cell].is_hit(1)
-				emit_signal("player_shot")
+	if target_cell in _selected_cells:
+		var direction = grid.calc_direction(target_cell, $"Player".cell)
+		var area = $"Player".aire_tirT(direction,target_cell)
+		for cell in area :
+			if is_occupied(cell) :
+				match $"Player".munition.name:
+					"Balle_simple" : 
+						_units[cell].is_hit(1)
+					"Balle_lourde" :
+						_units[cell].is_hit(1)
 				
-			"Balle_lourde" :
-				_units[target_cell].is_hit(2)
-				emit_signal("player_shot")
+		if is_occupied(target_cell) :
+			match $"Player".munition.name:
+				"Balle_simple" : 
+					_units[target_cell].is_hit(1)
+				"Balle_lourde" :
+					_units[target_cell].is_hit(2)
+		emit_signal("player_shot")
+
+
 
 func _tir_courbe_player (target_cell : Vector2) -> void:
-	if is_occupied(target_cell) and target_cell in _selected_cells:
-		print ("bloup")
+	if target_cell in _selected_cells:
+		var direction = grid.calc_direction(target_cell, $"Player".cell)
+		var area = $"Player".aire_tirC(direction,target_cell)
+		for cell in area :
+			if is_occupied(cell) :
+				match $"Player".munition.name:
+					"Balle_simple" : 
+						pass
+					"Balle_lourde" :
+						_units[cell].is_hit(1)
+				
+		if is_occupied(target_cell) :
+			match $"Player".munition.name:
+				"Balle_simple" : 
+					_units[target_cell].is_hit(2)
+				"Balle_lourde" :
+					_units[target_cell].is_hit(2)
+		emit_signal("player_shot")
 
 
 signal player_moved (move_range_left)
@@ -281,12 +307,12 @@ func _on_Cursor_moved(new_cell:Vector2)-> void:
 				"Tir_tendu":
 					if new_cell in _selected_cells :
 						var direction = grid.calc_direction(new_cell, $"Player".cell)
-						_aim_overlay.draw($"Player".calc_aire_tir_tendu(direction, new_cell), "rouge")
+						_aim_overlay.draw($"Player".aire_tirT(direction, new_cell), "rouge")
 						_aim_overlay.draw([new_cell],"rouge")
 				"Tir_courbe" :
 					if new_cell in _selected_cells :
 						var direction = grid.calc_direction(new_cell, $"Player".cell)
-						_aim_overlay.draw($"Player".calc_aire_tir_courbe(direction,new_cell), "rouge")
+						_aim_overlay.draw($"Player".aire_tirC(direction,new_cell), "rouge")
 						_aim_overlay.draw([new_cell],"rouge")
 
 func _unhandled_input(event: InputEvent) -> void:

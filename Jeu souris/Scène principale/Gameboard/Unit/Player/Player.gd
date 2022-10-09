@@ -28,7 +28,7 @@ func dash_along (old_cell : Vector2,new_cell : Vector2) :
 	cell = new_cell
 
 
-func calc_aire_tir_courbe (direction : Vector2, cell_select : Vector2) -> PoolVector2Array :
+func aire_tirC (direction : Vector2, cell_select : Vector2) -> PoolVector2Array :
 		match munition.name :
 			"Balle_simple":
 				aire_tir = []				
@@ -41,10 +41,10 @@ func calc_aire_tir_courbe (direction : Vector2, cell_select : Vector2) -> PoolVe
 			cases_cibles.append(c+cell_select)
 		return (cases_cibles)
 
-func calc_aire_tir_tendu (direction : Vector2, cell_select : Vector2) -> PoolVector2Array :
+func aire_tirT (direction : Vector2, cell_select : Vector2) -> PoolVector2Array :
 		match munition.name :
 			"Balle_simple":
-				aire_tir = []				
+				aire_tir = [direction]				
 			"Balle_lourde":
 				aire_tir = [direction, 2*direction]
 			"Balle_paralysante":
