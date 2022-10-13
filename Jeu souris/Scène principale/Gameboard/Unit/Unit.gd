@@ -48,7 +48,6 @@ func _ready() -> void:
 	
 	life = max_life
 	update_lifebar()
-
 func _process(delta: float) -> void:
 	_path_follow.offset += move_speed * delta
 
@@ -113,3 +112,6 @@ func update_lifebar ():
 func is_hit (valeur : int)  -> void:
 	life = max (0, life - valeur)
 	update_lifebar()
+
+func is_para (valeur : int) -> void:
+	pass

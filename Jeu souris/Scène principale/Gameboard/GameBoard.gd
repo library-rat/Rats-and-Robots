@@ -225,6 +225,8 @@ func _tir_tendu_player (target_cell : Vector2) -> void:
 						_units[cell].is_hit(1)
 					"Balle_lourde" :
 						_units[cell].is_hit(1)
+					"Balle_paralysante" :
+						_units[cell].is_para(1)
 				
 		if is_occupied(target_cell) :
 			match $"Player".munition.name:
@@ -232,6 +234,8 @@ func _tir_tendu_player (target_cell : Vector2) -> void:
 					_units[target_cell].is_hit(1)
 				"Balle_lourde" :
 					_units[target_cell].is_hit(2)
+				"Balle_paralysante" :
+					_units[target_cell].is_para(1)
 		emit_signal("player_shot")
 
 
@@ -247,6 +251,8 @@ func _tir_courbe_player (target_cell : Vector2) -> void:
 						pass
 					"Balle_lourde" :
 						_units[cell].is_hit(1)
+					"Balle_paralysante" :
+						_units[cell].is_para(1)
 				
 		if is_occupied(target_cell) :
 			match $"Player".munition.name:
@@ -254,6 +260,8 @@ func _tir_courbe_player (target_cell : Vector2) -> void:
 					_units[target_cell].is_hit(2)
 				"Balle_lourde" :
 					_units[target_cell].is_hit(2)
+				"Balle_paralysante" :
+					_units[target_cell].is_para(1)
 		emit_signal("player_shot")
 
 

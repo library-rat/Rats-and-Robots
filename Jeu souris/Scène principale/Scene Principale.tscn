@@ -10,9 +10,6 @@
 
 [node name="Plateau" parent="." instance=ExtResource( 3 )]
 
-[node name="Player" parent="Plateau/GameBoard" index="4"]
-position = Vector2( 341, 318 )
-
 [node name="Enemy3" parent="Plateau/GameBoard" index="7"]
 movable = false
 
