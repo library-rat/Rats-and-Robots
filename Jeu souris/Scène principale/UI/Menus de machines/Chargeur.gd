@@ -62,3 +62,7 @@ func _on_Gachette_tir_tendu(ammo):
 func _on_Gachette_tir_courbe(ammo):
 	loaded = false
 	$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ouvert
+
+signal open_gachette()
+func _on_Button_pressed():
+	emit_signal("open_gachette")

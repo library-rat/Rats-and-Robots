@@ -6,7 +6,7 @@ var valeur_reset = 1
 
 func debut_tour():
 	valeur_reset = 1
-	changer_cout(valeur_reset)
+	changer_cout(0)
 
 func _on_Monter_cout_point(type, index):
 	if not (Souris == null):

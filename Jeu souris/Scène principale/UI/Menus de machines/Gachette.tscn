@@ -49,8 +49,16 @@ margin_right = 630.0
 [node name="Label" parent="Control/HSplitContainer/Panel/VBoxContainer/TirerC/Panel" index="0"]
 text = "Tir en Cloche"
 
+[node name="Button" type="Button" parent="." index="3"]
+margin_left = 454.0
+margin_top = 16.0
+margin_right = 494.0
+margin_bottom = 56.0
+text = "<->"
+
 [connection signal="cout_point" from="Control/HSplitContainer/Panel/VBoxContainer/TirerT" to="." method="_on_TirerT_cout_point"]
 [connection signal="cout_point" from="Control/HSplitContainer/Panel/VBoxContainer/TirerC" to="." method="_on_TirerC_cout_point"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 
 [editable path="Control/HSplitContainer/Panel/VBoxContainer/TirerT"]
 [editable path="Control/HSplitContainer/Panel/VBoxContainer/TirerC"]

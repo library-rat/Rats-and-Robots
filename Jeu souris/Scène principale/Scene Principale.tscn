@@ -48,8 +48,10 @@ movable = false
 [connection signal="aller_tete" from="UI/Pont (epaule_g)" to="Robot" method="_on_Pont_epaule_g_aller_tete"]
 [connection signal="aller_epaule_g" from="UI/Pont (epaule_d)" to="Robot" method="_on_Pont_epaule_d_aller_epaule_g"]
 [connection signal="aller_tete" from="UI/Pont (epaule_d)" to="Robot" method="_on_Pont_epaule_d_aller_tete"]
+[connection signal="open_chargeur" from="UI/Gachette" to="UI" method="_on_Gachette_open_chargeur"]
 [connection signal="tir_courbe" from="UI/Gachette" to="Robot" method="_on_Gachette_tir_courbe"]
 [connection signal="tir_tendu" from="UI/Gachette" to="Robot" method="_on_Gachette_tir_tendu"]
+[connection signal="open_gachette" from="UI/Chargeur" to="UI" method="_on_Chargeur_open_gachette"]
 
 [editable path="Robot"]
 [editable path="Robot/Ordi_c"]

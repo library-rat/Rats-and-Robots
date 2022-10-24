@@ -41,3 +41,7 @@ func _on_TirerC_cout_point(type, index):
 func _on_Chargeur_charge_munition(ammo):
 	munition = ammo
 	$"Control/HSplitContainer/CenterContainer/TextureRect".texture = munition.texture
+
+signal open_chargeur()
+func _on_Button_pressed():
+	emit_signal("open_chargeur")

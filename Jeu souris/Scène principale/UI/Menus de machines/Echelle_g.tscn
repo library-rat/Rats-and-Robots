@@ -19,6 +19,7 @@ anchor_bottom = 0.0
 margin_right = 630.0
 margin_bottom = 69.0
 pointValeur = [ "Endurance" ]
+ValeurMax = [ 0 ]
 
 [node name="Panel" parent="Control/VBoxContainer/Monter" index="2"]
 margin_right = 630.0

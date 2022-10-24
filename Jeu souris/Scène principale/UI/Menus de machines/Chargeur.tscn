@@ -72,9 +72,17 @@ margin_right = 630.0
 [node name="Label" parent="Control/HSplitContainer/Panel/VBoxContainer/ChargerP/Panel" index="0"]
 text = "Mun. Paralysante"
 
+[node name="Button" type="Button" parent="." index="3"]
+margin_left = 454.0
+margin_top = 16.0
+margin_right = 494.0
+margin_bottom = 56.0
+text = "<->"
+
 [connection signal="cout_point" from="Control/HSplitContainer/Panel/VBoxContainer/ChargerS" to="." method="_on_ChargerS_cout_point"]
 [connection signal="cout_point" from="Control/HSplitContainer/Panel/VBoxContainer/ChargerL" to="." method="_on_ChargerL_cout_point"]
 [connection signal="cout_point" from="Control/HSplitContainer/Panel/VBoxContainer/ChargerP" to="." method="_on_ChargerP_cout_point"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 
 [editable path="Control/HSplitContainer/Panel/VBoxContainer/ChargerS"]
 [editable path="Control/HSplitContainer/Panel/VBoxContainer/ChargerL"]
