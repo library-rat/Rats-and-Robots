@@ -10,6 +10,8 @@ signal walk_finished
 
 ## Shared resource of type Grid, used to calculate map coordinates.
 export var grid: Resource
+##Shared ressource of type board, used to know where are located amm the units
+export var board: Resource
 ## Texture representing the unit.
 export var skin: Texture setget set_skin
 ## Distance to which the unit can walk in cells.
@@ -25,6 +27,8 @@ export var move_speed := 600.0
 
 ## Coordinates of the current cell the cursor moved to.
 export var cell := Vector2.ZERO setget set_cell
+#facing unit direction
+export var direction := Vector2.DOWN
 ## Toggles the "selected" animation on the unit.
 var is_selected := false setget set_is_selected
 

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.gd" type="Script" id=2]
+
+[node name="Furnace" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+grid = null
+skin = null
+skin_offset = Vector2( 0, 0 )
