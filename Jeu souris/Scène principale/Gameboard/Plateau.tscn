@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scène principale/Gameboard/Unit/bugcat.png" type="Texture" id=1]
 [ext_resource path="res://Scène principale/Gameboard/GameBoard.gd" type="Script" id=2]
 [ext_resource path="res://Scène principale/Gameboard/Cursor/Cursor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scène principale/Gameboard/UnitOverlay.tscn" type="PackedScene" id=4]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Scène principale/Gameboard/UnitPath.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scène principale/Gameboard/Unit/Player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scène principale/Gameboard/Grid.tres" type="Resource" id=8]
+[ext_resource path="res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scène principale/Gameboard/Board.tres" type="Resource" id=10]
 
 [node name="Plateau" type="Node2D"]
 __meta__ = {
@@ -36,6 +38,7 @@ grid = ExtResource( 8 )
 
 [node name="Player" parent="GameBoard" instance=ExtResource( 7 )]
 position = Vector2( 354, 281 )
+board = ExtResource( 10 )
 move_range = 0
 rsautext = 3
 rsautint = 2
@@ -43,17 +46,33 @@ limitedash = 5
 rlimitetir = 5
 limitetir = 8
 
-[node name="Enemy" parent="GameBoard" instance=ExtResource( 1 )]
-position = Vector2( 177, 216 )
-max_life = 5
+[node name="Furnace" parent="GameBoard" instance=ExtResource( 9 )]
+position = Vector2( 225, 369 )
+grid = ExtResource( 8 )
+board = ExtResource( 10 )
+skin = ExtResource( 1 )
+skin_offset = Vector2( 0, -40 )
 
-[node name="Enemy2" parent="GameBoard" instance=ExtResource( 1 )]
-position = Vector2( 218, 190 )
-max_life = 3
+[node name="Furnace2" parent="GameBoard" instance=ExtResource( 9 )]
+position = Vector2( 150, 129 )
+grid = ExtResource( 8 )
+board = ExtResource( 10 )
+skin = ExtResource( 1 )
+skin_offset = Vector2( 0, -40 )
 
-[node name="Enemy3" parent="GameBoard" instance=ExtResource( 1 )]
-position = Vector2( 148, 221 )
-max_life = 4
+[node name="Furnace3" parent="GameBoard" instance=ExtResource( 9 )]
+position = Vector2( 129, 518 )
+grid = ExtResource( 8 )
+board = ExtResource( 10 )
+skin = ExtResource( 1 )
+skin_offset = Vector2( 0, -40 )
+
+[node name="Furnace4" parent="GameBoard" instance=ExtResource( 9 )]
+position = Vector2( 582, 475 )
+grid = ExtResource( 8 )
+board = ExtResource( 10 )
+skin = ExtResource( 1 )
+skin_offset = Vector2( 0, -40 )
 
 [connection signal="accept_pressed" from="GameBoard/Cursor" to="GameBoard" method="_on_Cursor_accept_pressed"]
 [connection signal="moved" from="GameBoard/Cursor" to="GameBoard" method="_on_Cursor_moved"]

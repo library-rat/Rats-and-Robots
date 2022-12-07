@@ -10,9 +10,6 @@
 
 [node name="Plateau" parent="." instance=ExtResource( 3 )]
 
-[node name="Enemy3" parent="Plateau/GameBoard" index="7"]
-movable = false
-
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
 [connection signal="fermer_pont_epaule_d" from="Robot" to="UI/Pont (epaule_d)" method="_on_Robot_fermer_pont_epaule_d"]
@@ -36,6 +33,7 @@ movable = false
 [connection signal="player_moved" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_moved"]
 [connection signal="player_shot" from="Plateau/GameBoard" to="Robot/AfficheactionActive" method="_on_GameBoard_player_shot"]
 [connection signal="pressed" from="UI/Fin_de_tour" to="Robot" method="_on_Fin_de_tour_pressed"]
+[connection signal="pressed" from="UI/Fin_de_tour" to="Plateau/GameBoard" method="_on_Fin_de_tour_pressed"]
 [connection signal="pressed" from="UI/Fin_de_tour" to="UI" method="_on_Fin_de_tour_pressed"]
 [connection signal="charge" from="UI/Ordi_m" to="Robot" method="_on_Ordi_m_charge"]
 [connection signal="marcher" from="UI/Ordi_m" to="Robot" method="_on_Ordi_m_marcher"]

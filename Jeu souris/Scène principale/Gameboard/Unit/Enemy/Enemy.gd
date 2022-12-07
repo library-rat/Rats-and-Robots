@@ -8,7 +8,6 @@ func _ready():
 	self.add_to_group('Enemy')
 
 func para_var_set(new_val):
-	print (new_val)
 	if new_val > 0:
 		para = new_val
 	else:

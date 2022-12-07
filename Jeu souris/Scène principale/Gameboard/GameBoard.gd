@@ -264,3 +264,9 @@ func _on_AfficheactionActive_tir_courbe(ammo):
 	state = "Tir_courbe"
 	_deselect_active_unit()#on efface les cases autours du joueur et
 	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
+
+
+func _on_Fin_de_tour_pressed():
+	var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
+	for en in enliste :
+		en.play_turn()

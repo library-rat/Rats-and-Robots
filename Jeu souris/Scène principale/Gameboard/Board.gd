@@ -6,6 +6,9 @@ const DIRECTIONS = [Vector2.LEFT,Vector2.RIGHT, Vector2.UP,Vector2.DOWN]
 #on utilise un dictionnaire pour les unitées leur clefs est leur coordonnée,
 #en coordonnée grille (vector 2) et le contenu une reference à l'unité
 export var units := {}
+#cette fois le dictionnaire stocke la liste de unitées attaquant une case,
+#la clef la coordonnée grille de la case (vector 2) et le contenu une liste des references à l'unitée
+export var threat := {}
 #variable stockant la reference du joueur elle est initialisée dans gameboard
 var Player
 export var  grid : Resource = preload ("res://Scène principale/Gameboard/Grid.tres")
@@ -100,6 +103,9 @@ func remplir_case_ligne (cell:Vector2, reach:int, select_occu: bool) -> Array :
 #renvoie vrai si la case est occupée par une unitée
 func is_occupied(cell : Vector2) -> bool :
 	return true if units.has(cell) else false
+
+func is_danger(cell : Vector2) -> bool:
+	return true if threat.has(cell) else false
 
 func position_player():
 	var keylist = units.keys()
