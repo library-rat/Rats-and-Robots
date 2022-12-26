@@ -11,7 +11,7 @@ signal walk_finished
 ## Shared resource of type Grid, used to calculate map coordinates.
 export var grid: Resource
 ##Shared ressource of type board, used to know where are located amm the units
-export var board: Resource
+export var board: Resource = preload("res://Scène principale/Gameboard/Board.tres")
 ## Texture representing the unit.
 export var skin: Texture setget set_skin
 ## Distance to which the unit can walk in cells.
@@ -42,7 +42,7 @@ onready var _path_follow: PathFollow2D = $PathFollow2D
 func _ready() -> void:
 	set_process(false)
 	grid = load("res://Scène principale/Gameboard/Grid.tres")
-	board = load("res://Scène principale/Gameboard/Board.tres")
+	#board = load("res://Scène principale/Gameboard/Board.tres")
 	self.cell = grid.calcul_grille_position(position)
 	position = grid.calcul_map_position(cell)
 
@@ -78,7 +78,10 @@ func walk_along(path: PoolVector2Array) -> void:
 
 
 func set_cell(value: Vector2) -> void:
+	board.units.erase(cell) #on enleve l'unité à l'ancienne case du dictionnaire
 	cell = grid.clamp(value)
+	board.units[value] = self #on l'inscrit à la nouvelle case
+	print('ok')
 
 
 func set_is_selected(value: bool) -> void:
