@@ -9,7 +9,7 @@
 [ext_resource path="res://Scène principale/Robot/Machines/Plasma.png" type="Texture" id=7]
 [ext_resource path="res://Scène principale/Robot/Machines/Echelle_g_b.png" type="Texture" id=8]
 [ext_resource path="res://Scène principale/Robot/Machines/Chargeur.png" type="Texture" id=9]
-[ext_resource path="res://Scène principale/Robot/Robot background.png" type="Texture" id=10]
+[ext_resource path="res://Scène principale/Robot/Background placement.png" type="Texture" id=10]
 [ext_resource path="res://Scène principale/Robot/Machines/Echelle_d_h.png" type="Texture" id=11]
 [ext_resource path="res://Scène principale/Robot/Machines/Echelle_g_h.png" type="Texture" id=12]
 [ext_resource path="res://Scène principale/Robot/Machines/Ordi_c.png" type="Texture" id=13]
@@ -30,11 +30,11 @@ margin_left = 574.657
 margin_top = 0.909408
 margin_right = 1022.65
 margin_bottom = 621.909
+rect_scale = Vector2( 0.175, 0.175 )
 size_flags_horizontal = 5
 size_flags_vertical = 5
 texture = ExtResource( 10 )
-expand = true
-stretch_mode = 5
+stretch_mode = 3
 
 [node name="FileAction" type="VBoxContainer" parent="."]
 margin_left = 627.024
@@ -102,10 +102,10 @@ salle = "Scapula_d"
 numero_de_machine = 1
 
 [node name="Texture" parent="Ordi_c" index="0"]
-margin_left = -19.8037
-margin_top = -20.8622
-margin_right = 16.1963
-margin_bottom = 33.1378
+margin_left = -17.282
+margin_top = -15.327
+margin_right = 167.718
+margin_bottom = 155.673
 texture = ExtResource( 13 )
 
 [node name="Ordi_m" parent="." instance=ExtResource( 1 )]
@@ -114,10 +114,10 @@ salle = "Scapula_d"
 numero_de_machine = 2
 
 [node name="Texture" parent="Ordi_m" index="0"]
-margin_left = -20.2921
-margin_top = -18.9885
-margin_right = 17.7079
-margin_bottom = 21.0115
+margin_left = -20.103
+margin_top = -17.79
+margin_right = 200.897
+margin_bottom = 177.21
 texture = ExtResource( 21 )
 
 [node name="Pont_g" parent="." instance=ExtResource( 1 )]
@@ -126,10 +126,10 @@ salle = "Scapula_d"
 numero_de_machine = 3
 
 [node name="Texture" parent="Pont_g" index="0"]
-margin_left = -9.7937
-margin_top = -33.0
-margin_right = 84.2063
-margin_bottom = 32.0
+margin_left = -10.802
+margin_top = -31.931
+margin_right = 229.198
+margin_bottom = 297.069
 texture = ExtResource( 17 )
 
 [node name="Pont_d" parent="." instance=ExtResource( 1 )]
@@ -138,22 +138,22 @@ salle = "Scapula_g"
 numero_de_machine = 5
 
 [node name="Texture" parent="Pont_d" index="0"]
-margin_left = -56.528
-margin_top = -35.5281
-margin_right = 37.472
-margin_bottom = 28.4719
+margin_left = -30.4717
+margin_top = -33.214
+margin_right = 204.528
+margin_bottom = 278.786
 texture = ExtResource( 14 )
 
 [node name="Plasma" parent="." instance=ExtResource( 1 )]
-position = Vector2( 893, 109 )
+position = Vector2( 887, 105 )
 salle = "Scapula_g"
 numero_de_machine = 6
 
 [node name="Texture" parent="Plasma" index="0"]
-margin_left = -22.023
-margin_top = -41.874
-margin_right = 14.977
-margin_bottom = 40.126
+margin_left = -17.0
+margin_top = -39.0
+margin_right = 185.0
+margin_bottom = 308.0
 texture = ExtResource( 7 )
 
 [node name="Gachette" parent="." instance=ExtResource( 1 )]
@@ -162,11 +162,12 @@ salle = "Scapula_g"
 numero_de_machine = 7
 
 [node name="Texture" parent="Gachette" index="0"]
-margin_left = -24.0
-margin_top = -30.0
-margin_right = 25.0
-margin_bottom = 15.0
+margin_left = -18.041
+margin_top = -41.396
+margin_right = 240.959
+margin_bottom = 279.604
 texture = ExtResource( 16 )
+stretch_mode = 3
 
 [node name="Echelle_g_h" parent="." instance=ExtResource( 1 )]
 position = Vector2( 625.948, 134.927 )
@@ -174,10 +175,10 @@ salle = "Scapula_d"
 numero_de_machine = 8
 
 [node name="Texture" parent="Echelle_g_h" index="0"]
-margin_left = -9.82751
-margin_top = -12.8343
-margin_right = 11.1725
-margin_bottom = 28.1657
+margin_left = -6.948
+margin_top = -12.927
+margin_right = 60.052
+margin_bottom = 211.073
 texture = ExtResource( 12 )
 
 [node name="Echelle_g_b" parent="." instance=ExtResource( 1 )]
@@ -186,10 +187,10 @@ salle = "Humerus_d"
 numero_de_machine = 9
 
 [node name="Texture" parent="Echelle_g_b" index="0"]
-margin_left = -11.752
-margin_top = -22.0496
-margin_right = 19.248
-margin_bottom = 14.9504
+margin_left = -9.198
+margin_top = -20.802
+margin_right = 65.802
+margin_bottom = 184.198
 texture = ExtResource( 8 )
 
 [node name="Injecteur" parent="." instance=ExtResource( 1 )]
@@ -198,10 +199,10 @@ salle = "Humerus_d"
 numero_de_machine = 10
 
 [node name="Texture" parent="Injecteur" index="0"]
-margin_left = -61.1575
-margin_top = -43.2126
-margin_right = 27.8425
-margin_bottom = 11.7874
+margin_left = -59.1819
+margin_top = -40.244
+margin_right = 407.818
+margin_bottom = 246.756
 texture = ExtResource( 18 )
 
 [node name="Visage" parent="." instance=ExtResource( 1 )]
@@ -210,10 +211,10 @@ salle = "Tete"
 numero_de_machine = 11
 
 [node name="Texture" parent="Visage" index="0"]
-margin_left = -35.871
-margin_top = -54.681
-margin_right = 41.129
-margin_bottom = 19.319
+margin_left = -32.8708
+margin_top = -57.6809
+margin_right = 315.129
+margin_bottom = 359.319
 texture = ExtResource( 19 )
 
 [node name="Pont_b" parent="." instance=ExtResource( 1 )]
@@ -222,10 +223,10 @@ salle = "Tete"
 numero_de_machine = 4
 
 [node name="Texture" parent="Pont_b" index="0"]
-margin_left = -15.0
-margin_top = -24.0
-margin_right = 14.0
-margin_bottom = 36.0
+margin_left = -14.4448
+margin_top = -22.357
+margin_right = 146.555
+margin_bottom = 197.643
 texture = ExtResource( 15 )
 
 [node name="Chargeur" parent="." instance=ExtResource( 1 )]
@@ -234,10 +235,10 @@ salle = "Humerus_g"
 numero_de_machine = 12
 
 [node name="Texture" parent="Chargeur" index="0"]
-margin_left = -20.5
-margin_top = -34.0
-margin_right = 30.5
-margin_bottom = 23.0
+margin_left = -14.686
+margin_top = -30.275
+margin_right = 225.314
+margin_bottom = 200.725
 texture = ExtResource( 9 )
 
 [node name="Echelle_d_h" parent="." instance=ExtResource( 1 )]
@@ -246,10 +247,10 @@ salle = "Scapula_g"
 numero_de_machine = 13
 
 [node name="Texture" parent="Echelle_d_h" index="0"]
-margin_left = -11.4744
-margin_top = -15.7898
-margin_right = 41.5256
-margin_bottom = 67.2102
+margin_left = -4.93994
+margin_top = -15.43
+margin_right = 182.06
+margin_bottom = 196.57
 texture = ExtResource( 11 )
 
 [node name="Echelle_d_b" parent="." instance=ExtResource( 1 )]
@@ -258,10 +259,10 @@ salle = "Humerus_g"
 numero_de_machine = 14
 
 [node name="Texture" parent="Echelle_d_b" index="0"]
-margin_left = -16.0
-margin_top = -28.0
-margin_right = 35.0
-margin_bottom = 26.0
+margin_left = -6.27197
+margin_top = -14.595
+margin_right = 143.728
+margin_bottom = 181.405
 texture = ExtResource( 20 )
 
 [node name="Souris" parent="." instance=ExtResource( 3 )]

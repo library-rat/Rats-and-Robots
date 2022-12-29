@@ -44,10 +44,7 @@ margin_right = 27.4731
 margin_bottom = 50.6551
 grow_horizontal = 2
 grow_vertical = 2
-expand = true
+rect_scale = Vector2( 0.175, 0.175 )
 stretch_mode = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="gui_input" from="Texture" to="." method="_on_Texture_gui_input"]
