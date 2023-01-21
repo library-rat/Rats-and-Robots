@@ -8,7 +8,8 @@ const DIRECTIONS = [Vector2.LEFT,Vector2.RIGHT, Vector2.UP,Vector2.DOWN]
 export var units := {}
 #cette fois le dictionnaire stocke la liste de unitées attaquant une case,
 #la clef la coordonnée grille de la case (vector 2) et le contenu une liste des references à l'unitée
-export var threat := {}
+export var threat := {} setget _set_threat
+signal update_threat()
 #variable stockant la reference du joueur elle est initialisée dans gameboard
 var Player
 export var  grid : Resource = preload ("res://Scène principale/Gameboard/Grid.tres")
@@ -148,13 +149,18 @@ func add_threat(cell : Vector2, unit : Enemy) -> void:
 	if threat.has(cell) :
 		threat[cell].append(unit)
 	else :
-		threat[cell] = [unit]
+		self.threat[cell] = [unit]
 
 func remove_threat(cell : Vector2, unit : Enemy) -> void: 
 	threat[cell].erase(unit)
 	if threat[cell] == [] :
-		threat.erase(cell)
+		self.threat.erase(cell)
 
+func _set_threat(new_dic):
+	threat = new_dic
+	emit_signal("update_threat")
+
+	
 func is_danger(cell : Vector2) -> bool:
 	return true if threat.has(cell) else false
 

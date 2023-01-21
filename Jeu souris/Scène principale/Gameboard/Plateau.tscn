@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scène principale/Gameboard/Unit/bugcat.png" type="Texture" id=1]
 [ext_resource path="res://Scène principale/Gameboard/GameBoard.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Scène principale/Gameboard/Unit/Player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scène principale/Gameboard/Grid.tres" type="Resource" id=8]
 [ext_resource path="res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scène principale/Gameboard/Board.tres" type="Resource" id=10]
+[ext_resource path="res://Scène principale/Gameboard/DangerOverlay.tscn" type="PackedScene" id=11]
 
 [node name="Plateau" type="Node2D"]
 __meta__ = {
@@ -27,10 +29,9 @@ script = ExtResource( 2 )
 [node name="UnitOverlay" parent="GameBoard" instance=ExtResource( 4 )]
 cell_y_sort = true
 
-[node name="AimOverlay" parent="GameBoard" instance=ExtResource( 4 )]
-cell_y_sort = true
+[node name="DangerOverlay" parent="GameBoard" instance=ExtResource( 11 )]
 
-[node name="DangerOverlay" parent="GameBoard" instance=ExtResource( 4 )]
+[node name="AimOverlay" parent="GameBoard" instance=ExtResource( 4 )]
 cell_y_sort = true
 
 [node name="UnitPath" parent="GameBoard" instance=ExtResource( 6 )]
@@ -40,6 +41,7 @@ grid = ExtResource( 8 )
 
 [node name="Player" parent="GameBoard" instance=ExtResource( 7 )]
 position = Vector2( 354, 281 )
+board = ExtResource( 10 )
 move_range = 0
 rsautext = 3
 rsautint = 2
@@ -49,21 +51,25 @@ limitetir = 8
 
 [node name="Furnace" parent="GameBoard" instance=ExtResource( 9 )]
 position = Vector2( 225, 369 )
+board = ExtResource( 10 )
 skin = ExtResource( 1 )
 skin_offset = Vector2( 0, -40 )
 
 [node name="Furnace2" parent="GameBoard" instance=ExtResource( 9 )]
 position = Vector2( 150, 129 )
+board = ExtResource( 10 )
 skin = ExtResource( 1 )
 skin_offset = Vector2( 0, -40 )
 
 [node name="Furnace3" parent="GameBoard" instance=ExtResource( 9 )]
 position = Vector2( 129, 518 )
+board = ExtResource( 10 )
 skin = ExtResource( 1 )
 skin_offset = Vector2( 0, -40 )
 
 [node name="Furnace4" parent="GameBoard" instance=ExtResource( 9 )]
 position = Vector2( 582, 475 )
+board = ExtResource( 10 )
 skin = ExtResource( 1 )
 skin_offset = Vector2( 0, -40 )
 
