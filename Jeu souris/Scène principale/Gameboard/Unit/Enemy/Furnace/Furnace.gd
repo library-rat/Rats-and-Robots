@@ -7,13 +7,19 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	rng.randomize()
 
+func charge_rayon():
+		loading = true
+		$"PathFollow2D/Sprite".modulate = Color(0, 0, 1)
+		var target = cell + direction
+		while grid.dans_limite(target):
+			board.add_threat(target,self)
+			target += direction
+
 func tire_rayon():
 	loading = false
-	print(cell)
 	var target = cell + direction
 	while grid.dans_limite(target):
 		if board.is_occupied(target) :
-			print(target)
 			board.units[target].is_hit(2)
 		target += direction
 
@@ -29,19 +35,27 @@ func play_turn ():
 	for new_cell in targetcells :
 		if new_cell in possiblecells :
 			selected_cell.append(new_cell)
-	var dif : Vector2 = (playercell - cell)
-	var distance := int(abs(dif.x) + abs(dif.y))
-	if abs(dif.x) < abs(dif.y) :
-		direction = Vector2(0, (dif.y/abs(dif.y)))
-	else :
-		direction = Vector2((dif.x/abs(dif.x)), 0)
 	if selected_cell == [] :
+		var dif : Vector2 = (playercell - cell)
+		var distance := int(abs(dif.x) + abs(dif.y))
+		var directions : PoolVector2Array
+		if abs(dif.x) > 0 :
+			directions.append(Vector2((dif.x/abs(dif.x)), 0))
+		else :
+			directions.append(Vector2.LEFT)
+			directions.append(Vector2.RIGHT)
+		if abs(dif.y) > 0 :
+			directions.append(Vector2(0,(dif.y/abs(dif.y))))
+		else :
+			directions.append(Vector2.UP)
+			directions.append(Vector2.DOWN)
+			
 		if distance < 3 :
-			direction = - direction
-		selected_cell.append(cell + move_range*direction)
+			directions[0] = -directions[0]
+		selected_cell = board.remplir_case_move_direction_max(cell, move_range, directions)
+		$"PathFollow2D/Sprite".modulate = Color(1, 1, 1)
 	else :
-		loading = true
-		$"PathFollow2D/Sprite".modulate = Color(0, 0, 1)
+		charge_rayon()
 	var indice = rng.randi_range(0,len(selected_cell) - 1)
 	move_along(cell,selected_cell[indice])
 

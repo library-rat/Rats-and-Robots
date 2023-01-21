@@ -11,7 +11,7 @@ signal walk_finished
 ## Shared resource of type Grid, used to calculate map coordinates.
 export var grid: Resource
 ##Shared ressource of type board, used to know where are located amm the units
-export var board: Resource = preload("res://Scène principale/Gameboard/Board.tres")
+export var board: Resource = load("res://Scène principale/Gameboard/Board.tres")
 ## Texture representing the unit.
 export var skin: Texture setget set_skin
 ## Distance to which the unit can walk in cells.

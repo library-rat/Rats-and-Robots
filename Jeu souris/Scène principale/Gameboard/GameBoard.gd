@@ -276,3 +276,5 @@ func _input(event):
 	if event.is_action_released("ui_up") :
 		enliste[index%len(enliste)].play_turn()
 		index += 1
+		print('type')
+

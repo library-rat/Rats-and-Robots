@@ -47,6 +47,46 @@ func remplir_case_move(cell:Vector2, max_distance: int)-> Array:
 			queue.append({"cell":coordinates, "dist":newdist})
 	return( array)
 	
+#retourne un array des coordonnées de toute les cellules à la plus grande distance traversable
+#en ne se déplaçant que selon les directions "directions" et en allant moins loins que distance max
+#basé sur les coordonnée de la case centrale et la distance max
+func remplir_case_move_direction_max(cell:Vector2, max_distance: int, directions : PoolVector2Array)-> Array:
+	#variable que l'on retournera
+	var array :=  []
+	var maxdist := 0
+	#on utilise une file pour implémenter l'algo
+	var queue := [{"cell":cell,"dist":0}]
+	while not queue.empty():
+		var current = queue.pop_front()
+		var curcell = current["cell"]
+		#on verifie à chaque ajout de case que
+		#-on est dans la grille
+		#-la case n'est pas déjà remplie
+		#la cellule est à une distance inférieure à la distance max
+		if not grid.dans_limite(curcell):
+			continue
+		if curcell in array :
+			continue
+		if current["dist"] > max_distance :
+			continue
+		#si la cellule est plus loin que toute les autres on vide la liste des candidats
+		if current["dist"] > maxdist :
+			array = []
+			maxdist = current["dist"]
+		#si la case satisfait toutes les conditions on l'ajoute à array
+		#et on inspecte les voisins
+		array.append(curcell)
+		for direction in directions :
+			var coordinates: Vector2 = curcell + direction
+			#pour minimiser le nombre de tests on elimine les case déjà vues ici
+			if is_occupied(coordinates):
+				continue
+			if coordinates in array :
+				continue
+			var newdist = current["dist"] +1
+			queue.append({"cell":coordinates, "dist":newdist})
+	return( array)
+	
 #retourne toute les case pour le saut
 #rayonext est la distance maximale de saut et rayonint est la distance minimale 
 #select_occu dit si l'on selectionne les cases occupées ou pas
@@ -103,6 +143,17 @@ func remplir_case_ligne (cell:Vector2, reach:int, select_occu: bool) -> Array :
 #renvoie vrai si la case est occupée par une unitée
 func is_occupied(cell : Vector2) -> bool :
 	return true if units.has(cell) else false
+
+func add_threat(cell : Vector2, unit : Enemy) -> void: 
+	if threat.has(cell) :
+		threat[cell].append(unit)
+	else :
+		threat[cell] = [unit]
+
+func remove_threat(cell : Vector2, unit : Enemy) -> void: 
+	threat[cell].erase(unit)
+	if threat[cell] == [] :
+		threat.erase(cell)
 
 func is_danger(cell : Vector2) -> bool:
 	return true if threat.has(cell) else false
