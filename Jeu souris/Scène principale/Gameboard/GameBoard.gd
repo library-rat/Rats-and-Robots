@@ -269,12 +269,12 @@ func _on_AfficheactionActive_tir_courbe(ammo):
 func _on_Fin_de_tour_pressed():
 	var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
 	for en in enliste :
-		en.play_turn()
+		if is_instance_valid(en) :
+			en.play_turn()
 onready var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
 var index = 0
 func _input(event):
 	if event.is_action_released("ui_up") :
-		enliste[index%len(enliste)].play_turn()
+		if is_instance_valid(enliste[index%len(enliste)]) :
+			enliste[index%len(enliste)].play_turn()
 		index += 1
-		print('type')
-

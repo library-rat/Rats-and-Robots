@@ -1,6 +1,7 @@
 tool
 class_name Enemy
 extends "res://Scène principale/Gameboard/Unit/Unit.gd"
+
 export var para = 0 setget para_var_set
 var frozen : bool = false 
 
@@ -27,6 +28,12 @@ func is_hit (valeur : int)  -> void:
 	else :
 		life -= valeur
 	update_lifebar()
+	if life == 0 and para == 0:
+		dying()
+
+func dying():
+	board.remove_enemy(self)
+	self.queue_free()
 
 func is_para(valeur : int) ->void:
 	if valeur > life :

@@ -145,6 +145,15 @@ func remplir_case_ligne (cell:Vector2, reach:int, select_occu: bool) -> Array :
 func is_occupied(cell : Vector2) -> bool :
 	return true if units.has(cell) else false
 
+func remove_enemy(unit:Enemy) -> void :
+	var key_array = units.keys() 
+	for key in key_array :
+		if units[key] == unit :
+			units.erase(key)
+	var cell_array = threat.keys()
+	for cell in cell_array :
+		remove_threat(cell,unit)
+
 func add_threat(cell : Vector2, unit : Enemy) -> void: 
 	if threat.has(cell) :
 		threat[cell].append(unit)
@@ -152,9 +161,10 @@ func add_threat(cell : Vector2, unit : Enemy) -> void:
 		self.threat[cell] = [unit]
 
 func remove_threat(cell : Vector2, unit : Enemy) -> void: 
-	threat[cell].erase(unit)
-	if threat[cell] == [] :
-		self.threat.erase(cell)
+	if cell in threat :
+		threat[cell].erase(unit)
+		if threat[cell] == [] :
+			self.threat.erase(cell)
 
 func _set_threat(new_dic):
 	threat = new_dic

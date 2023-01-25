@@ -69,11 +69,13 @@ func play_turn ():
 func face_player ():
 	var playercell : Vector2 = board.position_player()
 	var dif : Vector2 = (playercell - cell)
-	if abs(dif.x)>1 :
-		dif.x = dif.x/abs(dif.x)
-	if abs(dif.y)>1:
-		dif.y = dif.y/abs(dif.y) 
-	return (dif)
+	var face_dir : Vector2 = Vector2.ZERO 
+	if abs(dif.x)>abs(dif.y) :
+		face_dir.x = dif.x/abs(dif.x)
+	else :
+		if abs(dif.y)>1:
+			face_dir.y = dif.y/abs(dif.y) 
+	return (face_dir)
 
 func move_along(old_cell : Vector2,new_cell:Vector2) -> void:
 	position = grid.calcul_map_position(new_cell)
