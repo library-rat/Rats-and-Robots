@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scène principale/UI/Menus de machines/Ordi_m.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scène principale/UI/UI.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scène principale/UI/Menus de machines/Visage.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scène principale/UI/Menus de machines/Gachette.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scène principale/UI/Menus de machines/Chargeur.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Injecteur.tscn" type="PackedScene" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.215686, 0.0823529, 0.172549, 1 )
@@ -55,6 +56,9 @@ visible = false
 visible = false
 
 [node name="Chargeur" parent="." instance=ExtResource( 10 )]
+visible = false
+
+[node name="Injecteur" parent="." instance=ExtResource( 11 )]
 visible = false
 
 [connection signal="coordine_deplacement" from="Visage" to="Echelle_g" method="_on_Visage_coordine_deplacement"]

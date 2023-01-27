@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scène principale/UI/Menus de machines/menu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Icon point endurance.png" type="Texture" id=4]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Icon point observation.png" type="Texture" id=5]
+[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Icon point calcul.png" type="Texture" id=6]
+[ext_resource path="res://Scène principale/UI/Menus de machines/Injecteur.gd" type="Script" id=7]
+
+[node name="Injecteur" instance=ExtResource( 3 )]
+script = ExtResource( 7 )
+
+[node name="Label" parent="Control/MarginContainer/Panel" index="0"]
+text = "Injecteur"
+
+[node name="VBoxContainer" parent="Control" index="1"]
+margin_bottom = 325.0
+
+[node name="Fluide" parent="Control/VBoxContainer" index="0" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 630.0
+margin_bottom = 69.0
+pointValeur = [ "Observation" ]
+ValeurMax = [ 1 ]
+
+[node name="icon" parent="Control/VBoxContainer/Fluide" index="1"]
+icon = ExtResource( 5 )
+
+[node name="Panel" parent="Control/VBoxContainer/Fluide" index="2"]
+margin_right = 630.0
+
+[node name="Label" parent="Control/VBoxContainer/Fluide/Panel" index="0"]
+text = "Forme Fluide"
+
+[node name="Armure" parent="Control/VBoxContainer" index="1" instance=ExtResource( 2 )]
+margin_top = 73.0
+margin_right = 630.0
+margin_bottom = 142.0
+pointValeur = [ "Observation", "Endurance" ]
+ValeurMax = [ 1, 1 ]
+
+[node name="icon 1" parent="Control/VBoxContainer/Armure" index="1"]
+icon = ExtResource( 5 )
+
+[node name="icon 2" parent="Control/VBoxContainer/Armure" index="3"]
+icon = ExtResource( 4 )
+
+[node name="Panel" parent="Control/VBoxContainer/Armure" index="4"]
+margin_right = 630.0
+
+[node name="Label" parent="Control/VBoxContainer/Armure/Panel" index="0"]
+text = "Forme Épaisse"
+
+[node name="Corrosif" parent="Control/VBoxContainer" index="2" instance=ExtResource( 2 )]
+margin_top = 146.0
+margin_right = 630.0
+margin_bottom = 215.0
+pointValeur = [ "Observation", "Calcul" ]
+ValeurMax = [ 1, 1 ]
+
+[node name="icon 1" parent="Control/VBoxContainer/Corrosif" index="1"]
+icon = ExtResource( 5 )
+
+[node name="icon 2" parent="Control/VBoxContainer/Corrosif" index="3"]
+icon = ExtResource( 6 )
+
+[node name="Panel" parent="Control/VBoxContainer/Corrosif" index="4"]
+margin_right = 630.0
+
+[node name="Label" parent="Control/VBoxContainer/Corrosif/Panel" index="0"]
+text = "Forme Corrosive"
+
+[connection signal="cout_point" from="Control/VBoxContainer/Fluide" to="." method="_on_Fluide_cout_point"]
+[connection signal="cout_point" from="Control/VBoxContainer/Armure" to="." method="_on_Armure_cout_point"]
+[connection signal="cout_point" from="Control/VBoxContainer/Corrosif" to="." method="_on_Corrosif_cout_point"]
+
+[editable path="Control/VBoxContainer/Fluide"]
+[editable path="Control/VBoxContainer/Armure"]
+[editable path="Control/VBoxContainer/Corrosif"]
