@@ -51,7 +51,7 @@ icon = ExtResource( 4 )
 margin_right = 630.0
 
 [node name="Label" parent="Control/VBoxContainer/Armure/Panel" index="0"]
-text = "Forme Épaisse"
+text = "Forme Armure"
 
 [node name="Corrosif" parent="Control/VBoxContainer" index="2" instance=ExtResource( 2 )]
 margin_top = 146.0

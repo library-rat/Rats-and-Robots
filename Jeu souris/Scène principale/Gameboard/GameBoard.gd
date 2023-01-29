@@ -267,6 +267,7 @@ func _on_AfficheactionActive_tir_courbe(ammo):
 
 
 func _on_Fin_de_tour_pressed():
+	$"Player".end_turn()
 	var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
 	for en in enliste :
 		if is_instance_valid(en) :
@@ -278,3 +279,4 @@ func _input(event):
 		if is_instance_valid(enliste[index%len(enliste)]) :
 			enliste[index%len(enliste)].play_turn()
 		index += 1
+	$"Player".begin_turn()

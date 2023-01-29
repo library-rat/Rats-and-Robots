@@ -81,7 +81,7 @@ func set_cell(value: Vector2) -> void:
 	board.units.erase(cell) #on enleve l'unité à l'ancienne case du dictionnaire
 	cell = grid.clamp(value)
 	board.units[value] = self #on l'inscrit à la nouvelle case
-	print('ok')
+
 
 
 func set_is_selected(value: bool) -> void:

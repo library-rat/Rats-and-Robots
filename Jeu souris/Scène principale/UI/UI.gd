@@ -17,7 +17,7 @@ func _on_Fin_de_tour_pressed():
 
 
 func _on_Chargeur_open_gachette():
-	print($"Gachette".Souris)
+
 	$"Chargeur".visible = false
 	$"Gachette".afficher_menu($"Gachette".Souris)
 

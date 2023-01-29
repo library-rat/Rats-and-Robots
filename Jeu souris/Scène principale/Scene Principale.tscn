@@ -50,6 +50,9 @@
 [connection signal="tir_courbe" from="UI/Gachette" to="Robot" method="_on_Gachette_tir_courbe"]
 [connection signal="tir_tendu" from="UI/Gachette" to="Robot" method="_on_Gachette_tir_tendu"]
 [connection signal="open_gachette" from="UI/Chargeur" to="UI" method="_on_Chargeur_open_gachette"]
+[connection signal="to_armure" from="UI/Injecteur" to="Plateau/GameBoard/Player" method="_on_Injecteur_to_armure"]
+[connection signal="to_corrosif" from="UI/Injecteur" to="Plateau/GameBoard/Player" method="_on_Injecteur_to_corrosif"]
+[connection signal="to_fluide" from="UI/Injecteur" to="Plateau/GameBoard/Player" method="_on_Injecteur_to_fluide"]
 
 [editable path="Robot"]
 [editable path="Robot/Ordi_c"]

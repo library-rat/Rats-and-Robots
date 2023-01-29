@@ -8,3 +8,8 @@
 script = ExtResource( 2 )
 skin = ExtResource( 3 )
 move_range = 3
+rsautext = 3
+rsautint = 2
+limitedash = 5
+rlimitetir = 5
+limitetir = 8

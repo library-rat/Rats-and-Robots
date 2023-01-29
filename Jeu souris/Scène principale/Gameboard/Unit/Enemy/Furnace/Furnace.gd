@@ -25,11 +25,9 @@ func tire_rayon():
 		target += direction
 
 func play_turn ():
-	print(board.units.size())
 	var playercell = board.position_player()
 	if loading :
 		tire_rayon()
-		print('shoot')
 	var targetcells = board.remplir_case_cercle(playercell, 7,3,false)
 	var possiblecells = board.remplir_case_move(cell, move_range)
 	var selected_cell = []
