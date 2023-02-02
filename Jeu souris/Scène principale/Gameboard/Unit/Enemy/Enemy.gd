@@ -5,9 +5,6 @@ extends "res://Scène principale/Gameboard/Unit/Unit.gd"
 export var para = 0 setget para_var_set
 var frozen : bool = false 
 
-func _ready():
-	self.add_to_group('Enemy')
-
 func para_var_set(new_val):
 	if new_val > 0:
 		para = new_val

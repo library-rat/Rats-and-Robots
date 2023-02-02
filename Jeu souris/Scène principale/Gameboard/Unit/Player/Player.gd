@@ -110,6 +110,7 @@ func _on_Injecteur_to_armure():
 	if forme != null :
 		effet_forme() 
 	forme = "armure"
+	print (forme)
 
 
 func _on_Injecteur_to_corrosif():
