@@ -272,6 +272,8 @@ func _on_Fin_de_tour_pressed():
 	for en in enliste :
 		if is_instance_valid(en) :
 			en.play_turn()
+	$"Player".begin_turn()
+	
 onready var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
 var index = 0
 func _input(event):
@@ -279,4 +281,4 @@ func _input(event):
 		if is_instance_valid(enliste[index%len(enliste)]) :
 			enliste[index%len(enliste)].play_turn()
 		index += 1
-	$"Player".begin_turn()
+

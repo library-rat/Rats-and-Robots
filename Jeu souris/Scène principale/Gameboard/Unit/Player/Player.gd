@@ -21,23 +21,27 @@ func end_turn():
 func begin_turn():
 	forme = null
 
+
 func _on_AfficheactionActive_move_player(valeur :int) -> void:
 	move_range = valeur
 	
 func effet_forme():
 	match forme :
 		"armure" :
-			armure = 1
+			if armure < 3 :
+				armure += 1
 			update_lifebar()
 			$"Lifebar".add_armor(armure)
+
 		"fluide" :
 			pass
 		"corrosive" :
 			for i in range(-1,2):
 				for j in range(-1,2):
 					var target = cell + Vector2(i,j)
-					if i != 0 and j!=0 and board.is_occupied(target):
+					if not(i == 0 and j==0) and board.is_occupied(target):
 						board.units[target].is_hit(1)
+
 
 
 func _on_AfficheactionActive_player_neutre():
@@ -105,21 +109,10 @@ func _on_AfficheactionActive_tir_courbe(ammo):
 func _on_AfficheactionActive_tir_tendu(ammo):
 	munition = ammo
 
-
-func _on_Injecteur_to_armure():
+func injecte_forme(new_f : String):
 	if forme != null :
 		effet_forme() 
-	forme = "armure"
-	print (forme)
+	forme = new_f
 
 
-func _on_Injecteur_to_corrosif():
-	if forme != null :
-		effet_forme() 
-	forme = "corrosive"
-
-
-func _on_Injecteur_to_fluide():
-	if forme != null :
-		effet_forme() 
-	forme = "fluide"
+	
