@@ -150,24 +150,27 @@ func remove_enemy(unit:Enemy) -> void :
 	for key in key_array :
 		if units[key] == unit :
 			units.erase(key)
+	remove_all_threats(unit)
+
+func remove_all_threats(unit:Enemy):
 	var cell_array = threat.keys()
 	for cell in cell_array :
 		remove_threat(cell,unit)
 
-func remove_all_threats(unit:Enemy):
-	pass
 	
 func add_threat(cell : Vector2, unit : Enemy) -> void: 
 	if threat.has(cell) :
 		threat[cell].append(unit)
 	else :
 		self.threat[cell] = [unit]
+	emit_signal("update_threat")
 
 func remove_threat(cell : Vector2, unit : Enemy) -> void: 
 	if cell in threat :
-		threat[cell].erase(unit)
+		self.threat[cell].erase(unit)
 		if threat[cell] == [] :
 			self.threat.erase(cell)
+		emit_signal("update_threat")
 
 func _set_threat(new_dic):
 	threat = new_dic

@@ -10,6 +10,15 @@
 
 [node name="Plateau" parent="." instance=ExtResource( 3 )]
 
+[node name="Furnace2" parent="Plateau/GameBoard" index="7"]
+max_life = 2
+
+[node name="Furnace3" parent="Plateau/GameBoard" index="8"]
+max_life = 2
+
+[node name="Furnace4" parent="Plateau/GameBoard" index="9"]
+max_life = 2
+
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
 [connection signal="fermer_pont_epaule_d" from="Robot" to="UI/Pont (epaule_d)" method="_on_Robot_fermer_pont_epaule_d"]
