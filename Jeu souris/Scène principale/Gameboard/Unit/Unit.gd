@@ -112,7 +112,7 @@ func _set_is_walking(value: bool) -> void:
 
 func pushed_along(old_cell:Vector2,new_cell:Vector2) -> void:
 	position = grid.calcul_map_position(new_cell)
-	cell = new_cell
+	self.cell = new_cell
 	
 func update_lifebar ():
 	$'Lifebar'.update_health(life,max_life)

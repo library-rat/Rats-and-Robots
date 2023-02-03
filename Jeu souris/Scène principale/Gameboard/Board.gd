@@ -154,6 +154,9 @@ func remove_enemy(unit:Enemy) -> void :
 	for cell in cell_array :
 		remove_threat(cell,unit)
 
+func remove_all_threats(unit:Enemy):
+	pass
+	
 func add_threat(cell : Vector2, unit : Enemy) -> void: 
 	if threat.has(cell) :
 		threat[cell].append(unit)

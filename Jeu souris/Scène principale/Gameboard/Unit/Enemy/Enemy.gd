@@ -39,3 +39,12 @@ func is_para(valeur : int) ->void:
 	life -= valeur
 	update_lifebar()
 
+func set_cell(value: Vector2) -> void: #version de set_cell, override the one from Unit
+	board.units.erase(cell) #on enleve l'unité à l'ancienne case du dictionnaire
+	cell = grid.clamp(value)
+	board.units[value] = self #on l'inscrit à la nouvelle case
+	update_threats()
+	
+func update_threats():#function  supposed to be override by each kind of ennemy
+	board.remove_all_threats(self)
+

@@ -45,6 +45,7 @@ move_range = 0
 [node name="Furnace" parent="GameBoard" instance=ExtResource( 9 )]
 position = Vector2( 225, 369 )
 skin = ExtResource( 1 )
+max_life = 2
 skin_offset = Vector2( 0, -40 )
 
 [node name="Furnace2" parent="GameBoard" instance=ExtResource( 9 )]

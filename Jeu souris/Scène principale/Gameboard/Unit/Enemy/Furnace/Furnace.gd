@@ -10,6 +10,11 @@ func _ready():
 func charge_rayon():
 		loading = true
 		$"PathFollow2D/Sprite".modulate = Color(0, 0, 1)
+		update_threats() #met en rouge les cases cibles du rayon
+
+func update_threats():
+	board.remove_all_threats(self)
+	if loading :
 		var target = cell + direction
 		while grid.dans_limite(target):
 			board.add_threat(target,self)
