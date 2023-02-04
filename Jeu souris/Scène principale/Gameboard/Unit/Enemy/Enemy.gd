@@ -28,9 +28,11 @@ func is_hit (valeur : int)  -> void:
 	if life == 0 and para == 0:
 		dying()
 
+
 func dying():
 	board.remove_enemy(self)
 	self.queue_free()
+
 
 func is_para(valeur : int) ->void:
 	if valeur > life :
