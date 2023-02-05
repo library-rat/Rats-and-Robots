@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scène principale/UI/Menus de machines/Ordi_m.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scène principale/UI/UI.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scène principale/UI/Menus de machines/Gachette.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scène principale/UI/Menus de machines/Chargeur.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scène principale/UI/Menus de machines/Injecteur.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scène principale/UI/Fin_de_tour.gd" type="Script" id=12]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.215686, 0.0823529, 0.172549, 1 )
@@ -29,6 +30,7 @@ anchor_right = 0.5
 margin_left = 15.6675
 margin_right = 55.6675
 margin_bottom = 50.0
+script = ExtResource( 12 )
 
 [node name="Ordi_m" parent="." instance=ExtResource( 1 )]
 visible = false
