@@ -27,6 +27,7 @@ action_mode = 0
 [connection signal="fermer_pont_epaule_d" from="Robot" to="UI/Pont (epaule_d)" method="_on_Robot_fermer_pont_epaule_d"]
 [connection signal="fermer_pont_epaule_g" from="Robot" to="UI/Pont (epaule_g)" method="_on_Robot_fermer_pont_epaule_g"]
 [connection signal="fermer_pont_tete" from="Robot" to="UI/Pont (tete)" method="_on_Robot_fermer_pont_tete"]
+[connection signal="init_souris" from="Robot" to="UI" method="_on_Robot_init_souris"]
 [connection signal="ouvremachine" from="Robot" to="UI" method="_on_Robot_ouvremachine"]
 [connection signal="reset_echelle_d" from="Robot" to="UI/Echelle_d" method="_on_Robot_reset_echelle_d"]
 [connection signal="reset_echelle_g" from="Robot" to="UI/Echelle_g" method="_on_Robot_reset_echelle_g"]

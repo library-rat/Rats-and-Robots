@@ -2,7 +2,7 @@ extends Node2D
 
 var EquipeListe = [null,null,null,null,null,null,null,null,null,null,null,null,null,null] #liste des souris
 signal ouvremachine (numero,souris)
-
+signal init_souris(liste)
 func ouvrirmenu (numero_machine,souris) : #ouvre le menu de la machine en lui assignant la souris
 	emit_signal("ouvremachine", numero_machine,souris)
 
@@ -19,6 +19,9 @@ var tendu_paralysante = preload ("res://Scène principale/Robot/Queue_action/Tir
 var courbe_simple = preload ("res://Scène principale/Robot/Queue_action/Tir_courbe_simple.tres")
 var courbe_lourd = preload ("res://Scène principale/Robot/Queue_action/Tir_courbe_lourd.tres")
 var courbe_paralysante = preload ("res://Scène principale/Robot/Queue_action/Tir_courbe_paralysant.tres")
+
+func _ready():
+	emit_signal("init_souris", EquipeListe)
 
 func _input(event):
 	if event.is_action_pressed("ui_accept") :

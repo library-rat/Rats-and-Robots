@@ -1,6 +1,16 @@
 extends Control
 
 onready var ListeMachine = [null,$"Ordi_m",$"Pont (epaule_g)",$"Pont (tete)",$"Pont (epaule_d)",null,$"Gachette",$"Echelle_g",$"Echelle_g",$"Injecteur",$"Visage",$"Chargeur",$"Echelle_d",$"Echelle_d"]
+var liste_souris = []
+
+
+func _on_Robot_init_souris(liste):
+	liste_souris = liste
+
+func _ready():
+	for index in range(ListeMachine.size()):
+		if ListeMachine[index] != null :
+			ListeMachine[index].Souris = liste_souris[index]
 
 
 func _on_Robot_ouvremachine(numero,souris):
