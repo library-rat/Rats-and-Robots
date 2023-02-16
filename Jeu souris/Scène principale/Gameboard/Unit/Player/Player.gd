@@ -22,6 +22,12 @@ func begin_turn():
 	forme = null
 
 
+func set_cell(value: Vector2) -> void: #version de set_cell, override the one from Unit
+	board.units.erase(cell) #on enleve l'unité à l'ancienne case du dictionnaire
+	cell = grid.clamp(value)
+	board.units[value] = self #on l'inscrit à la nouvelle case
+	board.player_moved()
+
 func _on_AfficheactionActive_move_player(valeur :int) -> void:
 	move_range = valeur
 	
@@ -51,11 +57,11 @@ func _on_AfficheactionActive_player_neutre():
 
 func jump_along(old_cell : Vector2,new_cell:Vector2) -> void:
 	position = grid.calcul_map_position(new_cell)
-	cell = new_cell
+	self.cell = new_cell
 
 func dash_along (old_cell : Vector2,new_cell : Vector2) :
 	position = grid.calcul_map_position(new_cell)
-	cell = new_cell
+	self.cell = new_cell
 
 func armure_var_set(new_val):
 	if new_val > 0:

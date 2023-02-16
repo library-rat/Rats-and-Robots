@@ -4,6 +4,11 @@ extends "res://Scène principale/Gameboard/Unit/Unit.gd"
 
 export var para = 0 setget para_var_set
 var frozen : bool = false 
+var rng = RandomNumberGenerator.new()
+
+func _ready():
+	rng.randomize()
+
 
 func para_var_set(new_val):
 	if new_val > 0:

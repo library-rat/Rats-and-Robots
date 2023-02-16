@@ -8,10 +8,10 @@ extends Path2D
 ## Emitted when the unit reached the end of a path along which it was walking.
 signal walk_finished
 
-## Shared resource of type Grid, used to calculate map coordinates.
+## Shared resource of type Grid, used to calculate map coordinates. initialized in _ready
 export var grid: Resource
-##Shared ressource of type board, used to know where are located amm the units
-export var board: Resource = load("res://Scène principale/Gameboard/Board.tres")
+##Shared ressource of type board, used to know where are located amm the units. initialized in _ready
+export var board: Resource
 ## Texture representing the unit.
 export var skin: Texture setget set_skin
 ## Distance to which the unit can walk in cells.
@@ -42,6 +42,7 @@ onready var _path_follow: PathFollow2D = $PathFollow2D
 func _ready() -> void:
 	set_process(false)
 	grid = load("res://Scène principale/Gameboard/Grid.tres")
+	board = load("res://Scène principale/Gameboard/Board.tres")
 	#board = load("res://Scène principale/Gameboard/Board.tres")
 	self.cell = grid.calcul_grille_position(position)
 	position = grid.calcul_map_position(cell)

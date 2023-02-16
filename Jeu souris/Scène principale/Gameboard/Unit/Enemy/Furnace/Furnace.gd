@@ -2,10 +2,8 @@ tool
 class_name Furnace
 extends "res://Scène principale/Gameboard/Unit/Enemy/Enemy.gd"
 var loading := false
-var rng = RandomNumberGenerator.new()
+var damage = 2
 
-func _ready():
-	rng.randomize()
 
 func charge_rayon():
 		loading = true
@@ -26,14 +24,14 @@ func tire_rayon():
 	while grid.dans_limite(target):
 		board.remove_threat(target,self)
 		if board.is_occupied(target) :
-			board.units[target].is_hit(2)
+			board.units[target].is_hit(damage)
 		target += direction
 
 func play_turn ():
 	var playercell = board.position_player()
 	if loading :
 		tire_rayon()
-	var targetcells = board.remplir_case_cercle(playercell, 7,3,false)
+	var targetcells = board.remplir_case_cercle(playercell, 7,3,false)##!!!! c'est ici pour modifier la distance préférée des furnaces
 	var possiblecells = board.remplir_case_move(cell, move_range)
 	var selected_cell = []
 	for new_cell in targetcells :

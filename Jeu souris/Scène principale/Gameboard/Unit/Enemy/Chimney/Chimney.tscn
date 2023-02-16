@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scène principale/Gameboard/Unit/Enemy/Chimney/Chimney.gd" type="Script" id=1]
+[ext_resource path="res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn" type="PackedScene" id=2]
+
+[node name="Chimney" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+board = null
+skin = null
+skin_offset = Vector2( 0, 0 )
+
+[node name="Sprite" parent="PathFollow2D" index="1"]
+position = Vector2( 0, 0 )
+texture = null

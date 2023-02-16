@@ -12,6 +12,7 @@ export var threat := {} setget _set_threat
 signal update_threat()
 #variable stockant la reference du joueur elle est initialisée dans gameboard
 var Player
+signal player_moved()
 export var  grid : Resource = preload ("res://Scène principale/Gameboard/Grid.tres")
 
 #retourne un array des coordonnées de toutes les celllules possibles à traverser
@@ -180,10 +181,9 @@ func _set_threat(new_dic):
 func is_danger(cell : Vector2) -> bool:
 	return true if threat.has(cell) else false
 
+func player_moved():
+	emit_signal("player_moved")
+
 func position_player():
-	var keylist = units.keys()
-	var keyplayer = null
-	for i in keylist :
-		if units[i] == Player :
-			keyplayer = i
-	return(keyplayer)
+	if not Player == null:
+		return(Player.cell)
