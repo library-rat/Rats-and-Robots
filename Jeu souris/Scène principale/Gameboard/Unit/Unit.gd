@@ -74,15 +74,15 @@ func walk_along(path: PoolVector2Array) -> void:
 	curve.add_point(Vector2.ZERO)
 	for point in path:
 		curve.add_point(grid.calcul_map_position(point) - position)
-	cell = path[-1]
+	self.cell = path[-1]
 	self._is_walking = true
 
 
-func jump_along(old_cell : Vector2,new_cell:Vector2) -> void:
+func jump_along(new_cell:Vector2) -> void:
 	position = grid.calcul_map_position(new_cell)
 	self.cell = new_cell
 
-func dash_along (old_cell : Vector2,new_cell : Vector2) :
+func dash_along (new_cell : Vector2) :
 	position = grid.calcul_map_position(new_cell)
 	self.cell = new_cell
 

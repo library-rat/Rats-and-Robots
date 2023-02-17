@@ -105,20 +105,16 @@ func _jump_player (new_cell : Vector2) -> void:
 	if board.is_occupied(new_cell) or not(new_cell in _selected_cells) :
 		return
 	var old_cell = _active_unit.cell
-	board.units.erase(_active_unit.cell)
-	board.units[new_cell] = _active_unit
 	_deselect_active_unit()
-	$"Player".jump_along(old_cell,new_cell)
+	$"Player".jump_along(new_cell)
 	_clear_active_unit()
 
 func _dash_player (new_cell : Vector2) -> void :
 	if board.is_occupied(new_cell) or not(new_cell in _selected_cells) :
 		return
 	var old_cell = _active_unit.cell
-	board.units.erase(_active_unit.cell)
-	board.units[new_cell] = _active_unit
 	_deselect_active_unit()
-	$"Player".dash_along(old_cell,new_cell)
+	$"Player".dash_along(new_cell)
 	var direction = grid.calc_direction(new_cell,old_cell)
 	$"Player"._push_cell(new_cell + direction,direction)
 	_clear_active_unit()
