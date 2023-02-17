@@ -78,6 +78,15 @@ func walk_along(path: PoolVector2Array) -> void:
 	self._is_walking = true
 
 
+func jump_along(old_cell : Vector2,new_cell:Vector2) -> void:
+	position = grid.calcul_map_position(new_cell)
+	self.cell = new_cell
+
+func dash_along (old_cell : Vector2,new_cell : Vector2) :
+	position = grid.calcul_map_position(new_cell)
+	self.cell = new_cell
+
+
 func set_cell(value: Vector2) -> void:
 	board.units.erase(cell) #on enleve l'unité à l'ancienne case du dictionnaire
 	cell = grid.clamp(value)

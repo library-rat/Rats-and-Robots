@@ -55,14 +55,6 @@ func _on_AfficheactionActive_player_neutre():
 	munition = null
 	aire_tir = []
 
-func jump_along(old_cell : Vector2,new_cell:Vector2) -> void:
-	position = grid.calcul_map_position(new_cell)
-	self.cell = new_cell
-
-func dash_along (old_cell : Vector2,new_cell : Vector2) :
-	position = grid.calcul_map_position(new_cell)
-	self.cell = new_cell
-
 func armure_var_set(new_val):
 	if new_val > 0:
 		armure = new_val
