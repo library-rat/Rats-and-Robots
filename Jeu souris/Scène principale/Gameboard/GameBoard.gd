@@ -120,7 +120,7 @@ func _dash_player (new_cell : Vector2) -> void :
 	_deselect_active_unit()
 	$"Player".dash_along(old_cell,new_cell)
 	var direction = grid.calc_direction(new_cell,old_cell)
-	_push_unit(new_cell + direction,direction)
+	$"Player"._push_cell(new_cell + direction,direction)
 	_clear_active_unit()
 
 func _tir_tendu_player (target_cell : Vector2) -> void:
@@ -178,20 +178,6 @@ signal player_moved (move_range_left)
 signal player_jumped ()
 signal player_dashed ()
 signal player_shot ()
-
-func _push_unit (cell : Vector2, direction : Vector2)-> void:
-	if not board.units.has(cell) :
-		return
-	var pushed_unit = board.units[cell]
-	if pushed_unit.movable :
-		if grid.dans_limite(cell+direction):
-			var new_cell = cell + direction
-			board.units.erase(pushed_unit.cell)
-			pushed_unit.pushed_along(cell, new_cell)
-			board.units[new_cell] = pushed_unit
-	else:
-		pushed_unit.is_hit(1)
-		$"Player".is_hit(1)
 
 func _on_Cursor_accept_pressed(cell : Vector2)-> void:
 	if not _active_unit:

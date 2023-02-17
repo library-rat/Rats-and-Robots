@@ -43,6 +43,6 @@ func player_alone() -> bool :
 	var playercell = board.position_player()
 	for direction in TargetArea :
 		if board.is_occupied(direction + playercell):
-			if board.units(direction+ playercell).is_in_group("Enemy"):
+			if board.units[direction+ playercell].is_in_group("Enemy"):
 				return(false)
 	return true

@@ -86,6 +86,17 @@ func dash_along (old_cell : Vector2,new_cell : Vector2) :
 	position = grid.calcul_map_position(new_cell)
 	self.cell = new_cell
 
+func _push_cell (cell : Vector2, direction : Vector2)-> void:
+	if not board.units.has(cell) :
+		return
+	var pushed_unit = board.units[cell]
+	if pushed_unit.movable :
+		if grid.dans_limite(cell+direction):
+			var new_cell = cell + direction
+			pushed_unit.pushed_along(cell, new_cell)
+	else:
+		pushed_unit.is_hit(1)
+		self.is_hit(1)
 
 func set_cell(value: Vector2) -> void:
 	board.units.erase(cell) #on enleve l'unité à l'ancienne case du dictionnaire
