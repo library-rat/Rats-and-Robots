@@ -13,7 +13,7 @@ func _on_FermeMenu_pressed():
 	visible = false
 
 func test_souris_stat (stat) : #permet de tester si une souris a des points
-	var sumCalc = Souris.Calcul+Souris.CLock
+	var sumCalc = Souris.Calcul+Souris.CLock + Souris.Ctemp
 	var sumEndu = Souris.Endurance + Souris.ELock
 	if stat =="Endurance" :
 		if Souris.Endurance > 0 : #si la souris a des points en endurance
@@ -24,7 +24,15 @@ func test_souris_stat (stat) : #permet de tester si une souris a des points
 			Souris.get_node("PanelContainer/Grille de points").rafraichir_affichage(Souris.Points)
 			return (true)
 	if stat =="Calcul" :
-		if Souris.Calcul > 0 : #si la souris a des points en endurance
+		if Souris.CTemp > 0:
+			Souris.Ctemp -= 1
+			for i in range (sumCalc - Souris.Ctemp, Souris.Points()-2 ):
+				Souris.Points[i] = Souris.Points[i+1]
+			Souris.Points[-1] = null
+			$"Panel/Grille de points".rafraichir_affichage(Souris.Points) #update les points dans le menu
+			Souris.get_node("PanelContainer/Grille de points").rafraichir_affichage(Souris.Points)
+			
+		elif Souris.Calcul > 0 : #si la souris a des points en calcul
 			Souris.Calcul -= 1
 			Souris.CLock += 1#un point est alors transformé en pt bloqué
 			Souris.Points[Souris.Calcul] = Souris.CalculLockPt #modifie un point dans la liste de Points de la souris
@@ -32,7 +40,7 @@ func test_souris_stat (stat) : #permet de tester si une souris a des points
 			Souris.get_node("PanelContainer/Grille de points").rafraichir_affichage(Souris.Points)
 			return (true)
 	if stat =="Observation" :
-		if Souris.Observation > 0 : #si la souris a des points en endurance
+		if Souris.Observation > 0 : #si la souris a des points en observation
 			Souris.Observation -= 1
 			Souris.OLock += 1#un point est alors transformé en pt bloqué
 			Souris.Points[sumCalc+sumEndu+ Souris.Observation] = Souris.ObservationLockPt #modifie un point dans la liste de Points de la souris

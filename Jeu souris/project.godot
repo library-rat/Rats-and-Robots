@@ -67,7 +67,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "Point",
 "language": "GDScript",
-"path": "res://Scène principale/Souris/Ressources/Afficheur de points/Point.gd"
+"path": "res://Scène principale/Souris/Afficheur de points/Point.gd"
 }, {
 "base": "Path2D",
 "class": "Unit",

@@ -1,9 +1,0 @@
-[gd_resource type="Resource" load_steps=3 format=2]
-
-[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Point.gd" type="Script" id=1]
-[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Icon point enduranceLock.png" type="Texture" id=2]
-
-[resource]
-script = ExtResource( 1 )
-name = "ELock"
-texture = ExtResource( 2 )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Scène principale/Souris/Ressources/Afficheur de points/Grille de points.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scène principale/Souris/Afficheur de points/Grille de points.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scène principale/UI/Menus de machines/Menu.gd" type="Script" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]

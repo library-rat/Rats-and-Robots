@@ -1,5 +1,5 @@
 extends Node2D
-
+var MousePop :Array #Permet de stocker la liste de tout les souris disponibles
 var EquipeListe = [null,null,null,null,null,null,null,null,null,null,null,null,null,null] #liste des souris
 signal ouvremachine (numero,souris)
 signal init_souris(liste)

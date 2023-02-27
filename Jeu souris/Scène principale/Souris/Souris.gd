@@ -3,6 +3,7 @@ extends Node2D
 export(String) var nomSouris = ""
 #Stat dans les deifférentes stats
 export (int) var Calcul = 0
+var CTemp :int = 0
 export (int) var CLock = 0
 export (int) var Endurance =0
 export (int) var ELock = 0
@@ -12,12 +13,13 @@ export(Array, Resource) var Points = [ null, null,
 null, null, null, null, null, null, null, null]
 
 #on importe les differents types de points
-var CalculPt = preload("res://Scène principale/Souris/Ressources/Afficheur de points/Calcul.tres")
-var CalculLockPt = preload("res://Scène principale/Souris/Ressources/Afficheur de points/CalculLock.tres")
-var EndurancePt = preload("res://Scène principale/Souris/Ressources/Afficheur de points/Endurance.tres")
-var EnduranceLockPt = preload("res://Scène principale/Souris/Ressources/Afficheur de points/Endurancelock.tres")
-var ObservationPt = preload("res://Scène principale/Souris/Ressources/Afficheur de points/Observation.tres")
-var ObservationLockPt = preload("res://Scène principale/Souris/Ressources/Afficheur de points/ObservationLock.tres")
+var CalculPt = preload("res://Scène principale/Souris/Afficheur de points/Calcul.tres")
+var CalculTempPt = preload("res://Scène principale/Souris/Afficheur de points/CalculTemp.tres")
+var CalculLockPt = preload("res://Scène principale/Souris/Afficheur de points/CalculLock.tres")
+var EndurancePt = preload("res://Scène principale/Souris/Afficheur de points/Endurance.tres")
+var EnduranceLockPt = preload("res://Scène principale/Souris/Afficheur de points/Endurancelock.tres")
+var ObservationPt = preload("res://Scène principale/Souris/Afficheur de points/Observation.tres")
+var ObservationLockPt = preload("res://Scène principale/Souris/Afficheur de points/ObservationLock.tres")
 #Variables liées au drag and dropping de la souris
 var selectionnee = false
 export (int) var rest_point	#attention il y a un décalage de 1 entre respoint et numéro machines : respoint +1 = numéro_machine
@@ -57,6 +59,7 @@ null, null, null, null, null, null, null, null]
 	Observation = sumObs
 	OLock = 0
 	Calcul= sumCalc
+	CTemp = 0
 	CLock = 0
 	for i in range (sumCalc):#reset les points de calcul
 		change_point(i,CalculPt)
