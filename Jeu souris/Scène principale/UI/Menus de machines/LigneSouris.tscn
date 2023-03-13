@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scène principale/Souris/Afficheur de points/Grille de points.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scène principale/UI/Menus de machines/LigneSouris.gd" type="Script" id=2]
+
+[node name="LigneSouris" type="Panel"]
+anchor_right = 0.9
+rect_min_size = Vector2( 0, 70 )
+script = ExtResource( 2 )
+
+[node name="Machine" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+rect_min_size = Vector2( 300, 0 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 657.0
+margin_bottom = 70.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+
+[node name="Nom" type="Label" parent="HBoxContainer"]
+margin_left = 74.0
+margin_right = 274.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 200, 70 )
+
+[node name="Grille de points" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 278.0
+margin_right = 453.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 175, 70 )
+rect_scale = Vector2( 1, 1 )
+
+[node name="Afficheur de point" parent="HBoxContainer/Grille de points" index="0"]
+margin_right = 35.0
+margin_bottom = 35.0
+
+[node name="PointTextureRect" parent="HBoxContainer/Grille de points/Afficheur de point" index="0"]
+margin_right = 35.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+expand = true
+stretch_mode = 1
+
+[node name="Afficheur de point2" parent="HBoxContainer/Grille de points" index="1"]
+margin_left = 35.0
+margin_right = 70.0
+margin_bottom = 35.0
+
+[node name="Afficheur de point3" parent="HBoxContainer/Grille de points" index="2"]
+margin_left = 70.0
+margin_right = 105.0
+margin_bottom = 35.0
+
+[node name="Afficheur de point4" parent="HBoxContainer/Grille de points" index="3"]
+margin_left = 105.0
+margin_right = 140.0
+margin_bottom = 35.0
+
+[node name="Afficheur de point5" parent="HBoxContainer/Grille de points" index="4"]
+margin_left = 140.0
+margin_right = 175.0
+margin_bottom = 35.0
+
+[node name="Afficheur de point6" parent="HBoxContainer/Grille de points" index="5"]
+margin_top = 35.0
+margin_right = 35.0
+margin_bottom = 70.0
+
+[node name="Afficheur de point7" parent="HBoxContainer/Grille de points" index="6"]
+margin_left = 35.0
+margin_top = 35.0
+margin_right = 70.0
+margin_bottom = 70.0
+
+[node name="Afficheur de point8" parent="HBoxContainer/Grille de points" index="7"]
+margin_left = 70.0
+margin_top = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+
+[node name="Afficheur de point9" parent="HBoxContainer/Grille de points" index="8"]
+margin_left = 105.0
+margin_top = 35.0
+margin_right = 140.0
+margin_bottom = 70.0
+
+[node name="Afficheur de point10" parent="HBoxContainer/Grille de points" index="9"]
+margin_left = 140.0
+margin_top = 35.0
+margin_right = 175.0
+margin_bottom = 70.0
+
+[node name="Description" type="Label" parent="HBoxContainer"]
+margin_left = 457.0
+margin_right = 657.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 200, 70 )
+
+[editable path="HBoxContainer/Grille de points"]
+[editable path="HBoxContainer/Grille de points/Afficheur de point"]

@@ -1,7 +1,7 @@
 extends Node2D
 
 export(String) var nomSouris = ""
-#Stat dans les deifférentes stats
+#Stat dans les différentes stats
 export (int) var Calcul = 0
 var CTemp :int = 0
 export (int) var CLock = 0

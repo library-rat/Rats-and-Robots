@@ -102,6 +102,7 @@ rect_scale = Vector2( 0.5, 0.5 )
 [node name="Ordi_c" parent="." instance=ExtResource( 1 )]
 position = Vector2( 666.282, 113.327 )
 salle = "Scapula_d"
+nom = "Ordi_c"
 numero_de_machine = 1
 
 [node name="Texture" parent="Ordi_c" index="0"]
@@ -114,6 +115,7 @@ texture = ExtResource( 13 )
 [node name="Ordi_m" parent="." instance=ExtResource( 1 )]
 position = Vector2( 702.103, 115.79 )
 salle = "Scapula_d"
+nom = "Ordi_m"
 numero_de_machine = 2
 
 [node name="Texture" parent="Ordi_m" index="0"]
@@ -126,6 +128,7 @@ texture = ExtResource( 21 )
 [node name="Pont_g" parent="." instance=ExtResource( 1 )]
 position = Vector2( 740.802, 107.931 )
 salle = "Scapula_d"
+nom = "Pont_g"
 numero_de_machine = 3
 
 [node name="Texture" parent="Pont_g" index="0"]
@@ -138,6 +141,7 @@ texture = ExtResource( 17 )
 [node name="Pont_d" parent="." instance=ExtResource( 1 )]
 position = Vector2( 855.472, 111.214 )
 salle = "Scapula_g"
+nom = "Pont_d"
 numero_de_machine = 5
 
 [node name="Texture" parent="Pont_d" index="0"]
@@ -150,6 +154,7 @@ texture = ExtResource( 14 )
 [node name="Plasma" parent="." instance=ExtResource( 1 )]
 position = Vector2( 887, 105 )
 salle = "Scapula_g"
+nom = "Plasma"
 numero_de_machine = 6
 
 [node name="Texture" parent="Plasma" index="0"]
@@ -162,6 +167,7 @@ texture = ExtResource( 7 )
 [node name="Gachette" parent="." instance=ExtResource( 1 )]
 position = Vector2( 937.041, 113.396 )
 salle = "Scapula_g"
+nom = "Gachette"
 numero_de_machine = 7
 
 [node name="Texture" parent="Gachette" index="0"]
@@ -175,6 +181,7 @@ stretch_mode = 3
 [node name="Echelle_g_h" parent="." instance=ExtResource( 1 )]
 position = Vector2( 625.948, 134.927 )
 salle = "Scapula_d"
+nom = "Echelle_g_h"
 numero_de_machine = 8
 
 [node name="Texture" parent="Echelle_g_h" index="0"]
@@ -187,6 +194,7 @@ texture = ExtResource( 12 )
 [node name="Echelle_g_b" parent="." instance=ExtResource( 1 )]
 position = Vector2( 628.198, 181.802 )
 salle = "Humerus_d"
+nom = "Echelle_g_b"
 numero_de_machine = 9
 
 [node name="Texture" parent="Echelle_g_b" index="0"]
@@ -199,6 +207,7 @@ texture = ExtResource( 8 )
 [node name="Injecteur" parent="." instance=ExtResource( 1 )]
 position = Vector2( 699.182, 177.244 )
 salle = "Humerus_d"
+nom = "Injecteur"
 numero_de_machine = 10
 
 [node name="Texture" parent="Injecteur" index="0"]
@@ -211,6 +220,7 @@ texture = ExtResource( 18 )
 [node name="Visage" parent="." instance=ExtResource( 1 )]
 position = Vector2( 808.871, 199.681 )
 salle = "Tete"
+nom = "Visage"
 numero_de_machine = 11
 
 [node name="Texture" parent="Visage" index="0"]
@@ -223,6 +233,7 @@ texture = ExtResource( 19 )
 [node name="Pont_b" parent="." instance=ExtResource( 1 )]
 position = Vector2( 782.445, 186.357 )
 salle = "Tete"
+nom = "Pont_b"
 numero_de_machine = 4
 
 [node name="Texture" parent="Pont_b" index="0"]
@@ -235,6 +246,7 @@ texture = ExtResource( 15 )
 [node name="Chargeur" parent="." instance=ExtResource( 1 )]
 position = Vector2( 891.686, 169.275 )
 salle = "Humerus_g"
+nom = "Chargeur"
 numero_de_machine = 12
 
 [node name="Texture" parent="Chargeur" index="0"]
@@ -247,6 +259,7 @@ texture = ExtResource( 9 )
 [node name="Echelle_d_h" parent="." instance=ExtResource( 1 )]
 position = Vector2( 952.94, 136.43 )
 salle = "Scapula_g"
+nom = "Echelle_d_h"
 numero_de_machine = 13
 
 [node name="Texture" parent="Echelle_d_h" index="0"]
@@ -259,6 +272,7 @@ texture = ExtResource( 11 )
 [node name="Echelle_d_b" parent="." instance=ExtResource( 1 )]
 position = Vector2( 940.272, 172.595 )
 salle = "Humerus_g"
+nom = "Echelle_d_b"
 numero_de_machine = 14
 
 [node name="Texture" parent="Echelle_d_b" index="0"]

@@ -13,7 +13,7 @@ func _on_FermeMenu_pressed():
 	visible = false
 
 func test_souris_stat (stat) : #permet de tester si une souris a des points
-	var sumCalc = Souris.Calcul+Souris.CLock + Souris.Ctemp
+	var sumCalc = Souris.Calcul+Souris.CLock + Souris.CTemp
 	var sumEndu = Souris.Endurance + Souris.ELock
 	if stat =="Endurance" :
 		if Souris.Endurance > 0 : #si la souris a des points en endurance
@@ -25,8 +25,8 @@ func test_souris_stat (stat) : #permet de tester si une souris a des points
 			return (true)
 	if stat =="Calcul" :
 		if Souris.CTemp > 0:
-			Souris.Ctemp -= 1
-			for i in range (sumCalc - Souris.Ctemp, Souris.Points()-2 ):
+			Souris.CTemp -= 1
+			for i in range (sumCalc - Souris.CTemp, Souris.Points()-2 ):
 				Souris.Points[i] = Souris.Points[i+1]
 			Souris.Points[-1] = null
 			$"Panel/Grille de points".rafraichir_affichage(Souris.Points) #update les points dans le menu

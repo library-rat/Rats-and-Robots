@@ -4,6 +4,7 @@
 script/source = "extends Position2D
 var libre = true
 export(String) var salle #sallle dans laquelle la machine est située
+export(String) var nom #nom de la machine
 export (int) var numero_de_machine #numéro de la machine utilisé dans la liste du robot
 signal assign_souris (numero_de_machine,souris) #envoie le signal à robot que la souris va à la machine numero
 signal swap_souris(numero_de_machine, other_num) #quand on échange deux souris il suffit d'envoyer le numéro de la machine et celle de l'autre machine 
