@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-export var speed = 550.0
+@export var speed = 550.0
 var left_limit = 0
 var right_limit = 0
 
@@ -12,7 +12,7 @@ func _ready():
 	left_limit = get_viewport_rect().position.x 
 	right_limit = get_viewport_rect().position.x + get_viewport_rect().size.x 
 
-	$"AnimatedSprite".play("default")
+	$"AnimatedSprite2D".play("default")
 
 func _process(delta):
 	var direction = 0

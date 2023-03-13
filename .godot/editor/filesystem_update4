@@ -1,0 +1,6 @@
+res://default_env.tres
+res://Screen.tscn
+res://Brick.tscn
+res://Ball.tscn
+res://Ball.gd
+res://Player.tscn

@@ -1,49 +1,47 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://dhm0gk3klud4q"]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Screen.gd" type="Script" id=2]
-[ext_resource path="res://Ball.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Brick.tscn" type="PackedScene" id=4]
+[ext_resource type="PackedScene" uid="uid://d21f10kvr55rq" path="res://Player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cb70110m3iv46" path="res://Ball.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c2lmkk5sqaoam" path="res://Brick.tscn" id="4"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 520, 10 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(1152, 10)
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 4, 306 )
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(4, 648)
 
 [node name="Screen" type="Node2D"]
-script = ExtResource( 2 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 500, 538 )
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(500, 538)
 
-[node name="Ball" parent="." instance=ExtResource( 3 )]
-position = Vector2( 498, 346 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Ball" parent="." instance=ExtResource("3")]
+position = Vector2(498, 346)
+scale = Vector2(0.5, 0.5)
 
-[node name="Brick" parent="." instance=ExtResource( 4 )]
-position = Vector2( 360, 251 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Brick" parent="." instance=ExtResource("4")]
+position = Vector2(360, 251)
+scale = Vector2(0.5, 0.5)
 color = "Blue"
 
-[node name="Brick2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 242, 248 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Brick2" parent="." instance=ExtResource("4")]
+position = Vector2(242, 248)
+scale = Vector2(0.5, 0.5)
 color = "Yellow"
 
-[node name="Brick3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 303, 207 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Brick3" parent="." instance=ExtResource("4")]
+position = Vector2(303, 207)
+scale = Vector2(0.5, 0.5)
 color = "Red"
 
-[node name="Brick4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 183, 206 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Brick4" parent="." instance=ExtResource("4")]
+position = Vector2(183, 206)
+scale = Vector2(0.5, 0.5)
 color = "Yellow"
 
-[node name="Brick5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 232, 160 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Brick5" parent="." instance=ExtResource("4")]
+position = Vector2(232, 160)
+scale = Vector2(0.5, 0.5)
 color = "Red"
 
 [node name="Walls" type="Node2D" parent="."]
@@ -51,18 +49,18 @@ color = "Red"
 [node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D"]
-position = Vector2( 510, 0 )
-shape = SubResource( 1 )
+position = Vector2(576, 0)
+shape = SubResource("1")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2"]
-position = Vector2( -6, 296 )
-shape = SubResource( 2 )
+position = Vector2(-6, 324)
+shape = SubResource("2")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Walls"]
-position = Vector2( 1036, -3 )
+position = Vector2(1152, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D3"]
-position = Vector2( -6, 296 )
-shape = SubResource( 2 )
+position = Vector2(0, 324)
+shape = SubResource("2")
