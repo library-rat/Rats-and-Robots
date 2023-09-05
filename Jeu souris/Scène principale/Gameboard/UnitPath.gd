@@ -2,14 +2,14 @@
 class_name UnitPath
 extends TileMap
 
-export var grid: Resource
+@export var grid: Resource
 
 #on créer un nouvel object pathFinder à chaque selection d'unitée
 var _pathfinder: PathFinder
 # Stoque le chemin de l'unité
 #si le chemin est validé par le joueur on fait bouger le personnage à l'aide de 
 # la fonction walk_along().
-var current_path := PoolVector2Array()
+var current_path := PackedVector2Array()
 
 # Creates a new PathFinder that uses the AStar algorithm we use to find a path between two cells 
 # among the `walkable_cells`.
@@ -26,10 +26,10 @@ func draw(cell_start: Vector2, cell_end: Vector2) -> void:
 	current_path = _pathfinder.calculate_point_path(cell_start, cell_end)
 	# And we draw a tile for every cell in the path.
 	for cell in current_path:
-		set_cellv(cell, 0)
+		set_cell(0,cell, 0)
 	# The function below updates the auto-tiling. Without it, you wouldn't get the nice path with curves
 	# and the arrows on either end.
-	update_bitmask_region()
+	set_cells_terrain_connect(0,current_path,0,0)
 
 
 # Stops drawing, clearing the drawn path and the `_pathfinder`.

@@ -6,35 +6,35 @@
 script = null
 
 [node name="HSplitContainer" type="HSplitContainer" parent="Control" index="1"]
-margin_top = 110.0
-margin_right = 630.0
-margin_bottom = 310.0
+offset_top = 110.0
+offset_right = 630.0
+offset_bottom = 310.0
 split_offset = 50
 
 [node name="CenterContainer" type="CenterContainer" parent="Control/HSplitContainer" index="0"]
-margin_right = 190.0
-margin_bottom = 200.0
+offset_right = 190.0
+offset_bottom = 200.0
 
 [node name="TextureRect" type="TextureRect" parent="Control/HSplitContainer/CenterContainer" index="0"]
-margin_left = 25.0
-margin_right = 165.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 140, 200 )
+offset_left = 25.0
+offset_right = 165.0
+offset_bottom = 200.0
+custom_minimum_size = Vector2( 140, 200 )
 
 [node name="Panel" type="Panel" parent="Control/HSplitContainer" index="1"]
-margin_left = 202.0
-margin_right = 630.0
-margin_bottom = 200.0
+offset_left = 202.0
+offset_right = 630.0
+offset_bottom = 200.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HSplitContainer/Panel" index="0"]
-margin_left = 12.0
-margin_right = 642.0
-rect_min_size = Vector2( 630, 0 )
-rect_scale = Vector2( 0.65, 0.65 )
+offset_left = 12.0
+offset_right = 642.0
+custom_minimum_size = Vector2( 630, 0 )
+scale = Vector2( 0.65, 0.65 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 15
+theme_override_constants/separation = 15
 
 [node name="VBoxContainer" parent="Control" index="2"]
-margin_top = 340.0
-margin_bottom = 340.0
+offset_top = 340.0
+offset_bottom = 340.0

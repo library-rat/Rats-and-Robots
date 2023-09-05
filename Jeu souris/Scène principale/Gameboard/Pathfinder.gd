@@ -1,6 +1,6 @@
 #Utilise l'algo Astar
 class_name PathFinder
-extends Reference
+extends RefCounted
 
 const DIRECTIONS = [Vector2.UP,Vector2.DOWN,Vector2.LEFT,Vector2.RIGHT]
 #Liste des directions possibles pour une unitée on en aura besoin dans une boucle for après
@@ -24,7 +24,7 @@ func _init(grid : Grid,walkable_cells : Array) -> void :
 #On ajoute alors toutes les cases dans l'instance Astar
 	_add_and_connect_points(cell_mappings)
 
-func calculate_point_path( start : Vector2, end : Vector2) -> PoolVector2Array :
+func calculate_point_path( start : Vector2, end : Vector2) -> PackedVector2Array :
 	#Pour l'algo Astar on a besoin des indices pour faire le chemin
 	#On a donc besoin de pouvoir trouver l'index avec les coordonnées ce que fait grad.as_index()
 	var start_index : int = _grid.as_index(start)
@@ -33,7 +33,7 @@ func calculate_point_path( start : Vector2, end : Vector2) -> PoolVector2Array :
 	if _astar.has_point(start_index) and _astar.has_point(end_index):
 		return _astar.get_point_path(start_index,end_index)
 	else :
-		return PoolVector2Array()
+		return PackedVector2Array()
 
 #Ajoute et connecte les cases ou l'on peut marcher à l'instace AStar
 func _add_and_connect_points(cell_mappings : Dictionary ) -> void :

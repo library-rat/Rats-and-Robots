@@ -1,0 +1,371 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1693916791
+DangerOverlay.gd::GDScript::-1::1693080481::0::1::::<>TileMap<>::
+default_env.tres::Environment::2168104264303753901::1693759604::0::1::::<><>::
+::res://Godot-Fontpack-master/::1693080498
+icon.png::CompressedTexture2D::4687408009814618130::1683997439::1693080498::1::::<><>::
+README.md::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/fonts/::1693080498
+overview.PNG::CompressedTexture2D::7540648818465857013::1683997439::1693080498::1::::<><>::
+::res://Godot-Fontpack-master/fonts/architect-s-daughter/::1693080497
+Architects Daughter SIL OFL Font License.txt::TextFile::-1::1683997438::0::1::::<><>::
+ArchitectsDaughter32.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/architect-s-daughter/ArchitectsDaughter.ttf
+ArchitectsDaughter.ttf::FontFile::2016666445774422193::1683997438::1693080497::1::::<><>::
+::res://Godot-Fontpack-master/fonts/cmu-typewriter/::1683997438
+Typewriter.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/cmu-typewriter/Typewriter/cmuntt.ttf
+::res://Godot-Fontpack-master/fonts/cmu-typewriter/Typewriter/::1693080497
+cmunit.ttf::FontFile::8314325423885615242::1683997438::1693080497::1::::<><>::
+cmuntb.ttf::FontFile::2617095167386031495::1683997438::1693080497::1::::<><>::
+cmuntt.ttf::FontFile::4308385501093255407::1683997438::1693080497::1::::<><>::
+cmuntx.ttf::FontFile::390751403394459031::1683997438::1693080497::1::::<><>::
+OFL-FAQ.txt::TextFile::-1::1683997438::0::1::::<><>::
+OFL.txt::TextFile::-1::1683997438::0::1::::<><>::
+README.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/fonts/connection/::1693080497
+Connection.otf::FontFile::4666343774973354283::1683997438::1693080497::1::::<><>::
+ConnectionBold.otf::FontFile::5849914677710377897::1683997438::1693080497::1::::<><>::
+SIL Open Font License.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/fonts/connection_ii/::1693080497
+ConnectionII.otf::FontFile::5744382601272942248::1683997438::1693080497::1::::<><>::
+ConnectionII.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/connection_ii/ConnectionII.otf
+SIL Open Font License.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/fonts/droid-sans/::1693080497
+Apache License.txt::TextFile::-1::1683997438::0::1::::<><>::
+DroidSans-Bold.ttf::FontFile::2250329398079281266::1683997438::1693080497::1::::<><>::
+DroidSans.tres::FontFile::-1::1693080481::0::1::::<><>::
+DroidSans.ttf::FontFile::4973093483664896767::1683997438::1693080497::1::::<><>::
+::res://Godot-Fontpack-master/fonts/kirifont/::1693080497
+KiriFont.otf::FontFile::5618991740019434693::1683997438::1693080497::1::::<><>::
+Kirifont.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/kirifont/KiriFont.otf
+KiriFont.ttf::FontFile::1997200497938122498::1683997438::1693080497::1::::<><>::
+OFL.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/fonts/linux-libertine/::1683997439
+LinuxLibertine.tres::FontFile::-1::1693080481::0::1::::<><>::
+::res://Godot-Fontpack-master/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/::1683997438
+::res://Godot-Fontpack-master/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/::1693080497
+Bugs.txt::TextFile::-1::1683997438::0::1::::<><>::
+ChangeLog.txt::TextFile::-1::1683997438::0::1::::<><>::
+GPL.txt::TextFile::-1::1683997438::0::1::::<><>::
+INSTALL.txt::TextFile::-1::1683997438::0::1::::<><>::
+LICENCE.txt::TextFile::-1::1683997438::0::1::::<><>::
+LinLibertine_DR.otf::FontFile::957132178770516281::1683997438::1693080497::1::::<><>::
+LinLibertine_I.otf::FontFile::7231110911836339751::1683997438::1693080497::1::::<><>::
+LinLibertine_M.otf::FontFile::2824227974994302890::1683997438::1693080497::1::::<><>::
+LinLibertine_R.otf::FontFile::8318959467410697057::1683997438::1693080497::1::::<><>::
+LinLibertine_RB.otf::FontFile::3631756151644071957::1683997438::1693080497::1::::<><>::
+LinLibertine_RBI.otf::FontFile::8955855469461695276::1683997438::1693080497::1::::<><>::
+LinLibertine_RI.otf::FontFile::318479506169266421::1683997438::1693080497::1::::<><>::
+LinLibertine_RZ.otf::FontFile::1121229580779344734::1683997439::1693080497::1::::<><>::
+LinLibertine_RZI.otf::FontFile::2140635148799391586::1683997439::1693080497::1::::<><>::
+OFL-1.1.txt::TextFile::-1::1683997439::0::1::::<><>::
+Readme-TEX.txt::TextFile::-1::1683997439::0::1::::<><>::
+ToDo.txt::TextFile::-1::1683997439::0::1::::<><>::
+::res://Godot-Fontpack-master/fonts/montreal/::1693080497
+Montreal-Bold.ttf::FontFile::7660775938441183494::1683997439::1693080497::1::::<><>::
+Montreal-Regular.ttf::FontFile::8485210560697323230::1683997439::1693080497::1::::<><>::
+Montreal.tres::FontFile::-1::1693080481::0::1::::<><>::res://Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf
+OFL.txt::TextFile::-1::1683997439::0::1::::<><>::
+::res://Godot-Fontpack-master/fonts/poco/::1693080497
+CC BY 4.0.txt::TextFile::-1::1683997439::0::1::::<><>::
+Poco.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/poco/Poco.ttf
+Poco.ttf::FontFile::4034241868085159667::1683997439::1693080497::1::::<><>::
+::res://Godot-Fontpack-master/fonts/source-code-pro/::1683997439
+SourceCodePro.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf
+::res://Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/::1683997439
+LICENSE.txt::TextFile::-1::1683997439::0::1::::<><>::
+::res://Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/::1693080497
+SourceCodePro-Black.ttf::FontFile::1140197804571131531::1683997439::1693080497::1::::<><>::
+SourceCodePro-BlackIt.ttf::FontFile::1507067901414347780::1683997439::1693080497::1::::<><>::
+SourceCodePro-Bold.ttf::FontFile::295458018985344118::1683997439::1693080497::1::::<><>::
+SourceCodePro-BoldIt.ttf::FontFile::4222677595220643792::1683997439::1693080497::1::::<><>::
+SourceCodePro-ExtraLight.ttf::FontFile::7874714651037301205::1683997439::1693080497::1::::<><>::
+SourceCodePro-ExtraLightIt.ttf::FontFile::4182134177584217011::1683997439::1693080497::1::::<><>::
+SourceCodePro-It.ttf::FontFile::1786208662318322437::1683997439::1693080497::1::::<><>::
+SourceCodePro-Light.ttf::FontFile::7746126684677086608::1683997439::1693080497::1::::<><>::
+SourceCodePro-LightIt.ttf::FontFile::3400271519790468125::1683997439::1693080497::1::::<><>::
+SourceCodePro-Medium.ttf::FontFile::2911434045550814847::1683997439::1693080497::1::::<><>::
+SourceCodePro-MediumIt.ttf::FontFile::851907682178915754::1683997439::1693080497::1::::<><>::
+SourceCodePro-Regular.ttf::FontFile::2602872982136937641::1683997439::1693080497::1::::<><>::
+SourceCodePro-Semibold.ttf::FontFile::4627354196936423845::1683997439::1693080497::1::::<><>::
+SourceCodePro-SemiboldIt.ttf::FontFile::7158520565762945266::1683997439::1693080497::1::::<><>::
+::res://Godot-Fontpack-master/fonts/xolonium/::1683997439
+Xolonium.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf
+::res://Godot-Fontpack-master/fonts/xolonium/xolonium-fonts-4.1/::1683997439
+FONTLOG.txt::TextFile::-1::1683997439::0::1::::<><>::
+LICENSE.txt::TextFile::-1::1683997439::0::1::::<><>::
+::res://Godot-Fontpack-master/fonts/xolonium/xolonium-fonts-4.1/ttf/::1693080497
+Xolonium-Bold.ttf::FontFile::8702285981096856089::1683997439::1693080497::1::::<><>::
+Xolonium-Regular.ttf::FontFile::7805563971963158388::1683997439::1693080497::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/::1683997438
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/::1693080498
+icon.png::CompressedTexture2D::8582365092320529560::1683997438::1693080498::1::::<><>::
+README.md::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/::1693080498
+overview.PNG::CompressedTexture2D::5358382359970568839::1683997438::1693080498::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/architect-s-daughter/::1693080497
+Architects Daughter SIL OFL Font License.txt::TextFile::-1::1683997438::0::1::::<><>::
+ArchitectsDaughter32.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/architect-s-daughter/ArchitectsDaughter.ttf
+ArchitectsDaughter.ttf::FontFile::2121646902840938099::1683997438::1693080497::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/cmu-typewriter/::1683997438
+Typewriter.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/cmu-typewriter/Typewriter/cmuntt.ttf
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/cmu-typewriter/Typewriter/::1693080497
+cmunit.ttf::FontFile::5299480648492004793::1683997438::1693080497::1::::<><>::
+cmuntb.ttf::FontFile::8345377834784810253::1683997438::1693080497::1::::<><>::
+cmuntt.ttf::FontFile::6145662973349050428::1683997438::1693080497::1::::<><>::
+cmuntx.ttf::FontFile::7104105336957376842::1683997438::1693080497::1::::<><>::
+OFL-FAQ.txt::TextFile::-1::1683997438::0::1::::<><>::
+OFL.txt::TextFile::-1::1683997438::0::1::::<><>::
+README.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/connection/::1693080497
+Connection.otf::FontFile::6160067727328751886::1683997438::1693080497::1::::<><>::
+ConnectionBold.otf::FontFile::7289026786707045678::1683997438::1693080497::1::::<><>::
+SIL Open Font License.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/connection_ii/::1693080497
+ConnectionII.otf::FontFile::4689508543437242563::1683997438::1693080497::1::::<><>::
+ConnectionII.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/connection_ii/ConnectionII.otf
+SIL Open Font License.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/droid-sans/::1693080497
+Apache License.txt::TextFile::-1::1683997438::0::1::::<><>::
+DroidSans-Bold.ttf::FontFile::2425902264550223851::1683997438::1693080497::1::::<><>::
+DroidSans.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/droid-sans/DroidSans.ttf
+DroidSans.ttf::FontFile::9012898089236019271::1683997438::1693080497::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/kirifont/::1693080497
+KiriFont.otf::FontFile::5675528890561043607::1683997438::1693080497::1::::<><>::
+Kirifont.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/kirifont/KiriFont.otf
+KiriFont.ttf::FontFile::906229216981302455::1683997438::1693080497::1::::<><>::
+OFL.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/linux-libertine/::1683997438
+LinuxLibertine.tres::FontFile::-1::1693080481::0::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/::1683997438
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/::1693080497
+Bugs.txt::TextFile::-1::1683997438::0::1::::<><>::
+ChangeLog.txt::TextFile::-1::1683997438::0::1::::<><>::
+GPL.txt::TextFile::-1::1683997438::0::1::::<><>::
+INSTALL.txt::TextFile::-1::1683997438::0::1::::<><>::
+LICENCE.txt::TextFile::-1::1683997438::0::1::::<><>::
+LinLibertine_DR.otf::FontFile::4430289737664013623::1683997438::1693080497::1::::<><>::
+LinLibertine_I.otf::FontFile::1531766282117221602::1683997438::1693080497::1::::<><>::
+LinLibertine_M.otf::FontFile::5154838583350305941::1683997438::1693080497::1::::<><>::
+LinLibertine_R.otf::FontFile::825748377076612674::1683997438::1693080497::1::::<><>::
+LinLibertine_RB.otf::FontFile::5511405995287377759::1683997438::1693080496::1::::<><>::
+LinLibertine_RBI.otf::FontFile::237480657451298583::1683997438::1693080496::1::::<><>::
+LinLibertine_RI.otf::FontFile::1404635699266366089::1683997438::1693080496::1::::<><>::
+LinLibertine_RZ.otf::FontFile::2397814211309319984::1683997438::1693080496::1::::<><>::
+LinLibertine_RZI.otf::FontFile::2870399172130107520::1683997438::1693080497::1::::<><>::
+OFL-1.1.txt::TextFile::-1::1683997438::0::1::::<><>::
+Readme-TEX.txt::TextFile::-1::1683997438::0::1::::<><>::
+ToDo.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/::1693080497
+Montreal-Bold.ttf::FontFile::4289195818439365756::1683997438::1693080497::1::::<><>::
+Montreal-Regular.ttf::FontFile::5410218744378524241::1683997438::1693080497::1::::<><>::
+Montreal.tres::FontFile::-1::1693080481::0::1::::<><>::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf
+OFL.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/poco/::1693080497
+CC BY 4.0.txt::TextFile::-1::1683997438::0::1::::<><>::
+Poco.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/poco/Poco.ttf
+Poco.ttf::FontFile::6440125702840122617::1683997438::1693080497::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/::1683997438
+SourceCodePro.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/::1683997438
+LICENSE.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/::1693080497
+SourceCodePro-Black.ttf::FontFile::899266266929208693::1683997438::1693080497::1::::<><>::
+SourceCodePro-BlackIt.ttf::FontFile::7028788640774226374::1683997438::1693080497::1::::<><>::
+SourceCodePro-Bold.ttf::FontFile::7288341614036059311::1683997438::1693080497::1::::<><>::
+SourceCodePro-BoldIt.ttf::FontFile::9131625999853864029::1683997438::1693080497::1::::<><>::
+SourceCodePro-ExtraLight.ttf::FontFile::5704938737480053182::1683997438::1693080497::1::::<><>::
+SourceCodePro-ExtraLightIt.ttf::FontFile::5288154407145723701::1683997438::1693080497::1::::<><>::
+SourceCodePro-It.ttf::FontFile::8468474798510166416::1683997438::1693080497::1::::<><>::
+SourceCodePro-Light.ttf::FontFile::5028313209695492344::1683997438::1693080497::1::::<><>::
+SourceCodePro-LightIt.ttf::FontFile::2706083559843950504::1683997438::1693080497::1::::<><>::
+SourceCodePro-Medium.ttf::FontFile::2210275616878460393::1683997438::1693080497::1::::<><>::
+SourceCodePro-MediumIt.ttf::FontFile::4367398774266322319::1683997438::1693080497::1::::<><>::
+SourceCodePro-Regular.ttf::FontFile::5823808203007592897::1683997438::1693080497::1::::<><>::
+SourceCodePro-Semibold.ttf::FontFile::5178116425138233929::1683997438::1693080497::1::::<><>::
+SourceCodePro-SemiboldIt.ttf::FontFile::8855109610513663493::1683997438::1693080497::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/xolonium/::1683997438
+Xolonium.tres::FontFile::-1::1693080481::0::1::::<><>::res://fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/xolonium/xolonium-fonts-4.1/::1683997438
+FONTLOG.txt::TextFile::-1::1683997438::0::1::::<><>::
+LICENSE.txt::TextFile::-1::1683997438::0::1::::<><>::
+::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/xolonium/xolonium-fonts-4.1/ttf/::1693080497
+Xolonium-Bold.ttf::FontFile::464934056131694965::1683997438::1693080497::1::::<><>::
+Xolonium-Regular.ttf::FontFile::4514706374816544755::1683997438::1693080497::1::::<><>::
+::res://Scène principale/::1693759604
+principale_2_0.tscn::PackedScene::844846534214955553::1693759604::0::1::::<><>::res://Scène principale/Robot/Robot.tscn
+Scene Principale.gd::GDScript::-1::1693080481::0::1::::<>Node<>::
+Scene Principale.tscn::PackedScene::648610345101897057::1693759604::0::1::::<><>::res://Scène principale/Robot/Robot.tscn<>res://Scène principale/UI/UI.tscn<>res://Scène principale/Gameboard/Plateau.tscn<>res://Scène principale/Gameboard/Board.tres
+::res://Scène principale/Gameboard/::1693501469
+arrows.svg::CompressedTexture2D::3819215722187998862::1622232670::1693080499::1::::<><>::
+arrows_iso.png::CompressedTexture2D::5444948965420885264::1645464376::1693080499::1::::<><>::
+Board.gd::GDScript::-1::1693469576::0::1::::Board<>Resource<>::
+Board.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Grid.tres<>res://Scène principale/Gameboard/Board.gd
+DangerOverlay.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/UnitOverlay.tscn<>res://DangerOverlay.gd
+GameBoard.gd::GDScript::-1::1693080481::0::1::::GameBoard<>Node2D<>::
+Grid.gd::GDScript::-1::1693080481::0::1::::Grid<>Resource<>::
+Grid.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Grid.gd
+isometric tile.png::CompressedTexture2D::6661562438579159995::1640873200::1693080499::1::::<><>::
+isometric tiles.png::CompressedTexture2D::3130040982477465188::1664041458::1693080499::1::::<><>::
+Pathfinder.gd::GDScript::-1::1693080481::0::1::::PathFinder<>RefCounted<>::
+Plateau.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/bugcat.png<>res://Scène principale/Gameboard/GameBoard.gd<>res://Scène principale/Gameboard/Cursor/Cursor.tscn<>res://Scène principale/Gameboard/UnitOverlay.tscn<>res://Scène principale/Gameboard/unit_overlay_tileset.tres<>res://Scène principale/Gameboard/UnitPath.tscn<>res://Scène principale/Gameboard/Unit/Player/Player.tscn<>res://Scène principale/Gameboard/Grid.tres<>res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.tscn<>res://Scène principale/Gameboard/Unit/Enemy/Chimney/Chimney.tscn<>res://Scène principale/Gameboard/DangerOverlay.tscn
+tileset_unit_overlay.svg::CompressedTexture2D::3218846207091479788::1622232670::1693080499::1::::<><>::
+UnitOverlay.gd::GDScript::-1::1693469887::0::1::::UnitOverlay<>TileMap<>::
+UnitOverlay.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/UnitOverlay.gd<>res://Scène principale/Gameboard/unit_overlay_tileset.tres
+UnitPath.gd::GDScript::-1::1693501469::0::1::::UnitPath<>TileMap<>::
+UnitPath.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/arrows_iso.png<>res://Scène principale/Gameboard/UnitPath.gd
+unit_overlay_tileset.tres::TileSet::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/isometric tiles.png
+unit_path_tileset.tres::TileSet::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/arrows.svg
+::res://Scène principale/Gameboard/Cursor/::1693080498
+Cursor.gd::GDScript::-1::1693080481::0::1::::Cursor<>Node2D<>::
+Cursor.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Cursor/menu_selection_arrow.png<>res://Scène principale/Gameboard/Cursor/Cursor.gd
+menu_selection_arrow.png::CompressedTexture2D::7067772652404347404::1622232670::1693080498::1::::<><>::
+::res://Scène principale/Gameboard/godot-2d-tactical-rpg-movement-main/::1678736480
+README.md::TextFile::-1::1678736480::0::1::::<><>::
+::res://Scène principale/Gameboard/godot-2d-tactical-rpg-movement-main/images/::1693080499
+trpg-screenshot.png::CompressedTexture2D::640036612777058437::1678736480::1693080499::1::::<><>::
+::res://Scène principale/Gameboard/Unit/::1693759604
+bugcat.png::CompressedTexture2D::972558091274571899::1622232670::1693080499::1::::<><>::
+Unit.gd::GDScript::-1::1693755087::0::1::::Unit<>Path2D<>::
+Unit.tscn::PackedScene::8515794753846498497::1693759604::0::1::::<><>::uid://n4d5ipvc70p0::::res://Scène principale/Gameboard/Unit/bugcat.png<>uid://cc5ddbljw1y15::::res://Scène principale/Gameboard/Unit/unit_shadow.svg<>res://Scène principale/Gameboard/Unit/Unit.gd<>res://Scène principale/Gameboard/Grid.tres<>res://Scène principale/Gameboard/Unit/Lifebar/Lifebar.tscn<>res://Scène principale/Gameboard/Board.tres
+unit_shadow.svg::CompressedTexture2D::4975337965599641730::1622232670::1693080499::1::::<><>::
+::res://Scène principale/Gameboard/Unit/Enemy/::1683997439
+Enemy.gd::GDScript::-1::1693080481::0::1::::Enemy<>Path2D<>::
+Enemy.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Unit.tscn<>res://Scène principale/Gameboard/Unit/Enemy/Enemy.gd<>res://Scène principale/Gameboard/Unit/bugcat.png
+::res://Scène principale/Gameboard/Unit/Enemy/Chimney/::1683997439
+Chimney.gd::GDScript::-1::1693080481::0::1::::Chimney<>Path2D<>::
+Chimney.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Enemy/Chimney/Chimney.gd<>res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn
+::res://Scène principale/Gameboard/Unit/Enemy/Furnace/::1683997439
+Furnace.gd::GDScript::-1::1693080481::0::1::::Furnace<>Path2D<>::
+Furnace.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn<>res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.gd
+::res://Scène principale/Gameboard/Unit/Lifebar/::1693080499
+Armor_lifesegment.png::CompressedTexture2D::7747518052022388094::1675459921::1693080499::1::::<><>::
+Empty_lifesegment.png::CompressedTexture2D::2418529617793732307::1655035928::1693080499::1::::<><>::
+FIll_lifesegment.png::CompressedTexture2D::6956684281348778245::1655035776::1693080499::1::::<><>::
+Lifebar.gd::GDScript::-1::1693080481::0::1::::<>HBoxContainer<>::
+Lifebar.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Lifebar/Lifebar.gd
+Para_lifesegment.png::CompressedTexture2D::318252018943683297::1665386191::1693080499::1::::<><>::
+::res://Scène principale/Gameboard/Unit/Player/::1693469591
+Player.gd::GDScript::-1::1693469591::0::1::::Player<>Path2D<>::
+Player.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Unit.tscn<>res://Scène principale/Gameboard/Unit/Player/Player.gd<>res://Scène principale/Gameboard/Unit/bugcat.png
+::res://Scène principale/Robot/::1693080501
+Background placement.png::CompressedTexture2D::7543068711404493056::1662894879::1693080501::1::::<><>::
+Robot background.png::CompressedTexture2D::1167455157268223716::1657910738::1693080501::1::::<><>::
+Robot.gd::GDScript::-1::1693080481::0::1::::<>Node2D<>::
+Robot.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Machines/Machine.tscn<>res://Scène principale/Robot/Robot.gd<>res://Scène principale/Souris/Team/Le Jeune.tscn<>res://Scène principale/Robot/Queue_action/Afficheaction.tscn<>res://Scène principale/Robot/Queue_action/FileAction.gd<>res://Scène principale/Robot/Queue_action/AfficheactionActive.gd<>res://Scène principale/Robot/Machines/Plasma.png<>res://Scène principale/Robot/Machines/Echelle_g_b.png<>res://Scène principale/Robot/Machines/Chargeur.png<>res://Scène principale/Robot/Background placement.png<>res://Scène principale/Robot/Machines/Echelle_d_h.png<>res://Scène principale/Robot/Machines/Echelle_g_h.png<>res://Scène principale/Robot/Machines/Ordi_c.png<>res://Scène principale/Robot/Machines/Pont_d.png<>res://Scène principale/Robot/Machines/Pont_b.png<>res://Scène principale/Robot/Machines/Gachette.png<>res://Scène principale/Robot/Machines/Pont_g.png<>res://Scène principale/Robot/Machines/Injecteur.png<>res://Scène principale/Robot/Machines/Visage.png<>res://Scène principale/Robot/Machines/Echelle_d_b.png<>res://Scène principale/Robot/Machines/Ordi_m.png<>res://Scène principale/Souris/Team/Le Gras.tscn<>res://Scène principale/Souris/Team/Le Dodu.tscn<>res://Scène principale/Souris/Team/Le Vieux.tscn
+::res://Scène principale/Robot/Machines/::1693759604
+Chargeur.png::CompressedTexture2D::8127347982008877899::1672312957::1693080499::1::::<><>::
+Echelle_d_b.png::CompressedTexture2D::9108431837988802091::1672312957::1693080499::1::::<><>::
+Echelle_d_h.png::CompressedTexture2D::1295177960863410466::1672312957::1693080499::1::::<><>::
+Echelle_g_b.png::CompressedTexture2D::2612375806215097211::1672312957::1693080499::1::::<><>::
+Echelle_g_h.png::CompressedTexture2D::2618888577688537753::1672312957::1693080499::1::::<><>::
+Gachette.png::CompressedTexture2D::6561176308797060788::1672312957::1693080499::1::::<><>::
+Injecteur.png::CompressedTexture2D::8696901630877482733::1672312957::1693080499::1::::<><>::
+Machine.tscn::PackedScene::3701651167678808854::1693759604::0::1::::<><>::
+Ordi_c.png::CompressedTexture2D::5194753420416643442::1672312957::1693080499::1::::<><>::
+Ordi_m.png::CompressedTexture2D::1900764779884704273::1672312957::1693080499::1::::<><>::
+Plasma.png::CompressedTexture2D::5890603666477760704::1672312957::1693080499::1::::<><>::
+Pont_b.png::CompressedTexture2D::7555642379010814978::1672312957::1693080498::1::::<><>::
+Pont_d.png::CompressedTexture2D::444166642280551939::1672312957::1693080498::1::::<><>::
+Pont_g.png::CompressedTexture2D::3103065667627598527::1672312957::1693080498::1::::<><>::
+Visage.png::CompressedTexture2D::7698904610652776904::1672312957::1693080498::1::::<><>::
+::res://Scène principale/Robot/Machines/Munitions/::1693469274
+ammo.gd::GDScript::-1::1693469274::0::1::::Ammo<>Resource<>::
+Balle_lourde.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Machines/Munitions/ammo.gd
+Balle_paralysante.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Machines/Munitions/ammo.gd
+Balle_simple.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Machines/Munitions/ammo.gd
+::res://Scène principale/Robot/Queue_action/::1693469285
+Action.gd::GDScript::-1::1693080481::0::1::::Action<>Resource<>::
+Afficheaction.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Godot-Fontpack-master/fonts/montreal/Montreal.tres
+AfficheactionActive.gd::GDScript::-1::1693469285::0::1::::<>Control<>::
+Charge.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Queue_action/Action.gd<>res://Scène principale/Robot/Queue_action/IconCharge.png
+FileAction.gd::GDScript::-1::1693080481::0::1::::<>VBoxContainer<>::
+Icon.png::CompressedTexture2D::4750322286155405846::1655145102::1693080498::1::::<><>::
+Icon.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Queue_action/Action.gd<>res://Scène principale/Robot/Queue_action/Icon.png
+IconCharge.png::CompressedTexture2D::7565067696996944282::1659883979::1693080498::1::::<><>::
+IconPlus.png::CompressedTexture2D::807577408032321678::1655209392::1693080498::1::::<><>::
+IconSaut.png::CompressedTexture2D::4532836842835787594::1659883934::1693080497::1::::<><>::
+Mouvement.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Queue_action/Action.gd<>res://Scène principale/Robot/Queue_action/IconPlus.png
+Saut.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Queue_action/Action.gd<>res://Scène principale/Robot/Queue_action/IconSaut.png
+Tir_courbe_lourd.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Queue_action/Action.gd<>res://Scène principale/Robot/Queue_action/IconPlus.png
+Tir_courbe_paralysant.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Queue_action/Action.gd<>res://Scène principale/Robot/Queue_action/IconPlus.png
+Tir_courbe_simple.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Queue_action/Action.gd<>res://Scène principale/Robot/Queue_action/IconPlus.png
+Tir_tendu_lourd.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Queue_action/Action.gd<>res://Scène principale/Robot/Queue_action/Icon.png
+Tir_tendu_paralysant.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Queue_action/Action.gd<>res://Scène principale/Robot/Queue_action/Icon.png
+Tir_tendu_simple.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Queue_action/Action.gd<>res://Scène principale/Robot/Queue_action/Icon.png
+::res://Scène principale/Robot/Ressources/::1623957790
+::res://Scène principale/Robot/Ressources/graphiques/::1693080498
+icob déplacement.png::CompressedTexture2D::2030925071510317803::1624041698::1693080497::1::::<><>::
+icon charme.png::CompressedTexture2D::6863905172501714665::1624544982::1693080498::1::::<><>::
+icon int.jpeg::CompressedTexture2D::468453291408025532::1623872614::1693080497::1::::<><>::
+icon physique.png::CompressedTexture2D::6003748579613717592::1623872962::1693080497::1::::<><>::
+Machine Canon Plasma.png::CompressedTexture2D::323943234480204336::1632764732::1693080497::1::::<><>::
+thunder.png::CompressedTexture2D::5477194844850024857::1624043616::1693080498::1::::<><>::
+Tuile basique.png::CompressedTexture2D::1492533490243878989::1623688938::1693080498::1::::<><>::
+::res://Scène principale/Robot/Ressources/Informatique/::1631118286
+::res://Scène principale/Souris/::1693755657
+Souris.gd::GDScript::-1::1693501734::0::1::::<>Node2D<>::
+Souris.tscn::PackedScene::7455066003347883168::1693755657::0::1::::<><>::res://Scène principale/Souris/Souris.gd<>res://Scène principale/Souris/Afficheur de points/Calcul.tres<>res://Scène principale/Souris/Afficheur de points/Endurance.tres<>res://Scène principale/Souris/Afficheur de points/Observation.tres<>res://Scène principale/Souris/Afficheur de points/Grille de points.tscn<>uid://n5kfkvwhpni2
+Sprite Souris Moche.png::CompressedTexture2D::975002957497336135::1630328712::1693080498::1::::<><>::
+::res://Scène principale/Souris/Afficheur de points/::1693080695
+Afficheur de point.gd::GDScript::-1::1693080481::0::1::::<>CenterContainer<>::
+Afficheur de point.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Afficheur de point.gd
+Calcul.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Point.gd<>res://Scène principale/Souris/Afficheur de points/Icon point calcul.png
+CalculLock.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Point.gd<>res://Scène principale/Souris/Afficheur de points/Icon point calculLock.png
+CalculTemp.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Point.gd
+Endurance.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Point.gd<>res://Scène principale/Souris/Afficheur de points/Icon point endurance.png
+Endurancelock.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Point.gd<>res://Scène principale/Souris/Afficheur de points/Icon point enduranceLock.png
+Grille de points.gd::GDScript::-1::1693080481::0::1::::<>GridContainer<>::
+Grille de points.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Grille de points.gd<>res://Scène principale/Souris/Afficheur de points/Afficheur de point.tscn
+Icon point calcul.png::CompressedTexture2D::5887411634606297140::1638022758::1693080498::1::::<><>::
+Icon point calculLock.png::CompressedTexture2D::5716918211260568523::1638022802::1693080498::1::::<><>::
+Icon point endurance.png::CompressedTexture2D::2180913869295534198::1637345806::1693080498::1::::<><>::
+Icon point enduranceLock.png::CompressedTexture2D::8882144145676722239::1636917042::1693080498::1::::<><>::
+Icon point observation.png::CompressedTexture2D::6499801735046175949::1639774062::1693080498::1::::<><>::
+Icon point observationLock.png::CompressedTexture2D::1241132155038473379::1639774180::1693080498::1::::<><>::
+Observation.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Point.gd<>res://Scène principale/Souris/Afficheur de points/Icon point observation.png
+ObservationLock.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Point.gd<>res://Scène principale/Souris/Afficheur de points/Icon point observationLock.png
+Point.gd::GDScript::-1::1693080695::0::1::::Point<>Resource<>::
+::res://Scène principale/Souris/Team/::1677425983
+Le Dodu.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Souris.tscn
+Le Gras.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Souris.tscn
+Le Jeune.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Souris.tscn
+Le Vieux.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Souris.tscn
+::res://Scène principale/UI/::1683997439
+Fin_de_tour.gd::GDScript::-1::1693080481::0::1::::<>Button<>::
+UI.gd::GDScript::-1::1693080481::0::1::::<>Control<>::
+UI.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/Ordi_m.tscn<>res://Scène principale/UI/UI.gd<>res://Scène principale/UI/Menus de machines/Echelle_g.tscn<>res://Scène principale/UI/Menus de machines/Echelle_d.tscn<>res://Scène principale/UI/Menus de machines/Pont (tete).tscn<>res://Scène principale/UI/Menus de machines/Pont (epaule_g).tscn<>res://Scène principale/UI/Menus de machines/Pont (epaule_d).tscn<>res://Scène principale/UI/Menus de machines/Visage.tscn<>res://Scène principale/UI/Menus de machines/Gachette.tscn<>res://Scène principale/UI/Menus de machines/Chargeur.tscn<>res://Scène principale/UI/Menus de machines/Injecteur.tscn<>res://Scène principale/UI/Fin_de_tour.gd
+::res://Scène principale/UI/Menus de machines/::1683997439
+bullet_menu.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/menu.tscn
+Chargeur.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Chargeur.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/bullet_menu.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>res://Scène principale/Souris/Afficheur de points/Icon point endurance.png<>res://Scène principale/UI/Menus de machines/Chargeur.gd<>res://Scène principale/UI/Menus de machines/Image Chargeur-Gachette/chargeur ouvert.png
+Echelle_d.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Echelle_d.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/Echelle_g.tscn<>res://Scène principale/UI/Menus de machines/Echelle_d.gd
+Echelle_g.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Echelle_g.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/menu.tscn<>res://Scène principale/UI/Menus de machines/Echelle_g.gd<>res://Scène principale/UI/Menus de machines/ligne transport.tscn
+Gachette.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Gachette.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/bullet_menu.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>res://Scène principale/Souris/Afficheur de points/Icon point observation.png<>res://Scène principale/UI/Menus de machines/Gachette.gd
+Injecteur.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Injecteur.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>res://Scène principale/UI/Menus de machines/menu.tscn<>res://Scène principale/Souris/Afficheur de points/Icon point endurance.png<>res://Scène principale/Souris/Afficheur de points/Icon point observation.png<>res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>res://Scène principale/UI/Menus de machines/Injecteur.gd
+ligne menu 1 icon.gd::GDScript::-1::1693080481::0::1::::<>HBoxContainer<>::
+ligne menu 1 icon.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Ressources/graphiques/icon physique.png<>res://Scène principale/Robot/Ressources/graphiques/icob déplacement.png<>res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.gd<>res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf
+ligne menu 2 icon.gd::GDScript::-1::1693080481::0::1::::<>HBoxContainer<>::
+ligne menu 2 icon.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Robot/Ressources/graphiques/icon physique.png<>res://Scène principale/Robot/Ressources/graphiques/icon int.jpeg<>res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf<>res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal.tres<>res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.gd
+ligne transport.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn
+LigneSouris.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+LigneSouris.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Grille de points.tscn<>res://Scène principale/UI/Menus de machines/LigneSouris.gd
+Menu.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+menu.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf<>res://Scène principale/Souris/Afficheur de points/Grille de points.tscn<>res://Scène principale/UI/Menus de machines/Menu.gd
+Ordi_m.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Ordi_m.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/menu.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Scène principale/UI/Menus de machines/Ordi_m.gd<>res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>res://Scène principale/Souris/Afficheur de points/Icon point observation.png
+Pont (epaule_d).gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Pont (epaule_d).tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/Pont (tete).tscn<>res://Scène principale/UI/Menus de machines/Pont (epaule_d).gd
+Pont (epaule_g).gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Pont (epaule_g).tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/Pont (tete).tscn<>res://Scène principale/UI/Menus de machines/Pont (epaule_g).gd
+Pont (tete).gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Pont (tete).tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/menu.tscn<>res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf<>res://Scène principale/UI/Menus de machines/Pont (tete).gd<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf<>res://Scène principale/Robot/Ressources/graphiques/icon physique.png<>res://Scène principale/Robot/Ressources/graphiques/icob déplacement.png
+SourisListe.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf
+Visage.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Visage.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/menu.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf<>res://Scène principale/UI/Menus de machines/Visage.gd<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>res://Scène principale/Souris/Afficheur de points/Icon point observation.png
+::res://Scène principale/UI/Menus de machines/Image Chargeur-Gachette/::1693080498
+chargeur ferme.png::CompressedTexture2D::6308725848689616834::1663268773::1693080498::1::::<><>::
+chargeur ouvert.png::CompressedTexture2D::6891122412908961046::1663268725::1693080498::1::::<><>::

@@ -1,6 +1,6 @@
+@tool
 ## Player-controlled cursor. Allows them to navigate the game grid, select units, and move them.
 ## Supports both keyboard and mouse (or touch) input.
-tool
 class_name Cursor
 extends Node2D
 
@@ -10,14 +10,14 @@ signal accept_pressed(cell)
 signal moved(new_cell)
 
 ## Grid resource, giving the node access to the grid size, and more.
-export var grid: Resource
+@export var grid: Resource
 ## Time before the cursor can move again in seconds.
-export var ui_cooldown := 0.1
+@export var ui_cooldown := 0.1
 
 ## Coordinates of the current cell the cursor is hovering.
-var cell := Vector2.ZERO setget set_cell
+var cell := Vector2.ZERO: set = set_cell
 
-onready var _timer: Timer = $Timer
+@onready var _timer: Timer = $Timer
 
 
 func _ready() -> void:
@@ -32,7 +32,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Trying to select something in a cell.
 	elif event.is_action_pressed("click") or event.is_action_pressed("ui_accept"):
 		emit_signal("accept_pressed", cell)
-		get_tree().set_input_as_handled()
+		get_viewport().set_input_as_handled()
 
 	var should_move := event.is_pressed() 
 	if event.is_echo():
@@ -53,7 +53,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _draw() -> void:
-	draw_rect(Rect2(-grid.cell_size / 2, grid.cell_size), Color.aliceblue, false, 2.0)
+	draw_rect(Rect2(-grid.cell_size / 2, grid.cell_size), Color.ALICE_BLUE, false, 2.0)
 
 
 func set_cell(value: Vector2) -> void:

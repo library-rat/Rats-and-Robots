@@ -1,4 +1,4 @@
-tool
+@tool
 class_name Chimney
 extends "res://Scène principale/Gameboard/Unit/Enemy/Enemy.gd"
 var loading := false
@@ -8,7 +8,7 @@ var reach = 10
 var TargetArea = [Vector2.UP,Vector2.DOWN,Vector2.LEFT,Vector2.RIGHT, Vector2(1,1),Vector2(-1,1),Vector2(1,-1),Vector2(-1,-1),Vector2.ZERO]
 
 func _ready():
-	board.connect("player_moved", self, "_on_player_moved")
+	board.connect("player_moved", Callable(self, "_on_player_moved"))
 
 func _on_player_moved():
 	update_threats()
@@ -45,8 +45,8 @@ func play_turn ():
 	var distance := int(abs(dif.x) + abs(dif.y))
 	if distance < 4  or board.is_danger(cell) :
 		var possiblecells = board.remplir_case_move(cell, move_range)
-		var best_cell : PoolVector2Array = []
-		var worst_cell : PoolVector2Array = []
+		var best_cell : PackedVector2Array = []
+		var worst_cell : PackedVector2Array = []
 		for new_cell in possiblecells :
 			if  not(board.is_occupied(new_cell)):
 				var new_dif : Vector2 = playercell - new_cell
@@ -56,10 +56,10 @@ func play_turn ():
 				elif new_dist > distance :
 					worst_cell.append(new_cell)
 		
-		if not (best_cell.empty()) :
+		if not (best_cell.is_empty()) :
 			var indice = rng.randi_range(0,len(best_cell) - 1)
 			move_along(cell,best_cell[indice])
-		elif not(worst_cell.empty()) :
+		elif not(worst_cell.is_empty()) :
 			var indice = rng.randi_range(0,len(worst_cell) - 1)
 			move_along(cell,worst_cell[indice])
 			

@@ -5,15 +5,15 @@ const DIRECTIONS = [Vector2.LEFT,Vector2.RIGHT, Vector2.UP,Vector2.DOWN]
 
 #on utilise un dictionnaire pour les unitées leur clefs est leur coordonnée,
 #en coordonnée grille (vector 2) et le contenu une reference à l'unité
-export var units := {}
+@export var units := {}
 #cette fois le dictionnaire stocke la liste de unitées attaquant une case,
 #la clef la coordonnée grille de la case (vector 2) et le contenu une liste des references à l'unitée
-export var threat := {} setget _set_threat
+@export var threat := {}: set = _set_threat
 signal update_threat()
 #variable stockant la reference du joueur elle est initialisée dans gameboard
 var Player
 signal player_moved()
-export var  grid : Resource = preload ("res://Scène principale/Gameboard/Grid.tres")
+@export var  grid : Resource = preload ("res://Scène principale/Gameboard/Grid.tres")
 
 #retourne un array des coordonnées de toutes les celllules possibles à traverser
 #basé sur les coordonnée de la case centrale et la distance max
@@ -22,7 +22,7 @@ func remplir_case_move(cell:Vector2, max_distance: int)-> Array:
 	var array :=  []
 	#on utilise une file pour implémenter l'algo
 	var queue := [{"cell":cell,"dist":0}]
-	while not queue.empty():
+	while not queue.is_empty():
 		var current = queue.pop_front()
 		var curcell = current["cell"]
 		#on verifie à chaque ajout de case que
@@ -52,13 +52,13 @@ func remplir_case_move(cell:Vector2, max_distance: int)-> Array:
 #retourne un array des coordonnées de toute les cellules à la plus grande distance traversable
 #en ne se déplaçant que selon les directions "directions" et en allant moins loins que distance max
 #basé sur les coordonnée de la case centrale et la distance max
-func remplir_case_move_direction_max(cell:Vector2, max_distance: int, directions : PoolVector2Array)-> Array:
+func remplir_case_move_direction_max(cell:Vector2, max_distance: int, directions : PackedVector2Array)-> Array:
 	#variable que l'on retournera
 	var array :=  []
 	var maxdist := 0
 	#on utilise une file pour implémenter l'algo
 	var queue := [{"cell":cell,"dist":0}]
-	while not queue.empty():
+	while not queue.is_empty():
 		var current = queue.pop_front()
 		var curcell = current["cell"]
 		#on verifie à chaque ajout de case que
@@ -96,7 +96,7 @@ func remplir_case_cercle(cell:Vector2, rayonext: int, rayonint: int, select_occu
 	var dejavu =[]
 	var array = []#variable que l'on retournera
 	var pile = [cell] #pile des cases à visiter
-	while not pile.empty() :#tant que il y a des cases à visiter
+	while not pile.is_empty() :#tant que il y a des cases à visiter
 		var current = pile.pop_back() #current est la case qui est visitée
 		#on verifie à chaque ajout de case que
 		#-on est dans la grille
@@ -181,7 +181,7 @@ func _set_threat(new_dic):
 func is_danger(cell : Vector2) -> bool:
 	return true if threat.has(cell) else false
 
-func player_moved():
+func _emit_player_moved():
 	emit_signal("player_moved")
 
 func position_player():

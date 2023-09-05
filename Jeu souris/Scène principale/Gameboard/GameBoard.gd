@@ -6,8 +6,8 @@ extends Node2D
 const DIRECTIONS = [Vector2.LEFT,Vector2.RIGHT, Vector2.UP,Vector2.DOWN]
 
 #on veut utiliser la grille donc on la charge à l'avance
-export var  grid : Resource = preload ("res://Scène principale/Gameboard/Grid.tres")
-export var  board : Resource = preload("res://Scène principale/Gameboard/Board.tres")
+@export var  grid : Resource = preload ("res://Scène principale/Gameboard/Grid.tres")
+@export var  board : Resource = preload("res://Scène principale/Gameboard/Board.tres")
 #on en bouge que un unité à la fois
 #on garde  alors l'unité active dans la varialble
 var _active_unit : Unit
@@ -17,10 +17,10 @@ var _selected_cells := []
 
 var state #permet de savoir quel type d'action le robot est en train d'effectuer
  #note si le joueur tire 
-onready var _unit_path : UnitPath = $UnitPath
+@onready var _unit_path : UnitPath = $UnitPath
 
-onready var _unit_overlay : UnitOverlay = $UnitOverlay
-onready var _aim_overlay : UnitOverlay = $AimOverlay
+@onready var _unit_overlay : UnitOverlay = $UnitOverlay
+@onready var _aim_overlay : UnitOverlay = $AimOverlay
 
 #au début du jeu on réinitialise le plateau
 func _ready()-> void:
@@ -98,7 +98,7 @@ func _move_active_unit(new_cell : Vector2) -> void :
 	board.units[new_cell] = _active_unit #on l'inscrit à la nouvelle case
 	_deselect_active_unit()
 	_active_unit.walk_along(_unit_path.current_path)
-	yield(_active_unit,"walk_finished")
+	await _active_unit.walk_finished
 	_clear_active_unit()
 
 func _jump_player (new_cell : Vector2) -> void:
@@ -258,7 +258,7 @@ func _on_Fin_de_tour_pressed():
 			en.play_turn()
 	$"Player".begin_turn()
 	
-onready var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
+@onready var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
 var index = 0
 func _input(event):
 	if event.is_action_released("ui_up") :

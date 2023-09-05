@@ -1,53 +1,44 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://dehj33e6yfhho"]
 
-[ext_resource path="res://Scène principale/Souris/Souris.gd" type="Script" id=1]
-[ext_resource path="res://Scène principale/Souris/Afficheur de points/Calcul.tres" type="Resource" id=2]
-[ext_resource path="res://Scène principale/Souris/Afficheur de points/Endurance.tres" type="Resource" id=3]
-[ext_resource path="res://Scène principale/Souris/Afficheur de points/Observation.tres" type="Resource" id=4]
-[ext_resource path="res://Scène principale/Souris/Afficheur de points/Grille de points.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scène principale/Souris/Sprite Souris Moche.png" type="Texture" id=6]
+[ext_resource type="Script" path="res://Scène principale/Souris/Souris.gd" id="1"]
+[ext_resource type="Resource" path="res://Scène principale/Souris/Afficheur de points/Calcul.tres" id="2"]
+[ext_resource type="Resource" path="res://Scène principale/Souris/Afficheur de points/Endurance.tres" id="3"]
+[ext_resource type="Resource" path="res://Scène principale/Souris/Afficheur de points/Observation.tres" id="4"]
+[ext_resource type="PackedScene" path="res://Scène principale/Souris/Afficheur de points/Grille de points.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://n5kfkvwhpni2" path="res://Scène principale/Souris/Sprite Souris Moche.png" id="5_fm1dd"]
 
 [node name="Souris" type="Node2D" groups=["Souris"]]
-script = ExtResource( 1 )
-Points = [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 4 ), null, null, null ]
+script = ExtResource("1")
+Points = [ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("3"), ExtResource("3"), ExtResource("4"), ExtResource("4"), null, null, null]
 
-[node name="Texture" type="TextureRect" parent="."]
+[node name="Texture2D" type="TextureRect" parent="."]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -7.33315
-margin_top = -3.15669
-margin_right = 7.66685
-margin_bottom = 20.8433
+offset_left = -7.33315
+offset_top = -3.15669
+offset_right = 7.66685
+offset_bottom = 20.8433
 focus_mode = 1
-texture = ExtResource( 6 )
-expand = true
+texture = ExtResource("5_fm1dd")
+expand_mode = 1
 stretch_mode = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 visible = false
-margin_left = 15.0
-margin_top = 11.0
-margin_right = 254.0
-margin_bottom = 103.0
-rect_scale = Vector2( 0.2, 0.2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = 15.0
+offset_top = 11.0
+offset_right = 254.0
+offset_bottom = 103.0
+scale = Vector2(0.2, 0.2)
 
-[node name="Grille de points" parent="PanelContainer" instance=ExtResource( 5 )]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 232.0
-margin_bottom = 85.0
-rect_scale = Vector2( 1, 1 )
+[node name="Grille de points" parent="PanelContainer" instance=ExtResource("5")]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[connection signal="gui_input" from="Texture" to="." method="_on_Texture_gui_input"]
-[connection signal="mouse_entered" from="Texture" to="." method="_on_Texture_mouse_entered"]
-[connection signal="mouse_exited" from="Texture" to="." method="_on_Texture_mouse_exited"]
+[connection signal="gui_input" from="Texture2D" to="." method="_on_Texture_gui_input"]
+[connection signal="mouse_entered" from="Texture2D" to="." method="_on_Texture_mouse_entered"]
+[connection signal="mouse_exited" from="Texture2D" to="." method="_on_Texture_mouse_exited"]

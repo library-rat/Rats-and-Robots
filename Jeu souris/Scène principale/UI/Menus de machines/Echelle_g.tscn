@@ -11,18 +11,18 @@ script = ExtResource( 3 )
 text = "Echelle"
 
 [node name="VBoxContainer" parent="Control" index="1"]
-margin_bottom = 179.0
+offset_bottom = 179.0
 
 [node name="Monter" parent="Control/VBoxContainer" index="0" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 630.0
-margin_bottom = 69.0
+offset_right = 630.0
+offset_bottom = 69.0
 pointValeur = [ "Endurance" ]
 ValeurMax = [ 0 ]
 
 [node name="Panel" parent="Control/VBoxContainer/Monter" index="2"]
-margin_right = 630.0
+offset_right = 630.0
 
 [node name="Label" parent="Control/VBoxContainer/Monter/Panel" index="0"]
 text = "Monter/Descendre"

@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://GameBoard/Cursor/Cursor.gd" type="Script" id=1]
-[ext_resource path="res://GameBoard/Cursor/menu_selection_arrow.png" type="Texture" id=2]
+[ext_resource path="res://GameBoard/Cursor/menu_selection_arrow.png" type="Texture2D" id=2]
 [ext_resource path="res://GameBoard/Grid.tres" type="Resource" id=3]
 
 [node name="Cursor" type="Node2D"]
 script = ExtResource( 1 )
 grid = ExtResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2( 0.193848, 0 )
 rotation = 2.35619
 texture = ExtResource( 2 )

@@ -1,8 +1,8 @@
 class_name Grid
 extends Resource
 
-export var taille := Vector2(200,200)# talle de la grille en ligne, colonnes
-export var taille_case:= Vector2(32,32)#taille d'une case en pixels
+@export var taille := Vector2(200,200)# talle de la grille en ligne, colonnes
+@export var taille_case:= Vector2(32,32)#taille d'une case en pixels
 
 var taille_demie_case = taille_case/2
 

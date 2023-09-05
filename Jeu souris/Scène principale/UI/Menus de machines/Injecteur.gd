@@ -1,7 +1,7 @@
 extends "res://Scène principale/UI/Menus de machines/Menu.gd"
 
 
-onready var Player = get_tree().get_nodes_in_group("Player")[0]#Permet de récupérer une référence à l'unité "Player"
+@onready var Player = get_tree().get_nodes_in_group("Player")[0]#Permet de récupérer une référence à l'unité "Player"
 
 
 func debut_tour():

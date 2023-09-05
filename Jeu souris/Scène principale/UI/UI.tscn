@@ -19,17 +19,17 @@ bg_color = Color( 0.215686, 0.0823529, 0.172549, 1 )
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -0.667427
-margin_right = -0.667419
+offset_left = -0.667427
+offset_right = -0.667419
 mouse_filter = 2
 script = ExtResource( 2 )
 
 [node name="Fin_de_tour" type="Button" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = 15.6675
-margin_right = 55.6675
-margin_bottom = 50.0
+offset_left = 15.6675
+offset_right = 55.6675
+offset_bottom = 50.0
 script = ExtResource( 12 )
 
 [node name="Ordi_m" parent="." instance=ExtResource( 1 )]
@@ -40,7 +40,7 @@ visible = false
 
 [node name="Echelle_d" parent="." instance=ExtResource( 4 )]
 visible = false
-custom_styles/panel = SubResource( 1 )
+theme_override_styles/panel = SubResource( 1 )
 
 [node name="Pont (tete)" parent="." instance=ExtResource( 5 )]
 visible = false

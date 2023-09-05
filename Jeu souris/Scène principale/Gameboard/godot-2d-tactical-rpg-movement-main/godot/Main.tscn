@@ -6,41 +6,41 @@
 [ext_resource path="res://GameBoard/Grid.tres" type="Resource" id=4]
 [ext_resource path="res://UnitOverlay/UnitOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GameBoard/UnitPath.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Units/squirrel.png" type="Texture" id=7]
-[ext_resource path="res://Units/bear.png" type="Texture" id=8]
-[ext_resource path="res://Units/bugcat.png" type="Texture" id=9]
+[ext_resource path="res://Units/squirrel.png" type="Texture2D" id=7]
+[ext_resource path="res://Units/bear.png" type="Texture2D" id=8]
+[ext_resource path="res://Units/bugcat.png" type="Texture2D" id=9]
 [ext_resource path="res://Background/Map.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Curve2D" id=1]
 resource_local_to_scene = true
 _data = {
-"points": PoolVector2Array(  )
+"points": PackedVector2Array(  )
 }
 
 [sub_resource type="Curve2D" id=2]
 resource_local_to_scene = true
 _data = {
-"points": PoolVector2Array(  )
+"points": PackedVector2Array(  )
 }
 
 [sub_resource type="Curve2D" id=3]
 resource_local_to_scene = true
 _data = {
-"points": PoolVector2Array(  )
+"points": PackedVector2Array(  )
 }
 
 [node name="Main" type="Node2D"]
 
 [node name="Map" parent="." instance=ExtResource( 10 )]
 
-[node name="GameBoard" type="YSort" parent="."]
+[node name="GameBoard" type="Node2D" parent="."]
 script = ExtResource( 3 )
 grid = ExtResource( 4 )
 
 [node name="UnitOverlay" parent="GameBoard" instance=ExtResource( 5 )]
 
 [node name="UnitPath" parent="GameBoard" instance=ExtResource( 6 )]
-tile_data = PoolIntArray(  )
+tile_data = PackedInt32Array(  )
 
 [node name="Cursor" parent="GameBoard" instance=ExtResource( 1 )]
 

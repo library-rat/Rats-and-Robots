@@ -6,21 +6,21 @@
 [ext_resource path="res://Scène principale/Robot/Queue_action/Afficheaction.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scène principale/Robot/Queue_action/FileAction.gd" type="Script" id=5]
 [ext_resource path="res://Scène principale/Robot/Queue_action/AfficheactionActive.gd" type="Script" id=6]
-[ext_resource path="res://Scène principale/Robot/Machines/Plasma.png" type="Texture" id=7]
-[ext_resource path="res://Scène principale/Robot/Machines/Echelle_g_b.png" type="Texture" id=8]
-[ext_resource path="res://Scène principale/Robot/Machines/Chargeur.png" type="Texture" id=9]
-[ext_resource path="res://Scène principale/Robot/Background placement.png" type="Texture" id=10]
-[ext_resource path="res://Scène principale/Robot/Machines/Echelle_d_h.png" type="Texture" id=11]
-[ext_resource path="res://Scène principale/Robot/Machines/Echelle_g_h.png" type="Texture" id=12]
-[ext_resource path="res://Scène principale/Robot/Machines/Ordi_c.png" type="Texture" id=13]
-[ext_resource path="res://Scène principale/Robot/Machines/Pont_d.png" type="Texture" id=14]
-[ext_resource path="res://Scène principale/Robot/Machines/Pont_b.png" type="Texture" id=15]
-[ext_resource path="res://Scène principale/Robot/Machines/Gachette.png" type="Texture" id=16]
-[ext_resource path="res://Scène principale/Robot/Machines/Pont_g.png" type="Texture" id=17]
-[ext_resource path="res://Scène principale/Robot/Machines/Injecteur.png" type="Texture" id=18]
-[ext_resource path="res://Scène principale/Robot/Machines/Visage.png" type="Texture" id=19]
-[ext_resource path="res://Scène principale/Robot/Machines/Echelle_d_b.png" type="Texture" id=20]
-[ext_resource path="res://Scène principale/Robot/Machines/Ordi_m.png" type="Texture" id=21]
+[ext_resource path="res://Scène principale/Robot/Machines/Plasma.png" type="Texture2D" id=7]
+[ext_resource path="res://Scène principale/Robot/Machines/Echelle_g_b.png" type="Texture2D" id=8]
+[ext_resource path="res://Scène principale/Robot/Machines/Chargeur.png" type="Texture2D" id=9]
+[ext_resource path="res://Scène principale/Robot/Background placement.png" type="Texture2D" id=10]
+[ext_resource path="res://Scène principale/Robot/Machines/Echelle_d_h.png" type="Texture2D" id=11]
+[ext_resource path="res://Scène principale/Robot/Machines/Echelle_g_h.png" type="Texture2D" id=12]
+[ext_resource path="res://Scène principale/Robot/Machines/Ordi_c.png" type="Texture2D" id=13]
+[ext_resource path="res://Scène principale/Robot/Machines/Pont_d.png" type="Texture2D" id=14]
+[ext_resource path="res://Scène principale/Robot/Machines/Pont_b.png" type="Texture2D" id=15]
+[ext_resource path="res://Scène principale/Robot/Machines/Gachette.png" type="Texture2D" id=16]
+[ext_resource path="res://Scène principale/Robot/Machines/Pont_g.png" type="Texture2D" id=17]
+[ext_resource path="res://Scène principale/Robot/Machines/Injecteur.png" type="Texture2D" id=18]
+[ext_resource path="res://Scène principale/Robot/Machines/Visage.png" type="Texture2D" id=19]
+[ext_resource path="res://Scène principale/Robot/Machines/Echelle_d_b.png" type="Texture2D" id=20]
+[ext_resource path="res://Scène principale/Robot/Machines/Ordi_m.png" type="Texture2D" id=21]
 [ext_resource path="res://Scène principale/Souris/Team/Le Gras.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scène principale/Souris/Team/Le Dodu.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Scène principale/Souris/Team/Le Vieux.tscn" type="PackedScene" id=24]
@@ -29,63 +29,63 @@
 script = ExtResource( 2 )
 
 [node name="Background" type="TextureRect" parent="."]
-margin_left = 574.657
-margin_top = 0.909408
-margin_right = 1022.65
-margin_bottom = 621.909
-rect_scale = Vector2( 0.175, 0.175 )
+offset_left = 574.657
+offset_top = 0.909408
+offset_right = 1022.65
+offset_bottom = 621.909
+scale = Vector2( 0.175, 0.175 )
 size_flags_horizontal = 5
 size_flags_vertical = 5
 texture = ExtResource( 10 )
 stretch_mode = 3
 
 [node name="FileAction" type="VBoxContainer" parent="."]
-margin_left = 627.024
-margin_top = 229.152
-margin_right = 657.024
-margin_bottom = 531.153
+offset_left = 627.024
+offset_top = 229.152
+offset_right = 657.024
+offset_bottom = 531.153
 script = ExtResource( 5 )
 
 [node name="Afficheaction9" parent="FileAction" instance=ExtResource( 4 )]
 
 [node name="Afficheaction8" parent="FileAction" instance=ExtResource( 4 )]
-margin_top = 34.0
-margin_bottom = 64.0
+offset_top = 34.0
+offset_bottom = 64.0
 
 [node name="Afficheaction7" parent="FileAction" instance=ExtResource( 4 )]
-margin_top = 68.0
-margin_bottom = 98.0
+offset_top = 68.0
+offset_bottom = 98.0
 
 [node name="Afficheaction6" parent="FileAction" instance=ExtResource( 4 )]
-margin_top = 102.0
-margin_bottom = 132.0
+offset_top = 102.0
+offset_bottom = 132.0
 
 [node name="Afficheaction5" parent="FileAction" instance=ExtResource( 4 )]
-margin_top = 136.0
-margin_bottom = 166.0
+offset_top = 136.0
+offset_bottom = 166.0
 
 [node name="Afficheaction4" parent="FileAction" instance=ExtResource( 4 )]
-margin_top = 170.0
-margin_bottom = 200.0
+offset_top = 170.0
+offset_bottom = 200.0
 
 [node name="Afficheaction3" parent="FileAction" instance=ExtResource( 4 )]
-margin_top = 204.0
-margin_bottom = 234.0
+offset_top = 204.0
+offset_bottom = 234.0
 
 [node name="Afficheaction2" parent="FileAction" instance=ExtResource( 4 )]
-margin_top = 238.0
-margin_bottom = 268.0
+offset_top = 238.0
+offset_bottom = 268.0
 
 [node name="Afficheaction1" parent="FileAction" instance=ExtResource( 4 )]
-margin_top = 272.0
-margin_bottom = 302.0
+offset_top = 272.0
+offset_bottom = 302.0
 
 [node name="AfficheactionActive" parent="." instance=ExtResource( 4 )]
-margin_left = 598.212
-margin_top = 530.33
-margin_right = 628.212
-margin_bottom = 560.33
-rect_scale = Vector2( 2, 2 )
+offset_left = 598.212
+offset_top = 530.33
+offset_right = 628.212
+offset_bottom = 560.33
+scale = Vector2( 2, 2 )
 script = ExtResource( 6 )
 
 [node name="Action_Retenue" parent="AfficheactionActive" instance=ExtResource( 4 )]
@@ -93,11 +93,11 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 22.894
-margin_top = -14.165
-margin_right = 52.894
-margin_bottom = 15.835
-rect_scale = Vector2( 0.5, 0.5 )
+offset_left = 22.894
+offset_top = -14.165
+offset_right = 52.894
+offset_bottom = 15.835
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Ordi_c" parent="." instance=ExtResource( 1 )]
 position = Vector2( 666.282, 113.327 )
@@ -105,11 +105,11 @@ salle = "Scapula_d"
 nom = "Ordi_c"
 numero_de_machine = 1
 
-[node name="Texture" parent="Ordi_c" index="0"]
-margin_left = -17.282
-margin_top = -15.327
-margin_right = 167.718
-margin_bottom = 155.673
+[node name="Texture2D" parent="Ordi_c" index="0"]
+offset_left = -17.282
+offset_top = -15.327
+offset_right = 167.718
+offset_bottom = 155.673
 texture = ExtResource( 13 )
 
 [node name="Ordi_m" parent="." instance=ExtResource( 1 )]
@@ -118,11 +118,11 @@ salle = "Scapula_d"
 nom = "Ordi_m"
 numero_de_machine = 2
 
-[node name="Texture" parent="Ordi_m" index="0"]
-margin_left = -20.103
-margin_top = -17.79
-margin_right = 200.897
-margin_bottom = 177.21
+[node name="Texture2D" parent="Ordi_m" index="0"]
+offset_left = -20.103
+offset_top = -17.79
+offset_right = 200.897
+offset_bottom = 177.21
 texture = ExtResource( 21 )
 
 [node name="Pont_g" parent="." instance=ExtResource( 1 )]
@@ -131,11 +131,11 @@ salle = "Scapula_d"
 nom = "Pont_g"
 numero_de_machine = 3
 
-[node name="Texture" parent="Pont_g" index="0"]
-margin_left = -10.802
-margin_top = -31.931
-margin_right = 229.198
-margin_bottom = 297.069
+[node name="Texture2D" parent="Pont_g" index="0"]
+offset_left = -10.802
+offset_top = -31.931
+offset_right = 229.198
+offset_bottom = 297.069
 texture = ExtResource( 17 )
 
 [node name="Pont_d" parent="." instance=ExtResource( 1 )]
@@ -144,11 +144,11 @@ salle = "Scapula_g"
 nom = "Pont_d"
 numero_de_machine = 5
 
-[node name="Texture" parent="Pont_d" index="0"]
-margin_left = -30.4717
-margin_top = -33.214
-margin_right = 204.528
-margin_bottom = 278.786
+[node name="Texture2D" parent="Pont_d" index="0"]
+offset_left = -30.4717
+offset_top = -33.214
+offset_right = 204.528
+offset_bottom = 278.786
 texture = ExtResource( 14 )
 
 [node name="Plasma" parent="." instance=ExtResource( 1 )]
@@ -157,11 +157,11 @@ salle = "Scapula_g"
 nom = "Plasma"
 numero_de_machine = 6
 
-[node name="Texture" parent="Plasma" index="0"]
-margin_left = -17.0
-margin_top = -39.0
-margin_right = 185.0
-margin_bottom = 308.0
+[node name="Texture2D" parent="Plasma" index="0"]
+offset_left = -17.0
+offset_top = -39.0
+offset_right = 185.0
+offset_bottom = 308.0
 texture = ExtResource( 7 )
 
 [node name="Gachette" parent="." instance=ExtResource( 1 )]
@@ -170,11 +170,11 @@ salle = "Scapula_g"
 nom = "Gachette"
 numero_de_machine = 7
 
-[node name="Texture" parent="Gachette" index="0"]
-margin_left = -18.041
-margin_top = -41.396
-margin_right = 240.959
-margin_bottom = 279.604
+[node name="Texture2D" parent="Gachette" index="0"]
+offset_left = -18.041
+offset_top = -41.396
+offset_right = 240.959
+offset_bottom = 279.604
 texture = ExtResource( 16 )
 stretch_mode = 3
 
@@ -184,11 +184,11 @@ salle = "Scapula_d"
 nom = "Echelle_g_h"
 numero_de_machine = 8
 
-[node name="Texture" parent="Echelle_g_h" index="0"]
-margin_left = -6.948
-margin_top = -12.927
-margin_right = 60.052
-margin_bottom = 211.073
+[node name="Texture2D" parent="Echelle_g_h" index="0"]
+offset_left = -6.948
+offset_top = -12.927
+offset_right = 60.052
+offset_bottom = 211.073
 texture = ExtResource( 12 )
 
 [node name="Echelle_g_b" parent="." instance=ExtResource( 1 )]
@@ -197,11 +197,11 @@ salle = "Humerus_d"
 nom = "Echelle_g_b"
 numero_de_machine = 9
 
-[node name="Texture" parent="Echelle_g_b" index="0"]
-margin_left = -9.198
-margin_top = -20.802
-margin_right = 65.802
-margin_bottom = 184.198
+[node name="Texture2D" parent="Echelle_g_b" index="0"]
+offset_left = -9.198
+offset_top = -20.802
+offset_right = 65.802
+offset_bottom = 184.198
 texture = ExtResource( 8 )
 
 [node name="Injecteur" parent="." instance=ExtResource( 1 )]
@@ -210,11 +210,11 @@ salle = "Humerus_d"
 nom = "Injecteur"
 numero_de_machine = 10
 
-[node name="Texture" parent="Injecteur" index="0"]
-margin_left = -59.1819
-margin_top = -40.244
-margin_right = 407.818
-margin_bottom = 246.756
+[node name="Texture2D" parent="Injecteur" index="0"]
+offset_left = -59.1819
+offset_top = -40.244
+offset_right = 407.818
+offset_bottom = 246.756
 texture = ExtResource( 18 )
 
 [node name="Visage" parent="." instance=ExtResource( 1 )]
@@ -223,11 +223,11 @@ salle = "Tete"
 nom = "Visage"
 numero_de_machine = 11
 
-[node name="Texture" parent="Visage" index="0"]
-margin_left = -32.8708
-margin_top = -57.6809
-margin_right = 315.129
-margin_bottom = 359.319
+[node name="Texture2D" parent="Visage" index="0"]
+offset_left = -32.8708
+offset_top = -57.6809
+offset_right = 315.129
+offset_bottom = 359.319
 texture = ExtResource( 19 )
 
 [node name="Pont_b" parent="." instance=ExtResource( 1 )]
@@ -236,11 +236,11 @@ salle = "Tete"
 nom = "Pont_b"
 numero_de_machine = 4
 
-[node name="Texture" parent="Pont_b" index="0"]
-margin_left = -14.4448
-margin_top = -22.357
-margin_right = 146.555
-margin_bottom = 197.643
+[node name="Texture2D" parent="Pont_b" index="0"]
+offset_left = -14.4448
+offset_top = -22.357
+offset_right = 146.555
+offset_bottom = 197.643
 texture = ExtResource( 15 )
 
 [node name="Chargeur" parent="." instance=ExtResource( 1 )]
@@ -249,11 +249,11 @@ salle = "Humerus_g"
 nom = "Chargeur"
 numero_de_machine = 12
 
-[node name="Texture" parent="Chargeur" index="0"]
-margin_left = -14.686
-margin_top = -30.275
-margin_right = 225.314
-margin_bottom = 200.725
+[node name="Texture2D" parent="Chargeur" index="0"]
+offset_left = -14.686
+offset_top = -30.275
+offset_right = 225.314
+offset_bottom = 200.725
 texture = ExtResource( 9 )
 
 [node name="Echelle_d_h" parent="." instance=ExtResource( 1 )]
@@ -262,11 +262,11 @@ salle = "Scapula_g"
 nom = "Echelle_d_h"
 numero_de_machine = 13
 
-[node name="Texture" parent="Echelle_d_h" index="0"]
-margin_left = -4.93994
-margin_top = -15.43
-margin_right = 182.06
-margin_bottom = 196.57
+[node name="Texture2D" parent="Echelle_d_h" index="0"]
+offset_left = -4.93994
+offset_top = -15.43
+offset_right = 182.06
+offset_bottom = 196.57
 texture = ExtResource( 11 )
 
 [node name="Echelle_d_b" parent="." instance=ExtResource( 1 )]
@@ -275,11 +275,11 @@ salle = "Humerus_g"
 nom = "Echelle_d_b"
 numero_de_machine = 14
 
-[node name="Texture" parent="Echelle_d_b" index="0"]
-margin_left = -6.27197
-margin_top = -14.595
-margin_right = 143.728
-margin_bottom = 181.405
+[node name="Texture2D" parent="Echelle_d_b" index="0"]
+offset_left = -6.27197
+offset_top = -14.595
+offset_right = 143.728
+offset_bottom = 181.405
 texture = ExtResource( 20 )
 
 [node name="Le Dodu" parent="." instance=ExtResource( 23 )]

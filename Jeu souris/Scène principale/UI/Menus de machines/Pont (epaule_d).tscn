@@ -13,8 +13,8 @@ text = "Pont (épaule droite)"
 text = "Pont(crane)"
 
 [node name="Pont_2" parent="Control/VBoxContainer" index="2"]
-margin_top = 146.0
-margin_bottom = 215.0
+offset_top = 146.0
+offset_bottom = 215.0
 
 [node name="Label" parent="Control/VBoxContainer/Pont_2/Panel" index="0"]
 text = "Pont(épaule gauche)"

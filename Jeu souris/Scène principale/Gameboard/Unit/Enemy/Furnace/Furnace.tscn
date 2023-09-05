@@ -8,6 +8,6 @@ script = ExtResource( 2 )
 skin = null
 skin_offset = Vector2( 0, 0 )
 
-[node name="Sprite" parent="PathFollow2D" index="1"]
+[node name="Sprite2D" parent="PathFollow2D" index="1"]
 position = Vector2( 0, 0 )
 texture = null

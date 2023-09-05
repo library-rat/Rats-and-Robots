@@ -1,4 +1,4 @@
 extends Resource
 class_name Ammo
-export(String) var name = ""
-export (Texture) var texture
+@export var name: String = ""
+@export var texture : Texture2D

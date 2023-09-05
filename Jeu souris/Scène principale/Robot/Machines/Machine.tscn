@@ -1,51 +1,51 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://bs0dwh6omw8t3"]
 
-[sub_resource type="GDScript" id=1]
-script/source = "extends Position2D
+[sub_resource type="GDScript" id="1"]
+script/source = "extends Marker2D
 var libre = true
-export(String) var salle #sallle dans laquelle la machine est située
-export(String) var nom #nom de la machine
-export (int) var numero_de_machine #numéro de la machine utilisé dans la liste du robot
+@export var salle: String #sallle dans laquelle la machine est située
+@export var nom: String #nom de la machine
+@export var numero_de_machine : int#numéro de la machine utilisé dans la liste du robot
 signal assign_souris (numero_de_machine,souris) #envoie le signal à robot que la souris va à la machine numero
 signal swap_souris(numero_de_machine, other_num) #quand on échange deux souris il suffit d'envoyer le numéro de la machine et celle de l'autre machine 
 signal ouvrir_menu (numero_de_machine)
 
 
 func _draw ():
-	draw_circle(Vector2.ZERO, 25, Color.blanchedalmond)
+	draw_circle(Vector2.ZERO, 25, Color.BLANCHED_ALMOND)
 	
 func select(souris): #quand une souris arrive dans une nouvelle dropzone ouvre le menu
 	emit_signal(\"assign_souris\",numero_de_machine,souris)
 	libre = false
-	modulate = Color.webmaroon
+	modulate = Color.WEB_MAROON
 
 func deselect(): #deselection la souris quitte la dropzone
 	libre= true
 	emit_signal(\"assign_souris\",numero_de_machine,null)
 	if salle == \"epauleg\":
-		modulate = Color.yellow
+		modulate = Color.YELLOW
 	if salle == \"epauled\" :
-		modulate = Color.blue
+		modulate = Color.BLUE
 
 func swap(other) :
 	emit_signal(\"swap_souris\", numero_de_machine, other)
 
-func _on_Texture_gui_input(event):
+func _on_Texture_gui_input():
 	if Input.is_action_just_pressed(\"left click\") :
 		emit_signal(\"ouvrir_menu\", numero_de_machine)
 "
 
-[node name="Machine" type="Position2D" groups=["DropzoneMachine"]]
-script = SubResource( 1 )
+[node name="Machine" type="Marker2D" groups=["DropzoneMachine"]]
+script = SubResource("1")
 
-[node name="Texture" type="TextureRect" parent="."]
-margin_left = -32.5269
-margin_top = -29.3449
-margin_right = 27.4731
-margin_bottom = 50.6551
+[node name="Texture2D" type="TextureRect" parent="."]
+offset_left = -32.5269
+offset_top = -29.3449
+offset_right = 27.4731
+offset_bottom = 50.6551
 grow_horizontal = 2
 grow_vertical = 2
-rect_scale = Vector2( 0.175, 0.175 )
+scale = Vector2(0.175, 0.175)
 stretch_mode = 5
 
-[connection signal="gui_input" from="Texture" to="." method="_on_Texture_gui_input"]
+[connection signal="gui_input" from="Texture2D" to="." method="_on_Texture_gui_input"]

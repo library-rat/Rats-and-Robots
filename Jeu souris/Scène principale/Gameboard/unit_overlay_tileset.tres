@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=2 format=2]
 
-[ext_resource path="res://Scène principale/Gameboard/isometric tiles.png" type="Texture" id=2]
+[ext_resource path="res://Scène principale/Gameboard/isometric tiles.png" type="Texture2D" id=2]
 
 [resource]
 1/name = "isometric tiles.png 1"

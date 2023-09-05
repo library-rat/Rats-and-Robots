@@ -1,15 +1,15 @@
 extends Node2D
 
-export(String) var nomSouris = ""
+@export var nomSouris: String = ""
 #Stat dans les différentes stats
-export (int) var Calcul = 0
+@export var Calcul : int = 0
 var CTemp :int = 0
-export (int) var CLock = 0
-export (int) var Endurance =0
-export (int) var ELock = 0
-export (int) var Observation = 0
-export (int) var OLock = 0
-export(Array, Resource) var Points = [ null, null, 
+@export var CLock : int = 0
+@export var Endurance : int =0
+@export var ELock : int = 0
+@export var Observation : int = 0
+@export var OLock : int = 0
+@export var Points = [ null, null,  # (Array, Resource)
 null, null, null, null, null, null, null, null]
 
 #on importe les differents types de points
@@ -22,7 +22,7 @@ var ObservationPt = preload("res://Scène principale/Souris/Afficheur de points/
 var ObservationLockPt = preload("res://Scène principale/Souris/Afficheur de points/ObservationLock.tres")
 #Variables liées au drag and dropping de la souris
 var selectionnee = false
-export (int) var rest_point	#attention il y a un décalage de 1 entre respoint et numéro machines : respoint +1 = numéro_machine
+@export var rest_point : int 	#attention il y a un décalage de 1 entre respoint et numéro machines : respoint +1 = numéro_machine
 var rest_nodes =  [null,null,null,null,null,null,null,null,null,null,null,null,null,null]
 
 
@@ -80,7 +80,7 @@ func _on_Texture_gui_input(event):
 	if Input.is_action_just_pressed("left click") :#la souris est selectionnée si le joueur clique dessus
 		selectionnee = true
 	if event is InputEventMouseButton :
-		if event.button_index == BUTTON_LEFT and not event.pressed: # quand le cilck est laché
+		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed: # quand le cilck est laché
 			selectionnee = false
 			#rayon de la dropzone des machines
 			var distancemin = 25

@@ -3,8 +3,8 @@
 [ext_resource path="res://Scène principale/Souris/Afficheur de points/Afficheur de point.gd" type="Script" id=1]
 
 [node name="Afficheur de point" type="CenterContainer"]
-margin_right = 18.0
-margin_bottom = 18.0
+offset_right = 18.0
+offset_bottom = 18.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 1 )
@@ -13,6 +13,6 @@ __meta__ = {
 }
 
 [node name="PointTextureRect" type="TextureRect" parent="."]
-margin_right = 18.0
-margin_bottom = 18.0
-rect_min_size = Vector2( 18, 18 )
+offset_right = 18.0
+offset_bottom = 18.0
+custom_minimum_size = Vector2( 18, 18 )

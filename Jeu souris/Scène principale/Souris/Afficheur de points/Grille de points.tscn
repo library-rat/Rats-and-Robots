@@ -4,11 +4,11 @@
 [ext_resource path="res://Scène principale/Souris/Afficheur de points/Afficheur de point.tscn" type="PackedScene" id=2]
 
 [node name="Grille de points" type="GridContainer"]
-margin_right = 106.0
-margin_bottom = 40.0
-rect_scale = Vector2( 0.1, 0.1 )
-custom_constants/vseparation = 0
-custom_constants/hseparation = 0
+offset_right = 106.0
+offset_bottom = 40.0
+scale = Vector2( 0.1, 0.1 )
+theme_override_constants/v_separation = 0
+theme_override_constants/h_separation = 0
 columns = 5
 script = ExtResource( 1 )
 __meta__ = {
@@ -16,57 +16,57 @@ __meta__ = {
 }
 
 [node name="Afficheur de point" parent="." instance=ExtResource( 2 )]
-margin_right = 22.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 18, 0 )
+offset_right = 22.0
+offset_bottom = 20.0
+custom_minimum_size = Vector2( 18, 0 )
 
 [node name="Afficheur de point2" parent="." instance=ExtResource( 2 )]
-margin_left = 22.0
-margin_right = 43.0
-margin_bottom = 20.0
+offset_left = 22.0
+offset_right = 43.0
+offset_bottom = 20.0
 
 [node name="Afficheur de point3" parent="." instance=ExtResource( 2 )]
-margin_left = 43.0
-margin_right = 64.0
-margin_bottom = 20.0
+offset_left = 43.0
+offset_right = 64.0
+offset_bottom = 20.0
 
 [node name="Afficheur de point4" parent="." instance=ExtResource( 2 )]
-margin_left = 64.0
-margin_right = 85.0
-margin_bottom = 20.0
+offset_left = 64.0
+offset_right = 85.0
+offset_bottom = 20.0
 
 [node name="Afficheur de point5" parent="." instance=ExtResource( 2 )]
-margin_left = 85.0
-margin_right = 106.0
-margin_bottom = 20.0
+offset_left = 85.0
+offset_right = 106.0
+offset_bottom = 20.0
 
 [node name="Afficheur de point6" parent="." instance=ExtResource( 2 )]
-margin_top = 20.0
-margin_right = 22.0
-margin_bottom = 40.0
+offset_top = 20.0
+offset_right = 22.0
+offset_bottom = 40.0
 
 [node name="Afficheur de point7" parent="." instance=ExtResource( 2 )]
-margin_left = 22.0
-margin_top = 20.0
-margin_right = 43.0
-margin_bottom = 40.0
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 43.0
+offset_bottom = 40.0
 
 [node name="Afficheur de point8" parent="." instance=ExtResource( 2 )]
-margin_left = 43.0
-margin_top = 20.0
-margin_right = 64.0
-margin_bottom = 40.0
+offset_left = 43.0
+offset_top = 20.0
+offset_right = 64.0
+offset_bottom = 40.0
 
 [node name="Afficheur de point9" parent="." instance=ExtResource( 2 )]
-margin_left = 64.0
-margin_top = 20.0
-margin_right = 85.0
-margin_bottom = 40.0
+offset_left = 64.0
+offset_top = 20.0
+offset_right = 85.0
+offset_bottom = 40.0
 size_flags_horizontal = 7
 size_flags_vertical = 7
 
 [node name="Afficheur de point10" parent="." instance=ExtResource( 2 )]
-margin_left = 85.0
-margin_top = 20.0
-margin_right = 106.0
-margin_bottom = 40.0
+offset_left = 85.0
+offset_top = 20.0
+offset_right = 106.0
+offset_bottom = 40.0

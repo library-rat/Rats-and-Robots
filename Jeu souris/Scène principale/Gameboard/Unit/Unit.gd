@@ -1,7 +1,7 @@
+@tool
 ## Represents a unit on the game board.
 ## The board manages its position inside the game grid.
 ## The unit itself holds stats and a visual representation that moves smoothly in the game world.
-tool
 class_name Unit
 extends Path2D
 
@@ -9,34 +9,34 @@ extends Path2D
 signal walk_finished
 
 ## Shared resource of type Grid, used to calculate map coordinates. initialized in _ready
-export var grid: Resource
+@export var grid: Resource
 ##Shared ressource of type board, used to know where are located amm the units. initialized in _ready
-export var board: Resource
+@export var board: Resource
 ## Texture representing the unit.
-export var skin: Texture setget set_skin
+@export var skin: Texture2D: set = set_skin
 ## Distance to which the unit can walk in cells.
-export var move_range : int = 3
-export var max_move_range : int = 3
-export var max_life : int = 7
-export var life : int
-export var movable : bool = true
+@export var move_range : int = 3
+@export var max_move_range : int = 3
+@export var max_life : int = 7
+@export var life : int
+@export var movable : bool = true
 ## Offset to apply to the `skin` sprite in pixels.
-export var skin_offset := Vector2.ZERO setget set_skin_offset
+@export var skin_offset := Vector2.ZERO: set = set_skin_offset
 ## The unit's move speed when it's moving along a path.
-export var move_speed := 600.0
+@export var move_speed := 600.0
 
 ## Coordinates of the current cell the cursor moved to.
-export var cell := Vector2.ZERO setget set_cell
+@export var cell := Vector2.ZERO: set = set_cell
 #facing unit direction
-export var direction := Vector2.DOWN
+@export var direction := Vector2.DOWN
 ## Toggles the "selected" animation on the unit.
-var is_selected := false setget set_is_selected
+var is_selected := false: set = set_is_selected
 
-var _is_walking := false setget _set_is_walking
+var _is_walking := false: set = _set_is_walking
 
-onready var _sprite: Sprite = $PathFollow2D/Sprite
-onready var _anim_player: AnimationPlayer = $AnimationPlayer
-onready var _path_follow: PathFollow2D = $PathFollow2D
+@onready var _sprite: Sprite2D = $PathFollow2D/Sprite2D
+@onready var _anim_player: AnimationPlayer = $AnimationPlayer
+@onready var _path_follow: PathFollow2D = $PathFollow2D
 
 
 func _ready() -> void:
@@ -49,15 +49,16 @@ func _ready() -> void:
 
 	# We create the curve resource here because creating it in the editor prevents us from
 	# moving the unit.
-	if not Engine.editor_hint:
+	print(Engine.is_editor_hint())
+	if not Engine.is_editor_hint():
 		curve = Curve2D.new()
 	
 	life = max_life
 	update_lifebar()
 func _process(delta: float) -> void:
-	_path_follow.offset += move_speed * delta
+	_path_follow.progress += move_speed * delta
 
-	if _path_follow.offset >= curve.get_baked_length():
+	if _path_follow.progress >= curve.get_baked_length():
 		self._is_walking = false
 		_path_follow.offset = 0
 		position = grid.calcul_map_position(cell)
@@ -67,8 +68,8 @@ func _process(delta: float) -> void:
 
 ## Starts walking along the `path`.
 ## `path` is an array of grid coordinates that the function converts to map coordinates.
-func walk_along(path: PoolVector2Array) -> void:
-	if path.empty():
+func walk_along(path: PackedVector2Array) -> void:
+	if path.is_empty():
 		return
 
 	curve.add_point(Vector2.ZERO)
@@ -113,17 +114,17 @@ func set_is_selected(value: bool) -> void:
 		_anim_player.play("idle")
 
 
-func set_skin(value: Texture) -> void:
+func set_skin(value: Texture2D) -> void:
 	skin = value
 	if not _sprite:
-		yield(self, "ready")
+		await self.ready
 	_sprite.texture = value
 
 
 func set_skin_offset(value: Vector2) -> void:
 	skin_offset = value
 	if not _sprite:
-		yield(self, "ready")
+		await self.ready
 	_sprite.position = value
 
 

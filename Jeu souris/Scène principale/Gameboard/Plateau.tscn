@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Scène principale/Gameboard/Unit/bugcat.png" type="Texture" id=1]
+[ext_resource path="res://Scène principale/Gameboard/Unit/bugcat.png" type="Texture2D" id=1]
 [ext_resource path="res://Scène principale/Gameboard/GameBoard.gd" type="Script" id=2]
 [ext_resource path="res://Scène principale/Gameboard/Cursor/Cursor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scène principale/Gameboard/UnitOverlay.tscn" type="PackedScene" id=4]
@@ -23,7 +23,7 @@ tile_set = ExtResource( 5 )
 cell_size = Vector2( 64, 32 )
 format = 1
 
-[node name="GameBoard" type="YSort" parent="."]
+[node name="GameBoard" type="Node2D" parent="."]
 script = ExtResource( 2 )
 
 [node name="UnitOverlay" parent="GameBoard" instance=ExtResource( 4 )]

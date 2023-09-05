@@ -1,8 +1,8 @@
-tool
+@tool
 class_name Enemy
 extends "res://Scène principale/Gameboard/Unit/Unit.gd"
 
-export var para = 0 setget para_var_set
+@export var para = 0: set = para_var_set
 var frozen : bool = false 
 var rng = RandomNumberGenerator.new()
 

@@ -1,0 +1,149 @@
+[gd_scene load_steps=2 format=3 uid="uid://mbiq73dqmijp"]
+
+[ext_resource type="PackedScene" path="res://Scène principale/Robot/Robot.tscn" id="1_gj3kl"]
+
+[node name="New_principale" type="Node"]
+
+[node name="Robot" parent="." instance=ExtResource("1_gj3kl")]
+
+[node name="Background" parent="Robot" index="0"]
+offset_left = 684.0
+offset_top = -1.0
+offset_right = 3253.0
+offset_bottom = 3562.0
+scale = Vector2(0.182472, 0.182472)
+size_flags_horizontal = 8
+
+[node name="Afficheaction9" parent="Robot/FileAction" index="0"]
+layout_mode = 2
+
+[node name="Afficheaction8" parent="Robot/FileAction" index="1"]
+layout_mode = 2
+
+[node name="Afficheaction7" parent="Robot/FileAction" index="2"]
+layout_mode = 2
+
+[node name="Afficheaction6" parent="Robot/FileAction" index="3"]
+layout_mode = 2
+
+[node name="Afficheaction5" parent="Robot/FileAction" index="4"]
+layout_mode = 2
+
+[node name="Afficheaction4" parent="Robot/FileAction" index="5"]
+layout_mode = 2
+
+[node name="Afficheaction3" parent="Robot/FileAction" index="6"]
+layout_mode = 2
+
+[node name="Afficheaction2" parent="Robot/FileAction" index="7"]
+layout_mode = 2
+
+[node name="Afficheaction1" parent="Robot/FileAction" index="8"]
+layout_mode = 2
+
+[node name="AfficheactionActive" parent="Robot" index="2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 30.0
+offset_bottom = 30.0
+
+[node name="Action_Retenue" parent="Robot/AfficheactionActive" index="2"]
+anchors_preset = 0
+
+[node name="Ordi_c" parent="Robot" index="3"]
+position = Vector2(779, 116)
+
+[node name="Texture2D" parent="Robot/Ordi_c" index="0"]
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(0.182, 0.182)
+
+[node name="Ordi_m" parent="Robot" index="4"]
+position = Vector2(815, 118)
+
+[node name="Texture2D" parent="Robot/Ordi_m" index="0"]
+scale = Vector2(0.182, 0.182)
+
+[node name="Pont_g" parent="Robot" index="5"]
+position = Vector2(858, 111)
+
+[node name="Pont_d" parent="Robot" index="6"]
+position = Vector2(976, 114)
+
+[node name="Plasma" parent="Robot" index="7"]
+position = Vector2(1009, 106)
+
+[node name="Texture2D" parent="Robot/Plasma" index="0"]
+scale = Vector2(0.182, 0.182)
+
+[node name="Gachette" parent="Robot" index="8"]
+position = Vector2(1061, 116)
+
+[node name="Texture2D" parent="Robot/Gachette" index="0"]
+offset_left = -18.0
+offset_top = -43.0
+offset_right = 241.0
+offset_bottom = 278.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(0.182, 0.182)
+
+[node name="Echelle_g_h" parent="Robot" index="9"]
+position = Vector2(737, 138)
+
+[node name="Texture2D" parent="Robot/Echelle_g_h" index="0"]
+scale = Vector2(0.182, 0.182)
+
+[node name="Echelle_g_b" parent="Robot" index="10"]
+position = Vector2(739, 187)
+
+[node name="Texture2D" parent="Robot/Echelle_g_b" index="0"]
+scale = Vector2(0.182, 0.182)
+
+[node name="Injecteur" parent="Robot" index="11"]
+position = Vector2(812, 181)
+
+[node name="Texture2D" parent="Robot/Injecteur" index="0"]
+scale = Vector2(0.182, 0.182)
+
+[node name="Visage" parent="Robot" index="12"]
+position = Vector2(927, 194)
+
+[node name="Texture2D" parent="Robot/Visage" index="0"]
+offset_left = -34.0
+offset_top = -48.0
+offset_right = 314.0
+offset_bottom = 369.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(0.182, 0.182)
+
+[node name="Pont_b" parent="Robot" index="13"]
+position = Vector2(901, 193)
+
+[node name="Chargeur" parent="Robot" index="14"]
+position = Vector2(1014, 174)
+
+[node name="Echelle_d_h" parent="Robot" index="15"]
+position = Vector2(1075, 140)
+
+[node name="Echelle_d_b" parent="Robot" index="16"]
+position = Vector2(1064, 178)
+
+[editable path="Robot"]
+[editable path="Robot/Ordi_c"]
+[editable path="Robot/Ordi_m"]
+[editable path="Robot/Pont_g"]
+[editable path="Robot/Pont_d"]
+[editable path="Robot/Plasma"]
+[editable path="Robot/Gachette"]
+[editable path="Robot/Echelle_g_h"]
+[editable path="Robot/Echelle_g_b"]
+[editable path="Robot/Injecteur"]
+[editable path="Robot/Visage"]
+[editable path="Robot/Pont_b"]
+[editable path="Robot/Chargeur"]
+[editable path="Robot/Echelle_d_h"]
+[editable path="Robot/Echelle_d_b"]

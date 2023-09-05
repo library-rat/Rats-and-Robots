@@ -1,16 +1,16 @@
-tool
+@tool
 class_name Player
 extends "res://Scène principale/Gameboard/Unit/Unit.gd"
 signal saut_fini
-export var rsautext = 3 #rayon intérieur de la zone de saut
-export var rsautint = 2 #rayon exterieur de la zone de saut
-export var limitedash = 5 #distance limite de dash
-export var rlimitetir = 5 #rayon  de limite ext de tir en cloche
-export var limitetir = 8  #distance limite de tir tendu
+@export var rsautext = 3 #rayon intérieur de la zone de saut
+@export var rsautint = 2 #rayon exterieur de la zone de saut
+@export var limitedash = 5 #distance limite de dash
+@export var rlimitetir = 5 #rayon  de limite ext de tir en cloche
+@export var limitetir = 8  #distance limite de tir tendu
 var munition : Ammo = null
 var aire_tir = [] #stockage des cases d'effet supplémentaires à la case séléctionnée
 var forme = null #forme du robot donnée par l'injecteur
-var armure :int = 0 setget armure_var_set #variable de PV supplémentaires temporaires
+var armure :int = 0: set = armure_var_set
 
 func end_turn():
 	effet_forme()
@@ -26,7 +26,7 @@ func set_cell(value: Vector2) -> void: #version de set_cell, override the one fr
 	board.units.erase(cell) #on enleve l'unité à l'ancienne case du dictionnaire
 	cell = grid.clamp(value)
 	board.units[value] = self #on l'inscrit à la nouvelle case
-	board.player_moved()
+	board._emit_player_moved()
 
 func _on_AfficheactionActive_move_player(valeur :int) -> void:
 	move_range = valeur
@@ -73,7 +73,7 @@ func is_hit (valeur : int)  -> void:
 			armure = 0
 	update_lifebar()
 
-func aire_tirC (direction : Vector2, cell_select : Vector2) -> PoolVector2Array :
+func aire_tirC (direction : Vector2, cell_select : Vector2) -> PackedVector2Array :
 		match munition.name :
 			"Balle_simple":
 				aire_tir = []				
@@ -86,7 +86,7 @@ func aire_tirC (direction : Vector2, cell_select : Vector2) -> PoolVector2Array 
 			cases_cibles.append(c+cell_select)
 		return (cases_cibles)
 
-func aire_tirT (direction : Vector2, cell_select : Vector2) -> PoolVector2Array :
+func aire_tirT (direction : Vector2, cell_select : Vector2) -> PackedVector2Array :
 		match munition.name :
 			"Balle_simple":
 				aire_tir = [direction]				

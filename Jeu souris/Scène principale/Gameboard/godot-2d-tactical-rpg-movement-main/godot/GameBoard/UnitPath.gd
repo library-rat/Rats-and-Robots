@@ -2,10 +2,10 @@
 class_name UnitPath
 extends TileMap
 
-export var grid: Resource
+@export var grid: Resource
 
 var _pathfinder: PathFinder
-var current_path := PoolVector2Array()
+var current_path := PackedVector2Array()
 
 
 ## Creates a new PathFinder that uses the AStar algorithm to find a path between two cells among

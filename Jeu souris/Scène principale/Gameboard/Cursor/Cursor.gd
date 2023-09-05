@@ -1,17 +1,17 @@
-tool
+@tool
 class_name Cursor
 extends Node2D
 
 signal accept_pressed (cell)#emit quand quand on clique sur une case selectionnée ou cliquée
 signal moved(new_cell)
 
-export var grid: Resource = preload ("res://Scène principale/Gameboard/Grid.tres")
+@export var grid: Resource = preload ("res://Scène principale/Gameboard/Grid.tres")
 var offset = Vector2.ZERO
 
-export var ui_cooldown := 0.1#cooldown en temps
-var cell := Vector2.ZERO setget set_cell#coordonnées du curseur en cartésiennes + setget permet d'appeller
+@export var ui_cooldown := 0.1#cooldown en temps
+var cell := Vector2.ZERO: set = set_cell
 #set_cell à chaque fois que on modifie cell
-onready var _timer : Timer = $Timer #timer pour eviter de bouger trop vite
+@onready var _timer : Timer = $Timer #timer pour eviter de bouger trop vite
 
 func _ready () -> void : 
 	_timer.wait_time = ui_cooldown #réinitialise le timer
@@ -23,7 +23,7 @@ func _unhandled_input(event : InputEvent) -> void :
 	elif event.is_action_pressed("left click") or event.is_action_pressed("ui_accept") :
 		#si l'on clique sur la caseon emet le signal adapté
 		emit_signal("accept_pressed",cell+offset)
-		get_tree().set_input_as_handled()
+		get_viewport().set_input_as_handled()
 
 	#pour bouger le curseur
 	var should_move := event.is_pressed()
@@ -47,10 +47,10 @@ func _draw() -> void :
 	var isoLeft =taillec* grid.cartesien_a_isometric(Vector2.LEFT)
 	var isoUp = taillec*grid.cartesien_a_isometric(Vector2.UP)
 	var isoDown = taillec*grid.cartesien_a_isometric(Vector2.DOWN)
-	draw_line(isoLeft+isoUp, isoRight+isoUp,Color.orangered, false, .0)
-	draw_line(isoRight+isoUp,isoRight+isoDown,Color.orangered, false, .0)
-	draw_line(isoRight+isoDown, isoLeft + isoDown,Color.orangered, false, .0)
-	draw_line(isoLeft + isoDown,isoLeft+isoUp,Color.orangered, false, .0)
+	draw_line(isoLeft+isoUp, isoRight+isoUp, Color.ORANGE_RED, false)
+	draw_line(isoRight+isoUp, isoRight+isoDown, Color.ORANGE_RED, false)
+	draw_line(isoRight+isoDown, isoLeft + isoDown, Color.ORANGE_RED, false)
+	draw_line(isoLeft + isoDown, isoLeft+isoUp, Color.ORANGE_RED, false)
 
 #fonction appellée a chaque fois que l'on bouge la position du curseur
 func set_cell(value : Vector2) -> void:

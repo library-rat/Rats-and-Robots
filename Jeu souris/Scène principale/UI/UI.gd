@@ -1,6 +1,6 @@
 extends Control
 
-onready var ListeMachine = [null,$"Ordi_m",$"Pont (epaule_g)",$"Pont (tete)",$"Pont (epaule_d)",null,$"Gachette",$"Echelle_g",$"Echelle_g",$"Injecteur",$"Visage",$"Chargeur",$"Echelle_d",$"Echelle_d"]
+@onready var ListeMachine = [null,$"Ordi_m",$"Pont (epaule_g)",$"Pont (tete)",$"Pont (epaule_d)",null,$"Gachette",$"Echelle_g",$"Echelle_g",$"Injecteur",$"Visage",$"Chargeur",$"Echelle_d",$"Echelle_d"]
 var liste_souris = []
 var all_souris = 
 

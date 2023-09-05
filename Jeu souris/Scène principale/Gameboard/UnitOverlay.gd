@@ -18,4 +18,4 @@ func draw(cells: Array, color: String) -> void:
 		"rouge":
 			number = 3
 	for cell in cells :
-		set_cellv(cell,number)
+		set_cell(cell,number)

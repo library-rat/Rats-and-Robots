@@ -1,4 +1,4 @@
-tool
+@tool
 class_name Furnace
 extends "res://Scène principale/Gameboard/Unit/Enemy/Enemy.gd"
 var loading := false
@@ -7,7 +7,7 @@ var damage = 2
 
 func charge_rayon():
 		loading = true
-		$"PathFollow2D/Sprite".modulate = Color(0, 0, 1)
+		$"PathFollow2D/Sprite2D".modulate = Color(0, 0, 1)
 		update_threats() #met en rouge les cases cibles du rayon
 
 func update_threats():
@@ -42,7 +42,7 @@ func play_turn ():
 		tirera = false
 		var dif : Vector2 = (playercell - cell)
 		var distance := int(abs(dif.x) + abs(dif.y))
-		var directions : PoolVector2Array
+		var directions : PackedVector2Array
 		if abs(dif.x) > 0 :
 			directions.append(Vector2((dif.x/abs(dif.x)), 0))
 		else :
@@ -58,7 +58,7 @@ func play_turn ():
 			for i in range(len(directions)):
 				directions[i] = -directions[i]
 		selected_cell = board.remplir_case_move_direction_max(cell, move_range, directions)
-		$"PathFollow2D/Sprite".modulate = Color(1, 1, 1)
+		$"PathFollow2D/Sprite2D".modulate = Color(1, 1, 1)
 		if selected_cell == [] :
 			selected_cell.append(self.cell)
 
