@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://jigrumtewfs0"]
 
-[ext_resource type="PackedScene" path="res://Scène principale/Robot/Robot.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bcrjdxkchld0" path="res://Scène principale/Robot/Robot.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://Scène principale/UI/UI.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://Scène principale/Gameboard/Plateau.tscn" id="3"]
 [ext_resource type="Resource" path="res://Scène principale/Gameboard/Board.tres" id="4"]
@@ -9,43 +9,11 @@
 
 [node name="Robot" parent="." instance=ExtResource("1")]
 
-[node name="Afficheaction9" parent="Robot/FileAction" index="0"]
-layout_mode = 2
-
-[node name="Afficheaction8" parent="Robot/FileAction" index="1"]
-layout_mode = 2
-
-[node name="Afficheaction7" parent="Robot/FileAction" index="2"]
-layout_mode = 2
-
-[node name="Afficheaction6" parent="Robot/FileAction" index="3"]
-layout_mode = 2
-
-[node name="Afficheaction5" parent="Robot/FileAction" index="4"]
-layout_mode = 2
-
-[node name="Afficheaction4" parent="Robot/FileAction" index="5"]
-layout_mode = 2
-
-[node name="Afficheaction3" parent="Robot/FileAction" index="6"]
-layout_mode = 2
-
-[node name="Afficheaction2" parent="Robot/FileAction" index="7"]
-layout_mode = 2
-
-[node name="Afficheaction1" parent="Robot/FileAction" index="8"]
-layout_mode = 2
-
 [node name="AfficheactionActive" parent="Robot" index="2"]
-layout_mode = 3
-anchors_preset = 0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 30.0
 offset_bottom = 30.0
-
-[node name="Action_Retenue" parent="Robot/AfficheactionActive" index="2"]
-anchors_preset = 0
 
 [node name="Plateau" parent="." instance=ExtResource("3")]
 

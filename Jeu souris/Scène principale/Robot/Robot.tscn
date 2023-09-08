@@ -1,42 +1,43 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=25 format=3 uid="uid://bcrjdxkchld0"]
 
-[ext_resource path="res://Scène principale/Robot/Machines/Machine.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scène principale/Robot/Robot.gd" type="Script" id=2]
-[ext_resource path="res://Scène principale/Souris/Team/Le Jeune.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scène principale/Robot/Queue_action/Afficheaction.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scène principale/Robot/Queue_action/FileAction.gd" type="Script" id=5]
-[ext_resource path="res://Scène principale/Robot/Queue_action/AfficheactionActive.gd" type="Script" id=6]
-[ext_resource path="res://Scène principale/Robot/Machines/Plasma.png" type="Texture2D" id=7]
-[ext_resource path="res://Scène principale/Robot/Machines/Echelle_g_b.png" type="Texture2D" id=8]
-[ext_resource path="res://Scène principale/Robot/Machines/Chargeur.png" type="Texture2D" id=9]
-[ext_resource path="res://Scène principale/Robot/Background placement.png" type="Texture2D" id=10]
-[ext_resource path="res://Scène principale/Robot/Machines/Echelle_d_h.png" type="Texture2D" id=11]
-[ext_resource path="res://Scène principale/Robot/Machines/Echelle_g_h.png" type="Texture2D" id=12]
-[ext_resource path="res://Scène principale/Robot/Machines/Ordi_c.png" type="Texture2D" id=13]
-[ext_resource path="res://Scène principale/Robot/Machines/Pont_d.png" type="Texture2D" id=14]
-[ext_resource path="res://Scène principale/Robot/Machines/Pont_b.png" type="Texture2D" id=15]
-[ext_resource path="res://Scène principale/Robot/Machines/Gachette.png" type="Texture2D" id=16]
-[ext_resource path="res://Scène principale/Robot/Machines/Pont_g.png" type="Texture2D" id=17]
-[ext_resource path="res://Scène principale/Robot/Machines/Injecteur.png" type="Texture2D" id=18]
-[ext_resource path="res://Scène principale/Robot/Machines/Visage.png" type="Texture2D" id=19]
-[ext_resource path="res://Scène principale/Robot/Machines/Echelle_d_b.png" type="Texture2D" id=20]
-[ext_resource path="res://Scène principale/Robot/Machines/Ordi_m.png" type="Texture2D" id=21]
-[ext_resource path="res://Scène principale/Souris/Team/Le Gras.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Scène principale/Souris/Team/Le Dodu.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Scène principale/Souris/Team/Le Vieux.tscn" type="PackedScene" id=24]
+[ext_resource type="PackedScene" uid="uid://bs0dwh6omw8t3" path="res://Scène principale/Robot/Machines/Machine.tscn" id="1"]
+[ext_resource type="Script" path="res://Scène principale/Robot/Robot.gd" id="2"]
+[ext_resource type="PackedScene" path="res://Scène principale/Souris/Team/Le Jeune.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scène principale/Robot/Queue_action/Afficheaction.tscn" id="4"]
+[ext_resource type="Script" path="res://Scène principale/Robot/Queue_action/FileAction.gd" id="5"]
+[ext_resource type="Script" path="res://Scène principale/Robot/Queue_action/AfficheactionActive.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://cp6pm8kwgq8xo" path="res://Scène principale/Robot/Machines/Plasma.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://bdhpphyrnwmbj" path="res://Scène principale/Robot/Machines/Echelle_g_b.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dn17h7k8g3b4n" path="res://Scène principale/Robot/Machines/Chargeur.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://dfp6ifab1fd1y" path="res://Scène principale/Robot/Background placement.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://spnnk522svbm" path="res://Scène principale/Robot/Machines/Echelle_d_h.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bdkuyhmjqhnth" path="res://Scène principale/Robot/Machines/Echelle_g_h.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cgam3hli44587" path="res://Scène principale/Robot/Machines/Ordi_c.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://glfmh23qg0x8" path="res://Scène principale/Robot/Machines/Pont_d.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dfwalc7uwnr1c" path="res://Scène principale/Robot/Machines/Pont_b.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://c0qju6gb758ey" path="res://Scène principale/Robot/Machines/Gachette.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://bkhfbkeyld15t" path="res://Scène principale/Robot/Machines/Pont_g.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://dv53x1kov3v2t" path="res://Scène principale/Robot/Machines/Injecteur.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://dhxn3mh81p5n5" path="res://Scène principale/Robot/Machines/Visage.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://d21gsodtegmdf" path="res://Scène principale/Robot/Machines/Echelle_d_b.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://2c0k24kfrl5r" path="res://Scène principale/Robot/Machines/Ordi_m.png" id="21"]
+[ext_resource type="PackedScene" path="res://Scène principale/Souris/Team/Le Gras.tscn" id="22"]
+[ext_resource type="PackedScene" path="res://Scène principale/Souris/Team/Le Dodu.tscn" id="23"]
+[ext_resource type="PackedScene" path="res://Scène principale/Souris/Team/Le Vieux.tscn" id="24"]
 
 [node name="Robot" type="Node2D"]
-script = ExtResource( 2 )
+position = Vector2(125, 25)
+script = ExtResource("2")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = 574.657
 offset_top = 0.909408
 offset_right = 1022.65
 offset_bottom = 621.909
-scale = Vector2( 0.175, 0.175 )
+scale = Vector2(0.175, 0.175)
 size_flags_horizontal = 5
 size_flags_vertical = 5
-texture = ExtResource( 10 )
+texture = ExtResource("10")
 stretch_mode = 3
 
 [node name="FileAction" type="VBoxContainer" parent="."]
@@ -44,51 +45,47 @@ offset_left = 627.024
 offset_top = 229.152
 offset_right = 657.024
 offset_bottom = 531.153
-script = ExtResource( 5 )
+script = ExtResource("5")
 
-[node name="Afficheaction9" parent="FileAction" instance=ExtResource( 4 )]
+[node name="Afficheaction9" parent="FileAction" instance=ExtResource("4")]
+layout_mode = 2
 
-[node name="Afficheaction8" parent="FileAction" instance=ExtResource( 4 )]
-offset_top = 34.0
-offset_bottom = 64.0
+[node name="Afficheaction8" parent="FileAction" instance=ExtResource("4")]
+layout_mode = 2
 
-[node name="Afficheaction7" parent="FileAction" instance=ExtResource( 4 )]
-offset_top = 68.0
-offset_bottom = 98.0
+[node name="Afficheaction7" parent="FileAction" instance=ExtResource("4")]
+layout_mode = 2
 
-[node name="Afficheaction6" parent="FileAction" instance=ExtResource( 4 )]
-offset_top = 102.0
-offset_bottom = 132.0
+[node name="Afficheaction6" parent="FileAction" instance=ExtResource("4")]
+layout_mode = 2
 
-[node name="Afficheaction5" parent="FileAction" instance=ExtResource( 4 )]
-offset_top = 136.0
-offset_bottom = 166.0
+[node name="Afficheaction5" parent="FileAction" instance=ExtResource("4")]
+layout_mode = 2
 
-[node name="Afficheaction4" parent="FileAction" instance=ExtResource( 4 )]
-offset_top = 170.0
-offset_bottom = 200.0
+[node name="Afficheaction4" parent="FileAction" instance=ExtResource("4")]
+layout_mode = 2
 
-[node name="Afficheaction3" parent="FileAction" instance=ExtResource( 4 )]
-offset_top = 204.0
-offset_bottom = 234.0
+[node name="Afficheaction3" parent="FileAction" instance=ExtResource("4")]
+layout_mode = 2
 
-[node name="Afficheaction2" parent="FileAction" instance=ExtResource( 4 )]
-offset_top = 238.0
-offset_bottom = 268.0
+[node name="Afficheaction2" parent="FileAction" instance=ExtResource("4")]
+layout_mode = 2
 
-[node name="Afficheaction1" parent="FileAction" instance=ExtResource( 4 )]
-offset_top = 272.0
-offset_bottom = 302.0
+[node name="Afficheaction1" parent="FileAction" instance=ExtResource("4")]
+layout_mode = 2
 
-[node name="AfficheactionActive" parent="." instance=ExtResource( 4 )]
+[node name="AfficheactionActive" parent="." instance=ExtResource("4")]
+layout_mode = 3
+anchors_preset = 0
 offset_left = 598.212
 offset_top = 530.33
 offset_right = 628.212
 offset_bottom = 560.33
-scale = Vector2( 2, 2 )
-script = ExtResource( 6 )
+scale = Vector2(2, 2)
+script = ExtResource("6")
 
-[node name="Action_Retenue" parent="AfficheactionActive" instance=ExtResource( 4 )]
+[node name="Action_Retenue" parent="AfficheactionActive" instance=ExtResource("4")]
+anchors_preset = 0
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -97,10 +94,10 @@ offset_left = 22.894
 offset_top = -14.165
 offset_right = 52.894
 offset_bottom = 15.835
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2(0.5, 0.5)
 
-[node name="Ordi_c" parent="." instance=ExtResource( 1 )]
-position = Vector2( 666.282, 113.327 )
+[node name="Ordi_c" parent="." instance=ExtResource("1")]
+position = Vector2(666.282, 113.327)
 salle = "Scapula_d"
 nom = "Ordi_c"
 numero_de_machine = 1
@@ -110,10 +107,10 @@ offset_left = -17.282
 offset_top = -15.327
 offset_right = 167.718
 offset_bottom = 155.673
-texture = ExtResource( 13 )
+texture = ExtResource("13")
 
-[node name="Ordi_m" parent="." instance=ExtResource( 1 )]
-position = Vector2( 702.103, 115.79 )
+[node name="Ordi_m" parent="." instance=ExtResource("1")]
+position = Vector2(702.103, 115.79)
 salle = "Scapula_d"
 nom = "Ordi_m"
 numero_de_machine = 2
@@ -123,10 +120,10 @@ offset_left = -20.103
 offset_top = -17.79
 offset_right = 200.897
 offset_bottom = 177.21
-texture = ExtResource( 21 )
+texture = ExtResource("21")
 
-[node name="Pont_g" parent="." instance=ExtResource( 1 )]
-position = Vector2( 740.802, 107.931 )
+[node name="Pont_g" parent="." instance=ExtResource("1")]
+position = Vector2(740.802, 107.931)
 salle = "Scapula_d"
 nom = "Pont_g"
 numero_de_machine = 3
@@ -136,10 +133,10 @@ offset_left = -10.802
 offset_top = -31.931
 offset_right = 229.198
 offset_bottom = 297.069
-texture = ExtResource( 17 )
+texture = ExtResource("17")
 
-[node name="Pont_d" parent="." instance=ExtResource( 1 )]
-position = Vector2( 855.472, 111.214 )
+[node name="Pont_d" parent="." instance=ExtResource("1")]
+position = Vector2(855.472, 111.214)
 salle = "Scapula_g"
 nom = "Pont_d"
 numero_de_machine = 5
@@ -149,10 +146,10 @@ offset_left = -30.4717
 offset_top = -33.214
 offset_right = 204.528
 offset_bottom = 278.786
-texture = ExtResource( 14 )
+texture = ExtResource("14")
 
-[node name="Plasma" parent="." instance=ExtResource( 1 )]
-position = Vector2( 887, 105 )
+[node name="Plasma" parent="." instance=ExtResource("1")]
+position = Vector2(887, 105)
 salle = "Scapula_g"
 nom = "Plasma"
 numero_de_machine = 6
@@ -162,10 +159,10 @@ offset_left = -17.0
 offset_top = -39.0
 offset_right = 185.0
 offset_bottom = 308.0
-texture = ExtResource( 7 )
+texture = ExtResource("7")
 
-[node name="Gachette" parent="." instance=ExtResource( 1 )]
-position = Vector2( 937.041, 113.396 )
+[node name="Gachette" parent="." instance=ExtResource("1")]
+position = Vector2(937.041, 113.396)
 salle = "Scapula_g"
 nom = "Gachette"
 numero_de_machine = 7
@@ -175,11 +172,11 @@ offset_left = -18.041
 offset_top = -41.396
 offset_right = 240.959
 offset_bottom = 279.604
-texture = ExtResource( 16 )
+texture = ExtResource("16")
 stretch_mode = 3
 
-[node name="Echelle_g_h" parent="." instance=ExtResource( 1 )]
-position = Vector2( 625.948, 134.927 )
+[node name="Echelle_g_h" parent="." instance=ExtResource("1")]
+position = Vector2(625.948, 134.927)
 salle = "Scapula_d"
 nom = "Echelle_g_h"
 numero_de_machine = 8
@@ -189,10 +186,10 @@ offset_left = -6.948
 offset_top = -12.927
 offset_right = 60.052
 offset_bottom = 211.073
-texture = ExtResource( 12 )
+texture = ExtResource("12")
 
-[node name="Echelle_g_b" parent="." instance=ExtResource( 1 )]
-position = Vector2( 628.198, 181.802 )
+[node name="Echelle_g_b" parent="." instance=ExtResource("1")]
+position = Vector2(628.198, 181.802)
 salle = "Humerus_d"
 nom = "Echelle_g_b"
 numero_de_machine = 9
@@ -202,10 +199,10 @@ offset_left = -9.198
 offset_top = -20.802
 offset_right = 65.802
 offset_bottom = 184.198
-texture = ExtResource( 8 )
+texture = ExtResource("8")
 
-[node name="Injecteur" parent="." instance=ExtResource( 1 )]
-position = Vector2( 699.182, 177.244 )
+[node name="Injecteur" parent="." instance=ExtResource("1")]
+position = Vector2(699.182, 177.244)
 salle = "Humerus_d"
 nom = "Injecteur"
 numero_de_machine = 10
@@ -215,10 +212,10 @@ offset_left = -59.1819
 offset_top = -40.244
 offset_right = 407.818
 offset_bottom = 246.756
-texture = ExtResource( 18 )
+texture = ExtResource("18")
 
-[node name="Visage" parent="." instance=ExtResource( 1 )]
-position = Vector2( 808.871, 199.681 )
+[node name="Visage" parent="." instance=ExtResource("1")]
+position = Vector2(808.871, 199.681)
 salle = "Tete"
 nom = "Visage"
 numero_de_machine = 11
@@ -228,10 +225,10 @@ offset_left = -32.8708
 offset_top = -57.6809
 offset_right = 315.129
 offset_bottom = 359.319
-texture = ExtResource( 19 )
+texture = ExtResource("19")
 
-[node name="Pont_b" parent="." instance=ExtResource( 1 )]
-position = Vector2( 782.445, 186.357 )
+[node name="Pont_b" parent="." instance=ExtResource("1")]
+position = Vector2(782.445, 186.357)
 salle = "Tete"
 nom = "Pont_b"
 numero_de_machine = 4
@@ -241,10 +238,10 @@ offset_left = -14.4448
 offset_top = -22.357
 offset_right = 146.555
 offset_bottom = 197.643
-texture = ExtResource( 15 )
+texture = ExtResource("15")
 
-[node name="Chargeur" parent="." instance=ExtResource( 1 )]
-position = Vector2( 891.686, 169.275 )
+[node name="Chargeur" parent="." instance=ExtResource("1")]
+position = Vector2(891.686, 169.275)
 salle = "Humerus_g"
 nom = "Chargeur"
 numero_de_machine = 12
@@ -254,10 +251,10 @@ offset_left = -14.686
 offset_top = -30.275
 offset_right = 225.314
 offset_bottom = 200.725
-texture = ExtResource( 9 )
+texture = ExtResource("9")
 
-[node name="Echelle_d_h" parent="." instance=ExtResource( 1 )]
-position = Vector2( 952.94, 136.43 )
+[node name="Echelle_d_h" parent="." instance=ExtResource("1")]
+position = Vector2(952.94, 136.43)
 salle = "Scapula_g"
 nom = "Echelle_d_h"
 numero_de_machine = 13
@@ -267,10 +264,10 @@ offset_left = -4.93994
 offset_top = -15.43
 offset_right = 182.06
 offset_bottom = 196.57
-texture = ExtResource( 11 )
+texture = ExtResource("11")
 
-[node name="Echelle_d_b" parent="." instance=ExtResource( 1 )]
-position = Vector2( 940.272, 172.595 )
+[node name="Echelle_d_b" parent="." instance=ExtResource("1")]
+position = Vector2(940.272, 172.595)
 salle = "Humerus_g"
 nom = "Echelle_d_b"
 numero_de_machine = 14
@@ -280,62 +277,21 @@ offset_left = -6.27197
 offset_top = -14.595
 offset_right = 143.728
 offset_bottom = 181.405
-texture = ExtResource( 20 )
+texture = ExtResource("20")
 
-[node name="Le Dodu" parent="." instance=ExtResource( 23 )]
+[node name="Le Dodu" parent="." instance=ExtResource("23")]
+rest_point = 1
 
-[node name="Le Gras" parent="." instance=ExtResource( 22 )]
+[node name="Le Gras" parent="." instance=ExtResource("22")]
 rest_point = 10
 
-[node name="Le Jeune" parent="." instance=ExtResource( 3 )]
+[node name="Le Jeune" parent="." instance=ExtResource("3")]
 rest_point = 6
 
-[node name="Le Vieux" parent="." instance=ExtResource( 24 )]
+[node name="Le Vieux" parent="." instance=ExtResource("24")]
 rest_point = 11
 
 [connection signal="change_action" from="FileAction" to="AfficheactionActive" method="_on_FileAction_change_action"]
-[connection signal="assign_souris" from="Ordi_c" to="." method="_on_Ordi_c_assign_souris"]
-[connection signal="ouvrir_menu" from="Ordi_c" to="." method="_on_Ordi_c_ouvrir_menu"]
-[connection signal="swap_souris" from="Ordi_c" to="." method="_on_Ordi_c_swap_souris"]
-[connection signal="assign_souris" from="Ordi_m" to="." method="_on_Ordi_m_assign_souris"]
-[connection signal="ouvrir_menu" from="Ordi_m" to="." method="_on_Ordi_m_ouvrir_menu"]
-[connection signal="swap_souris" from="Ordi_m" to="." method="_on_Ordi_m_swap_souris"]
-[connection signal="assign_souris" from="Pont_g" to="." method="_on_Pont_g_assign_souris"]
-[connection signal="ouvrir_menu" from="Pont_g" to="." method="_on_Pont_g_ouvrir_menu"]
-[connection signal="swap_souris" from="Pont_g" to="." method="_on_Pont_g_swap_souris"]
-[connection signal="assign_souris" from="Pont_d" to="." method="_on_Pont_d_assign_souris"]
-[connection signal="ouvrir_menu" from="Pont_d" to="." method="_on_Pont_d_ouvrir_menu"]
-[connection signal="swap_souris" from="Pont_d" to="." method="_on_Pont_d_swap_souris"]
-[connection signal="assign_souris" from="Plasma" to="." method="_on_Plasma_assign_souris"]
-[connection signal="ouvrir_menu" from="Plasma" to="." method="_on_Plasma_ouvrir_menu"]
-[connection signal="swap_souris" from="Plasma" to="." method="_on_Plasma_swap_souris"]
-[connection signal="assign_souris" from="Gachette" to="." method="_on_Gachette_assign_souris"]
-[connection signal="ouvrir_menu" from="Gachette" to="." method="_on_Gachette_ouvrir_menu"]
-[connection signal="swap_souris" from="Gachette" to="." method="_on_Gachette_swap_souris"]
-[connection signal="assign_souris" from="Echelle_g_h" to="." method="_on_Echelle_g_h_assign_souris"]
-[connection signal="ouvrir_menu" from="Echelle_g_h" to="." method="_on_Echelle_g_h_ouvrir_menu"]
-[connection signal="swap_souris" from="Echelle_g_h" to="." method="_on_Echelle_g_h_swap_souris"]
-[connection signal="assign_souris" from="Echelle_g_b" to="." method="_on_Echelle_g_b_assign_souris"]
-[connection signal="ouvrir_menu" from="Echelle_g_b" to="." method="_on_Echelle_g_b_ouvrir_menu"]
-[connection signal="swap_souris" from="Echelle_g_b" to="." method="_on_Echelle_g_b_swap_souris"]
-[connection signal="assign_souris" from="Injecteur" to="." method="_on_Injecteur_assign_souris"]
-[connection signal="ouvrir_menu" from="Injecteur" to="." method="_on_Injecteur_ouvrir_menu"]
-[connection signal="swap_souris" from="Injecteur" to="." method="_on_Injecteur_swap_souris"]
-[connection signal="assign_souris" from="Visage" to="." method="_on_Visage_assign_souris"]
-[connection signal="ouvrir_menu" from="Visage" to="." method="_on_Visage_ouvrir_menu"]
-[connection signal="swap_souris" from="Visage" to="." method="_on_Visage_swap_souris"]
-[connection signal="assign_souris" from="Pont_b" to="." method="_on_Pont_b_assign_souris"]
-[connection signal="ouvrir_menu" from="Pont_b" to="." method="_on_Pont_b_ouvrir_menu"]
-[connection signal="swap_souris" from="Pont_b" to="." method="_on_Pont_b_swap_souris"]
-[connection signal="assign_souris" from="Chargeur" to="." method="_on_Chargeur_assign_souris"]
-[connection signal="ouvrir_menu" from="Chargeur" to="." method="_on_Chargeur_ouvrir_menu"]
-[connection signal="swap_souris" from="Chargeur" to="." method="_on_Chargeur_swap_souris"]
-[connection signal="assign_souris" from="Echelle_d_h" to="." method="_on_Echelle_d_h_assign_souris"]
-[connection signal="ouvrir_menu" from="Echelle_d_h" to="." method="_on_Echelle_d_h_ouvrir_menu"]
-[connection signal="swap_souris" from="Echelle_d_h" to="." method="_on_Echelle_d_h_swap_souris"]
-[connection signal="assign_souris" from="Echelle_d_b" to="." method="_on_Echelle_d_b_assign_souris"]
-[connection signal="ouvrir_menu" from="Echelle_d_b" to="." method="_on_Echelle_d_b_ouvrir_menu"]
-[connection signal="swap_souris" from="Echelle_d_b" to="." method="_on_Echelle_d_b_swap_souris"]
 
 [editable path="Ordi_c"]
 [editable path="Ordi_m"]

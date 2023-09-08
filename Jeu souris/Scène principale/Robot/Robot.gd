@@ -21,7 +21,54 @@ var courbe_lourd = preload ("res://Scène principale/Robot/Queue_action/Tir_cour
 var courbe_paralysante = preload ("res://Scène principale/Robot/Queue_action/Tir_courbe_paralysant.tres")
 
 func _ready():
+	MousePop = get_tree().get_nodes_in_group("Souris")
+	for souris in MousePop :
+		_on_assign_souris(souris.rest_point +1, souris)
+		print(souris.rest_point)
+	print(EquipeListe)
 	emit_signal("init_souris", EquipeListe)
+	$Ordi_c.assign_souris.connect(_on_assign_souris)
+	$Ordi_c.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Ordi_c.swap_souris.connect(_on_swap_souris)
+	$Ordi_m.assign_souris.connect(_on_assign_souris)
+	$Ordi_m.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Ordi_m.swap_souris.connect(_on_swap_souris)
+	$Pont_g.assign_souris.connect(_on_assign_souris)
+	$Pont_g.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Pont_g.swap_souris.connect(_on_swap_souris)
+	$Pont_d.assign_souris.connect(_on_assign_souris)
+	$Pont_d.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Pont_d.swap_souris.connect(_on_swap_souris)
+	$Plasma.assign_souris.connect(_on_assign_souris)
+	$Plasma.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Plasma.swap_souris.connect(_on_swap_souris)
+	$Gachette.assign_souris.connect(_on_assign_souris)
+	$Gachette.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Gachette.swap_souris.connect(_on_swap_souris)
+	$Echelle_g_h.assign_souris.connect(_on_assign_souris)
+	$Echelle_g_h.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Echelle_g_h.swap_souris.connect(_on_swap_souris)
+	$Echelle_g_b.assign_souris.connect(_on_assign_souris)
+	$Echelle_g_b.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Echelle_g_b.swap_souris.connect(_on_swap_souris)
+	$Injecteur.assign_souris.connect(_on_assign_souris)
+	$Injecteur.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Injecteur.swap_souris.connect(_on_swap_souris)
+	$Visage.assign_souris.connect(_on_assign_souris)
+	$Visage.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Visage.swap_souris.connect(_on_swap_souris)
+	$Pont_b.assign_souris.connect(_on_assign_souris)
+	$Pont_b.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Pont_b.swap_souris.connect(_on_swap_souris)
+	$Chargeur.assign_souris.connect(_on_assign_souris)
+	$Chargeur.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Chargeur.swap_souris.connect(_on_swap_souris)
+	$Echelle_d_h.assign_souris.connect(_on_assign_souris)
+	$Echelle_d_h.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Echelle_d_h.swap_souris.connect(_on_swap_souris)
+	$Echelle_d_b.assign_souris.connect(_on_assign_souris)
+	$Echelle_d_b.ouvrir_menu.connect(_on_ouvrir_menu)
+	$Echelle_d_b.swap_souris.connect(_on_swap_souris)
 
 func _input(event):
 	if event.is_action_pressed("ui_accept") :
@@ -169,172 +216,18 @@ func swap (numero_machine, other_num):
 	EquipeListe[other_num - 1] = EquipeListe[numero_machine -1]
 	EquipeListe[numero_machine -1] = stockage
 
-func _on_Ordi_c_assign_souris(numero_machine, souris):
+
+func _on_assign_souris(numero_machine, souris):
 	EquipeListe[numero_machine-1] = souris
 
 
-func _on_Ordi_c_ouvrir_menu(numero_machine):
+
+func _on_ouvrir_menu(numero_machine):
 	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
+	$"../Panel".visible = true
 
 
-func _on_Ordi_c_swap_souris(numero_machine, other_num):
+func _on_swap_souris(numero_machine, other_num):
 	swap(numero_machine, other_num)
-
-func _on_Ordi_m_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Ordi_m_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Ordi_m_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Pont_g_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Pont_g_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Pont_g_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-
-func _on_Pont_b_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Pont_b_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Pont_b_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Pont_d_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Pont_d_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Pont_d_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Plasma_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Plasma_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Plasma_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Gachette_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Gachette_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Gachette_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Echelle_g_h_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Echelle_g_h_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Echelle_g_h_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Echelle_g_b_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Echelle_g_b_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Echelle_g_b_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Injecteur_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Injecteur_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Injecteur_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Visage_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Visage_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Visage_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Chargeur_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Chargeur_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Chargeur_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Echelle_d_h_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Echelle_d_h_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Echelle_d_h_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
-
-func _on_Echelle_d_b_assign_souris(numero_machine, souris):
-	EquipeListe[numero_machine-1] = souris
-
-
-func _on_Echelle_d_b_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-
-
-func _on_Echelle_d_b_swap_souris(numero_machine, other_num):
-	swap(numero_machine, other_num)
-
 
 
