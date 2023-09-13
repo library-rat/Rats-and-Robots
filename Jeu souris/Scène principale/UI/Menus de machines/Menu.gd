@@ -1,5 +1,5 @@
 extends Panel
-var Souris 
+var Souris : Node2D
 
 func afficher_menu(souris) :
 	visible = true

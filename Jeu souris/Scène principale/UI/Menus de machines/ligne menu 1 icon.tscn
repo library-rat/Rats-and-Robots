@@ -1,75 +1,71 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://ddv1owo3ypvhn"]
 
-[ext_resource path="res://Scène principale/Robot/Ressources/graphiques/icon physique.png" type="Texture2D" id=1]
-[ext_resource path="res://Scène principale/Robot/Ressources/graphiques/icob déplacement.png" type="Texture2D" id=2]
-[ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf" type="FontFile" id=3]
-[ext_resource path="res://Scène principale/UI/Menus de machines/ligne menu 1 icon.gd" type="Script" id=4]
-[ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf" type="FontFile" id=5]
+[ext_resource type="Texture2D" uid="uid://crsi4kn8ulys3" path="res://Scène principale/Robot/Ressources/graphiques/icon physique.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://362blk7jcuo6" path="res://Scène principale/Robot/Ressources/graphiques/icob déplacement.png" id="2"]
+[ext_resource type="FontFile" uid="uid://b2dyotkul1ruq" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf" id="3"]
+[ext_resource type="Script" path="res://Scène principale/UI/Menus de machines/ligne menu 1 icon.gd" id="4"]
+[ext_resource type="FontFile" uid="uid://co8djgnkdpi46" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf" id="5"]
 
-[sub_resource type="FontFile" id=1]
-size = 51
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-use_mipmaps = true
-font_data = ExtResource( 3 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id=2]
-size = 34
-use_mipmaps = true
-font_data = ExtResource( 5 )
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("5")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="ligne menu 1 icon" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 69)
+anchors_preset = -1
 anchor_right = 0.9
 anchor_bottom = 0.115
-custom_minimum_size = Vector2( 0, 69 )
 size_flags_stretch_ratio = 0.0
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
+script = ExtResource("4")
 
 [node name="Compteur" type="Button" parent="."]
-offset_right = 50.0
-offset_bottom = 69.0
-custom_minimum_size = Vector2( 50, 69 )
+custom_minimum_size = Vector2(50, 69)
+layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_disabled_color = Color( 0, 0, 0, 1 )
-theme_override_fonts/font = SubResource( 1 )
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("1")
 text = "x"
 flat = true
 
 [node name="icon" type="Button" parent="."]
-offset_left = 54.0
-offset_right = 124.0
-offset_bottom = 69.0
-custom_minimum_size = Vector2( 70, 0 )
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
 size_flags_vertical = 3
-icon = ExtResource( 1 )
+icon = ExtResource("1")
 expand_icon = true
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 128.0
-offset_right = 921.0
-offset_bottom = 69.0
-custom_minimum_size = Vector2( 400, 0 )
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = -0.943909
 offset_top = 1.94388
 offset_right = 580.056
 offset_bottom = 70.9439
-theme_override_fonts/font = SubResource( 2 )
+theme_override_fonts/font = SubResource("2")
 text = "GROSSE ATTAQUE"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
+custom_minimum_size = Vector2(63, 63)
+layout_mode = 0
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -78,12 +74,8 @@ offset_left = -69.0
 offset_top = -31.5
 offset_right = -6.0
 offset_bottom = 31.5
-custom_minimum_size = Vector2( 63, 63 )
-texture = ExtResource( 2 )
-expand = true
+texture = ExtResource("2")
+expand_mode = 1
 stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="icon" to="." method="_on_icon_pressed"]

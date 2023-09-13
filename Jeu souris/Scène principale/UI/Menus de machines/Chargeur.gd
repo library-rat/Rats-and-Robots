@@ -66,3 +66,8 @@ func _on_Gachette_tir_courbe(ammo):
 signal open_gachette()
 func _on_Button_pressed():
 	emit_signal("open_gachette")
+	self.visible = false
+
+
+func _on_gachette_open_chargeur():
+	afficher_menu(Souris)

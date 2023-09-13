@@ -1,76 +1,75 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://c3ry8kfhwdsy0"]
 
-[ext_resource path="res://Scène principale/Robot/Ressources/graphiques/icon physique.png" type="Texture2D" id=1]
-[ext_resource path="res://Scène principale/Robot/Ressources/graphiques/icon int.jpeg" type="Texture2D" id=2]
-[ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf" type="FontFile" id=3]
-[ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal.tres" type="FontFile" id=4]
-[ext_resource path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf" type="FontFile" id=5]
-[ext_resource path="res://Scène principale/UI/Menus de machines/ligne menu 2 icon.gd" type="Script" id=6]
+[ext_resource type="Texture2D" uid="uid://crsi4kn8ulys3" path="res://Scène principale/Robot/Ressources/graphiques/icon physique.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://gw6mfabtifii" path="res://Scène principale/Robot/Ressources/graphiques/icon int.jpeg" id="2"]
+[ext_resource type="FontFile" uid="uid://b2dyotkul1ruq" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf" id="3"]
+[ext_resource type="FontFile" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal.tres" id="4"]
+[ext_resource type="FontFile" uid="uid://co8djgnkdpi46" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf" id="5"]
+[ext_resource type="Script" path="res://Scène principale/UI/Menus de machines/ligne menu 2 icon.gd" id="6"]
 
-[sub_resource type="FontFile" id=1]
-size = 51
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-use_mipmaps = true
-font_data = ExtResource( 3 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id=2]
-size = 34
-use_mipmaps = true
-font_data = ExtResource( 5 )
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("5")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="ligne menu 2 icon" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 69)
 offset_right = 969.0
 offset_bottom = 69.0
-script = ExtResource( 6 )
+script = ExtResource("6")
 
 [node name="cout 1" type="Button" parent="."]
-offset_right = 42.0
-offset_bottom = 69.0
+layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_disabled_color = Color( 0, 0, 0, 1 )
-theme_override_fonts/font = SubResource( 1 )
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("1")
 text = "x"
 flat = true
 
 [node name="icon 1" type="Button" parent="."]
-offset_left = 46.0
-offset_right = 116.0
-offset_bottom = 69.0
-custom_minimum_size = Vector2( 70, 0 )
-icon = ExtResource( 2 )
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+icon = ExtResource("2")
 expand_icon = true
 
 [node name="cout 2" type="Button" parent="."]
-offset_left = 120.0
-offset_right = 162.0
-offset_bottom = 69.0
+layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 4 )
+theme_override_fonts/font = ExtResource("4")
 text = "x"
 flat = true
 
 [node name="icon 2" type="Button" parent="."]
-offset_left = 166.0
-offset_right = 236.0
-offset_bottom = 69.0
-custom_minimum_size = Vector2( 70, 0 )
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
 size_flags_vertical = 3
-icon = ExtResource( 1 )
+icon = ExtResource("1")
 expand_icon = true
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 240.0
-offset_right = 969.0
-offset_bottom = 69.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = -0.943909
 offset_top = 0.943878
 offset_right = 580.056
 offset_bottom = 69.9439
-theme_override_fonts/font = SubResource( 2 )
+theme_override_fonts/font = SubResource("2")
 text = "GROSSE ATTAQUE"
 
 [connection signal="pressed" from="icon 1" to="." method="_on_icon_1_pressed"]

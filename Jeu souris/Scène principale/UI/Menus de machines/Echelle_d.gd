@@ -25,10 +25,12 @@ func changer_cout (cout):
 	$"Control/VBoxContainer/Monter/Compteur".text = str(cout)
 
 
-func _on_Robot_reset_echelle_d():
+func _on_robot_reset_echelle_d():
 	changer_cout(valeur_reset)
 
 
 func _on_Visage_coordine_deplacement():
 	valeur_reset = 0
 	changer_cout(0)
+
+

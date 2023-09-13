@@ -29,7 +29,7 @@ func _on_passage_2_pressed():
 	emit_signal("aller_epaule_d")
 
 
-func _on_Robot_fermer_pont_tete():
+func _on_robot_fermer_pont_tete():
 	fermer_pont()
 	
 func fermer_pont():

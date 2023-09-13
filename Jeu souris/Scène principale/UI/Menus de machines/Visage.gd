@@ -28,5 +28,5 @@ func _on_Coordination_cout_point(type, index):
 				coord.Valeur[index] = coord.Valeur[index] - 1
 				coord.update_affichage()
 				if coord.Valeur[0] == 0 and coord.Valeur[1] == 0 :
-					 emit_signal("coordine_deplacement")
+					emit_signal("coordine_deplacement")
 

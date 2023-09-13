@@ -29,7 +29,7 @@ func _on_passage_2_pressed():
 	emit_signal("aller_epaule_g")
 
 
-func _on_Robot_fermer_pont_epaule_d():
+func _on_robot_fermer_pont_epaule_d():
 	fermer_pont()
 
 func fermer_pont():
@@ -49,3 +49,5 @@ func _on_Visage_coordine_deplacement():
 	$"Control/VBoxContainer/Pont_1".visible = true
 	$"Control/VBoxContainer/Pont_2".visible = true
 	coord = true
+
+

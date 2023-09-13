@@ -25,7 +25,7 @@ func changer_cout (cout):
 	$"Control/VBoxContainer/Monter/Compteur".text = str(cout)
 
 
-func _on_Robot_reset_echelle_g():
+func _on_robot_reset_echelle_g():
 	changer_cout(valeur_reset)
 
 

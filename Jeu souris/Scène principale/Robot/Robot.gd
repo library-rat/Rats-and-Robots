@@ -24,8 +24,7 @@ func _ready():
 	MousePop = get_tree().get_nodes_in_group("Souris")
 	for souris in MousePop :
 		_on_assign_souris(souris.rest_point +1, souris)
-		print(souris.rest_point)
-	print(EquipeListe)
+
 	emit_signal("init_souris", EquipeListe)
 	$Ordi_c.assign_souris.connect(_on_assign_souris)
 	$Ordi_c.ouvrir_menu.connect(_on_ouvrir_menu)
@@ -224,7 +223,6 @@ func _on_assign_souris(numero_machine, souris):
 
 func _on_ouvrir_menu(numero_machine):
 	emit_signal("ouvremachine", numero_machine,EquipeListe[numero_machine -1])
-	$"../Panel".visible = true
 
 
 func _on_swap_souris(numero_machine, other_num):

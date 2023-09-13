@@ -45,3 +45,8 @@ func _on_Chargeur_charge_munition(ammo):
 signal open_chargeur()
 func _on_Button_pressed():
 	emit_signal("open_chargeur")
+	self.visible = false
+
+
+func _on_chargeur_open_gachette():
+	afficher_menu(Souris)
