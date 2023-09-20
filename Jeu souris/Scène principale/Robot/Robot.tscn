@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://bcrjdxkchld0"]
+[gd_scene load_steps=26 format=3 uid="uid://bcrjdxkchld0"]
 
 [ext_resource type="PackedScene" uid="uid://bs0dwh6omw8t3" path="res://Scène principale/Robot/Machines/Machine.tscn" id="1"]
 [ext_resource type="Script" path="res://Scène principale/Robot/Robot.gd" id="2"]
+[ext_resource type="Resource" uid="uid://bdla3rjjmiayv" path="res://Scène principale/Souris/Crew.tres" id="2_gkvte"]
 [ext_resource type="PackedScene" path="res://Scène principale/Souris/Team/Le Jeune.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://Scène principale/Robot/Queue_action/Afficheaction.tscn" id="4"]
 [ext_resource type="Script" path="res://Scène principale/Robot/Queue_action/FileAction.gd" id="5"]
@@ -28,6 +29,7 @@
 [node name="Robot" type="Node2D"]
 position = Vector2(125, 25)
 script = ExtResource("2")
+crew = ExtResource("2_gkvte")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = 574.657
@@ -283,13 +285,14 @@ texture = ExtResource("20")
 rest_point = 1
 
 [node name="Le Gras" parent="." instance=ExtResource("22")]
-rest_point = 10
+Calcul = 4
 
 [node name="Le Jeune" parent="." instance=ExtResource("3")]
-rest_point = 6
+Calcul = 6
+rest_point = 2
 
 [node name="Le Vieux" parent="." instance=ExtResource("24")]
-rest_point = 11
+rest_point = 4
 
 [connection signal="change_action" from="FileAction" to="AfficheactionActive" method="_on_FileAction_change_action"]
 

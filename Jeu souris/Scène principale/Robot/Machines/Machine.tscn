@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs0dwh6omw8t3"]
+[gd_scene load_steps=3 format=3 uid="uid://bs0dwh6omw8t3"]
+
+[ext_resource type="Resource" uid="uid://bdla3rjjmiayv" path="res://Scène principale/Souris/Crew.tres" id="1_n4k6c"]
 
 [sub_resource type="GDScript" id="1"]
 script/source = "extends Marker2D
 var libre = true
+@export var crew : Crew #Ressource Crew permettant de modifier la place des souris
 @export var salle: String #sallle dans laquelle la machine est située
 @export var nom: String #nom de la machine
 @export var numero_de_machine : int#numéro de la machine utilisé dans la liste du robot
@@ -15,7 +18,7 @@ func _draw ():
 	draw_circle(Vector2.ZERO, 25, Color.BLANCHED_ALMOND)
 	
 func select(souris): #quand une souris arrive dans une nouvelle dropzone ouvre le menu
-	emit_signal(\"assign_souris\",numero_de_machine,souris)
+	crew.change_mouse(souris, numero_de_machine)
 	libre = false
 	modulate = Color.WEB_MAROON
 
@@ -28,7 +31,7 @@ func deselect(): #deselection la souris quitte la dropzone
 		modulate = Color.BLUE
 
 func swap(other) :
-	emit_signal(\"swap_souris\", numero_de_machine, other)
+	crew.swap_mouse(numero_de_machine, other)
 
 func _on_Texture_gui_input(event):
 	if Input.is_action_just_pressed(\"left click\") :
@@ -37,6 +40,7 @@ func _on_Texture_gui_input(event):
 
 [node name="Machine" type="Marker2D" groups=["DropzoneMachine"]]
 script = SubResource("1")
+crew = ExtResource("1_n4k6c")
 
 [node name="Texture2D" type="TextureRect" parent="."]
 offset_left = -32.5269

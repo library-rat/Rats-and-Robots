@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Crew" load_steps=2 format=3 uid="uid://bdla3rjjmiayv"]
+
+[ext_resource type="Script" path="res://Scène principale/Souris/Crew.gd" id="1_bbx43"]
+
+[resource]
+script = ExtResource("1_bbx43")

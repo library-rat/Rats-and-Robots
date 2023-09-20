@@ -1,31 +1,33 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://djrliodh2kwg4"]
 
-[ext_resource path="res://Scène principale/UI/Menus de machines/menu.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scène principale/UI/Menus de machines/Echelle_g.gd" type="Script" id=3]
-[ext_resource path="res://Scène principale/UI/Menus de machines/ligne transport.tscn" type="PackedScene" id=4]
+[ext_resource type="PackedScene" uid="uid://bj5en5y6vyph1" path="res://Scène principale/UI/Menus de machines/menu.tscn" id="1"]
+[ext_resource type="Script" path="res://Scène principale/UI/Menus de machines/Echelle_g.gd" id="3"]
+[ext_resource type="PackedScene" path="res://Scène principale/UI/Menus de machines/ligne transport.tscn" id="4"]
 
-[node name="Echelle_g" instance=ExtResource( 1 )]
-script = ExtResource( 3 )
+[node name="Echelle_g" instance=ExtResource("1")]
+script = ExtResource("3")
 
 [node name="Label" parent="Control/MarginContainer/Panel" index="0"]
 text = "Echelle"
 
-[node name="VBoxContainer" parent="Control" index="1"]
-offset_bottom = 179.0
-
-[node name="Monter" parent="Control/VBoxContainer" index="0" instance=ExtResource( 4 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 630.0
-offset_bottom = 69.0
-pointValeur = [ "Endurance" ]
-ValeurMax = [ 0 ]
-
-[node name="Panel" parent="Control/VBoxContainer/Monter" index="2"]
-offset_right = 630.0
+[node name="Monter" parent="Control/VBoxContainer" index="0" instance=ExtResource("4")]
+layout_mode = 2
+pointValeur = Array[String](["Endurance"])
+ValeurMax = Array[int]([0])
 
 [node name="Label" parent="Control/VBoxContainer/Monter/Panel" index="0"]
 text = "Monter/Descendre"
+
+[node name="Button" parent="Control/VBoxContainer/Monter/Panel" index="2"]
+light_mask = 131073
+layout_mode = 1
+anchors_preset = 6
+offset_left = -63.0
+offset_top = -31.5
+offset_right = 0.0
+offset_bottom = 31.5
+grow_horizontal = 0
+grow_vertical = 2
 
 [connection signal="cout_point" from="Control/VBoxContainer/Monter" to="." method="_on_Monter_cout_point"]
 [connection signal="pressed" from="Control/VBoxContainer/Monter/Panel/Button" to="." method="_on_Button_pressed"]

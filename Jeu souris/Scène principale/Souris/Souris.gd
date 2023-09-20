@@ -1,4 +1,5 @@
 extends Node2D
+class_name Souris
 
 @export var nomSouris: String = ""
 #Stat dans les différentes stats

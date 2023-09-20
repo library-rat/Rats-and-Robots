@@ -1,67 +1,194 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=14 format=3 uid="uid://cpp8xyh7yc37a"]
 
-[ext_resource path="res://Scène principale/UI/Menus de machines/Ordi_m.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scène principale/UI/UI.gd" type="Script" id=2]
-[ext_resource path="res://Scène principale/UI/Menus de machines/Echelle_g.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scène principale/UI/Menus de machines/Echelle_d.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scène principale/UI/Menus de machines/Pont (tete).tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scène principale/UI/Menus de machines/Pont (epaule_g).tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scène principale/UI/Menus de machines/Pont (epaule_d).tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scène principale/UI/Menus de machines/Visage.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scène principale/UI/Menus de machines/Gachette.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scène principale/UI/Menus de machines/Chargeur.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scène principale/UI/Menus de machines/Injecteur.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scène principale/UI/Fin_de_tour.gd" type="Script" id=12]
+[ext_resource type="PackedScene" uid="uid://bpfi226ulfd6q" path="res://Scène principale/UI/Menus de machines/Ordi_m.tscn" id="1"]
+[ext_resource type="Script" path="res://Scène principale/UI/UI.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://djrliodh2kwg4" path="res://Scène principale/UI/Menus de machines/Echelle_g.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cssvbupwc63kh" path="res://Scène principale/UI/Menus de machines/Echelle_d.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b4wrnfl00m8u3" path="res://Scène principale/UI/Menus de machines/Pont (tete).tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scène principale/UI/Menus de machines/Pont (epaule_g).tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Scène principale/UI/Menus de machines/Pont (epaule_d).tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bub3e8ivibb1p" path="res://Scène principale/UI/Menus de machines/Visage.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Scène principale/UI/Menus de machines/Gachette.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Scène principale/UI/Menus de machines/Chargeur.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Scène principale/UI/Menus de machines/Injecteur.tscn" id="11"]
+[ext_resource type="Script" path="res://Scène principale/UI/Fin_de_tour.gd" id="12"]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.215686, 0.0823529, 0.172549, 1 )
+[sub_resource type="StyleBoxFlat" id="1"]
+bg_color = Color(0.215686, 0.0823529, 0.172549, 1)
 
 [node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -0.667427
 offset_right = -0.667419
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="Fin_de_tour" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 15.6675
 offset_right = 55.6675
 offset_bottom = 50.0
-script = ExtResource( 12 )
+grow_horizontal = 2
+script = ExtResource("12")
 
-[node name="Ordi_m" parent="." instance=ExtResource( 1 )]
+[node name="Ordi_m" parent="." instance=ExtResource("1")]
 visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -170.0
+offset_right = 315.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Echelle_g" parent="." instance=ExtResource( 3 )]
+[node name="Echelle_g" parent="." instance=ExtResource("3")]
 visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -170.0
+offset_right = 315.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Echelle_d" parent="." instance=ExtResource( 4 )]
+[node name="Echelle_d" parent="." instance=ExtResource("4")]
 visible = false
-theme_override_styles/panel = SubResource( 1 )
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -170.0
+offset_right = 315.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("1")
 
-[node name="Pont (tete)" parent="." instance=ExtResource( 5 )]
+[node name="Pont (tete)" parent="." instance=ExtResource("5")]
 visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -170.0
+offset_right = 315.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Pont (epaule_g)" parent="." instance=ExtResource( 6 )]
+[node name="Pont (epaule_g)" parent="." instance=ExtResource("6")]
 visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -170.0
+offset_right = 315.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Pont (epaule_d)" parent="." instance=ExtResource( 7 )]
+[node name="Pont (epaule_d)" parent="." instance=ExtResource("7")]
 visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -170.0
+offset_right = 315.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Visage" parent="." instance=ExtResource( 8 )]
+[node name="Visage" parent="." instance=ExtResource("8")]
 visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -170.0
+offset_right = 315.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Gachette" parent="." instance=ExtResource( 9 )]
+[node name="Gachette" parent="." instance=ExtResource("9")]
 visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -170.0
+offset_right = 315.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Chargeur" parent="." instance=ExtResource( 10 )]
+[node name="Chargeur" parent="." instance=ExtResource("10")]
 visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -170.0
+offset_right = 315.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Injecteur" parent="." instance=ExtResource( 11 )]
+[node name="Injecteur" parent="." instance=ExtResource("11")]
 visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -170.0
+offset_right = 315.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="coordine_deplacement" from="Visage" to="Echelle_g" method="_on_Visage_coordine_deplacement"]
 [connection signal="coordine_deplacement" from="Visage" to="Echelle_d" method="_on_Visage_coordine_deplacement"]

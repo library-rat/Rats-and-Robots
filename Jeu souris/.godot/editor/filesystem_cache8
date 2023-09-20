@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694622650
+::res://::1695193697
 DangerOverlay.gd::GDScript::-1::1693080481::0::1::::<>TileMap<>::
-default_env.tres::Environment::2168104264303753901::1694418443::0::1::::<><>::
+default_env.tres::Environment::2168104264303753901::1695119610::0::1::::<><>::
 ::res://Godot-Fontpack-master/::1693080498
 icon.png::CompressedTexture2D::4687408009814618130::1683997439::1693080498::1::::<><>::
 README.md::TextFile::-1::1683997438::0::1::::<><>::
@@ -191,9 +191,9 @@ LICENSE.txt::TextFile::-1::1683997438::0::1::::<><>::
 ::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/xolonium/xolonium-fonts-4.1/ttf/::1693080497
 Xolonium-Bold.ttf::FontFile::464934056131694965::1683997438::1693080497::1::::<><>::
 Xolonium-Regular.ttf::FontFile::4514706374816544755::1683997438::1693080497::1::::<><>::
-::res://Scène principale/::1694417859
+::res://Scène principale/::1694962515
 principale_2_0.gd::GDScript::-1::1694164886::0::1::::<>Node<>::
-principale_2_0.tscn::PackedScene::844846534214955553::1694417859::0::1::::<><>::res://Scène principale/principale_2_0.gd<>uid://bcrjdxkchld0::::res://Scène principale/Robot/Robot.tscn<>res://Scène principale/UI/UI.tscn
+principale_2_0.tscn::PackedScene::844846534214955553::1694962515::0::1::::<><>::res://Scène principale/principale_2_0.gd<>uid://bcrjdxkchld0
 Scene Principale.gd::GDScript::-1::1693080481::0::1::::<>Node<>::
 Scene Principale.tscn::PackedScene::648610345101897057::1694157887::0::1::::<><>::uid://bcrjdxkchld0
 ::res://Scène principale/Gameboard/::1693501469
@@ -227,7 +227,7 @@ trpg-screenshot.png::CompressedTexture2D::640036612777058437::1678736480::169308
 ::res://Scène principale/Gameboard/Unit/::1694417859
 bugcat.png::CompressedTexture2D::972558091274571899::1622232670::1693080499::1::::<><>::
 Unit.gd::GDScript::-1::1693755087::0::1::::Unit<>Path2D<>::
-Unit.tscn::PackedScene::8515794753846498497::1694417859::0::1::::<><>::uid://n4d5ipvc70p0::::res://Scène principale/Gameboard/Unit/bugcat.png<>uid://cc5ddbljw1y15::::res://Scène principale/Gameboard/Unit/unit_shadow.svg<>res://Scène principale/Gameboard/Unit/Unit.gd<>res://Scène principale/Gameboard/Grid.tres<>res://Scène principale/Gameboard/Unit/Lifebar/Lifebar.tscn<>res://Scène principale/Gameboard/Board.tres
+Unit.tscn::PackedScene::8515794753846498497::1694417859::0::1::::<><>::uid://n4d5ipvc70p0
 unit_shadow.svg::CompressedTexture2D::4975337965599641730::1622232670::1693080499::1::::<><>::
 ::res://Scène principale/Gameboard/Unit/Enemy/::1683997439
 Enemy.gd::GDScript::-1::1693080481::0::1::::Enemy<>Path2D<>::
@@ -248,11 +248,11 @@ Para_lifesegment.png::CompressedTexture2D::318252018943683297::1665386191::16930
 ::res://Scène principale/Gameboard/Unit/Player/::1693469591
 Player.gd::GDScript::-1::1693469591::0::1::::Player<>Path2D<>::
 Player.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Unit.tscn<>res://Scène principale/Gameboard/Unit/Player/Player.gd<>res://Scène principale/Gameboard/Unit/bugcat.png
-::res://Scène principale/Robot/::1694417859
+::res://Scène principale/Robot/::1695119610
 Background placement.png::CompressedTexture2D::7543068711404493056::1662894879::1693080501::1::::<><>::
 Robot background.png::CompressedTexture2D::1167455157268223716::1657910738::1693080501::1::::<><>::
-Robot.gd::GDScript::-1::1694164870::0::1::::<>Node2D<>::
-Robot.tscn::PackedScene::75366053726192771::1694417859::0::1::::<><>::uid://bs0dwh6omw8t3::::res://Scène principale/Robot/Machines/Machine.tscn<>res://Scène principale/Robot/Robot.gd<>res://Scène principale/Souris/Team/Le Jeune.tscn<>res://Scène principale/Robot/Queue_action/Afficheaction.tscn<>res://Scène principale/Robot/Queue_action/FileAction.gd<>res://Scène principale/Robot/Queue_action/AfficheactionActive.gd<>uid://cp6pm8kwgq8xo::::res://Scène principale/Robot/Machines/Plasma.png<>uid://bdhpphyrnwmbj::::res://Scène principale/Robot/Machines/Echelle_g_b.png<>uid://dn17h7k8g3b4n::::res://Scène principale/Robot/Machines/Chargeur.png<>uid://dfp6ifab1fd1y::::res://Scène principale/Robot/Background placement.png<>uid://spnnk522svbm::::res://Scène principale/Robot/Machines/Echelle_d_h.png<>uid://bdkuyhmjqhnth::::res://Scène principale/Robot/Machines/Echelle_g_h.png<>uid://cgam3hli44587::::res://Scène principale/Robot/Machines/Ordi_c.png<>uid://glfmh23qg0x8::::res://Scène principale/Robot/Machines/Pont_d.png<>uid://dfwalc7uwnr1c::::res://Scène principale/Robot/Machines/Pont_b.png<>uid://c0qju6gb758ey::::res://Scène principale/Robot/Machines/Gachette.png<>uid://bkhfbkeyld15t::::res://Scène principale/Robot/Machines/Pont_g.png<>uid://dv53x1kov3v2t::::res://Scène principale/Robot/Machines/Injecteur.png<>uid://dhxn3mh81p5n5::::res://Scène principale/Robot/Machines/Visage.png<>uid://d21gsodtegmdf::::res://Scène principale/Robot/Machines/Echelle_d_b.png<>uid://2c0k24kfrl5r::::res://Scène principale/Robot/Machines/Ordi_m.png<>res://Scène principale/Souris/Team/Le Gras.tscn<>res://Scène principale/Souris/Team/Le Dodu.tscn<>res://Scène principale/Souris/Team/Le Vieux.tscn
+Robot.gd::GDScript::-1::1695119562::0::1::::<>Node2D<>::
+Robot.tscn::PackedScene::75366053726192771::1695119610::0::1::::<><>::uid://bs0dwh6omw8t3::::res://Scène principale/Robot/Machines/Machine.tscn<>res://Scène principale/Robot/Robot.gd<>res://Scène principale/Souris/Team/Le Jeune.tscn<>res://Scène principale/Robot/Queue_action/Afficheaction.tscn<>res://Scène principale/Robot/Queue_action/FileAction.gd<>res://Scène principale/Robot/Queue_action/AfficheactionActive.gd<>uid://cp6pm8kwgq8xo::::res://Scène principale/Robot/Machines/Plasma.png<>uid://bdhpphyrnwmbj::::res://Scène principale/Robot/Machines/Echelle_g_b.png<>uid://dn17h7k8g3b4n::::res://Scène principale/Robot/Machines/Chargeur.png<>uid://dfp6ifab1fd1y::::res://Scène principale/Robot/Background placement.png<>uid://spnnk522svbm::::res://Scène principale/Robot/Machines/Echelle_d_h.png<>uid://bdkuyhmjqhnth::::res://Scène principale/Robot/Machines/Echelle_g_h.png<>uid://cgam3hli44587::::res://Scène principale/Robot/Machines/Ordi_c.png<>uid://glfmh23qg0x8::::res://Scène principale/Robot/Machines/Pont_d.png<>uid://dfwalc7uwnr1c::::res://Scène principale/Robot/Machines/Pont_b.png<>uid://c0qju6gb758ey::::res://Scène principale/Robot/Machines/Gachette.png<>uid://bkhfbkeyld15t::::res://Scène principale/Robot/Machines/Pont_g.png<>uid://dv53x1kov3v2t::::res://Scène principale/Robot/Machines/Injecteur.png<>uid://dhxn3mh81p5n5::::res://Scène principale/Robot/Machines/Visage.png<>uid://d21gsodtegmdf::::res://Scène principale/Robot/Machines/Echelle_d_b.png<>uid://2c0k24kfrl5r::::res://Scène principale/Robot/Machines/Ordi_m.png<>res://Scène principale/Souris/Team/Le Gras.tscn<>res://Scène principale/Souris/Team/Le Dodu.tscn<>res://Scène principale/Souris/Team/Le Vieux.tscn
 ::res://Scène principale/Robot/Machines/::1694417859
 Chargeur.png::CompressedTexture2D::8127347982008877899::1672312957::1693080499::1::::<><>::
 Echelle_d_b.png::CompressedTexture2D::9108431837988802091::1672312957::1693080499::1::::<><>::
@@ -303,8 +303,9 @@ Machine Canon Plasma.png::CompressedTexture2D::323943234480204336::1632764732::1
 thunder.png::CompressedTexture2D::5477194844850024857::1624043616::1693080498::1::::<><>::
 Tuile basique.png::CompressedTexture2D::1492533490243878989::1623688938::1693080498::1::::<><>::
 ::res://Scène principale/Robot/Ressources/Informatique/::1631118286
-::res://Scène principale/Souris/::1693755657
-Souris.gd::GDScript::-1::1693501734::0::1::::<>Node2D<>::
+::res://Scène principale/Souris/::1694981104
+Crew.gd::GDScript::-1::1694981104::0::1::::Crew<>Resource<>::
+Souris.gd::GDScript::-1::1694771396::0::1::::Souris<>Node2D<>::
 Souris.tscn::PackedScene::7455066003347883168::1693755657::0::1::::<><>::res://Scène principale/Souris/Souris.gd<>res://Scène principale/Souris/Afficheur de points/Calcul.tres<>res://Scène principale/Souris/Afficheur de points/Endurance.tres<>res://Scène principale/Souris/Afficheur de points/Observation.tres<>res://Scène principale/Souris/Afficheur de points/Grille de points.tscn<>uid://n5kfkvwhpni2
 Sprite Souris Moche.png::CompressedTexture2D::975002957497336135::1630328712::1693080498::1::::<><>::
 ::res://Scène principale/Souris/Afficheur de points/::1693080695
@@ -331,42 +332,42 @@ Le Dodu.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale
 Le Gras.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Souris.tscn
 Le Jeune.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Souris.tscn
 Le Vieux.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Souris.tscn
-::res://Scène principale/UI/::1694417647
+::res://Scène principale/UI/::1694882697
 Fin_de_tour.gd::GDScript::-1::1693080481::0::1::::<>Button<>::
 UI.gd::GDScript::-1::1694417647::0::1::::<>Control<>::
-UI.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/Ordi_m.tscn<>res://Scène principale/UI/UI.gd<>res://Scène principale/UI/Menus de machines/Echelle_g.tscn<>res://Scène principale/UI/Menus de machines/Echelle_d.tscn<>res://Scène principale/UI/Menus de machines/Pont (tete).tscn<>res://Scène principale/UI/Menus de machines/Pont (epaule_g).tscn<>res://Scène principale/UI/Menus de machines/Pont (epaule_d).tscn<>res://Scène principale/UI/Menus de machines/Visage.tscn<>res://Scène principale/UI/Menus de machines/Gachette.tscn<>res://Scène principale/UI/Menus de machines/Chargeur.tscn<>res://Scène principale/UI/Menus de machines/Injecteur.tscn<>res://Scène principale/UI/Fin_de_tour.gd
-::res://Scène principale/UI/Menus de machines/::1694418443
+UI.tscn::PackedScene::5858685695148842496::1694882697::0::1::::<><>::uid://bpfi226ulfd6q
+::res://Scène principale/UI/Menus de machines/::1694945771
 bullet_menu.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/menu.tscn
-Chargeur.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Chargeur.gd::GDScript::-1::1694623172::0::1::::<>Panel<>::
 Chargeur.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/bullet_menu.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>res://Scène principale/Souris/Afficheur de points/Icon point endurance.png<>res://Scène principale/UI/Menus de machines/Chargeur.gd<>res://Scène principale/UI/Menus de machines/Image Chargeur-Gachette/chargeur ouvert.png
 Echelle_d.gd::GDScript::-1::1694161286::0::1::::<>Panel<>::
-Echelle_d.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/Echelle_g.tscn<>res://Scène principale/UI/Menus de machines/Echelle_d.gd
+Echelle_d.tscn::PackedScene::6074677269728433891::1694887971::0::1::::<><>::uid://djrliodh2kwg4
 Echelle_g.gd::GDScript::-1::1694161292::0::1::::<>Panel<>::
-Echelle_g.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/menu.tscn<>res://Scène principale/UI/Menus de machines/Echelle_g.gd<>res://Scène principale/UI/Menus de machines/ligne transport.tscn
-Gachette.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
+Echelle_g.tscn::PackedScene::7826738979228144097::1694945771::0::1::::<><>::uid://bj5en5y6vyph1
+Gachette.gd::GDScript::-1::1694623241::0::1::::<>Panel<>::
 Gachette.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/bullet_menu.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>res://Scène principale/Souris/Afficheur de points/Icon point observation.png<>res://Scène principale/UI/Menus de machines/Gachette.gd
 Injecteur.gd::GDScript::-1::1694162906::0::1::::<>Panel<>::
 Injecteur.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>res://Scène principale/UI/Menus de machines/menu.tscn<>res://Scène principale/Souris/Afficheur de points/Icon point endurance.png<>res://Scène principale/Souris/Afficheur de points/Icon point observation.png<>res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>res://Scène principale/UI/Menus de machines/Injecteur.gd
 ligne menu 1 icon.gd::GDScript::-1::1694417006::0::1::::<>HBoxContainer<>::
-ligne menu 1 icon.tscn::PackedScene::7414785336201095239::1694418443::0::1::::<><>::uid://crsi4kn8ulys3::::res://Scène principale/Robot/Ressources/graphiques/icon physique.png<>uid://362blk7jcuo6::::res://Scène principale/Robot/Ressources/graphiques/icob déplacement.png<>uid://b2dyotkul1ruq::::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.gd<>uid://co8djgnkdpi46::::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf
+ligne menu 1 icon.tscn::PackedScene::7414785336201095239::1694882493::0::1::::<><>::uid://crsi4kn8ulys3
 ligne menu 2 icon.gd::GDScript::-1::1694417728::0::1::::<>HBoxContainer<>::
-ligne menu 2 icon.tscn::PackedScene::6774740083400492201::1694418443::0::1::::<><>::uid://crsi4kn8ulys3::::res://Scène principale/Robot/Ressources/graphiques/icon physique.png<>uid://gw6mfabtifii::::res://Scène principale/Robot/Ressources/graphiques/icon int.jpeg<>uid://b2dyotkul1ruq::::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf<>res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal.tres<>uid://co8djgnkdpi46::::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.gd
+ligne menu 2 icon.tscn::PackedScene::6774740083400492201::1694882493::0::1::::<><>::uid://crsi4kn8ulys3
 ligne transport.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn
 LigneSouris.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
 LigneSouris.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Souris/Afficheur de points/Grille de points.tscn<>res://Scène principale/UI/Menus de machines/LigneSouris.gd
 Menu.gd::GDScript::-1::1694164389::0::1::::<>Panel<>::
-menu.tscn::PackedScene::3080319306562347700::1694417859::0::1::::<><>::uid://db3r6lkljgrnr::::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf<>res://Scène principale/Souris/Afficheur de points/Grille de points.tscn<>res://Scène principale/UI/Menus de machines/Menu.gd
+menu.tscn::PackedScene::3080319306562347700::1694417859::0::1::::<><>::uid://db3r6lkljgrnr
 Ordi_m.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
-Ordi_m.tscn::PackedScene::3450110646354449618::1694418443::0::1::::<><>::uid://bj5en5y6vyph1::::res://Scène principale/UI/Menus de machines/menu.tscn<>uid://ddv1owo3ypvhn::::res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Scène principale/UI/Menus de machines/Ordi_m.gd<>uid://cp452r0bayg81::::res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>uid://c3ry8kfhwdsy0::::res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>uid://cyus1xnn8kmgr::::res://Scène principale/Souris/Afficheur de points/Icon point observation.png
+Ordi_m.tscn::PackedScene::3450110646354449618::1694882493::0::1::::<><>::uid://bj5en5y6vyph1
 Pont (epaule_d).gd::GDScript::-1::1694159347::0::1::::<>Panel<>::
 Pont (epaule_d).tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/Pont (tete).tscn<>res://Scène principale/UI/Menus de machines/Pont (epaule_d).gd
 Pont (epaule_g).gd::GDScript::-1::1694161239::0::1::::<>Panel<>::
 Pont (epaule_g).tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/Pont (tete).tscn<>res://Scène principale/UI/Menus de machines/Pont (epaule_g).gd
 Pont (tete).gd::GDScript::-1::1694159360::0::1::::<>Panel<>::
-Pont (tete).tscn::PackedScene::4468369144762552600::1694417859::0::1::::<><>::uid://bj5en5y6vyph1::::res://Scène principale/UI/Menus de machines/menu.tscn<>uid://b2dyotkul1ruq::::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf<>res://Scène principale/UI/Menus de machines/Pont (tete).gd<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>uid://co8djgnkdpi46::::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf<>uid://crsi4kn8ulys3::::res://Scène principale/Robot/Ressources/graphiques/icon physique.png<>uid://362blk7jcuo6::::res://Scène principale/Robot/Ressources/graphiques/icob déplacement.png
+Pont (tete).tscn::PackedScene::4468369144762552600::1694417859::0::1::::<><>::uid://bj5en5y6vyph1
 SourisListe.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf
 Visage.gd::GDScript::-1::1694417619::0::1::::<>Panel<>::
-Visage.tscn::PackedScene::3793970899774755119::1694417859::0::1::::<><>::uid://bj5en5y6vyph1::::res://Scène principale/UI/Menus de machines/menu.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>uid://db3r6lkljgrnr::::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf<>res://Scène principale/UI/Menus de machines/Visage.gd<>uid://c3ry8kfhwdsy0::::res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>uid://cp452r0bayg81::::res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>uid://cyus1xnn8kmgr::::res://Scène principale/Souris/Afficheur de points/Icon point observation.png
+Visage.tscn::PackedScene::3793970899774755119::1694417859::0::1::::<><>::uid://bj5en5y6vyph1
 ::res://Scène principale/UI/Menus de machines/Image Chargeur-Gachette/::1693080498
 chargeur ferme.png::CompressedTexture2D::6308725848689616834::1663268773::1693080498::1::::<><>::
 chargeur ouvert.png::CompressedTexture2D::6891122412908961046::1663268725::1693080498::1::::<><>::
