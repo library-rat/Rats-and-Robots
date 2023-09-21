@@ -1,22 +1,14 @@
 extends Control
 
 @onready var ListeMachine = [null,$"Ordi_m",$"Pont (epaule_g)",$"Pont (tete)",$"Pont (epaule_d)",null,$"Gachette",$"Echelle_g",$"Echelle_g",$"Injecteur",$"Visage",$"Chargeur",$"Echelle_d",$"Echelle_d"]
-var liste_souris = []
 
 
-func _on_robot_init_souris(liste): #On ne fait pas l'affectation des souris au menu car robot s'initialise en premier
-	liste_souris = liste
 
-func _ready():
-	for index in range(ListeMachine.size()):
-		if ListeMachine[index] != null :
-			ListeMachine[index].Souris = liste_souris[index]
-
-func _on_robot_ouvremachine(numero,souris):
+func _on_robot_ouvremachine(numero):
 	var menu = get_tree().get_nodes_in_group("Menu_machine")#souris est une liste de toutes les souris
 	for m in menu :
 		m.visible = false
-	ListeMachine[numero - 1].afficher_menu(souris)
+	ListeMachine[numero - 1].afficher_menu(numero)
 
 
 func _on_Fin_de_tour_pressed():

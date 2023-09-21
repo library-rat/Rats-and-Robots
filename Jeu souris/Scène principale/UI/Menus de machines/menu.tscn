@@ -73,8 +73,9 @@ layout_mode = 2
 layout_mode = 0
 anchor_left = 0.97
 anchor_right = 0.97
-offset_right = 12.0
-offset_bottom = 20.0
+offset_left = -6.10352e-05
+offset_right = 17.9999
+offset_bottom = 31.0
 text = "X"
 
 [connection signal="pressed" from="FermeMenu" to="." method="_on_FermeMenu_pressed"]

@@ -2,10 +2,7 @@ extends Node2D
 var MousePop :Array #Permet de stocker la liste de tout les souris disponibles
 @export var crew : Crew
 
-signal ouvremachine (numero,souris)
-
-func ouvrirmenu (numero_machine,souris) : #ouvre le menu de la machine en lui assignant la souris
-	emit_signal("ouvremachine", numero_machine )
+signal ouvremachine (numero)
 
 
 #Partie gérant la file d'action
@@ -26,9 +23,6 @@ func _ready():
 	for souris in MousePop :
 		crew.register_mouse(souris, souris.rest_point +1)
 		
-
-
-
 	$Ordi_c.ouvrir_menu.connect(_on_ouvrir_menu)
 	$Ordi_m.ouvrir_menu.connect(_on_ouvrir_menu)
 	$Pont_g.ouvrir_menu.connect(_on_ouvrir_menu)
@@ -49,6 +43,11 @@ func _input(event):
 		$FileAction.enleve_action() 
 	if event.is_action("ui_page_up"):
 		$FileAction.ajoute_action(test)
+
+
+func _on_ouvrir_menu(numero_machine): #ouvre le menu de la machine
+	emit_signal("ouvremachine", numero_machine)
+	
 
 func _on_Ordi_m_marcher(valeur):
 	for i in range (valeur) :
@@ -185,6 +184,5 @@ func _on_Fin_de_tour_pressed():
 
 
 
-func _on_ouvrir_menu(numero_machine):
-	emit_signal("ouvremachine", numero_machine)
+
 

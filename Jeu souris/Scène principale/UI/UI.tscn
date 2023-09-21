@@ -53,6 +53,7 @@ offset_right = 315.0
 offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
+numero_machine = 2
 
 [node name="Echelle_g" parent="." instance=ExtResource("3")]
 visible = false
@@ -99,6 +100,7 @@ offset_right = 315.0
 offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
+numero_machine = 4
 
 [node name="Pont (epaule_g)" parent="." instance=ExtResource("6")]
 visible = false
@@ -114,6 +116,7 @@ offset_right = 315.0
 offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
+numero_machine = 3
 
 [node name="Pont (epaule_d)" parent="." instance=ExtResource("7")]
 visible = false
@@ -129,6 +132,7 @@ offset_right = 315.0
 offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
+numero_machine = 5
 
 [node name="Visage" parent="." instance=ExtResource("8")]
 visible = false
@@ -144,6 +148,7 @@ offset_right = 315.0
 offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
+numero_machine = 11
 
 [node name="Gachette" parent="." instance=ExtResource("9")]
 visible = false
@@ -159,6 +164,7 @@ offset_right = 315.0
 offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
+numero_machine = 7
 
 [node name="Chargeur" parent="." instance=ExtResource("10")]
 visible = false
@@ -174,6 +180,7 @@ offset_right = 315.0
 offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
+numero_machine = 12
 
 [node name="Injecteur" parent="." instance=ExtResource("11")]
 visible = false
@@ -189,12 +196,7 @@ offset_right = 315.0
 offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
+numero_machine = 10
 
-[connection signal="coordine_deplacement" from="Visage" to="Echelle_g" method="_on_Visage_coordine_deplacement"]
-[connection signal="coordine_deplacement" from="Visage" to="Echelle_d" method="_on_Visage_coordine_deplacement"]
-[connection signal="coordine_deplacement" from="Visage" to="Pont (tete)" method="_on_Visage_coordine_deplacement"]
-[connection signal="coordine_deplacement" from="Visage" to="Pont (epaule_g)" method="_on_Visage_coordine_deplacement"]
-[connection signal="coordine_deplacement" from="Visage" to="Pont (epaule_d)" method="_on_Visage_coordine_deplacement"]
 [connection signal="tir_courbe" from="Gachette" to="Chargeur" method="_on_Gachette_tir_courbe"]
 [connection signal="tir_tendu" from="Gachette" to="Chargeur" method="_on_Gachette_tir_tendu"]
-[connection signal="charge_munition" from="Chargeur" to="Gachette" method="_on_Chargeur_charge_munition"]

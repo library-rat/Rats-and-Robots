@@ -1,13 +1,28 @@
 extends Panel
 var Souris : Node2D
+var crew : Crew 
+@export var numero_machine : int = 0
 
-func afficher_menu(souris) :
+func _ready():
+	crew = preload("res://Scène principale/Souris/Crew.tres")
+	crew.update_crew.connect(_on_update_crew)
+
+func afficher_menu(num_machine : int) :
 	visible = true
-	Souris = souris
+	numero_machine = num_machine
+	Souris = crew.get_mouse(num_machine)
 	if Souris == null :
 		$"Panel/Grille de points".nettoyer_affichage()
 	else :
 		$"Panel/Grille de points".rafraichir_affichage(Souris.Points)
+
+func _on_update_crew():
+	Souris = crew.get_mouse(numero_machine)
+	if Souris == null :
+		$"Panel/Grille de points".nettoyer_affichage()
+	else :
+		$"Panel/Grille de points".rafraichir_affichage(Souris.Points)
+
 
 func _on_FermeMenu_pressed():
 	visible = false

@@ -70,4 +70,4 @@ func _on_Button_pressed():
 
 
 func _on_gachette_open_chargeur():
-	afficher_menu(Souris)
+	afficher_menu(numero_machine)
