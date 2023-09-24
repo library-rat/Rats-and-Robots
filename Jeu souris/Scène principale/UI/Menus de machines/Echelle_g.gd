@@ -29,6 +29,6 @@ func _on_robot_reset_echelle_g():
 	changer_cout(valeur_reset)
 
 
-func _on_Visage_coordine_deplacement():
+func _on_visage_coordine_deplacement():
 	valeur_reset = 0
 	changer_cout(0)

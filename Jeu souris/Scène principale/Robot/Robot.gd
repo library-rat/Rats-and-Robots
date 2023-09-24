@@ -49,17 +49,17 @@ func _on_ouvrir_menu(numero_machine): #ouvre le menu de la machine
 	emit_signal("ouvremachine", numero_machine)
 	
 
-func _on_Ordi_m_marcher(valeur):
+func _on_ordi_m_marcher(valeur):
 	for i in range (valeur) :
 		$FileAction.ajoute_action(mouvement)
 
-func _on_Ordi_m_saut():
+func _on_ordi_m_saut():
 	$"FileAction".ajoute_action(saut)
 
-func _on_Ordi_m_charge():
+func _on_ordi_m_charge():
 	$"FileAction".ajoute_action(charge)
 
-func _on_Gachette_tir_tendu(ammo):
+func _on_gachette_tir_tendu(ammo):
 	if ammo.name == "Balle_simple" :
 		$"FileAction".ajoute_action(tendu_simple)
 	elif ammo.name =="Balle_lourde" :
@@ -67,7 +67,7 @@ func _on_Gachette_tir_tendu(ammo):
 	elif ammo.name == "Balle_paralysante" :
 		$"FileAction".ajoute_action(tendu_paralysante)
 
-func _on_Gachette_tir_courbe(ammo):
+func _on_gachette_tir_courbe(ammo):
 	if ammo.name == "Balle_simple" :
 		$"FileAction".ajoute_action(courbe_simple)
 	elif ammo.name =="Balle_lourde" :
@@ -75,14 +75,14 @@ func _on_Gachette_tir_courbe(ammo):
 	elif ammo.name == "Balle_paralysante" :
 		$"FileAction".ajoute_action(courbe_paralysante)
 
-func _on_FileAction_change_action(action, valeur):
+func _on_fileAction_change_action(action, valeur):
 	pass # Replace with function body.
 
 
 
 #Partie gérant les échelles et passages
 
-func _on_Echelle_g_utilise_echelle():
+func _on_echelle_g_utilise_echelle():
 	if ($"Echelle_g_h".libre and not $"Echelle_g_b".libre) :
 		var souris = crew.get_mouse($"Echelle_g_b".numero_de_machine)
 		$"Echelle_g_h".select(souris)
@@ -102,7 +102,7 @@ func _on_Echelle_g_utilise_echelle():
 signal reset_echelle_d()
 signal reset_echelle_g()
 
-func _on_Echelle_d_utilise_echelle():
+func _on_echelle_d_utilise_echelle():
 	if ($"Echelle_d_h".libre and not $"Echelle_d_b".libre) :
 		var souris = crew.get_mouse($"Echelle_d_b".numero_de_machine)
 		$"Echelle_d_h".select(souris)
@@ -122,7 +122,7 @@ signal fermer_pont_tete()
 signal fermer_pont_epaule_g()
 signal fermer_pont_epaule_d()
 
-func _on_Pont_tete_aller_epaule_d():
+func _on_pont_tete_aller_epaule_d():
 	if $"Pont_d".libre and not$"Pont_b".libre:
 		var souris = crew.get_mouse($"Pont_b".numero_de_machine)
 		$"Pont_d".select(souris)
@@ -131,7 +131,7 @@ func _on_Pont_tete_aller_epaule_d():
 		emit_signal("fermer_pont_tete")
 		
 
-func _on_Pont_tete_aller_epaule_g():
+func _on_pont_tete_aller_epaule_g():
 	if $"Pont_g".libre and not$"Pont_b".libre:
 		var souris = crew.get_mouse($"Pont_b".numero_de_machine)
 		$"Pont_g".select(souris)
@@ -139,7 +139,7 @@ func _on_Pont_tete_aller_epaule_g():
 		souris.rest_point = $"Pont_g".numero_de_machine -1
 		emit_signal("fermer_pont_tete")
 
-func _on_Pont_epaule_g_aller_epaule_d():
+func _on_pont_epaule_g_aller_epaule_d():
 	if $"Pont_d".libre and not$"Pont_g".libre:
 		var souris = crew.get_mouse($"Pont_g".numero_de_machine)
 		$"Pont_d".select(souris)
@@ -147,7 +147,7 @@ func _on_Pont_epaule_g_aller_epaule_d():
 		souris.rest_point = $"Pont_d".numero_de_machine -1
 		emit_signal("fermer_pont_epaule_g")
 
-func _on_Pont_epaule_g_aller_tete():
+func _on_pont_epaule_g_aller_tete():
 	if $"Pont_b".libre and not$"Pont_g".libre:
 		var souris = crew.get_mouse($"Pont_g".numero_de_machine)
 		$"Pont_b".select(souris)
@@ -156,7 +156,7 @@ func _on_Pont_epaule_g_aller_tete():
 		emit_signal("fermer_pont_epaule_g")
 
 
-func _on_Pont_epaule_d_aller_epaule_g():
+func _on_pont_epaule_d_aller_epaule_g():
 	if $"Pont_g".libre and not$"Pont_d".libre:
 		var souris = crew.get_mouse($"Pont_d".numero_de_machine)
 		$"Pont_g".select(souris)
@@ -165,7 +165,7 @@ func _on_Pont_epaule_d_aller_epaule_g():
 		emit_signal("fermer_pont_epaule_d")
 
 
-func _on_Pont_epaule_d_aller_tete():
+func _on_pont_epaule_d_aller_tete():
 	if $"Pont_b".libre and not$"Pont_d".libre:
 		var souris = crew.get_mouse($"Pont_d".numero_de_machine)
 		$"Pont_b".select(souris)
@@ -175,12 +175,13 @@ func _on_Pont_epaule_d_aller_tete():
 
 ##gère pour recommencer le tour
 
-func _on_Fin_de_tour_pressed():
+func _on_fin_de_tour_pressed():
 	var souris = get_tree().get_nodes_in_group("Souris")#souris est une liste de toutes les souris
 	for s in souris :
 		s.reset_stat()
 
 ##Toute la partie gérant les signaux des machines
+
 
 
 

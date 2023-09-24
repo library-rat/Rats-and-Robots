@@ -54,12 +54,12 @@ func _on_ChargerP_cout_point(type, index):
 					charp.update_affichage()						#on met à jour l'affichage
 
 
-func _on_Gachette_tir_tendu(ammo):
+func _on_gachette_tir_tendu(ammo):
 	loaded = false
 	$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ouvert
 
 
-func _on_Gachette_tir_courbe(ammo):
+func _on_gachette_tir_courbe(ammo):
 	loaded = false
 	$"Control/HSplitContainer/CenterContainer/TextureRect".texture = chargeur_ouvert
 

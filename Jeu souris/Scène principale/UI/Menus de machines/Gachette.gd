@@ -38,7 +38,7 @@ func _on_TirerC_cout_point(type, index):
 					tirc.update_affichage()						#on met à jour l'affichage
 
 
-func _on_Chargeur_charge_munition(ammo):
+func _on_chargeur_charge_munition(ammo):
 	munition = ammo
 	$"Control/HSplitContainer/CenterContainer/TextureRect".texture = munition.texture
 

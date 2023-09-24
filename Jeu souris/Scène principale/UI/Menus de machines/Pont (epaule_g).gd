@@ -44,7 +44,7 @@ func fermer_pont():
 		$"Control/VBoxContainer/Pont_2".visible = false
 
 
-func _on_Visage_coordine_deplacement():
+func _on_visage_coordine_deplacement():
 	$"Control/VBoxContainer/Ouvrir_porte".visible = false
 	$"Control/VBoxContainer/Pont_1".visible = true
 	$"Control/VBoxContainer/Pont_2".visible = true
