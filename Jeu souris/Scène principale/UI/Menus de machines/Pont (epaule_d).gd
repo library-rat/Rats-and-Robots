@@ -8,7 +8,7 @@ func debut_tour():
 	coord = false
 	fermer_pont()
 
-func _on_Ouvrir_porte_cout_point(type, index):
+func _on_ouvrir_porte_cout_point(type, index):
 	if not (Souris == null):
 		var ouvrir =$"Control/VBoxContainer/Ouvrir_porte"
 		if ouvrir.Valeur[index] > 0:

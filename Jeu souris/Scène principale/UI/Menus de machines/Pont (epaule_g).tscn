@@ -15,8 +15,4 @@ text = "Pont(épaule droite)"
 [node name="Label" parent="Control/VBoxContainer/Pont_2/Panel" index="0"]
 text = "Pont(crane)"
 
-[node name="FermeMenu" parent="." index="2"]
-offset_left = 611.1
-offset_right = 629.1
-
 [editable path="Control/VBoxContainer/Ouvrir_porte"]

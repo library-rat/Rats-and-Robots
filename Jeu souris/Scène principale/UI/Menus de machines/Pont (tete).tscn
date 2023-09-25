@@ -177,6 +177,7 @@ anchor_right = 0.0
 offset_left = 611.1
 offset_right = 629.1
 
+[connection signal="cout_point" from="Control/VBoxContainer/Ouvrir_porte" to="." method="_on_ouvrir_porte_cout_point"]
 [connection signal="pressed" from="Control/VBoxContainer/Pont_1/passage_1" to="." method="_on_passage_1_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Pont_2/passage_2" to="." method="_on_passage_2_pressed"]
 

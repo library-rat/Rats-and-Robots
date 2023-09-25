@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://jigrumtewfs0"]
 
 [ext_resource type="PackedScene" uid="uid://bcrjdxkchld0" path="res://Scène principale/Robot/Robot.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://Scène principale/UI/UI.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cpp8xyh7yc37a" path="res://Scène principale/UI/UI.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://Scène principale/Gameboard/Plateau.tscn" id="3"]
 [ext_resource type="Resource" path="res://Scène principale/Gameboard/Board.tres" id="4"]
 
@@ -42,95 +42,162 @@ max_life = 2
 board = ExtResource("4")
 
 [node name="UI" parent="." instance=ExtResource("2")]
-layout_mode = 3
-anchors_preset = 15
 offset_left = 0.0
 offset_right = 0.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Fin_de_tour" parent="UI" index="0"]
 layout_mode = 0
+anchors_preset = 0
 anchor_left = 0.0
 anchor_right = 0.0
 offset_left = 0.0
 offset_right = 40.0
+grow_horizontal = 1
 action_mode = 0
 
 [node name="Ordi_m" parent="UI" index="1"]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 630.0
 offset_bottom = 340.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Echelle_g" parent="UI" index="2"]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 630.0
 offset_bottom = 340.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Echelle_d" parent="UI" index="3"]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 630.0
 offset_bottom = 340.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Pont (tete)" parent="UI" index="4"]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 630.0
 offset_bottom = 340.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Pont (epaule_g)" parent="UI" index="5"]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 630.0
 offset_bottom = 340.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Pont (epaule_d)" parent="UI" index="6"]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 630.0
 offset_bottom = 340.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Visage" parent="UI" index="7"]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 630.0
 offset_bottom = 340.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Gachette" parent="UI" index="8"]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 630.0
 offset_bottom = 340.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Chargeur" parent="UI" index="9"]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 630.0
 offset_bottom = 340.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Injecteur" parent="UI" index="10"]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 630.0
 offset_bottom = 340.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="fermer_pont_epaule_d" from="Robot" to="UI/Pont (epaule_d)" method="_on_Robot_fermer_pont_epaule_d"]
 [connection signal="fermer_pont_epaule_g" from="Robot" to="UI/Pont (epaule_g)" method="_on_Robot_fermer_pont_epaule_g"]
 [connection signal="fermer_pont_tete" from="Robot" to="UI/Pont (tete)" method="_on_Robot_fermer_pont_tete"]
-[connection signal="init_souris" from="Robot" to="UI" method="_on_Robot_init_souris"]
 [connection signal="ouvremachine" from="Robot" to="UI" method="_on_Robot_ouvremachine"]
 [connection signal="reset_echelle_d" from="Robot" to="UI/Echelle_d" method="_on_Robot_reset_echelle_d"]
 [connection signal="reset_echelle_g" from="Robot" to="UI/Echelle_g" method="_on_Robot_reset_echelle_g"]
