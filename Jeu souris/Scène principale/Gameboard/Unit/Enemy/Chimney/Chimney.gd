@@ -1,6 +1,6 @@
 @tool
 class_name Chimney
-extends "res://Scène principale/Gameboard/Unit/Enemy/Enemy.gd"
+extends Enemy
 var loading := false
 var damage = 1
 var reach = 10

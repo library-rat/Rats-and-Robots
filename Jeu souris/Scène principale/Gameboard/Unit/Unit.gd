@@ -1,4 +1,4 @@
-@tool
+
 ## Represents a unit on the game board.
 ## The board manages its position inside the game grid.
 ## The unit itself holds stats and a visual representation that moves smoothly in the game world.
