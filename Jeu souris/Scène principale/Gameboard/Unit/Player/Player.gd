@@ -1,6 +1,5 @@
-@tool
 class_name Player
-extends "res://Scène principale/Gameboard/Unit/Unit.gd"
+extends Unit
 signal saut_fini
 @export var rsautext = 3 #rayon intérieur de la zone de saut
 @export var rsautint = 2 #rayon exterieur de la zone de saut
@@ -11,6 +10,7 @@ var munition : Ammo = null
 var aire_tir = [] #stockage des cases d'effet supplémentaires à la case séléctionnée
 var forme = null #forme du robot donnée par l'injecteur
 var armure :int = 0: set = armure_var_set
+
 
 func end_turn():
 	effet_forme()

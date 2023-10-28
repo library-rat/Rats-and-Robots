@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bcrjdxkchld0" path="res://Scène principale/Robot/Robot.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://cpp8xyh7yc37a" path="res://Scène principale/UI/UI.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://Scène principale/Gameboard/Plateau.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cns43qo6jv4m" path="res://Scène principale/Gameboard/Plateau.tscn" id="3"]
 [ext_resource type="Resource" path="res://Scène principale/Gameboard/Board.tres" id="4"]
 
 [node name="Scene Principale" type="Node"]
@@ -16,21 +16,6 @@ offset_right = 30.0
 offset_bottom = 30.0
 
 [node name="Plateau" parent="." instance=ExtResource("3")]
-
-[node name="Map" parent="Plateau" index="0"]
-format = 2
-
-[node name="UnitOverlay" parent="Plateau/GameBoard" index="0"]
-format = 2
-
-[node name="DangerOverlay" parent="Plateau/GameBoard" index="1"]
-format = 2
-
-[node name="AimOverlay" parent="Plateau/GameBoard" index="2"]
-format = 2
-
-[node name="UnitPath" parent="Plateau/GameBoard" index="3"]
-format = 2
 
 [node name="Player" parent="Plateau/GameBoard" index="5"]
 board = ExtResource("4")

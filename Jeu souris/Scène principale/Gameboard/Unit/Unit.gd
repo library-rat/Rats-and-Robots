@@ -49,15 +49,17 @@ func _ready() -> void:
 
 	# We create the curve resource here because creating it in the editor prevents us from
 	# moving the unit.
-	print(Engine.is_editor_hint())
-	if not Engine.is_editor_hint():
-		curve = Curve2D.new()
+	curve = Curve2D.new()
+	print("ready unit")
 	
 	life = max_life
 	update_lifebar()
 func _process(delta: float) -> void:
-	_path_follow.progress += move_speed * delta
 
+	_path_follow.progress += move_speed * delta
+	if curve == null :
+		curve = Curve2D.new()
+		print("failed")
 	if _path_follow.progress >= curve.get_baked_length():
 		self._is_walking = false
 		_path_follow.offset = 0

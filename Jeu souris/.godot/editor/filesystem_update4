@@ -1,10 +1,6 @@
 res://default_env.tres
 res://Scène principale/principale_2_0.tscn
 res://Scène principale/Robot/Robot.tscn
-res://Scène principale/UI/Menus de machines/Pont (tete).gd
-res://Scène principale/UI/Menus de machines/Pont (tete).tscn
-res://Scène principale/UI/Menus de machines/Pont (epaule_g).tscn
-res://Scène principale/UI/Menus de machines/Pont (epaule_g).gd
-res://Scène principale/UI/Menus de machines/Pont (epaule_d).tscn
-res://Scène principale/UI/Menus de machines/Pont (epaule_d).gd
-res://Scène principale/Scene Principale.tscn
+res://Scène principale/Gameboard/Unit/Player/Player.tscn
+res://Scène principale/Gameboard/Unit/Unit.tscn
+res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn

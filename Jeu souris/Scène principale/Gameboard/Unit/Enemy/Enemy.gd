@@ -5,6 +5,7 @@ var frozen : bool = false
 var rng = RandomNumberGenerator.new()
 
 func _ready():
+	super._ready()
 	rng.randomize()
 
 

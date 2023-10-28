@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695622833
+::res://::1698495566
 DangerOverlay.gd::GDScript::-1::1693080481::0::1::::<>TileMap<>::
-default_env.tres::Environment::2168104264303753901::1695581418::0::1::::<><>::
+default_env.tres::Environment::2168104264303753901::1698324164::0::1::::<><>::
 ::res://Godot-Fontpack-master/::1693080498
 icon.png::CompressedTexture2D::4687408009814618130::1683997439::1693080498::1::::<><>::
 README.md::TextFile::-1::1683997438::0::1::::<><>::
@@ -191,12 +191,12 @@ LICENSE.txt::TextFile::-1::1683997438::0::1::::<><>::
 ::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/xolonium/xolonium-fonts-4.1/ttf/::1693080497
 Xolonium-Bold.ttf::FontFile::464934056131694965::1683997438::1693080497::1::::<><>::
 Xolonium-Regular.ttf::FontFile::4514706374816544755::1683997438::1693080497::1::::<><>::
-::res://Scène principale/::1695581418
+::res://Scène principale/::1698324163
 principale_2_0.gd::GDScript::-1::1694164886::0::1::::<>Node<>::
-principale_2_0.tscn::PackedScene::844846534214955553::1695581418::0::1::::<><>::res://Scène principale/principale_2_0.gd<>uid://bcrjdxkchld0::::res://Scène principale/Robot/Robot.tscn<>uid://cpp8xyh7yc37a::::res://Scène principale/UI/UI.tscn
+principale_2_0.tscn::PackedScene::844846534214955553::1698324163::0::1::::<><>::res://Scène principale/principale_2_0.gd<>uid://bcrjdxkchld0
 Scene Principale.gd::GDScript::-1::1693080481::0::1::::<>Node<>::
-Scene Principale.tscn::PackedScene::648610345101897057::1694157887::0::1::::<><>::uid://bcrjdxkchld0
-::res://Scène principale/Gameboard/::1693501469
+Scene Principale.tscn::PackedScene::648610345101897057::1698324163::0::1::::<><>::uid://bcrjdxkchld0
+::res://Scène principale/Gameboard/::1698495301
 arrows.svg::CompressedTexture2D::3819215722187998862::1622232670::1693080499::1::::<><>::
 arrows_iso.png::CompressedTexture2D::5444948965420885264::1645464376::1693080499::1::::<><>::
 Board.gd::GDScript::-1::1693469576::0::1::::Board<>Resource<>::
@@ -208,36 +208,35 @@ Grid.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Gameb
 isometric tile.png::CompressedTexture2D::6661562438579159995::1640873200::1693080499::1::::<><>::
 isometric tiles.png::CompressedTexture2D::3130040982477465188::1664041458::1693080499::1::::<><>::
 Pathfinder.gd::GDScript::-1::1693080481::0::1::::PathFinder<>RefCounted<>::
-Plateau.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/bugcat.png<>res://Scène principale/Gameboard/GameBoard.gd<>res://Scène principale/Gameboard/Cursor/Cursor.tscn<>res://Scène principale/Gameboard/UnitOverlay.tscn<>res://Scène principale/Gameboard/unit_overlay_tileset.tres<>res://Scène principale/Gameboard/UnitPath.tscn<>res://Scène principale/Gameboard/Unit/Player/Player.tscn<>res://Scène principale/Gameboard/Grid.tres<>res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.tscn<>res://Scène principale/Gameboard/Unit/Enemy/Chimney/Chimney.tscn<>res://Scène principale/Gameboard/DangerOverlay.tscn
+Plateau.tscn::PackedScene::168360788020456242::1698324164::0::1::::<><>::uid://n4d5ipvc70p0
 tileset_unit_overlay.svg::CompressedTexture2D::3218846207091479788::1622232670::1693080499::1::::<><>::
 UnitOverlay.gd::GDScript::-1::1693469887::0::1::::UnitOverlay<>TileMap<>::
-UnitOverlay.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/UnitOverlay.gd<>res://Scène principale/Gameboard/unit_overlay_tileset.tres
+UnitOverlay.tscn::PackedScene::-1::1697622339::0::1::::<><>::res://Scène principale/Gameboard/UnitOverlay.gd<>res://Scène principale/Gameboard/unit_overlay_tileset.tres
 UnitPath.gd::GDScript::-1::1693501469::0::1::::UnitPath<>TileMap<>::
-UnitPath.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/arrows_iso.png<>res://Scène principale/Gameboard/UnitPath.gd
-unit_overlay_tileset.tres::TileSet::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/isometric tiles.png
-unit_path_tileset.tres::TileSet::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/arrows.svg
-::res://Scène principale/Gameboard/Cursor/::1693080498
-Cursor.gd::GDScript::-1::1693080481::0::1::::Cursor<>Node2D<>::
+UnitPath.tscn::PackedScene::-1::1697622339::0::1::::<><>::res://Scène principale/Gameboard/arrows_iso.png<>res://Scène principale/Gameboard/UnitPath.gd
+unit_path_tileset.tres::TileSet::2149065484760855680::1698495301::0::1::::<><>::uid://buob6piibch7s::::res://Scène principale/Gameboard/arrows.svg
+::res://Scène principale/Gameboard/Cursor/::1698324088
+Cursor.gd::GDScript::-1::1698324088::0::1::::Cursor<>Node2D<>::
 Cursor.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Cursor/menu_selection_arrow.png<>res://Scène principale/Gameboard/Cursor/Cursor.gd
 menu_selection_arrow.png::CompressedTexture2D::7067772652404347404::1622232670::1693080498::1::::<><>::
 ::res://Scène principale/Gameboard/godot-2d-tactical-rpg-movement-main/::1678736480
 README.md::TextFile::-1::1678736480::0::1::::<><>::
 ::res://Scène principale/Gameboard/godot-2d-tactical-rpg-movement-main/images/::1693080499
 trpg-screenshot.png::CompressedTexture2D::640036612777058437::1678736480::1693080499::1::::<><>::
-::res://Scène principale/Gameboard/Unit/::1694417859
+::res://Scène principale/Gameboard/Unit/::1698324163
 bugcat.png::CompressedTexture2D::972558091274571899::1622232670::1693080499::1::::<><>::
-Unit.gd::GDScript::-1::1693755087::0::1::::Unit<>Path2D<>::
-Unit.tscn::PackedScene::8515794753846498497::1694417859::0::1::::<><>::uid://n4d5ipvc70p0
+Unit.gd::GDScript::-1::1698323901::0::1::::Unit<>Path2D<>::
+Unit.tscn::PackedScene::8515794753846498497::1698324163::0::1::::<><>::uid://n4d5ipvc70p0
 unit_shadow.svg::CompressedTexture2D::4975337965599641730::1622232670::1693080499::1::::<><>::
-::res://Scène principale/Gameboard/Unit/Enemy/::1683997439
-Enemy.gd::GDScript::-1::1693080481::0::1::::Enemy<>Path2D<>::
-Enemy.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Unit.tscn<>res://Scène principale/Gameboard/Unit/Enemy/Enemy.gd<>res://Scène principale/Gameboard/Unit/bugcat.png
-::res://Scène principale/Gameboard/Unit/Enemy/Chimney/::1683997439
-Chimney.gd::GDScript::-1::1693080481::0::1::::Chimney<>Path2D<>::
-Chimney.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Enemy/Chimney/Chimney.gd<>res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn
-::res://Scène principale/Gameboard/Unit/Enemy/Furnace/::1683997439
-Furnace.gd::GDScript::-1::1693080481::0::1::::Furnace<>Path2D<>::
-Furnace.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn<>res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.gd
+::res://Scène principale/Gameboard/Unit/Enemy/::1698324163
+Enemy.gd::GDScript::-1::1698323923::0::1::::Enemy<>Unit<>::
+Enemy.tscn::PackedScene::6012470872536331154::1698324163::0::1::::<><>::uid://dtld5pdxss45b
+::res://Scène principale/Gameboard/Unit/Enemy/Chimney/::1698323958
+Chimney.gd::GDScript::-1::1698323958::0::1::::Chimney<>Enemy<>::
+Chimney.tscn::PackedScene::-1::1697622339::0::1::::<><>::res://Scène principale/Gameboard/Unit/Enemy/Chimney/Chimney.gd<>res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn
+::res://Scène principale/Gameboard/Unit/Enemy/Furnace/::1697622339
+Furnace.gd::GDScript::-1::1697192729::0::1::::Furnace<>Enemy<>::
+Furnace.tscn::PackedScene::-1::1697622339::0::1::::<><>::res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn<>res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.gd
 ::res://Scène principale/Gameboard/Unit/Lifebar/::1693080499
 Armor_lifesegment.png::CompressedTexture2D::7747518052022388094::1675459921::1693080499::1::::<><>::
 Empty_lifesegment.png::CompressedTexture2D::2418529617793732307::1655035928::1693080499::1::::<><>::
@@ -245,14 +244,14 @@ FIll_lifesegment.png::CompressedTexture2D::6956684281348778245::1655035776::1693
 Lifebar.gd::GDScript::-1::1693080481::0::1::::<>HBoxContainer<>::
 Lifebar.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Lifebar/Lifebar.gd
 Para_lifesegment.png::CompressedTexture2D::318252018943683297::1665386191::1693080499::1::::<><>::
-::res://Scène principale/Gameboard/Unit/Player/::1693469591
-Player.gd::GDScript::-1::1693469591::0::1::::Player<>Path2D<>::
-Player.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Unit.tscn<>res://Scène principale/Gameboard/Unit/Player/Player.gd<>res://Scène principale/Gameboard/Unit/bugcat.png
-::res://Scène principale/Robot/::1695581373
+::res://Scène principale/Gameboard/Unit/Player/::1698324163
+Player.gd::GDScript::-1::1698323911::0::1::::Player<>Unit<>::
+Player.tscn::PackedScene::7171001027173456130::1698324163::0::1::::<><>::uid://dtld5pdxss45b
+::res://Scène principale/Robot/::1698324163
 Background placement.png::CompressedTexture2D::7543068711404493056::1662894879::1693080501::1::::<><>::
 Robot background.png::CompressedTexture2D::1167455157268223716::1657910738::1693080501::1::::<><>::
 Robot.gd::GDScript::-1::1695581326::0::1::::<>Node2D<>::
-Robot.tscn::PackedScene::75366053726192771::1695581373::0::1::::<><>::uid://bs0dwh6omw8t3::::res://Scène principale/Robot/Machines/Machine.tscn<>res://Scène principale/Robot/Robot.gd<>uid://bdla3rjjmiayv::::res://Scène principale/Souris/Crew.tres<>res://Scène principale/Souris/Team/Le Jeune.tscn<>res://Scène principale/Robot/Queue_action/Afficheaction.tscn<>res://Scène principale/Robot/Queue_action/FileAction.gd<>res://Scène principale/Robot/Queue_action/AfficheactionActive.gd<>uid://cp6pm8kwgq8xo::::res://Scène principale/Robot/Machines/Plasma.png<>uid://bdhpphyrnwmbj::::res://Scène principale/Robot/Machines/Echelle_g_b.png<>uid://dn17h7k8g3b4n::::res://Scène principale/Robot/Machines/Chargeur.png<>uid://dfp6ifab1fd1y::::res://Scène principale/Robot/Background placement.png<>uid://spnnk522svbm::::res://Scène principale/Robot/Machines/Echelle_d_h.png<>uid://bdkuyhmjqhnth::::res://Scène principale/Robot/Machines/Echelle_g_h.png<>uid://cgam3hli44587::::res://Scène principale/Robot/Machines/Ordi_c.png<>uid://glfmh23qg0x8::::res://Scène principale/Robot/Machines/Pont_d.png<>uid://dfwalc7uwnr1c::::res://Scène principale/Robot/Machines/Pont_b.png<>uid://c0qju6gb758ey::::res://Scène principale/Robot/Machines/Gachette.png<>uid://bkhfbkeyld15t::::res://Scène principale/Robot/Machines/Pont_g.png<>uid://dv53x1kov3v2t::::res://Scène principale/Robot/Machines/Injecteur.png<>uid://dhxn3mh81p5n5::::res://Scène principale/Robot/Machines/Visage.png<>uid://d21gsodtegmdf::::res://Scène principale/Robot/Machines/Echelle_d_b.png<>uid://2c0k24kfrl5r::::res://Scène principale/Robot/Machines/Ordi_m.png<>res://Scène principale/Souris/Team/Le Gras.tscn<>res://Scène principale/Souris/Team/Le Dodu.tscn<>res://Scène principale/Souris/Team/Le Vieux.tscn
+Robot.tscn::PackedScene::75366053726192771::1698324163::0::1::::<><>::uid://bs0dwh6omw8t3
 ::res://Scène principale/Robot/Machines/::1695194060
 Chargeur.png::CompressedTexture2D::8127347982008877899::1672312957::1693080499::1::::<><>::
 Echelle_d_b.png::CompressedTexture2D::9108431837988802091::1672312957::1693080499::1::::<><>::
@@ -337,7 +336,7 @@ Le Vieux.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principal
 Fin_de_tour.gd::GDScript::-1::1693080481::0::1::::<>Button<>::
 UI.gd::GDScript::-1::1695581367::0::1::::<>Control<>::
 UI.tscn::PackedScene::5858685695148842496::1695281042::0::1::::<><>::uid://bpfi226ulfd6q
-::res://Scène principale/UI/Menus de machines/::1695581129
+::res://Scène principale/UI/Menus de machines/::1695624094
 bullet_menu.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/menu.tscn
 Chargeur.gd::GDScript::-1::1695567374::0::1::::<>Panel<>::
 Chargeur.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/UI/Menus de machines/bullet_menu.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn<>res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn<>res://Scène principale/Souris/Afficheur de points/Icon point calcul.png<>res://Scène principale/Souris/Afficheur de points/Icon point endurance.png<>res://Scène principale/UI/Menus de machines/Chargeur.gd<>res://Scène principale/UI/Menus de machines/Image Chargeur-Gachette/chargeur ouvert.png
@@ -360,12 +359,12 @@ Menu.gd::GDScript::-1::1695280647::0::1::::<>Panel<>::
 menu.tscn::PackedScene::3080319306562347700::1695281283::0::1::::<><>::uid://db3r6lkljgrnr
 Ordi_m.gd::GDScript::-1::1693080481::0::1::::<>Panel<>::
 Ordi_m.tscn::PackedScene::3450110646354449618::1695281043::0::1::::<><>::uid://bj5en5y6vyph1
-Pont (epaule_d).gd::GDScript::-1::1695581106::0::1::::<>Panel<>::
-Pont (epaule_d).tscn::PackedScene::5608667364404334027::1695281225::0::1::::<><>::uid://b4wrnfl00m8u3
-Pont (epaule_g).gd::GDScript::-1::1695581129::0::1::::<>Panel<>::
-Pont (epaule_g).tscn::PackedScene::6334762765818610092::1695281331::0::1::::<><>::uid://b4wrnfl00m8u3
-Pont (tete).gd::GDScript::-1::1695581123::0::1::::<>Panel<>::
-Pont (tete).tscn::PackedScene::4468369144762552600::1695281598::0::1::::<><>::uid://bj5en5y6vyph1
+Pont (epaule_d).gd::GDScript::-1::1695623025::0::1::::<>Panel<>::
+Pont (epaule_d).tscn::PackedScene::5608667364404334027::1695624094::0::1::::<><>::uid://b4wrnfl00m8u3
+Pont (epaule_g).gd::GDScript::-1::1695622997::0::1::::<>Panel<>::
+Pont (epaule_g).tscn::PackedScene::6334762765818610092::1695624094::0::1::::<><>::uid://b4wrnfl00m8u3
+Pont (tete).gd::GDScript::-1::1695622948::0::1::::<>Panel<>::
+Pont (tete).tscn::PackedScene::4468369144762552600::1695624094::0::1::::<><>::uid://bj5en5y6vyph1
 SourisListe.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Bold.ttf
 Visage.gd::GDScript::-1::1694417619::0::1::::<>Panel<>::
 Visage.tscn::PackedScene::3793970899774755119::1694417859::0::1::::<><>::uid://bj5en5y6vyph1

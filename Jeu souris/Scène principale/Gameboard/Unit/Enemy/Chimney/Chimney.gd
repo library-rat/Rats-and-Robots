@@ -1,4 +1,3 @@
-@tool
 class_name Chimney
 extends Enemy
 var loading := false
@@ -8,6 +7,7 @@ var reach = 10
 var TargetArea = [Vector2.UP,Vector2.DOWN,Vector2.LEFT,Vector2.RIGHT, Vector2(1,1),Vector2(-1,1),Vector2(1,-1),Vector2(-1,-1),Vector2.ZERO]
 
 func _ready():
+	super._ready()
 	board.connect("player_moved", Callable(self, "_on_player_moved"))
 
 func _on_player_moved():
