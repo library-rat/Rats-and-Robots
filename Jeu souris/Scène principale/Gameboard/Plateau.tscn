@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://n4d5ipvc70p0" path="res://Scène principale/Gameboard/Unit/bugcat.png" id="1"]
 [ext_resource type="Script" path="res://Scène principale/Gameboard/GameBoard.gd" id="2"]
 [ext_resource type="PackedScene" path="res://Scène principale/Gameboard/Cursor/Cursor.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://Scène principale/Gameboard/UnitOverlay.tscn" id="4"]
-[ext_resource type="TileSet" path="res://Scène principale/Gameboard/unit_overlay_tileset.tres" id="5"]
+[ext_resource type="PackedScene" uid="uid://cju4k17ahwn37" path="res://Scène principale/Gameboard/UnitOverlay.tscn" id="4"]
+[ext_resource type="TileSet" uid="uid://5va2arb6q1yy" path="res://Scène principale/Gameboard/unit_path_tileset.tres" id="5"]
 [ext_resource type="PackedScene" path="res://Scène principale/Gameboard/UnitPath.tscn" id="6"]
 [ext_resource type="PackedScene" uid="uid://dafxlse0qmk71" path="res://Scène principale/Gameboard/Unit/Player/Player.tscn" id="7"]
 [ext_resource type="Resource" path="res://Scène principale/Gameboard/Grid.tres" id="8"]
-[ext_resource type="PackedScene" path="res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://dav66l1qfqit4" path="res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.tscn" id="9"]
 [ext_resource type="PackedScene" path="res://Scène principale/Gameboard/Unit/Enemy/Chimney/Chimney.tscn" id="10"]
 [ext_resource type="PackedScene" path="res://Scène principale/Gameboard/DangerOverlay.tscn" id="11"]
 
@@ -22,13 +22,10 @@ format = 2
 script = ExtResource("2")
 
 [node name="UnitOverlay" parent="GameBoard" instance=ExtResource("4")]
-format = 2
 
 [node name="DangerOverlay" parent="GameBoard" instance=ExtResource("11")]
-format = 2
 
 [node name="AimOverlay" parent="GameBoard" instance=ExtResource("4")]
-format = 2
 
 [node name="UnitPath" parent="GameBoard" instance=ExtResource("6")]
 format = 2

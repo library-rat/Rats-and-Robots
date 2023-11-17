@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dav66l1qfqit4"]
 
-[ext_resource path="res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.gd" type="Script" id=2]
+[ext_resource type="PackedScene" uid="uid://crwqrtp12mu23" path="res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn" id="1"]
+[ext_resource type="Script" path="res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.gd" id="2"]
 
-[node name="Furnace" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="Furnace" instance=ExtResource("1")]
+script = ExtResource("2")
 skin = null
-skin_offset = Vector2( 0, 0 )
+skin_offset = Vector2(0, 0)
 
 [node name="Sprite2D" parent="PathFollow2D" index="1"]
-position = Vector2( 0, 0 )
+position = Vector2(0, 0)
 texture = null

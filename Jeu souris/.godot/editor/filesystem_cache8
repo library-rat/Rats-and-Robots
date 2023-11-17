@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698495566
+::res://::1700225443
 DangerOverlay.gd::GDScript::-1::1693080481::0::1::::<>TileMap<>::
-default_env.tres::Environment::2168104264303753901::1698324164::0::1::::<><>::
+default_env.tres::Environment::2168104264303753901::1700225426::0::1::::<><>::
 ::res://Godot-Fontpack-master/::1693080498
 icon.png::CompressedTexture2D::4687408009814618130::1683997439::1693080498::1::::<><>::
 README.md::TextFile::-1::1683997438::0::1::::<><>::
@@ -191,12 +191,12 @@ LICENSE.txt::TextFile::-1::1683997438::0::1::::<><>::
 ::res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/xolonium/xolonium-fonts-4.1/ttf/::1693080497
 Xolonium-Bold.ttf::FontFile::464934056131694965::1683997438::1693080497::1::::<><>::
 Xolonium-Regular.ttf::FontFile::4514706374816544755::1683997438::1693080497::1::::<><>::
-::res://Scène principale/::1698324163
-principale_2_0.gd::GDScript::-1::1694164886::0::1::::<>Node<>::
-principale_2_0.tscn::PackedScene::844846534214955553::1698324163::0::1::::<><>::res://Scène principale/principale_2_0.gd<>uid://bcrjdxkchld0
+::res://Scène principale/::1700221484
+principale_2_0.gd::GDScript::-1::1700221484::0::1::::<>Node<>::
+principale_2_0.tscn::PackedScene::844846534214955553::1700220987::0::1::::<><>::res://Scène principale/principale_2_0.gd<>uid://bcrjdxkchld0
 Scene Principale.gd::GDScript::-1::1693080481::0::1::::<>Node<>::
 Scene Principale.tscn::PackedScene::648610345101897057::1698324163::0::1::::<><>::uid://bcrjdxkchld0
-::res://Scène principale/Gameboard/::1698495301
+::res://Scène principale/Gameboard/::1700225426
 arrows.svg::CompressedTexture2D::3819215722187998862::1622232670::1693080499::1::::<><>::
 arrows_iso.png::CompressedTexture2D::5444948965420885264::1645464376::1693080499::1::::<><>::
 Board.gd::GDScript::-1::1693469576::0::1::::Board<>Resource<>::
@@ -208,13 +208,14 @@ Grid.tres::Resource::-1::1693080481::0::1::::<><>::res://Scène principale/Gameb
 isometric tile.png::CompressedTexture2D::6661562438579159995::1640873200::1693080499::1::::<><>::
 isometric tiles.png::CompressedTexture2D::3130040982477465188::1664041458::1693080499::1::::<><>::
 Pathfinder.gd::GDScript::-1::1693080481::0::1::::PathFinder<>RefCounted<>::
-Plateau.tscn::PackedScene::168360788020456242::1698324164::0::1::::<><>::uid://n4d5ipvc70p0
+Plateau.tscn::PackedScene::168360788020456242::1700221512::0::1::::<><>::uid://n4d5ipvc70p0
 tileset_unit_overlay.svg::CompressedTexture2D::3218846207091479788::1622232670::1693080499::1::::<><>::
 UnitOverlay.gd::GDScript::-1::1693469887::0::1::::UnitOverlay<>TileMap<>::
-UnitOverlay.tscn::PackedScene::-1::1697622339::0::1::::<><>::res://Scène principale/Gameboard/UnitOverlay.gd<>res://Scène principale/Gameboard/unit_overlay_tileset.tres
+UnitOverlay.tscn::PackedScene::5447608580990045612::1700225426::0::1::::<><>::res://Scène principale/Gameboard/UnitOverlay.gd<>uid://hpingwpx1dgl::::res://Scène principale/Gameboard/unit_overlay_tileset.tres
 UnitPath.gd::GDScript::-1::1693501469::0::1::::UnitPath<>TileMap<>::
 UnitPath.tscn::PackedScene::-1::1697622339::0::1::::<><>::res://Scène principale/Gameboard/arrows_iso.png<>res://Scène principale/Gameboard/UnitPath.gd
-unit_path_tileset.tres::TileSet::2149065484760855680::1698495301::0::1::::<><>::uid://buob6piibch7s::::res://Scène principale/Gameboard/arrows.svg
+unit_overlay_tileset.tres::TileSet::522796872879109379::1700225420::0::1::::<><>::uid://bkuhk2h72ioo7::::res://Scène principale/Gameboard/isometric tiles.png
+unit_path_tileset.tres::TileSet::2149065484760855680::1698495301::0::1::::<><>::uid://buob6piibch7s
 ::res://Scène principale/Gameboard/Cursor/::1698324088
 Cursor.gd::GDScript::-1::1698324088::0::1::::Cursor<>Node2D<>::
 Cursor.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Cursor/menu_selection_arrow.png<>res://Scène principale/Gameboard/Cursor/Cursor.gd
@@ -223,20 +224,20 @@ menu_selection_arrow.png::CompressedTexture2D::7067772652404347404::1622232670::
 README.md::TextFile::-1::1678736480::0::1::::<><>::
 ::res://Scène principale/Gameboard/godot-2d-tactical-rpg-movement-main/images/::1693080499
 trpg-screenshot.png::CompressedTexture2D::640036612777058437::1678736480::1693080499::1::::<><>::
-::res://Scène principale/Gameboard/Unit/::1698324163
+::res://Scène principale/Gameboard/Unit/::1698495773
 bugcat.png::CompressedTexture2D::972558091274571899::1622232670::1693080499::1::::<><>::
 Unit.gd::GDScript::-1::1698323901::0::1::::Unit<>Path2D<>::
-Unit.tscn::PackedScene::8515794753846498497::1698324163::0::1::::<><>::uid://n4d5ipvc70p0
+Unit.tscn::PackedScene::8515794753846498497::1698495773::0::1::::<><>::uid://n4d5ipvc70p0
 unit_shadow.svg::CompressedTexture2D::4975337965599641730::1622232670::1693080499::1::::<><>::
-::res://Scène principale/Gameboard/Unit/Enemy/::1698324163
+::res://Scène principale/Gameboard/Unit/Enemy/::1698495773
 Enemy.gd::GDScript::-1::1698323923::0::1::::Enemy<>Unit<>::
-Enemy.tscn::PackedScene::6012470872536331154::1698324163::0::1::::<><>::uid://dtld5pdxss45b
-::res://Scène principale/Gameboard/Unit/Enemy/Chimney/::1698323958
+Enemy.tscn::PackedScene::6012470872536331154::1698495773::0::1::::<><>::uid://dtld5pdxss45b
+::res://Scène principale/Gameboard/Unit/Enemy/Chimney/::1700221484
 Chimney.gd::GDScript::-1::1698323958::0::1::::Chimney<>Enemy<>::
-Chimney.tscn::PackedScene::-1::1697622339::0::1::::<><>::res://Scène principale/Gameboard/Unit/Enemy/Chimney/Chimney.gd<>res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn
-::res://Scène principale/Gameboard/Unit/Enemy/Furnace/::1697622339
+Chimney.tscn::PackedScene::-1::1700221484::0::1::::<><>::res://Scène principale/Gameboard/Unit/Enemy/Chimney/Chimney.gd<>res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn
+::res://Scène principale/Gameboard/Unit/Enemy/Furnace/::1700221573
 Furnace.gd::GDScript::-1::1697192729::0::1::::Furnace<>Enemy<>::
-Furnace.tscn::PackedScene::-1::1697622339::0::1::::<><>::res://Scène principale/Gameboard/Unit/Enemy/Enemy.tscn<>res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.gd
+Furnace.tscn::PackedScene::7204552188957424275::1700221573::0::1::::<><>::uid://crwqrtp12mu23
 ::res://Scène principale/Gameboard/Unit/Lifebar/::1693080499
 Armor_lifesegment.png::CompressedTexture2D::7747518052022388094::1675459921::1693080499::1::::<><>::
 Empty_lifesegment.png::CompressedTexture2D::2418529617793732307::1655035928::1693080499::1::::<><>::
@@ -244,14 +245,14 @@ FIll_lifesegment.png::CompressedTexture2D::6956684281348778245::1655035776::1693
 Lifebar.gd::GDScript::-1::1693080481::0::1::::<>HBoxContainer<>::
 Lifebar.tscn::PackedScene::-1::1693080481::0::1::::<><>::res://Scène principale/Gameboard/Unit/Lifebar/Lifebar.gd
 Para_lifesegment.png::CompressedTexture2D::318252018943683297::1665386191::1693080499::1::::<><>::
-::res://Scène principale/Gameboard/Unit/Player/::1698324163
+::res://Scène principale/Gameboard/Unit/Player/::1698495773
 Player.gd::GDScript::-1::1698323911::0::1::::Player<>Unit<>::
-Player.tscn::PackedScene::7171001027173456130::1698324163::0::1::::<><>::uid://dtld5pdxss45b
-::res://Scène principale/Robot/::1698324163
+Player.tscn::PackedScene::7171001027173456130::1698495773::0::1::::<><>::uid://dtld5pdxss45b
+::res://Scène principale/Robot/::1698495773
 Background placement.png::CompressedTexture2D::7543068711404493056::1662894879::1693080501::1::::<><>::
 Robot background.png::CompressedTexture2D::1167455157268223716::1657910738::1693080501::1::::<><>::
 Robot.gd::GDScript::-1::1695581326::0::1::::<>Node2D<>::
-Robot.tscn::PackedScene::75366053726192771::1698324163::0::1::::<><>::uid://bs0dwh6omw8t3
+Robot.tscn::PackedScene::75366053726192771::1698495773::0::1::::<><>::uid://bs0dwh6omw8t3
 ::res://Scène principale/Robot/Machines/::1695194060
 Chargeur.png::CompressedTexture2D::8127347982008877899::1672312957::1693080499::1::::<><>::
 Echelle_d_b.png::CompressedTexture2D::9108431837988802091::1672312957::1693080499::1::::<><>::
