@@ -10,7 +10,7 @@
 [ext_resource type="Resource" path="res://Scène principale/Gameboard/Grid.tres" id="8"]
 [ext_resource type="PackedScene" uid="uid://dav66l1qfqit4" path="res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.tscn" id="9"]
 [ext_resource type="PackedScene" path="res://Scène principale/Gameboard/Unit/Enemy/Chimney/Chimney.tscn" id="10"]
-[ext_resource type="PackedScene" path="res://Scène principale/Gameboard/DangerOverlay.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://u4n5m7i3pteb" path="res://Scène principale/Gameboard/DangerOverlay.tscn" id="11"]
 
 [node name="Plateau" type="Node2D"]
 

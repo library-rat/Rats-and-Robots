@@ -1,4 +1,4 @@
-extends "res://Scène principale/Gameboard/UnitOverlay.gd"
+extends UnitOverlay
 
 var board: Resource
 
@@ -9,4 +9,4 @@ func _ready():
 
 func _on_update_threat():
 		clear()
-		draw(board.threat.keys(),"rouge")
+		draw(0,board.threat.keys(),"rouge")

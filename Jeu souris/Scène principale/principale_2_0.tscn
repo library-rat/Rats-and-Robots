@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://mbiq73dqmijp"]
+[gd_scene load_steps=5 format=3 uid="uid://mbiq73dqmijp"]
 
 [ext_resource type="Script" path="res://Scène principale/principale_2_0.gd" id="1_4ai8y"]
 [ext_resource type="PackedScene" uid="uid://bcrjdxkchld0" path="res://Scène principale/Robot/Robot.tscn" id="1_gj3kl"]
 [ext_resource type="PackedScene" uid="uid://cpp8xyh7yc37a" path="res://Scène principale/UI/UI.tscn" id="3_4lbxb"]
+[ext_resource type="PackedScene" uid="uid://cns43qo6jv4m" path="res://Scène principale/Gameboard/Plateau.tscn" id="4_leytc"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_4ai8y")
@@ -20,6 +21,8 @@ anchor_right = 0.0
 offset_left = 591.0
 offset_right = 631.0
 grow_horizontal = 1
+
+[node name="Plateau" parent="." instance=ExtResource("4_leytc")]
 
 [connection signal="fermer_pont_epaule_d" from="Robot" to="UI/Pont (epaule_d)" method="_on_robot_fermer_pont_epaule_d"]
 [connection signal="fermer_pont_epaule_g" from="Robot" to="UI/Pont (epaule_g)" method="_on_robot_fermer_pont_epaule_g"]

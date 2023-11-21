@@ -52,27 +52,27 @@ func _select_unit(cell: Vector2) -> void :
 				_selected_cells =  board.remplir_case_move($"Player".cell,$"Player".move_range)
 				#on rempli l'array de cellule que le joueur peut utiliser
 				_unit_overlay.clear()
-				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
+				_unit_overlay.draw(0,_selected_cells, "jaune")#on les affiche en jaune
 			"Saut":
 				_selected_cells = board.remplir_case_cercle($"Player".cell,$"Player".rsautext,$"Player".rsautint,false)
 				#on rempli l'array de cellule que le joueur peut utiliser
 				_unit_overlay.clear()
-				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
+				_unit_overlay.draw(0,_selected_cells, "jaune")#on les affiche en jaune
 			"Charge" :
 				_selected_cells = board.remplir_case_ligne($"Player".cell,$"Player".limitedash,false)
 				#on rempli l'array de cellule que le joueur peut utiliser
 				_unit_overlay.clear()
-				_unit_overlay.draw(_selected_cells, "jaune")#on les affiche en jaune
+				_unit_overlay.draw(0,_selected_cells, "jaune")#on les affiche en jaune
 			"Tir_tendu":
 				_selected_cells = board.remplir_case_ligne($"Player".cell, $"Player".limitetir,true)
 				#on rempli l'array de cellules que le joueur peut toucher au gun
 				_unit_overlay.clear()
-				_unit_overlay.draw(_selected_cells, "vert")#on les affiche en vert
+				_unit_overlay.draw(0,_selected_cells, "vert")#on les affiche en vert
 			"Tir_courbe" :
 				_selected_cells = board.remplir_case_cercle($"Player".cell, $"Player".rlimitetir,2, true)
 				#on rempli l'array de cellules que le joueur peut toucher au gun
 				_unit_overlay.clear()
-				_unit_overlay.draw(_selected_cells, "vert")#on les affiche en vert
+				_unit_overlay.draw(0,_selected_cells, "vert")#on les affiche en vert
 
 	_unit_path.initialize(_selected_cells)
 
@@ -206,13 +206,13 @@ func _on_Cursor_moved(new_cell:Vector2)-> void:
 				"Tir_tendu":
 					if new_cell in _selected_cells :
 						var direction = grid.calc_direction(new_cell, $"Player".cell)
-						_aim_overlay.draw($"Player".aire_tirT(direction, new_cell), "rouge")
-						_aim_overlay.draw([new_cell],"rouge")
+						_aim_overlay.draw(0,$"Player".aire_tirT(direction, new_cell), "rouge")
+						_aim_overlay.draw(0,[new_cell],"rouge")
 				"Tir_courbe" :
 					if new_cell in _selected_cells :
 						var direction = grid.calc_direction(new_cell, $"Player".cell)
-						_aim_overlay.draw($"Player".aire_tirC(direction,new_cell), "rouge")
-						_aim_overlay.draw([new_cell],"rouge")
+						_aim_overlay.draw(0,$"Player".aire_tirC(direction,new_cell), "rouge")
+						_aim_overlay.draw(0,[new_cell],"rouge")
 
 func _unhandled_input(event: InputEvent) -> void:
 	if _active_unit and event.is_action_pressed("ui_cancel"):

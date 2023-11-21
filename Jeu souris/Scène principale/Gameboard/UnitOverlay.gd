@@ -7,7 +7,7 @@ extends TileMap
 
 #rempli la tilemap avec les cases, permettant de voir ou une unité peut aller
 
-func draw(cells: Array, color: String) -> void:
+func draw(layer : int, cells: Array, color: String) -> void:
 	#pour chaque case on leur assigne la seule tuile la tuile 0
 	var number = 1
 	match color :
@@ -18,4 +18,4 @@ func draw(cells: Array, color: String) -> void:
 		"rouge":
 			number = 3
 	for cell in cells :
-		set_cell(cell,number)
+		set_cell(layer,cell,number)
