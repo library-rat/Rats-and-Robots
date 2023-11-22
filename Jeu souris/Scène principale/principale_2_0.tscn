@@ -10,6 +10,8 @@ script = ExtResource("1_4ai8y")
 
 [node name="Robot" parent="." instance=ExtResource("1_gj3kl")]
 
+[node name="Plateau" parent="." instance=ExtResource("4_leytc")]
+
 [node name="UI" parent="." instance=ExtResource("3_4lbxb")]
 offset_left = 0.0
 offset_right = 0.0
@@ -22,8 +24,6 @@ offset_left = 591.0
 offset_right = 631.0
 grow_horizontal = 1
 
-[node name="Plateau" parent="." instance=ExtResource("4_leytc")]
-
 [connection signal="fermer_pont_epaule_d" from="Robot" to="UI/Pont (epaule_d)" method="_on_robot_fermer_pont_epaule_d"]
 [connection signal="fermer_pont_epaule_g" from="Robot" to="UI/Pont (epaule_g)" method="_on_robot_fermer_pont_epaule_g"]
 [connection signal="fermer_pont_tete" from="Robot" to="UI/Pont (tete)" method="_on_robot_fermer_pont_tete"]
@@ -31,6 +31,7 @@ grow_horizontal = 1
 [connection signal="reset_echelle_d" from="Robot" to="UI/Echelle_d" method="_on_robot_reset_echelle_d"]
 [connection signal="reset_echelle_g" from="Robot" to="UI/Echelle_g" method="_on_robot_reset_echelle_g"]
 [connection signal="pressed" from="UI/Fin_de_tour" to="Robot" method="_on_fin_de_tour_pressed"]
+[connection signal="pressed" from="UI/Fin_de_tour" to="Plateau/GameBoard" method="_on_fin_de_tour_pressed"]
 [connection signal="pressed" from="UI/Fin_de_tour" to="UI" method="_on_fin_de_tour_pressed"]
 [connection signal="charge" from="UI/Ordi_m" to="Robot" method="_on_ordi_m_charge"]
 [connection signal="marcher" from="UI/Ordi_m" to="Robot" method="_on_ordi_m_marcher"]
@@ -56,4 +57,5 @@ grow_horizontal = 1
 [connection signal="charge_munition" from="UI/Chargeur" to="UI/Gachette" method="_on_chargeur_charge_munition"]
 [connection signal="open_gachette" from="UI/Chargeur" to="UI/Gachette" method="_on_chargeur_open_gachette"]
 
+[editable path="Plateau"]
 [editable path="UI"]

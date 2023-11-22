@@ -9,6 +9,7 @@ extends TileMap
 
 func draw(layer : int, cells: Array, color: String) -> void:
 	#pour chaque case on leur assigne la seule tuile la tuile 0
+	print(cells);
 	var number = 1
 	match color :
 		"jaune" :

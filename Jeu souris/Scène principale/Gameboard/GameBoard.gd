@@ -248,7 +248,7 @@ func _on_AfficheactionActive_tir_courbe(ammo):
 	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
 
 
-func _on_Fin_de_tour_pressed():
+func _on_fin_de_tour_pressed():
 	$"Player".end_turn()
 	var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
 	var length = enliste.size()
@@ -265,4 +265,3 @@ func _input(event):
 		if is_instance_valid(enliste[index%len(enliste)]) and not( enliste[index%len(enliste)].is_queued_for_deletion()):
 			enliste[index%len(enliste)].play_turn()
 		index += 1
-
