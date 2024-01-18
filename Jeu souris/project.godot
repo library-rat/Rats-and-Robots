@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Jeu souris"
 run/main_scene="res://Scène principale/principale_2_0.tscn"
-config/features=PackedStringArray("4.1")
+config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 
 [display]

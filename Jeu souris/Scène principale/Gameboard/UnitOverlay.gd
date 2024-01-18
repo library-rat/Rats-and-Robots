@@ -19,4 +19,5 @@ func draw(layer : int, cells: Array, color: String) -> void:
 		"rouge":
 			number = 3
 	for cell in cells :
+		print(cell)
 		set_cell(layer,cell,number)
