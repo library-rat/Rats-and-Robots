@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://djrliodh2kwg4" path="res://Scène principale/UI/Menus de machines/Echelle_g.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://cssvbupwc63kh" path="res://Scène principale/UI/Menus de machines/Echelle_d.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://b4wrnfl00m8u3" path="res://Scène principale/UI/Menus de machines/Pont (tete).tscn" id="5"]
-[ext_resource type="PackedScene" path="res://Scène principale/UI/Menus de machines/Pont (epaule_g).tscn" id="6"]
-[ext_resource type="PackedScene" path="res://Scène principale/UI/Menus de machines/Pont (epaule_d).tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://cwiuu8ryfk5vk" path="res://Scène principale/UI/Menus de machines/Pont (epaule_g).tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://cl546xpq5nnxb" path="res://Scène principale/UI/Menus de machines/Pont (epaule_d).tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://bub3e8ivibb1p" path="res://Scène principale/UI/Menus de machines/Visage.tscn" id="8"]
 [ext_resource type="PackedScene" path="res://Scène principale/UI/Menus de machines/Gachette.tscn" id="9"]
 [ext_resource type="PackedScene" path="res://Scène principale/UI/Menus de machines/Chargeur.tscn" id="10"]
@@ -198,5 +198,8 @@ grow_horizontal = 2
 grow_vertical = 2
 numero_machine = 10
 
-[connection signal="tir_courbe" from="Gachette" to="Chargeur" method="_on_Gachette_tir_courbe"]
-[connection signal="tir_tendu" from="Gachette" to="Chargeur" method="_on_Gachette_tir_tendu"]
+[connection signal="open_chargeur" from="Gachette" to="Chargeur" method="_on_gachette_open_chargeur"]
+[connection signal="tir_courbe" from="Gachette" to="Chargeur" method="_on_gachette_tir_courbe"]
+[connection signal="tir_tendu" from="Gachette" to="Chargeur" method="_on_gachette_tir_tendu"]
+[connection signal="charge_munition" from="Chargeur" to="Gachette" method="_on_chargeur_charge_munition"]
+[connection signal="open_gachette" from="Chargeur" to="Gachette" method="_on_chargeur_open_gachette"]

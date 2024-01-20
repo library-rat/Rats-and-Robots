@@ -27,6 +27,15 @@ func _ready()-> void:
 	_reinitialize()
 	#on setup ici la reference du joueur dans board car get_node n'est pas défini pour board (une ressource)
 	board.Player = $"Player"
+	#Connection des signaux d'évènements
+	EventSingleton.connect("player_neutre", _on_EventSingleton_player_neutre)
+	EventSingleton.connect("move_player", _on_EventSingleton_move_player)
+	EventSingleton.connect("jump_player", _on_EventSingleton_jump_player)
+	EventSingleton.connect("dash_player", _on_EventSingleton_dash_player)
+	EventSingleton.connect("tir_tendu", _on_EventSingleton_tir_tendu)
+	EventSingleton.connect("tir_courbe", _on_EventSingleton_tir_courbe)
+
+
 
 #nettoie et reremplie board.units
 func _reinitialize () -> void :
@@ -219,30 +228,31 @@ func _unhandled_input(event: InputEvent) -> void:
 		_deselect_active_unit()
 		_clear_active_unit()
 
-func _on_AfficheactionActive_move_player(valeur):
+func _on_EventSingleton_move_player(valeur):
+	print(valeur)
 	state = "Mouvement"
 	_deselect_active_unit() #on efface les cases autours du joueur et
 	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
 
-func _on_AfficheactionActive_jump_player():
+func _on_EventSingleton_jump_player():
 	state = "Saut"
 	_deselect_active_unit()#on efface les cases autours du joueur et
 	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
 
-func _on_AfficheactionActive_player_neutre():
+func _on_EventSingleton_player_neutre():
 	state = "Neutre"
 
-func _on_AfficheactionActive_dash_player():
+func _on_EventSingleton_dash_player():
 	state = "Charge"
 	_deselect_active_unit()#on efface les cases autours du joueur et
 	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
 
-func _on_AfficheactionActive_tir_tendu(ammo):
+func _on_EventSingleton_tir_tendu(ammo):
 	state = "Tir_tendu"
 	_deselect_active_unit()#on efface les cases autours du joueur et
 	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m
 
-func _on_AfficheactionActive_tir_courbe(ammo):
+func _on_EventSingleton_tir_courbe(ammo):
 	state = "Tir_courbe"
 	_deselect_active_unit()#on efface les cases autours du joueur et
 	_clear_active_unit()#on vide les case atteignable pour éviter les bugs avec la touche m

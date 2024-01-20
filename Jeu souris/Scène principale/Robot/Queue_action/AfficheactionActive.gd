@@ -1,11 +1,6 @@
 extends Control
 
-signal player_neutre()
-signal move_player (valeur)
-signal jump_player()
-signal dash_player()
-signal tir_tendu(ammo)
-signal tir_courbe(ammo)
+
 var balle_S = preload("res://Scène principale/Robot/Machines/Munitions/Balle_simple.tres")
 var balle_L = preload("res://Scène principale/Robot/Machines/Munitions/Balle_lourde.tres")
 var balle_P = preload("res://Scène principale/Robot/Machines/Munitions/Balle_paralysante.tres")
@@ -17,7 +12,7 @@ func _on_FileAction_change_action(action, valeur): #quand on appuye sur la barre
 
 
 func change_action (action : Resource,valeur :int): #fonction qui s'occupe du changement d'action principale
-	emit_signal("player_neutre")	#reset l'état (envoyé à gameboard et à l'unit player
+	EventSingleton.emit_signal("player_neutre")	#reset l'état (envoyé à gameboard et à l'unit player
 	
 	if action == null :			#si action est nulle on nettoie l'affichage
 		action_active = null
@@ -29,23 +24,23 @@ func change_action (action : Resource,valeur :int): #fonction qui s'occupe du ch
 		$Label.text = str(valeur)
 		match action.name :
 			"Mouvement" :	#selon l'action on envoie le signal adapté
-				emit_signal("move_player", valeur)
+				EventSingleton.emit_signal("move_player", valeur)
 			'Saut':
-				emit_signal("jump_player")
+				EventSingleton.emit_signal("jump_player")
 			"Charge":
-				emit_signal("dash_player")
+				EventSingleton.emit_signal("dash_player")
 			"Tir_tendu_simple":
-				emit_signal("tir_tendu",balle_S)
+				EventSingleton.emit_signal("tir_tendu",balle_S)
 			"Tir_tendu_lourd":
-				emit_signal("tir_tendu",balle_L)
+				EventSingleton.emit_signal("tir_tendu",balle_L)
 			"Tir_tendu_paralysant":
-				emit_signal("tir_tendu",balle_P)
+				EventSingleton.emit_signal("tir_tendu",balle_P)
 			"Tir_courbe_simple":
-				emit_signal("tir_courbe",balle_S)
+				EventSingleton.emit_signal("tir_courbe",balle_S)
 			"Tir_courbe_lourd":
-				emit_signal("tir_courbe",balle_L)
+				EventSingleton.emit_signal("tir_courbe",balle_L)
 			"Tir_courbe_paralysant":
-				emit_signal("tir_courbe",balle_P)
+				EventSingleton.emit_signal("tir_courbe",balle_P)
 				
 
 func _on_GameBoard_player_moved(move_range_left): #met à jour l'affichage si le Player bouge
@@ -56,7 +51,7 @@ func _on_GameBoard_player_moved(move_range_left): #met à jour l'affichage si le
 func _on_GameBoard_player_jumped():			#met à jour l'affichage si le Player saute
 	if $"Label".text == "1" :
 		change_action(null,0)
-		emit_signal("player_neutre")
+		EventSingleton.emit_signal("player_neutre")
 	else :
 		var valeur = int($"Label".text)
 		$"Label".text = str(valeur -1)
@@ -64,7 +59,7 @@ func _on_GameBoard_player_jumped():			#met à jour l'affichage si le Player saut
 func _on_GameBoard_player_dashed():
 	if $"Label".text == "1" :
 		change_action(null,0)
-		emit_signal("player_neutre")
+		EventSingleton.emit_signal("player_neutre")
 	else :
 		var valeur = int($"Label".text)
 		$"Label".text = str(valeur -1)
@@ -73,7 +68,7 @@ func _on_GameBoard_player_dashed():
 func _on_GameBoard_player_shot():
 	if $"Label".text == "1" :
 		change_action(null,0)
-		emit_signal("player_neutre")
+		EventSingleton.emit_signal("player_neutre")
 	else :
 		var valeur = int($"Label".text)
 		$"Label".text = str(valeur -1)
