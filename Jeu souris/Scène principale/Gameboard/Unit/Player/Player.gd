@@ -11,6 +11,12 @@ var aire_tir = [] #stockage des cases d'effet supplémentaires à la case sélé
 var forme = null #forme du robot donnée par l'injecteur
 var armure :int = 0: set = armure_var_set
 
+func _ready():
+	super._ready()
+	EventSingleton.connect("player_neutre", _on_EventSingleton_player_neutre)
+	EventSingleton.connect("move_player",_on_EventSingleton_move_player)
+	EventSingleton.connect("tir_tendu", _on_EventSingleton_tir_tendu)
+	EventSingleton.connect("tir_courbe",_on_EventSingleton_tir_courbe)
 
 func end_turn():
 	effet_forme()
@@ -28,7 +34,7 @@ func set_cell(value: Vector2) -> void: #version de set_cell, override the one fr
 	board.units[value] = self #on l'inscrit à la nouvelle case
 	board._emit_player_moved()
 
-func _on_AfficheactionActive_move_player(valeur :int) -> void:
+func _on_EventSingleton_move_player(valeur :int) -> void:
 	move_range = valeur
 	
 func effet_forme():
@@ -50,7 +56,7 @@ func effet_forme():
 
 
 
-func _on_AfficheactionActive_player_neutre():
+func _on_EventSingleton_player_neutre():
 	move_range = 0
 	munition = null
 	aire_tir = []
@@ -101,10 +107,10 @@ func aire_tirT (direction : Vector2, cell_select : Vector2) -> PackedVector2Arra
 		for c in aire_tir :
 			cases_cibles.append(c+cell_select)
 		return (cases_cibles)
-func _on_AfficheactionActive_tir_courbe(ammo):
+func _on_EventSingleton_tir_courbe(ammo):
 	munition = ammo
 
-func _on_AfficheactionActive_tir_tendu(ammo):
+func _on_EventSingleton_tir_tendu(ammo):
 	munition = ammo
 
 func injecte_forme(new_f : String):
