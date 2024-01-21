@@ -62,7 +62,7 @@ func _process(delta: float) -> void:
 		print("failed")
 	if _path_follow.progress >= curve.get_baked_length():
 		self._is_walking = false
-		_path_follow.offset = 0
+		_path_follow.progress = 0
 		position = grid.calcul_map_position(cell)
 		curve.clear_points()
 		emit_signal("walk_finished")
