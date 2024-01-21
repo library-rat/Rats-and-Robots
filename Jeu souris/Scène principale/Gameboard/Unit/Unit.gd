@@ -50,7 +50,7 @@ func _ready() -> void:
 	# We create the curve resource here because creating it in the editor prevents us from
 	# moving the unit.
 	curve = Curve2D.new()
-	print("ready unit")
+
 	
 	life = max_life
 	update_lifebar()
@@ -65,7 +65,7 @@ func _process(delta: float) -> void:
 		_path_follow.progress = 0
 		position = grid.calcul_map_position(cell)
 		curve.clear_points()
-		EventSingleton.emit_signal("walk_finished")
+		EventSingleton.emit_signal("walk_finished",self)
 
 
 ## Starts walking along the `path`.

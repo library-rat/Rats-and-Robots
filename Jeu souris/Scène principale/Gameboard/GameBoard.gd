@@ -107,7 +107,7 @@ func _move_active_unit(new_cell : Vector2) -> void :
 	board.units[new_cell] = _active_unit #on l'inscrit à la nouvelle case
 	_deselect_active_unit()
 	_active_unit.walk_along(_unit_path.current_path)
-	await _active_unit.walk_finished
+	await EventSingleton.walk_finished
 	_clear_active_unit()
 
 func _jump_player (new_cell : Vector2) -> void:
