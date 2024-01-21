@@ -6,7 +6,7 @@ class_name Unit
 extends Path2D
 
 ## Emitted when the unit reached the end of a path along which it was walking.
-signal walk_finished
+
 
 ## Shared resource of type Grid, used to calculate map coordinates. initialized in _ready
 @export var grid: Resource
@@ -65,7 +65,7 @@ func _process(delta: float) -> void:
 		_path_follow.progress = 0
 		position = grid.calcul_map_position(cell)
 		curve.clear_points()
-		emit_signal("walk_finished")
+		EventSingleton.emit_signal("walk_finished")
 
 
 ## Starts walking along the `path`.
