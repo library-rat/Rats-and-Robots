@@ -150,7 +150,7 @@ func _tir_tendu_player (target_cell : Vector2) -> void:
 					board.units[target_cell].is_hit(2)
 				"Balle_paralysante" :
 					board.units[target_cell].is_para(1)
-		emit_signal("player_shot")
+		EventSingleton.emit_signal("player_shot")
 
 
 
@@ -176,7 +176,7 @@ func _tir_courbe_player (target_cell : Vector2) -> void:
 					board.units[target_cell].is_hit(2)
 				"Balle_paralysante" :
 					board.units[target_cell].is_para(1)
-		emit_signal("player_shot")
+		EventSingleton.emit_signal("player_shot")
 
 
 signal player_moved (move_range_left)
@@ -193,13 +193,13 @@ func _on_Cursor_accept_pressed(cell : Vector2)-> void:
 	elif _active_unit.is_selected and (_active_unit == $Player)  :	#si l'unité est le joueur, que l'action est mouvement on peut la bouger
 		if state == "Mouvement":
 			_move_active_unit(cell)
-			emit_signal( "player_moved", $Player.move_range)
+			EventSingleton.emit_signal( "player_moved", $Player.move_range)
 		if state == "Saut" :
 			_jump_player(cell)
-			emit_signal("player_jumped")
+			EventSingleton.emit_signal("player_jumped")
 		if state == "Charge":
 			_dash_player(cell)
-			emit_signal("player_dashed")
+			EventSingleton.emit_signal("player_dashed")
 		if state =="Tir_tendu":
 			_tir_tendu_player(cell)
 		if state == "Tir_courbe":

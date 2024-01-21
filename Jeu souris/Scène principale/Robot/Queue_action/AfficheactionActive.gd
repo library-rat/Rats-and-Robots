@@ -7,6 +7,12 @@ var balle_P = preload("res://Scène principale/Robot/Machines/Munitions/Balle_pa
 var action_active = null #variable en cours
 var action_retenue = null #sert à stocker l'action retenue
 
+func _ready():
+	EventSingleton.connect("player_moved", _on_EventSingleton_player_moved)
+	EventSingleton.connect("player_jumped", _on_EventSingleton_player_jumped)
+	EventSingleton.connect("player_dashed", _on_EventSingleton_player_dashed)
+	EventSingleton.connect("player_shot", _on_EventSingleton_player_shot)
+
 func _on_FileAction_change_action(action, valeur): #quand on appuye sur la barre espace
 	change_action(action, valeur)	#FileAction envoie le signal de changer l'action en une nouvelle action
 
@@ -43,12 +49,12 @@ func change_action (action : Resource,valeur :int): #fonction qui s'occupe du ch
 				EventSingleton.emit_signal("tir_courbe",balle_P)
 				
 
-func _on_GameBoard_player_moved(move_range_left): #met à jour l'affichage si le Player bouge
+func _on_EventSingleton_player_moved(move_range_left): #met à jour l'affichage si le Player bouge
 	$Label.text = str(move_range_left)
 	if move_range_left == 0 :
 		change_action(null,0)
 
-func _on_GameBoard_player_jumped():			#met à jour l'affichage si le Player saute
+func _on_EventSingleton_player_jumped():			#met à jour l'affichage si le Player saute
 	if $"Label".text == "1" :
 		change_action(null,0)
 		EventSingleton.emit_signal("player_neutre")
@@ -56,7 +62,7 @@ func _on_GameBoard_player_jumped():			#met à jour l'affichage si le Player saut
 		var valeur = int($"Label".text)
 		$"Label".text = str(valeur -1)
 
-func _on_GameBoard_player_dashed():
+func _on_EventSingleton_player_dashed():
 	if $"Label".text == "1" :
 		change_action(null,0)
 		EventSingleton.emit_signal("player_neutre")
@@ -65,7 +71,7 @@ func _on_GameBoard_player_dashed():
 		$"Label".text = str(valeur -1)
 
 
-func _on_GameBoard_player_shot():
+func _on_EventSingleton_player_shot():
 	if $"Label".text == "1" :
 		change_action(null,0)
 		EventSingleton.emit_signal("player_neutre")
