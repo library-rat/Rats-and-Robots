@@ -10,14 +10,14 @@ extends TileMap
 func draw(layer : int, cells: Array, color: String) -> void:
 	#pour chaque case on leur assigne la seule tuile la tuile 0
 	print(cells);
-	var number = 1
+	var coord :Vector2
 	match color :
 		"jaune" :
-			number = 1
+			coord = Vector2(0,0)
 		"vert":
-			number = 2
+			coord = Vector2(0,1)
 		"rouge":
-			number = 3
+			coord = Vector2(0,2)
 	for cell in cells :
 		print(cell)
-		set_cell(layer,cell,number)
+		set_cell(layer,cell,0,coord)

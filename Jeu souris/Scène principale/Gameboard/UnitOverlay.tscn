@@ -6,6 +6,7 @@
 [node name="UnitOverlay" type="TileMap"]
 modulate = Color(1, 1, 1, 0.454902)
 y_sort_enabled = true
+position = Vector2(-32, -16)
 tile_set = ExtResource("2")
 format = 2
 layer_0/y_sort_enabled = true
