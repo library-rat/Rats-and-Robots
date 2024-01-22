@@ -9,5 +9,6 @@ y_sort_enabled = true
 position = Vector2(-32, -16)
 tile_set = ExtResource("2")
 format = 2
+layer_0/name = "Selected"
 layer_0/y_sort_enabled = true
 script = ExtResource("1")

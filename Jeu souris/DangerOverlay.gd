@@ -10,4 +10,4 @@ func _ready():
 
 func _on_update_threat():
 		clear()
-		draw(1,board.threat.keys(),"rouge")
+		draw(0,board.threat.keys(),"rouge")

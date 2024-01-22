@@ -46,10 +46,10 @@ func _draw() -> void :
 	var isoLeft =taillec* grid.cartesien_a_isometric(Vector2.LEFT)
 	var isoUp = taillec*grid.cartesien_a_isometric(Vector2.UP)
 	var isoDown = taillec*grid.cartesien_a_isometric(Vector2.DOWN)
-	draw_line(isoLeft+isoUp, isoRight+isoUp, Color.ORANGE_RED, false)
-	draw_line(isoRight+isoUp, isoRight+isoDown, Color.ORANGE_RED, false)
-	draw_line(isoRight+isoDown, isoLeft + isoDown, Color.ORANGE_RED, false)
-	draw_line(isoLeft + isoDown, isoLeft+isoUp, Color.ORANGE_RED, false)
+	draw_line(isoLeft+isoUp, isoRight+isoUp, Color.ORANGE_RED,1, false)
+	draw_line(isoRight+isoUp, isoRight+isoDown, Color.ORANGE_RED,1, false)
+	draw_line(isoRight+isoDown, isoLeft + isoDown, Color.ORANGE_RED,1, false)
+	draw_line(isoLeft + isoDown, isoLeft+isoUp, Color.ORANGE_RED,1, false)
 
 #fonction appellée a chaque fois que l'on bouge la position du curseur
 func set_cell(value : Vector2) -> void:
