@@ -12,9 +12,6 @@ script = ExtResource("1_4ai8y")
 
 [node name="Plateau" parent="." instance=ExtResource("4_leytc")]
 
-[node name="DangerOverlay" parent="Plateau/GameBoard" index="1"]
-position = Vector2(0, 0)
-
 [node name="UI" parent="." instance=ExtResource("3_4lbxb")]
 offset_left = 0.0
 offset_right = 0.0

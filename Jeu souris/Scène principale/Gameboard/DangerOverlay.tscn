@@ -4,6 +4,5 @@
 [ext_resource type="Script" path="res://DangerOverlay.gd" id="2"]
 
 [node name="DangerOverlay" instance=ExtResource("1")]
-position = Vector2(0, 0)
 layer_0/name = "Damage_warning"
 script = ExtResource("2")
