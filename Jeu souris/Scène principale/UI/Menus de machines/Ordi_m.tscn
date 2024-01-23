@@ -91,6 +91,7 @@ offset_right = 631.1
 
 [connection signal="cout_point" from="Control/VBoxContainer/Marcher" to="." method="_on_Marcher_cout_point"]
 [connection signal="cout_point" from="Control/VBoxContainer/Charge" to="." method="_on_Charge_cout_point"]
+[connection signal="cout_point" from="Control/VBoxContainer/Saut" to="." method="_on_saut_cout_point"]
 
 [editable path="Control/VBoxContainer/Marcher"]
 [editable path="Control/VBoxContainer/Charge"]

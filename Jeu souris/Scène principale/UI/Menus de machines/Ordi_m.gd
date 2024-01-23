@@ -30,7 +30,7 @@ func _on_Charge_cout_point(type, index):
 			$"Control/VBoxContainer/Charge/Compteur".text = str(charge.Valeur[index])
 
 
-func _on_Saut_cout_point(type, index):
+func _on_saut_cout_point(type, index):
 	if not (Souris == null) :
 		var saut = $"Control/VBoxContainer/Saut" #on note la reference de la barre d'action "saut"
 		if saut.Valeur[index] > 0:				#si on peut dépenser des points
@@ -40,3 +40,4 @@ func _on_Saut_cout_point(type, index):
 					emit_signal("saut")							#on emet un signal
 					saut.Valeur = saut.ValeurMax.duplicate()	#on rest les statistique
 				saut.update_affichage()						#on met à jour l'affichage
+
