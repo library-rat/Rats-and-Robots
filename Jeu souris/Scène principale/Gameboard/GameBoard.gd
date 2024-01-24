@@ -260,13 +260,15 @@ func _on_EventSingleton_tir_courbe(ammo):
 
 func _on_fin_de_tour_pressed():
 	$"Player".end_turn()
-	var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
+	var enliste = get_tree().get_nodes_in_group("Enemy")#enliste est une liste de tout les ennemis
 	var length = enliste.size()
 	for index in range(length) :
 		var en = enliste[index]
 		if is_instance_valid(en) and not( en.is_queued_for_deletion()) :
 			en.play_turn()
+			await get_tree().create_timer(2.0).timeout
 	$"Player".begin_turn()
+	EventSingleton.emit_signal("begin_turn_player")
 	
 @onready var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
 var index = 0

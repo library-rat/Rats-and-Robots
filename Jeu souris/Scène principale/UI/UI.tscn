@@ -21,8 +21,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -0.667427
-offset_right = -0.667419
+offset_right = 0.00012207
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -38,6 +37,13 @@ offset_right = 55.6675
 offset_bottom = 50.0
 grow_horizontal = 2
 script = ExtResource("12")
+
+[node name="Cache" type="Panel" parent="Fin_de_tour"]
+visible = false
+offset_left = 111.0
+offset_top = 25.0
+offset_right = 563.0
+offset_bottom = 647.0
 
 [node name="Ordi_m" parent="." instance=ExtResource("1")]
 visible = false
@@ -198,6 +204,7 @@ grow_horizontal = 2
 grow_vertical = 2
 numero_machine = 10
 
+[connection signal="pressed" from="Fin_de_tour" to="." method="_on_fin_de_tour_pressed"]
 [connection signal="open_chargeur" from="Gachette" to="Chargeur" method="_on_gachette_open_chargeur"]
 [connection signal="tir_courbe" from="Gachette" to="Chargeur" method="_on_gachette_tir_courbe"]
 [connection signal="tir_tendu" from="Gachette" to="Chargeur" method="_on_gachette_tir_tendu"]

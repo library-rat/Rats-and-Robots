@@ -11,3 +11,6 @@ signal tir_tendu(ammo :Ammo)		#emittend when the actual action is tir_tendu
 signal tir_courbe(ammo : Ammo)		#emittend when the actual action is tir_courbe
 signal player_shot()				#emitted after player shooting
 signal walk_finished(unit :Unit)
+
+signal end_turn_player() #emitted when click on end of turn button
+signal begin_turn_player() #emitted after all ennemies turn ended
