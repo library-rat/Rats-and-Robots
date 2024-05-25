@@ -41,8 +41,6 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("ui_accept") :
 		$FileAction.enleve_action() 
-	if event.is_action("ui_page_up"):
-		$FileAction.ajoute_action(test)
 
 
 func _on_ouvrir_menu(numero_machine): #ouvre le menu de la machine

@@ -272,8 +272,4 @@ func _on_fin_de_tour_pressed():
 	
 @onready var enliste = get_tree().get_nodes_in_group("Enemy")#souris est une liste de toutes les souris
 var index = 0
-func _input(event):
-	if event.is_action_released("ui_up") :
-		if is_instance_valid(enliste[index%len(enliste)]) and not( enliste[index%len(enliste)].is_queued_for_deletion()):
-			enliste[index%len(enliste)].play_turn()
-		index += 1
+
