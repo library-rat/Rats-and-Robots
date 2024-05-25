@@ -13,7 +13,7 @@ extends Path2D
 ##Shared ressource of type board, used to know where are located amm the units. initialized in _ready
 @export var board: Resource
 ## Texture representing the unit.
-@export var skin: Texture2D: set = set_skin
+@export var skin: Texture2D
 ## Distance to which the unit can walk in cells.
 @export var move_range : int = 3
 @export var max_move_range : int = 3
@@ -21,7 +21,7 @@ extends Path2D
 @export var life : int
 @export var movable : bool = true
 ## Offset to apply to the `skin` sprite in pixels.
-@export var skin_offset := Vector2.ZERO: set = set_skin_offset
+@export var skin_offset := Vector2.ZERO
 ## The unit's move speed when it's moving along a path.
 @export var move_speed := 600.0
 
@@ -34,8 +34,6 @@ var is_selected := false: set = set_is_selected
 
 var _is_walking := false: set = _set_is_walking
 
-@onready var _sprite: Sprite2D = $PathFollow2D/Sprite2D
-@onready var _anim_player: AnimationPlayer = $AnimationPlayer
 @onready var _path_follow: PathFollow2D = $PathFollow2D
 
 
@@ -110,24 +108,7 @@ func set_cell(value: Vector2) -> void:
 
 func set_is_selected(value: bool) -> void:
 	is_selected = value
-	if is_selected:
-		_anim_player.play("selectionné")
-	else:
-		_anim_player.play("idle")
-
-
-func set_skin(value: Texture2D) -> void:
-	skin = value
-	if not _sprite:
-		await self.ready
-	_sprite.texture = value
-
-
-func set_skin_offset(value: Vector2) -> void:
-	skin_offset = value
-	if not _sprite:
-		await self.ready
-	_sprite.position = value
+	
 
 
 func _set_is_walking(value: bool) -> void:
