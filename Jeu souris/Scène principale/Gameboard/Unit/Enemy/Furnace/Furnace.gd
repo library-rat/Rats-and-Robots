@@ -6,7 +6,7 @@ var damage = 2
 
 func charge_rayon():
 		loading = true
-		$"PathFollow2D/Sprite2D".modulate = Color(0, 0, 1)
+		$"PathFollow2D/AnimatedSprite2D".modulate = Color(0, 0, 1)
 		update_threats() #met en rouge les cases cibles du rayon
 
 func update_threats():
@@ -57,7 +57,7 @@ func play_turn ():
 			for i in range(len(directions)):
 				directions[i] = -directions[i]
 		selected_cell = board.remplir_case_move_direction_max(cell, move_range, directions)
-		$"PathFollow2D/Sprite2D".modulate = Color(1, 1, 1)
+		$"PathFollow2D/AnimatedSprite2D".modulate = Color(1, 1, 1)
 		if selected_cell == [] :
 			selected_cell.append(self.cell)
 

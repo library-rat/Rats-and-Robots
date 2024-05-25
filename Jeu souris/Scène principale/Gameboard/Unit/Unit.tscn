@@ -38,7 +38,7 @@ loop = false
 modulate = Color(0.152941, 0.152941, 0.152941, 1)
 texture = ExtResource("2")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="PathFollow2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D"]
 position = Vector2(0, -40)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_pqvvu")
