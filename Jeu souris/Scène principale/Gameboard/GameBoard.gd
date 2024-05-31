@@ -99,7 +99,7 @@ func _clear_active_unit() -> void:
 func _move_active_unit(new_cell : Vector2) -> void :
 	if board.is_occupied(new_cell) or not(new_cell in _selected_cells):
 		return
-		
+	var direction = grid.calc_direction(new_cell, _active_unit.cell)
 	var difference : Vector2 = (_active_unit.cell - new_cell).abs()		#si l'on déplace l'unité on retire les déplacement de sa portée
 	var distance := int (difference.x + difference.y)
 	_active_unit.move_range -= distance
@@ -108,6 +108,16 @@ func _move_active_unit(new_cell : Vector2) -> void :
 	_deselect_active_unit()
 	_active_unit.walk_along(_unit_path.current_path)
 	await EventSingleton.walk_finished
+	if _active_unit == $"Player" :
+		match direction :
+			Vector2.UP:
+				EventSingleton.emit_signal("set_player_up")
+			Vector2.DOWN:
+				EventSingleton.emit_signal("set_player_down")
+			Vector2.LEFT:
+				EventSingleton.emit_signal("set_player_left")
+			Vector2.RIGHT:
+				EventSingleton.emit_signal("set_player_right")
 	_clear_active_unit()
 
 func _jump_player (new_cell : Vector2) -> void:

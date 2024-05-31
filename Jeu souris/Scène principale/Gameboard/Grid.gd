@@ -30,17 +30,18 @@ func dans_limite(coordonnees_case: Vector2) -> bool :
 
 func calc_direction (new_cell : Vector2,old_cell:Vector2) -> Vector2 :
 	var direction = new_cell-old_cell
-	if direction.x > 0:
-		direction = Vector2.RIGHT
-		
-	if direction.x < 0:
-		direction = Vector2.LEFT
-
-	if direction.y < 0:
-		direction = Vector2.UP
-		
-	if direction.y > 0:
-		direction = Vector2.DOWN
+	if(abs(direction.x) > abs(direction.y)):
+		if direction.x > 0:
+			direction = Vector2.RIGHT
+			
+		if direction.x < 0:
+			direction = Vector2.LEFT
+	else :
+		if direction.y < 0:
+			direction = Vector2.UP
+			
+		if direction.y > 0:
+			direction = Vector2.DOWN
 	return(direction)
 
 func clamp(grille_position: Vector2) -> Vector2 :

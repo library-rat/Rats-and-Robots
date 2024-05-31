@@ -17,6 +17,10 @@ func _ready():
 	EventSingleton.connect("move_player",_on_EventSingleton_move_player)
 	EventSingleton.connect("tir_tendu", _on_EventSingleton_tir_tendu)
 	EventSingleton.connect("tir_courbe",_on_EventSingleton_tir_courbe)
+	EventSingleton.connect("set_player_up", _on_EventSingleton_player_up)
+	EventSingleton.connect("set_player_down", _on_EventSingleton_player_down)
+	EventSingleton.connect("set_player_left", _on_EventSingleton_player_left)
+	EventSingleton.connect("set_player_right", _on_EventSingleton_player_right)
 
 func end_turn():
 	effet_forme()
@@ -112,6 +116,16 @@ func _on_EventSingleton_tir_courbe(ammo):
 
 func _on_EventSingleton_tir_tendu(ammo):
 	munition = ammo
+
+func _on_EventSingleton_player_up():
+	$PathFollow2D/AnimatedSprite2D.play("up")
+func _on_EventSingleton_player_down():
+	$PathFollow2D/AnimatedSprite2D.play("down")
+func _on_EventSingleton_player_left():
+	$PathFollow2D/AnimatedSprite2D.play("left")
+func _on_EventSingleton_player_right():
+	$PathFollow2D/AnimatedSprite2D.play("right")
+
 
 func injecte_forme(new_f : String):
 	if forme != null :

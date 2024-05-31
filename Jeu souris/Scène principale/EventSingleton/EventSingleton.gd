@@ -7,6 +7,10 @@ signal jump_player()		#emittend when the actual action is jump
 signal player_jumped()		#emitted after player movement
 signal dash_player()		#emittend when the actual action is dash
 signal player_dashed()		#emitted after player movement
+signal set_player_up()
+signal set_player_down()
+signal set_player_left()
+signal set_player_right()
 signal tir_tendu(ammo :Ammo)		#emittend when the actual action is tir_tendu
 signal tir_courbe(ammo : Ammo)		#emittend when the actual action is tir_courbe
 signal player_shot()				#emitted after player shooting

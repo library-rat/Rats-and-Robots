@@ -1,8 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://dafxlse0qmk71"]
+[gd_scene load_steps=10 format=3 uid="uid://dafxlse0qmk71"]
 
 [ext_resource type="PackedScene" uid="uid://dtld5pdxss45b" path="res://Scène principale/Gameboard/Unit/Unit.tscn" id="1"]
 [ext_resource type="Script" path="res://Scène principale/Gameboard/Unit/Player/Player.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://n4d5ipvc70p0" path="res://Scène principale/Gameboard/Unit/bugcat.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dqn4sqmj56lyu" path="res://Scène principale/Gameboard/Unit/Player/Player.png" id="4_ulvxx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plxkv"]
+atlas = ExtResource("4_ulvxx")
+region = Rect2(512, 0, 512, 427)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puxrl"]
+atlas = ExtResource("4_ulvxx")
+region = Rect2(0, 0, 512, 427)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykjs7"]
+atlas = ExtResource("4_ulvxx")
+region = Rect2(1024, 0, 512, 427)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhcax"]
+atlas = ExtResource("4_ulvxx")
+region = Rect2(1536, 0, 512, 427)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x402s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plxkv")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puxrl")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykjs7")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhcax")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
 
 [node name="Player" groups=["Player"] instance=ExtResource("1")]
 script = ExtResource("2")
@@ -13,3 +65,8 @@ rlimitetir = 5
 limitetir = 8
 skin = ExtResource("3")
 move_range = 3
+
+[node name="AnimatedSprite2D" parent="PathFollow2D" index="1"]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_x402s")
+animation = &"up"
