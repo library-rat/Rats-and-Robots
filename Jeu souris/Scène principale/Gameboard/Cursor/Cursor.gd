@@ -63,5 +63,4 @@ func set_cell(value : Vector2) -> void:
 	position = grid.calcul_map_position(cell) -grid.cartesien_a_isometric(offset* grid.taille_case)
 	emit_signal("moved", cell+offset)
 	_timer.start()
-	print(new_cell)
 
