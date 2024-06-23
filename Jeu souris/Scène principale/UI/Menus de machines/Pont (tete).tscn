@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://b4wrnfl00m8u3"]
 
 [ext_resource type="PackedScene" uid="uid://bj5en5y6vyph1" path="res://Scène principale/UI/Menus de machines/menu.tscn" id="1"]
-[ext_resource type="FontFile" uid="uid://b2dyotkul1ruq" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf" id="2"]
+[ext_resource type="FontFile" uid="uid://bo3v014kvscnr" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf" id="2"]
 [ext_resource type="Script" path="res://Scène principale/UI/Menus de machines/Pont (tete).gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://ddv1owo3ypvhn" path="res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn" id="4"]
-[ext_resource type="FontFile" uid="uid://co8djgnkdpi46" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf" id="5"]
+[ext_resource type="FontFile" uid="uid://c1npcp6w6ekmf" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf" id="5"]
 [ext_resource type="Texture2D" uid="uid://crsi4kn8ulys3" path="res://Scène principale/Robot/Ressources/graphiques/icon physique.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://362blk7jcuo6" path="res://Scène principale/Robot/Ressources/graphiques/icob déplacement.png" id="7"]
 
@@ -30,10 +30,10 @@ cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 script = ExtResource("3")
 
 [node name="Label" parent="Control/MarginContainer/Panel" index="0"]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 1.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
 text = "Pont (crane)"
 
 [node name="Ouvrir_porte" parent="Control/VBoxContainer" index="0" instance=ExtResource("4")]
@@ -42,21 +42,7 @@ pointValeur = Array[String](["Endurance"])
 ValeurMax = Array[int]([1])
 
 [node name="Label" parent="Control/VBoxContainer/Ouvrir_porte/Panel" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 581.0
-offset_bottom = 69.0
 text = "Ouvrir la porte"
-
-[node name="TextureRect" parent="Control/VBoxContainer/Ouvrir_porte/Panel" index="1"]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 63.0
-offset_bottom = 63.0
 
 [node name="Pont_1" type="HBoxContainer" parent="Control/VBoxContainer" index="1"]
 visible = false

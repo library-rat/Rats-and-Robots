@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://crsi4kn8ulys3" path="res://Scène principale/Robot/Ressources/graphiques/icon physique.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://gw6mfabtifii" path="res://Scène principale/Robot/Ressources/graphiques/icon int.jpeg" id="2"]
-[ext_resource type="FontFile" uid="uid://b2dyotkul1ruq" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf" id="3"]
+[ext_resource type="FontFile" uid="uid://bo3v014kvscnr" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal-Bold.ttf" id="3"]
 [ext_resource type="FontFile" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/montreal/Montreal.tres" id="4"]
-[ext_resource type="FontFile" uid="uid://co8djgnkdpi46" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf" id="5"]
+[ext_resource type="FontFile" uid="uid://c1npcp6w6ekmf" path="res://Godot-Fontpack-master/Godot-Fontpack-master(1)/Godot-Fontpack-master/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Regular.ttf" id="5"]
 [ext_resource type="Script" path="res://Scène principale/UI/Menus de machines/ligne menu 2 icon.gd" id="6"]
 
 [sub_resource type="FontFile" id="1"]
@@ -64,13 +64,16 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = -0.943909
-offset_top = 0.943878
-offset_right = 580.056
-offset_bottom = 69.9439
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = SubResource("2")
 text = "GROSSE ATTAQUE"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="icon 1" to="." method="_on_icon_1_pressed"]
 [connection signal="pressed" from="icon 2" to="." method="_on_icon_2_pressed"]
