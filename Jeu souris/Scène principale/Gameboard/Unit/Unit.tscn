@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dtld5pdxss45b"]
+[gd_scene load_steps=10 format=3 uid="uid://dtld5pdxss45b"]
 
 [ext_resource type="Texture2D" uid="uid://n4d5ipvc70p0" path="res://Scène principale/Gameboard/Unit/bugcat.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://cc5ddbljw1y15" path="res://Scène principale/Gameboard/Unit/unit_shadow.svg" id="2"]
@@ -6,6 +6,8 @@
 [ext_resource type="Resource" path="res://Scène principale/Gameboard/Grid.tres" id="4"]
 [ext_resource type="PackedScene" path="res://Scène principale/Gameboard/Unit/Lifebar/Lifebar.tscn" id="5"]
 [ext_resource type="Resource" path="res://Scène principale/Gameboard/Board.tres" id="6"]
+
+[sub_resource type="Curve2D" id="Curve2D_y4xt7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2igti"]
 atlas = ExtResource("1")
@@ -20,10 +22,43 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
 }]
 
 [node name="Unit" type="Path2D"]
 position = Vector2(200, 200)
+curve = SubResource("Curve2D_y4xt7")
 script = ExtResource("3")
 grid = ExtResource("4")
 board = ExtResource("6")
@@ -42,6 +77,7 @@ texture = ExtResource("2")
 position = Vector2(0, -40)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_pqvvu")
+animation = &"up"
 
 [node name="Lifebar" parent="." instance=ExtResource("5")]
 offset_left = -48.0

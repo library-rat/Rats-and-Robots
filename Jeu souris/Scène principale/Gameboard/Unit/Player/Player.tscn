@@ -69,4 +69,4 @@ move_range = 3
 [node name="AnimatedSprite2D" parent="PathFollow2D" index="1"]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_x402s")
-animation = &"up"
+animation = &"down"

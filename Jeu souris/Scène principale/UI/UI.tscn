@@ -40,6 +40,7 @@ script = ExtResource("12")
 
 [node name="Cache" type="Panel" parent="Fin_de_tour"]
 visible = false
+layout_mode = 0
 offset_left = 111.0
 offset_top = 25.0
 offset_right = 563.0

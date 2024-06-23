@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://n4d5ipvc70p0" path="res://Scène principale/Gameboard/Unit/bugcat.png" id="1"]
 [ext_resource type="Script" path="res://Scène principale/Gameboard/GameBoard.gd" id="2"]
-[ext_resource type="PackedScene" path="res://Scène principale/Gameboard/Cursor/Cursor.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://btqxg8jh14055" path="res://Scène principale/Gameboard/Cursor/Cursor.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://cju4k17ahwn37" path="res://Scène principale/Gameboard/UnitOverlay.tscn" id="4"]
 [ext_resource type="TileSet" uid="uid://5va2arb6q1yy" path="res://Scène principale/Gameboard/unit_path_tileset.tres" id="5"]
-[ext_resource type="PackedScene" path="res://Scène principale/Gameboard/UnitPath.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bkog4e1ddekpu" path="res://Scène principale/Gameboard/UnitPath.tscn" id="6"]
 [ext_resource type="PackedScene" uid="uid://dafxlse0qmk71" path="res://Scène principale/Gameboard/Unit/Player/Player.tscn" id="7"]
 [ext_resource type="Resource" path="res://Scène principale/Gameboard/Grid.tres" id="8"]
 [ext_resource type="PackedScene" uid="uid://dav66l1qfqit4" path="res://Scène principale/Gameboard/Unit/Enemy/Furnace/Furnace.tscn" id="9"]
@@ -28,34 +28,36 @@ script = ExtResource("2")
 [node name="AimOverlay" parent="GameBoard" instance=ExtResource("4")]
 
 [node name="UnitPath" parent="GameBoard" instance=ExtResource("6")]
-format = 2
 grid = ExtResource("8")
 
 [node name="Cursor" parent="GameBoard" instance=ExtResource("3")]
 
 [node name="Player" parent="GameBoard" instance=ExtResource("7")]
 position = Vector2(354, 281)
-board = null
 move_range = 0
 
 [node name="Furnace" parent="GameBoard" instance=ExtResource("9")]
 position = Vector2(225, 369)
+curve = null
 skin = ExtResource("1")
 max_life = 2
 skin_offset = Vector2(0, -40)
 
 [node name="Furnace2" parent="GameBoard" instance=ExtResource("9")]
 position = Vector2(150, 129)
+curve = null
 skin = ExtResource("1")
 skin_offset = Vector2(0, -40)
 
 [node name="Furnace3" parent="GameBoard" instance=ExtResource("9")]
 position = Vector2(520, 439)
+curve = null
 skin = ExtResource("1")
 skin_offset = Vector2(0, -40)
 
 [node name="Chimney" parent="GameBoard" instance=ExtResource("10")]
 position = Vector2(154, 459)
+curve = null
 
 [connection signal="accept_pressed" from="GameBoard/Cursor" to="GameBoard" method="_on_Cursor_accept_pressed"]
 [connection signal="moved" from="GameBoard/Cursor" to="GameBoard" method="_on_Cursor_moved"]

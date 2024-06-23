@@ -28,7 +28,7 @@ extends Path2D
 ## Coordinates of the current cell the cursor moved to.
 @export var cell := Vector2.ZERO: set = set_cell
 #facing unit direction
-@export var direction := Vector2.DOWN
+@export var direction := Vector2.DOWN: set = set_direction
 ## Toggles the "selected" animation on the unit.
 var is_selected := false: set = set_is_selected
 
@@ -36,6 +36,7 @@ var _is_walking := false: set = _set_is_walking
 
 @onready var _path_follow: PathFollow2D = $PathFollow2D
 
+signal cell_reached()
 
 func _ready() -> void:
 	set_process(false)
@@ -45,25 +46,18 @@ func _ready() -> void:
 	self.cell = grid.calcul_grille_position(position)
 	position = grid.calcul_map_position(cell)
 
-	# We create the curve resource here because creating it in the editor prevents us from
-	# moving the unit.
-	curve = Curve2D.new()
 
 	
 	life = max_life
 	update_lifebar()
 func _process(delta: float) -> void:
-
+	print("moving")
 	_path_follow.progress += move_speed * delta
 	if curve == null :
 		curve = Curve2D.new()
-		print("failed")
 	if _path_follow.progress >= curve.get_baked_length():
 		self._is_walking = false
-		_path_follow.progress = 0
-		position = grid.calcul_map_position(cell)
-		curve.clear_points()
-		EventSingleton.emit_signal("walk_finished",self)
+		emit_signal("cell_reached")
 
 
 ## Starts walking along the `path`.
@@ -73,11 +67,18 @@ func walk_along(path: PackedVector2Array) -> void:
 		return
 
 	curve.add_point(Vector2.ZERO)
+	print(curve.point_count)
 	for point in path:
+		var new_dir = grid.calc_direction(point, cell)
+		set_direction(new_dir)
 		curve.add_point(grid.calcul_map_position(point) - position)
-	self.cell = path[-1]
-	self._is_walking = true
-
+		self._is_walking = true
+		await self.cell_reached
+		self.cell = point
+	_path_follow.progress = 0
+	position = grid.calcul_map_position(cell)
+	curve.clear_points()
+	EventSingleton.emit_signal("walk_finished",self)
 
 func jump_along(new_cell:Vector2) -> void:
 	position = grid.calcul_map_position(new_cell)
@@ -108,8 +109,6 @@ func set_cell(value: Vector2) -> void:
 
 func set_is_selected(value: bool) -> void:
 	is_selected = value
-	
-
 
 func _set_is_walking(value: bool) -> void:
 	_is_walking = value
@@ -128,3 +127,15 @@ func is_hit (valeur : int)  -> void:
 
 func is_para (valeur : int) -> void:
 	pass
+
+func set_direction(new_dir : Vector2):
+	match new_dir :
+			Vector2.UP:
+				$PathFollow2D/AnimatedSprite2D.play("up")
+			Vector2.DOWN:
+				$PathFollow2D/AnimatedSprite2D.play("down")
+			Vector2.LEFT:
+				$PathFollow2D/AnimatedSprite2D.play("left")
+			Vector2.RIGHT:
+				$PathFollow2D/AnimatedSprite2D.play("right")
+	direction = new_dir

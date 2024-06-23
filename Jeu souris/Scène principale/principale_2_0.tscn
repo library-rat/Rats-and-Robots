@@ -24,7 +24,6 @@ offset_right = 631.0
 grow_horizontal = 1
 
 [node name="Cache" parent="UI/Fin_de_tour" index="0"]
-layout_mode = 0
 offset_left = 105.0
 offset_top = 28.0
 offset_right = 557.0
