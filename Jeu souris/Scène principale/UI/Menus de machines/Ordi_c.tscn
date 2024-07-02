@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://cagswdy0pipkr"]
+
+[ext_resource type="PackedScene" uid="uid://bj5en5y6vyph1" path="res://Scène principale/UI/Menus de machines/menu.tscn" id="1_y58hu"]
+[ext_resource type="Script" path="res://Scène principale/UI/Menus de machines/Ordi_c.gd" id="2_f3erh"]
+[ext_resource type="PackedScene" uid="uid://ddv1owo3ypvhn" path="res://Scène principale/UI/Menus de machines/ligne menu 1 icon.tscn" id="3_ielyp"]
+[ext_resource type="Texture2D" uid="uid://6cplkybwic2y" path="res://Scène principale/Souris/Afficheur de points/Icon point endurance.png" id="4_fxh2m"]
+[ext_resource type="PackedScene" uid="uid://c3ry8kfhwdsy0" path="res://Scène principale/UI/Menus de machines/ligne menu 2 icon.tscn" id="5_dicxa"]
+[ext_resource type="Texture2D" uid="uid://cp452r0bayg81" path="res://Scène principale/Souris/Afficheur de points/Icon point calcul.png" id="6_ln7ao"]
+[ext_resource type="Texture2D" uid="uid://cyus1xnn8kmgr" path="res://Scène principale/Souris/Afficheur de points/Icon point observation.png" id="7_l08l3"]
+
+[node name="Ordi_c" instance=ExtResource("1_y58hu")]
+script = ExtResource("2_f3erh")
+
+[node name="Label" parent="Control/MarginContainer/Panel" index="0"]
+text = "Module de Combat"
+
+[node name="Direct" parent="Control/VBoxContainer" index="0" instance=ExtResource("3_ielyp")]
+layout_mode = 2
+pointValeur = Array[String](["Endurance"])
+ValeurMax = Array[int]([2])
+
+[node name="icon" parent="Control/VBoxContainer/Direct" index="1"]
+icon = ExtResource("4_fxh2m")
+
+[node name="Label" parent="Control/VBoxContainer/Direct/Panel" index="0"]
+text = "Direct"
+
+[node name="Balayage" parent="Control/VBoxContainer" index="1" instance=ExtResource("5_dicxa")]
+layout_mode = 2
+pointValeur = Array[String](["Endurance", "Calcul"])
+ValeurMax = Array[int]([2, 1])
+
+[node name="icon 1" parent="Control/VBoxContainer/Balayage" index="1"]
+icon = ExtResource("4_fxh2m")
+
+[node name="icon 2" parent="Control/VBoxContainer/Balayage" index="3"]
+icon = ExtResource("6_ln7ao")
+
+[node name="Label" parent="Control/VBoxContainer/Balayage/Panel" index="0"]
+text = "Balayage"
+
+[node name="Projection" parent="Control/VBoxContainer" index="2" instance=ExtResource("5_dicxa")]
+layout_mode = 2
+pointValeur = Array[String](["Endurance", "Observation"])
+ValeurMax = Array[int]([2, 1])
+
+[node name="icon 1" parent="Control/VBoxContainer/Projection" index="1"]
+icon = ExtResource("4_fxh2m")
+
+[node name="icon 2" parent="Control/VBoxContainer/Projection" index="3"]
+icon = ExtResource("7_l08l3")
+
+[node name="Label" parent="Control/VBoxContainer/Projection/Panel" index="0"]
+text = "Projection"
+
+[connection signal="cout_point" from="Control/VBoxContainer/Direct" to="." method="_on_direct_cout_point"]
+[connection signal="cout_point" from="Control/VBoxContainer/Balayage" to="." method="_on_balayage_cout_point"]
+[connection signal="cout_point" from="Control/VBoxContainer/Projection" to="." method="_on_projection_cout_point"]
+
+[editable path="Control/VBoxContainer/Direct"]
+[editable path="Control/VBoxContainer/Balayage"]
+[editable path="Control/VBoxContainer/Projection"]
